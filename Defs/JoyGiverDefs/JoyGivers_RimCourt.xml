@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- baseChance 6 : quand quelqu'un est au pilori, c'est le loisir le plus tentant de la colonie. Le worker rend 0 s'il n'y a personne d'attaché, donc ça ne pèse rien le reste du temps. -->
+	<JoyGiverDef>
+		<defName>RimCourt_JeerAtStocks</defName>
+		<giverClass>RimCourt.Jobs.JoyGiver_JeerAtStocks</giverClass>
+		<jobDef>RimCourt_JeerAtStocks</jobDef>
+		<baseChance>6</baseChance>
+		<joyKind>Social</joyKind>
+		<requireChair>false</requireChair>
+		<desireSit>false</desireSit>
+		<countsForRecRoom>false</countsForRecRoom>
+		<requiredCapacities>
+			<li>Talking</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+
+</Defs>

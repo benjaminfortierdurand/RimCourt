@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_Captive.label>un prisonnier est amené devant le siège</RimCourt_Captive.label>
+	<RimCourt_Captive.description>Un ennemi capturé est traîné devant le seigneur, qui décide de son sort.</RimCourt_Captive.description>
+	<RimCourt_Captive.caseText>{PETITIONER_labelShort}, de la faction {FACTION}, a été amené les mains liées et planté là où se tiennent les pétitionnaires. {PETITIONER_labelShort} n'a rien demandé. La salle n'a rien offert.\n\n{DOSSIER}\n\nLes siens paieraient {SILVER} pièces d'argent pour le récupérer, à ce que dit le dernier marchand qui a traité avec eux.\n\nComment le seigneur tranche-t-il ?</RimCourt_Captive.caseText>
+	<RimCourt_Captive.verdicts.0.label>Renvoyer {PETITIONER_labelShort} chez les siens avec un avertissement</RimCourt_Captive.verdicts.0.label>
+	<RimCourt_Captive.verdicts.1.label>Le revendre aux siens pour {SILVER} pièces d'argent</RimCourt_Captive.verdicts.1.label>
+	<RimCourt_Captive.verdicts.2.label>Le pilori, à la vue de tous, puis retour en cellule</RimCourt_Captive.verdicts.2.label>
+	<RimCourt_Captive.verdicts.3.label>L'épée, ici, devant la cour</RimCourt_Captive.verdicts.3.label>
+	<RimCourt_Captive.verdicts.0.pastLabel>renvoyé chez les siens avec un avertissement</RimCourt_Captive.verdicts.0.pastLabel>
+	<RimCourt_Captive.verdicts.1.pastLabel>rançonné pour {SILVER} pièces d'argent</RimCourt_Captive.verdicts.1.pastLabel>
+	<RimCourt_Captive.verdicts.2.pastLabel>mis au pilori, puis renvoyé en cellule</RimCourt_Captive.verdicts.2.pastLabel>
+	<RimCourt_Captive.verdicts.3.pastLabel>passé par l'épée devant le siège</RimCourt_Captive.verdicts.3.pastLabel>
+
+</LanguageData>

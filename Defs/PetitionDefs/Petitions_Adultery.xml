@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- L'adultere dans le mariage seulement. Spurned garde la trahison generique
+	     entre amants ; ici la parole juree devant tout le monde se defait devant
+	     tout le monde. Priorite 70 contre 40, et le verrou de paire fait le reste. -->
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Adultery</defName>
+		<priority>70</priority>
+		<label>a vow broken in the dark</label>
+		<description>A colonist whose spouse strayed asks the court to make the marriage mean something, or end it.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Adultery</workerClass>
+		<maxMemoryAgeDays>20</maxMemoryAgeDays>
+		<sourceThoughts>
+			<li>CheatedOnMe</li>
+		</sourceThoughts>
+		<caseText>{PETITIONER_labelShort} stands before the court still wearing the ring, and asks the seat to look at what it is worth. {OTHER_labelShort} has been keeping company with {LOVER}, and not discreetly: the colony knew before {PETITIONER_labelShort} did.
+
+The vow was sworn in front of everyone. {PETITIONER_labelShort} wants it to mean something in front of everyone, or to be ended the same way.
+
+How does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Release {PETITIONER_labelShort} from the marriage</label>
+				<pastLabel>released from the marriage</pastLabel>
+				<outcome>Divorce</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Order {OTHER_labelShort} to give up {LOVER} and keep the vow</label>
+				<pastLabel>ordered back to the vow</pastLabel>
+				<outcome>EndAffair</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Have {OTHER_labelShort} flogged for the betrayal</label>
+				<pastLabel>flogged for the betrayal</pastLabel>
+				<outcome>FlogAdulterer</outcome>
+				<harsh>3</harsh>
+			</li>
+			<li>
+				<label>Rule that beds are no business of the seat</label>
+				<pastLabel>the bed ruled no business of the seat</pastLabel>
+				<outcome>Dismiss</outcome>
+				<weak>2</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+</Defs>

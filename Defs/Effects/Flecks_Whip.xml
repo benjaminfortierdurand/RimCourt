@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Le fouet est un chapelet de bouts de corde tendus point par point le long d'une courbe, recolorés cuir dans FlogUtility.Crack. Texture dessinée en code, _concept/whip/whip.cs, aucun emprunt. -->
+
+	<FleckDef ParentName="FleckBase">
+		<defName>RimCourt_WhipLine</defName>
+		<graphicData>
+			<texPath>Things/Mote/RimCourt_WhipLine</texPath>
+			<shaderType>Transparent</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0.3</solidTime>
+		<fadeOutTime>0.35</fadeOutTime>
+	</FleckDef>
+
+	<!-- Le fouet armé au-dessus de l'épaule. Court exprès : il doit avoir disparu quand le coup tombe, 18 ticks plus tard, sinon on voit deux fouets. -->
+	<FleckDef ParentName="FleckBase">
+		<defName>RimCourt_WhipRaised</defName>
+		<graphicData>
+			<texPath>Things/Mote/RimCourt_WhipLine</texPath>
+			<shaderType>Transparent</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0.16</solidTime>
+		<fadeOutTime>0.1</fadeOutTime>
+	</FleckDef>
+
+</Defs>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- La contestation du trone : le payoff d'une reputation de faible ou de venal.
+	     Le seigneur juge sa propre contestation, ce qui est tout le sel de l'affaire. -->
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Challenge</defName>
+		<priority>95</priority>
+		<label>a claim on the seat</label>
+		<description>A colonist who thinks little of the lord stands up and claims the seat itself.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Challenge</workerClass>
+		<caseText>{PETITIONER_labelShort} steps forward and does not kneel. The hall goes quiet, because everyone understands before a word is said. The colony has been calling its lord weak for some time, and {PETITIONER_labelShort} has decided to say it to the seat itself: step down, and let someone rule who will.
+
+The lord must answer his own accuser.
+
+How does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Yield the seat to {PETITIONER_labelShort}</label>
+				<pastLabel>the seat yielded</pastLabel>
+				<outcome>Yield</outcome>
+				<weak>3</weak>
+			</li>
+			<li>
+				<label>Banish {PETITIONER_labelShort} for treason</label>
+				<pastLabel>the claimant banished for treason</pastLabel>
+				<outcome>BanishChallenger</outcome>
+				<harsh>3</harsh>
+			</li>
+			<li>
+				<label>The seat is won by the sword. Fight for it</label>
+				<pastLabel>the seat put to the sword</pastLabel>
+				<outcome>ThroneDuel</outcome>
+				<just>1</just>
+				<harsh>1</harsh>
+			</li>
+			<li>
+				<label>Bind {PETITIONER_labelShort} to the post, and let the colony see who sits</label>
+				<pastLabel>the challenger bound to the post</pastLabel>
+				<outcome>StocksChallenger</outcome>
+				<harsh>3</harsh>
+				<just>1</just>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+</Defs>

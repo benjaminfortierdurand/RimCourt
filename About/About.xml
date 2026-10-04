@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>RimCourt</name>
+	<author>BenFD</author>
+	<packageId>forti.rimcourt</packageId>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<modVersion>0.2.1</modVersion>
+	<description>RimCourt is not a crime and punishment mod. Nobody is sentenced here. This is the lord holding court: people bring you their problems, you decide, and they remember what you decided.
+
+Cases are not invented. The court reads what your colonists actually remember, so it hears what your colony has lived through. An insult thrown in front of everyone. A surgeon whose hand slipped. A suitor who will not take no for an answer. Two heirs over what the dead left behind. A man who killed someone's brother and still walks past him every day. A quiet colony has little to try.
+
+Each case is written up on a parchment: the parties, the claim, and the rulings open to you. Take the lord's seal, stamp the one you choose, and pronounce it. Saying nothing is also an answer, and not one anyone respects.
+
+Verdicts are carried out. Silver changes hands, work orders change, marriages end, and a man sentenced to the lash is flogged in front of the whole court by whoever you hand the whip to. Banish someone and he may come back, either at the head of a raiding party or at the head of a faction that now shares a border with you.
+
+Every ruling builds a name: just, harsh, venal or weak. That name decides who brings what to court, whether strangers will travel to submit their quarrels to your judgement, and whether some ambitious colonist decides the seat should be his instead.
+
+A captured raider gets one hearing of his own: a guard drags him before the seat, the parchment says what he did and what his people would pay for him, and the lord sends him home, sells him back, puts him on the post or puts him to the sword. Whether that was justice depends on what he did, not on what you picked.
+
+Harmony is the only dependency. Royalty is optional and never required. Beyond that one hearing, RimCourt does not touch prisoners or wardens, so justice mods keep their turf.
+
+The pillory post texture is by Gerrymon, from Misc Props: Dungeon, used with permission.
+
+BenFD</description>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+	</loadAfter>
+</ModMetaData>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_LordRuledForMe.stages.0.label>a tranché en ma faveur</RimCourt_LordRuledForMe.stages.0.label>
+	<RimCourt_LordRuledAgainstMe.stages.0.label>a tranché contre moi</RimCourt_LordRuledAgainstMe.stages.0.label>
+	<RimCourt_LordDismissedMyCase.stages.0.label>a balayé mon affaire</RimCourt_LordDismissedMyCase.stages.0.label>
+	<RimCourt_SettledBeforeLord.stages.0.label>querelle réglée devant le seigneur</RimCourt_SettledBeforeLord.stages.0.label>
+
+	<RimCourt_ScoldedByLord.stages.0.label>réprimandé à l'audience</RimCourt_ScoldedByLord.stages.0.label>
+	<RimCourt_ScoldedByLord.stages.0.description>Le seigneur m'a sermonné devant toute la colonie.</RimCourt_ScoldedByLord.stages.0.description>
+
+	<RimCourt_LordReputation.stages.0.label>rend la justice avec équité</RimCourt_LordReputation.stages.0.label>
+	<RimCourt_LordReputation.stages.1.label>rend la justice avec dureté</RimCourt_LordReputation.stages.1.label>
+	<RimCourt_LordReputation.stages.2.label>vend ses verdicts</RimCourt_LordReputation.stages.2.label>
+	<RimCourt_LordReputation.stages.3.label>ne tranche jamais rien</RimCourt_LordReputation.stages.3.label>
+
+	<RimCourt_SawCourtHeld.stages.0.label>a vu le seigneur tenir audience</RimCourt_SawCourtHeld.stages.0.label>
+	<RimCourt_SawCourtHeld.stages.0.description>Les griefs ont été entendus et réglés dans les formes. C'est comme ça que les choses doivent se faire.</RimCourt_SawCourtHeld.stages.0.description>
+
+	<RimCourt_BlessedByLord.stages.0.label>le seigneur a béni notre union</RimCourt_BlessedByLord.stages.0.label>
+	<RimCourt_BlessedByLord.stages.0.description>Il l'a dit à voix haute, devant tout le monde. Plus personne ne peut trouver cela déplacé.</RimCourt_BlessedByLord.stages.0.description>
+
+	<RimCourt_RefusedByLord.stages.0.label>éconduit par le seigneur</RimCourt_RefusedByLord.stages.0.label>
+	<RimCourt_RefusedByLord.stages.0.description>J'ai demandé la seule chose que je voulais et on m'a dit non devant toute la colonie.</RimCourt_RefusedByLord.stages.0.description>
+
+	<RimCourt_HonouredByLord.stages.0.label>honoré devant la cour</RimCourt_HonouredByLord.stages.0.label>
+	<RimCourt_HonouredByLord.stages.0.description>Ce que j'ai fait a été dit à voix haute, et tout le monde l'a entendu.</RimCourt_HonouredByLord.stages.0.description>
+
+	<RimCourt_HonouredHim.stages.0.label>honoré par le seigneur</RimCourt_HonouredHim.stages.0.label>
+
+	<RimCourt_Deposed.stages.0.label>déchu devant la cour</RimCourt_Deposed.stages.0.label>
+	<RimCourt_Deposed.stages.0.description>Je tenais le siège, et toute la colonie m'a regardé le perdre.</RimCourt_Deposed.stages.0.description>
+
+	<RimCourt_TookThrone.stages.0.label>a pris le siège du seigneur</RimCourt_TookThrone.stages.0.label>
+	<RimCourt_TookThrone.stages.0.description>J'ai réclamé le siège devant toute la cour, et il est à moi désormais.</RimCourt_TookThrone.stages.0.description>
+
+	<RimCourt_DefeatedBeforeCourt.stages.0.label>battu devant la cour</RimCourt_DefeatedBeforeCourt.stages.0.label>
+	<RimCourt_DefeatedBeforeCourt.stages.0.description>J'ai réclamé le siège et on m'a mis à terre devant tout le monde.</RimCourt_DefeatedBeforeCourt.stages.0.description>
+
+	<RimCourt_PaidInSilver.stages.0.label>payé pour le sang que j'ai versé</RimCourt_PaidInSilver.stages.0.label>
+	<RimCourt_PaidInSilver.stages.0.description>Ils ont mis un prix sur ce que j'ai fait et ils l'ont payé. Ça vaut mieux que des remerciements.</RimCourt_PaidInSilver.stages.0.description>
+
+	<RimCourt_LordAdmittedFault.stages.0.label>a reconnu ses torts envers moi</RimCourt_LordAdmittedFault.stages.0.label>
+	<RimCourt_LordJudgedHimself.stages.0.label>a jugé sa propre affaire et l'a gagnée</RimCourt_LordJudgedHimself.stages.0.label>
+
+	<RimCourt_PromiseBroken.stages.0.label>remis à un travail dont j'étais dispensé</RimCourt_PromiseBroken.stages.0.label>
+	<RimCourt_PromiseBroken.stages.0.description>Le seigneur a dit à voix haute que j'en avais fini. Puis je m'y suis retrouvé. Laquelle des deux était vraie ?</RimCourt_PromiseBroken.stages.0.description>
+	<RimCourt_LordBrokeHisWord.stages.0.label>est revenu sur ce qu'il avait jugé</RimCourt_LordBrokeHisWord.stages.0.label>
+
+	<RimCourt_LordFavouredHisOwn.stages.0.label>a tranché en faveur des siens</RimCourt_LordFavouredHisOwn.stages.0.label>
+
+	<RimCourt_DefiedTheLord.stages.0.label>n'a pas accepté le jugement</RimCourt_DefiedTheLord.stages.0.label>
+	<RimCourt_DefiedTheLord.stages.0.description>Il l'a dit et je suis sorti. Quoi qu'il en soit par ailleurs, je ne suis pas resté planté là à encaisser.</RimCourt_DefiedTheLord.stages.0.description>
+	<RimCourt_LordWasDefied.stages.0.label>s'est fait quitter la salle en pleine audience</RimCourt_LordWasDefied.stages.0.label>
+
+	<RimCourt_EstateDenied.stages.0.label>a reçu ce qui aurait dû me revenir</RimCourt_EstateDenied.stages.0.label>
+
+	<RimCourt_RuledAgainstNature.stages.0.label>j'ai jugé contre ma nature</RimCourt_RuledAgainstNature.stages.0.label>
+	<RimCourt_RuledAgainstNature.stages.0.description>J'ai dit depuis ce siège une chose que je ne pense pas. Ils m'ont tous entendu la dire, et je dois être celui qui l'a dite maintenant.</RimCourt_RuledAgainstNature.stages.0.description>
+	<RimCourt_RuledTrueToNature.stages.0.label>j'ai jugé comme je l'aurais fait de toute façon</RimCourt_RuledTrueToNature.stages.0.label>
+	<RimCourt_RuledTrueToNature.stages.0.description>Le siège m'a demandé un jugement et je lui ai donné celui que j'avais déjà. C'est un bon jour quand ces deux-là s'accordent.</RimCourt_RuledTrueToNature.stages.0.description>
+
+	<RimCourt_Freed.stages.0.label>affranchi par la parole du seigneur</RimCourt_Freed.stages.0.label>
+	<RimCourt_Freed.stages.0.description>Je me suis tenu là où se tiennent les hommes libres et j'ai demandé. Ils ont dit oui, devant tout le monde. Je n'oublierai pas cette salle.</RimCourt_Freed.stages.0.description>
+
+	<RimCourt_InStocks.stages.0.label>mis au pilori</RimCourt_InStocks.stages.0.label>
+	<RimCourt_InStocks.stages.0.description>On m'a planté dans un bâti au milieu de la cour et on a laissé tout le monde regarder. Je ne pouvais même pas détourner la tête.</RimCourt_InStocks.stages.0.description>
+	<RimCourt_MockedInStocks.stages.0.label>s'est moqué de moi au pilori</RimCourt_MockedInStocks.stages.0.label>
+	<RimCourt_HadALaugh.stages.0.label>a bien ri au pilori</RimCourt_HadALaugh.stages.0.label>
+	<RimCourt_HadALaugh.stages.0.description>Quelqu'un était au pilori et j'avais quelque chose à en dire. Un plaisir facile, mais un plaisir.</RimCourt_HadALaugh.stages.0.description>
+
+	<RimCourt_PeltedInStocks.stages.0.label>m'a bombardé au pilori</RimCourt_PeltedInStocks.stages.0.label>
+
+	<RimCourt_KillerFreed.stages.0.label>le seigneur a laissé partir un tueur</RimCourt_KillerFreed.stages.0.label>
+	<RimCourt_KillerFreed.stages.0.description>Il se tenait là avec du sang sur les mains, un des nôtres en terre à cause de lui, et le siège l'a renvoyé chez lui. Je l'ai regardé partir.</RimCourt_KillerFreed.stages.0.description>
+
+</LanguageData>

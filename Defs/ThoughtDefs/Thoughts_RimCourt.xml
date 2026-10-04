@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>RimCourt_LordRuledForMe</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>8</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackLimitForSameOtherPawn>2</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>ruled in my favor</label>
+				<baseOpinionOffset>15</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_LordRuledAgainstMe</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>8</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackLimitForSameOtherPawn>2</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>ruled against me</label>
+				<baseOpinionOffset>-15</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_LordDismissedMyCase</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>8</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackLimitForSameOtherPawn>2</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>waved my case away</label>
+				<baseOpinionOffset>-8</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_SettledBeforeLord</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>10</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>settled before the lord</label>
+				<baseOpinionOffset>10</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_ScoldedByLord</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>3</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>scolded at court</label>
+				<description>The lord dressed me down in front of the whole colony.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_LordReputation</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>RimCourt.Court.ThoughtWorker_LordReputation</workerClass>
+		<stages>
+			<li>
+				<label>rules justly</label>
+				<baseOpinionOffset>20</baseOpinionOffset>
+			</li>
+			<li>
+				<label>rules harshly</label>
+				<baseOpinionOffset>-12</baseOpinionOffset>
+			</li>
+			<li>
+				<label>sells his verdicts</label>
+				<baseOpinionOffset>-25</baseOpinionOffset>
+			</li>
+			<li>
+				<label>settles nothing</label>
+				<baseOpinionOffset>-8</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_SawCourtHeld</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>2</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>watched the lord hold court</label>
+				<description>Grievances were heard and settled properly. That is how things should be done.</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_BlessedByLord</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>12</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>the lord blessed our match</label>
+				<description>He said it out loud, in front of everyone. Nobody can call it improper now.</description>
+				<baseMoodEffect>8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_RefusedByLord</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>10</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>refused by the lord</label>
+				<description>I asked for the one thing I wanted and was told no in front of the whole colony.</description>
+				<baseMoodEffect>-8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_HonouredByLord</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>15</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>honoured before the court</label>
+				<description>What I did was said out loud, and everyone heard it.</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_HonouredHim</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>15</durationDays>
+		<stackLimit>2</stackLimit>
+		<stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>honoured by the lord</label>
+				<baseOpinionOffset>12</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_Deposed</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>10</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>deposed before the court</label>
+				<description>I held the seat, and the whole colony watched me lose it.</description>
+				<baseMoodEffect>-8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_TookThrone</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>10</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>took the lord's seat</label>
+				<description>I claimed the seat before the whole court, and now it is mine.</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_DefeatedBeforeCourt</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>8</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>beaten before the court</label>
+				<description>I claimed the seat and was put on the floor in front of everyone.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+	<ThoughtDef>
+		<defName>RimCourt_PaidInSilver</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>20</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>paid for the blood I spilled</label>
+				<description>They put a price on what I did and they paid it. That is worth more than being thanked.</description>
+				<baseMoodEffect>14</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+	<ThoughtDef>
+		<defName>RimCourt_LordAdmittedFault</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>30</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>admitted he was wrong about me</label>
+				<baseOpinionOffset>40</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_LordJudgedHimself</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>30</durationDays>
+		<stackLimit>3</stackLimit>
+		<stages>
+			<li>
+				<label>judged his own case and won it</label>
+				<baseOpinionOffset>-35</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+	<ThoughtDef>
+		<defName>RimCourt_PromiseBroken</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>12</durationDays>
+		<stackLimit>2</stackLimit>
+		<stages>
+			<li>
+				<label>put back to work I was excused from</label>
+				<description>The lord said out loud that I was done with it. Then I was doing it again. So which of those was true?</description>
+				<baseMoodEffect>-8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_LordBrokeHisWord</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>20</durationDays>
+		<stackLimit>2</stackLimit>
+		<stages>
+			<li>
+				<label>went back on what he ruled</label>
+				<baseOpinionOffset>-40</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+	<ThoughtDef>
+		<defName>RimCourt_LordFavouredHisOwn</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>15</durationDays>
+		<stackLimit>3</stackLimit>
+		<stages>
+			<li>
+				<label>ruled for his own family</label>
+				<baseOpinionOffset>-25</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+	<ThoughtDef>
+		<defName>RimCourt_DefiedTheLord</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>10</durationDays>
+		<stackLimit>2</stackLimit>
+		<stages>
+			<li>
+				<label>did not take the ruling</label>
+				<description>He said it and I walked out. Whatever else is true, I did not stand there and take it.</description>
+				<baseMoodEffect>6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_LordWasDefied</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>15</durationDays>
+		<stackLimit>3</stackLimit>
+		<stages>
+			<li>
+				<label>was walked out on in his own hall</label>
+				<baseOpinionOffset>-20</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+	<ThoughtDef>
+		<defName>RimCourt_EstateDenied</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>20</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>was handed what should have come to me</label>
+				<baseOpinionOffset>-20</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+	<ThoughtDef>
+		<defName>RimCourt_RuledAgainstNature</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>5</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackedEffectMultiplier>0.8</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>ruled against my own nature</label>
+				<description>I said a thing from that chair that I do not believe. They all heard me say it, and I have to be the man who said it now.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_RuledTrueToNature</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>4</durationDays>
+		<stackLimit>2</stackLimit>
+		<stages>
+			<li>
+				<label>ruled as I would have anyway</label>
+				<description>The seat asked me for a judgement and I gave it the one I already had. It is a good day when those two agree.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_Freed</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>40</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>freed by the lord's word</label>
+				<description>I stood where the free people stand and asked. They said yes, in front of everyone. I am not going to forget the room.</description>
+				<baseMoodEffect>12</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_InStocks</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>5</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>bound to the post</label>
+				<description>They tied me to a post in the yard and let everyone have a look. I could not even walk away from it.</description>
+				<baseMoodEffect>-8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_MockedInStocks</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>8</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>laughed at me at the post</label>
+				<baseOpinionOffset>-12</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_HadALaugh</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>1</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>had a laugh at the post</label>
+				<description>Someone was tied to the post and I had something to say about it. Cheap fun, but fun.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_PeltedInStocks</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>10</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>threw things at me at the post</label>
+				<baseOpinionOffset>-18</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- Le seigneur a relâché ou rançonné un prisonnier qui avait tué un des nôtres. Aaaah putain, la colonie s'en souvient dix jours. -->
+	<ThoughtDef>
+		<defName>RimCourt_KillerFreed</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>10</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>the lord let a killer walk</label>
+				<description>He stood there with blood on his hands, one of ours in the ground because of him, and the seat sent him home. I watched him go.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

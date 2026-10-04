@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- La seule affaire dont les consequences sortent de la colonie.
+	     Deux factions, une seule peut gagner, et les deux s'en souviennent. -->
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Arbitration</defName>
+		<priority>90</priority>
+		<label>a quarrel between neighbours</label>
+		<description>Two factions bring a dispute to the lord rather than settle it with soldiers.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Arbitration</workerClass>
+		<amountRange>250~600</amountRange>
+		<arrivalText>{PETITIONER_labelShort} of {FIRST} and {OTHER_labelShort} of {SECOND} have come to the gate together, which neighbours who are quarrelling do not usually manage. The quarrel is {QUARREL}, and they have brought it here rather than settle it with soldiers.
+
+Neither has any hold over the lord. That is the point of asking him. They will wait {DAYS} days for an audience, and whatever he says, one of them goes home having lost.</arrivalText>
+		<caseText>{PETITIONER_labelShort} speaks for {FIRST}, {OTHER_labelShort} for {SECOND}, and the quarrel is {QUARREL}. Both accounts are complete and they agree nowhere it matters. Both have agreed in advance to be bound by whatever this chair says, which is a great deal of trust to put in a stranger.
+
+One of them leaves having lost, and both will remember which.
+
+How does the lord rule?</caseText>
+		<!-- Quatre verdicts. PAS CINQ. Aaaah putain, la soirée que j'ai perdue là-dessus. -->
+		<verdicts>
+			<li>
+				<label>Rule for {FIRST}</label>
+				<pastLabel>ruled for {FIRST} against {SECOND}</pastLabel>
+				<outcome>RuleForFirst</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Rule for {SECOND}</label>
+				<pastLabel>ruled for {SECOND} against {FIRST}</pastLabel>
+				<outcome>RuleForSecond</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Rule for whichever of them puts {SILVER} silver on the table</label>
+				<pastLabel>the ruling went to the one who paid</pastLabel>
+				<outcome>ArbitrationFee</outcome>
+				<venal>3</venal>
+			</li>
+			<li>
+				<label>Send them both away unheard</label>
+				<pastLabel>sent away to settle it themselves</pastLabel>
+				<outcome>Dismiss</outcome>
+				<weak>3</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+</Defs>

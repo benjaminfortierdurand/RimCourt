@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<LetterDef>
+		<defName>RimCourt_Verdict</defName>
+		<letterClass>RimCourt.Letters.ChoiceLetter_Verdict</letterClass>
+		<color>(175, 176, 185)</color>
+		<flashColor>(160, 170, 180)</flashColor>
+		<flashInterval>90</flashInterval>
+		<arriveSound>LetterArrive</arriveSound>
+	</LetterDef>
+
+</Defs>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_AudienceSpot.label>marqueur d'audience</RimCourt_AudienceSpot.label>
+	<RimCourt_AudienceSpot.description>Facultatif. Marque la case exacte où les pétitionnaires se tiennent pour plaider. Sans lui, ils se placent simplement à quelques cases devant le siège du seigneur, ce qui convient la plupart du temps. Posez-en un si vous voulez les éloigner, au bout d'une grande salle, ou si le siège fait face à un mur. Le plus proche à moins de 15 cases du siège l'emporte. Il se pose sur un sol, un tapis ou un meuble, et ne bloque jamais rien.</RimCourt_AudienceSpot.description>
+
+	<RimCourt_LordSeat.label>siège du seigneur</RimCourt_LordSeat.label>
+	<RimCourt_LordSeat.description>C'est toute la cour. Placez-le directement sur un trône ou une belle chaise : le marqueur se glisse sous le meuble, le trône reste donc visible, et le seigneur vient y siéger quand vous tenez audience. Les pétitionnaires se tiennent à quelques cases devant, dans la direction que regarde la chaise. Sélectionnez le marqueur pour voir la case où ils se placeront. Au sol nu, tournez le marqueur pour choisir la direction du regard du seigneur. Si RimJoust est installé, son siège du seigneur fonctionne aussi.</RimCourt_LordSeat.description>
+
+</LanguageData>

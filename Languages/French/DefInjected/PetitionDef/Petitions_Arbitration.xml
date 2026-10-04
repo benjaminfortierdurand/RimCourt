@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_Arbitration.label>une querelle entre voisins</RimCourt_Arbitration.label>
+	<RimCourt_Arbitration.description>Deux factions apportent un litige au seigneur plutôt que de le régler avec des soldats.</RimCourt_Arbitration.description>
+	<RimCourt_Arbitration.arrivalText>{PETITIONER_labelShort}, de {FIRST}, et {OTHER_labelShort}, de {SECOND}, se sont présentés ensemble à la porte, ce que des voisins en querelle ne parviennent pas souvent à faire. Le litige porte sur {QUARREL}, et ils l'apportent ici plutôt que de le régler avec des soldats.
+
+Ni l'un ni l'autre n'a de prise sur le seigneur. C'est précisément pour cela qu'on s'adresse à lui. Ils attendront une audience {DAYS} jours, et quoi qu'il dise, l'un des deux rentrera chez lui après avoir perdu.</RimCourt_Arbitration.arrivalText>
+	<RimCourt_Arbitration.caseText>{PETITIONER_labelShort} parle pour {FIRST}, {OTHER_labelShort} pour {SECOND}, et le litige porte sur {QUARREL}. Les deux récits sont complets et ne concordent nulle part où cela compte. Tous deux ont accepté d'avance d'être liés par ce que dira ce siège, ce qui fait beaucoup de confiance placée dans un étranger.
+
+L'un des deux repartira après avoir perdu, et les deux se souviendront duquel.
+
+Comment le seigneur tranche-t-il ?</RimCourt_Arbitration.caseText>
+	<RimCourt_Arbitration.verdicts.0.label>Donner raison à {FIRST}</RimCourt_Arbitration.verdicts.0.label>
+	<RimCourt_Arbitration.verdicts.1.label>Donner raison à {SECOND}</RimCourt_Arbitration.verdicts.1.label>
+	<RimCourt_Arbitration.verdicts.2.label>Donner raison à celui des deux qui posera {SILVER} pièces sur la table</RimCourt_Arbitration.verdicts.2.label>
+	<RimCourt_Arbitration.verdicts.3.label>Les renvoyer tous les deux sans les entendre</RimCourt_Arbitration.verdicts.3.label>
+	<RimCourt_Arbitration.verdicts.0.pastLabel>donné raison à {FIRST} contre {SECOND}</RimCourt_Arbitration.verdicts.0.pastLabel>
+	<RimCourt_Arbitration.verdicts.1.pastLabel>donné raison à {SECOND} contre {FIRST}</RimCourt_Arbitration.verdicts.1.pastLabel>
+	<RimCourt_Arbitration.verdicts.2.pastLabel>le jugement est allé à celui qui a payé</RimCourt_Arbitration.verdicts.2.pastLabel>
+	<RimCourt_Arbitration.verdicts.3.pastLabel>renvoyés régler cela eux-mêmes</RimCourt_Arbitration.verdicts.3.pastLabel>
+
+</LanguageData>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_HoldCourt.reportString>tient audience.</RimCourt_HoldCourt.reportString>
+	<RimCourt_AttendCourt.reportString>assiste à l'audience.</RimCourt_AttendCourt.reportString>
+	<RimCourt_PleadCase.reportString>plaide devant le seigneur.</RimCourt_PleadCase.reportString>
+
+	<RimCourt_Flog.reportString>exécute la punition du seigneur.</RimCourt_Flog.reportString>
+	<RimCourt_TakeLashes.reportString>en répond devant la cour.</RimCourt_TakeLashes.reportString>
+
+
+	<RimCourt_StandInStocks.reportString>au pilori.</RimCourt_StandInStocks.reportString>
+
+	<RimCourt_EscortToStocks.reportString>conduit TargetA au pilori.</RimCourt_EscortToStocks.reportString>
+
+	<RimCourt_BringCaptive.reportString>amène TargetA devant le siège.</RimCourt_BringCaptive.reportString>
+	<RimCourt_ExecuteCaptive.reportString>exécute la sentence du seigneur.</RimCourt_ExecuteCaptive.reportString>
+	<RimCourt_JeerAtStocks.reportString>se paie la tête du type au pilori.</RimCourt_JeerAtStocks.reportString>
+
+</LanguageData>

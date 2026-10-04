@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- La seule affaire ou l'accuse est celui qui juge. Elle ne sort que des
+	     verdicts que le joueur a rendus lui-meme : pas de generateur ici. -->
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_AgainstLord</defName>
+		<priority>80</priority>
+		<label>a grievance against the seat itself</label>
+		<description>A colonist the lord has ruled against too often comes to ask the lord for redress against the lord.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_AgainstLord</workerClass>
+		<maxMemoryAgeDays>30</maxMemoryAgeDays>
+		<sourceThoughts>
+			<li>RimCourt_LordRuledAgainstMe</li>
+			<li>RimCourt_LordDismissedMyCase</li>
+			<li>RimCourt_RefusedByLord</li>
+			<li>RimCourt_LordBrokeHisWord</li>
+		</sourceThoughts>
+		<!-- Fais pas plus long. La feuille passe en Tiny quand ça déborde et on lit plus rien. -->
+		<caseText>{PETITIONER_labelShort} comes forward alone. There is nobody to stand opposite {PETITIONER_objective}: the complaint is against {LORD}, and {LORD} is on the seat.
+
+{COUNT} times this court has ruled against {PETITIONER_labelShort} or sent {PETITIONER_objective} off without an answer. {PETITIONER_pronoun} does not say any one of them was wrong. {PETITIONER_pronoun} says all of them together are a habit, and that a lord who is never wrong is a lord nobody can bring anything to.
+
+The hall has gone quiet. How does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Grant that the court has wronged {PETITIONER_labelShort}</label>
+				<pastLabel>the court admitted its own fault</pastLabel>
+				<outcome>AdmitFault</outcome>
+				<just>3</just>
+			</li>
+			<li>
+				<label>Rule that the court has always ruled correctly</label>
+				<pastLabel>the court cleared itself</pastLabel>
+				<outcome>RuleForSelf</outcome>
+				<venal>2</venal>
+			</li>
+			<li>
+				<label>Have {PETITIONER_labelShort} flogged for speaking so to the seat</label>
+				<pastLabel>flogged for insolence to the seat</pastLabel>
+				<outcome>FlogAccuser</outcome>
+				<harsh>3</harsh>
+			</li>
+			<li>
+				<label>Let the hall wait, and say nothing</label>
+				<pastLabel>no answer given to the accusation</pastLabel>
+				<outcome>Defer</outcome>
+				<weak>3</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+</Defs>

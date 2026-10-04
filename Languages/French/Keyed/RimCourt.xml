@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Gizmos -->
+	<RimCourt.HoldCourtLabel>Tenir audience</RimCourt.HoldCourtLabel>
+	<RimCourt.GuideGizmoLabel>Guide de la cour</RimCourt.GuideGizmoLabel>
+	<RimCourt.GuideGizmoDesc>Comment se tient une audience : d'ou viennent les affaires, comment trancher, et ce que cela fait au nom du seigneur.</RimCourt.GuideGizmoDesc>
+	<RimCourt.Settings.OpenGuide>Ouvrir le guide de la cour</RimCourt.Settings.OpenGuide>
+	<RimCourt.HoldCourtDesc>Convoque une audience. Le seigneur prend place, la colonie s'assemble, et les pétitionnaires plaident leur cause un par un. C'est vous qui rendez chaque verdict.</RimCourt.HoldCourtDesc>
+	<RimCourt.NameLordLabel>Nommer le seigneur</RimCourt.NameLordLabel>
+	<RimCourt.NameLordDesc>Choisissez qui tient audience. Sans intervention, le siège revient au propriétaire du trône, et à défaut à celui qui pèse le plus dans la colonie.</RimCourt.NameLordDesc>
+	<RimCourt.NameLordOnThrone>Le siège repose sur le trône de {0}, et cela tranche la question. Réattribuez le trône pour installer un autre, ou laissez quelqu'un le lui prendre en pleine audience.</RimCourt.NameLordOnThrone>
+	<RimCourt.PickLordTitle>Qui tient audience</RimCourt.PickLordTitle>
+	<RimCourt.PickLordDesc>Aucun trône ne porte ce siège : il revient donc à celui que la colonie tient pour le plus haut. Attribuez un trône et son propriétaire prendra place de lui-même ; en attendant, nommez votre seigneur ici.</RimCourt.PickLordDesc>
+	<RimCourt.PickLordRow>{0}  ·  social {1}</RimCourt.PickLordRow>
+	<RimCourt.PickLordNoTitle>sans titre</RimCourt.PickLordNoTitle>
+	<RimCourt.PickLordThroneDesc>Le siège repose sur le trône de {0} : la cour l'y installerait d'elle-même. Si un autre le tient, c'est que vous ou une contestation l'y avez mis ; rendez le choix au siège et le trône le reprend.</RimCourt.PickLordThroneDesc>
+	<RimCourt.PickLordSeatOwner>propriétaire du trône</RimCourt.PickLordSeatOwner>
+	<RimCourt.LordByThrone>{0} tient audience, de droit par le trône.</RimCourt.LordByThrone>
+	<RimCourt.PickLordAuto>S'en remettre au siège ({0} en l'état)</RimCourt.PickLordAuto>
+	<RimCourt.LordNamed>{0} tient audience, par votre volonté.</RimCourt.LordNamed>
+	<RimCourt.LordByPrestige>{0} tiendrait audience.</RimCourt.LordByPrestige>
+	<RimCourt.NameHandLabel>Nommer la Main</RimCourt.NameHandLabel>
+	<RimCourt.NameHandDesc>Nommez un colon pour présider quand le seigneur ne le peut pas : alité, malade, ou trop jeune pour faire jurer qui que ce soit. Sans Main, le siège retombe au poids du rang, comme il l'a toujours fait.</RimCourt.NameHandDesc>
+	<RimCourt.PickHandTitle>La Main du seigneur</RimCourt.PickHandTitle>
+	<RimCourt.PickHandDesc>La Main prend le siège pour la journée chaque fois que le seigneur n'est pas en état de le tenir. Les verdicts sont les siens, la réputation qu'elle bâtit est celle de la cour, et le seigneur reprend sa place dès qu'il peut marcher jusqu'au siège.</RimCourt.PickHandDesc>
+	<RimCourt.PickHandNone>La cour se passera de Main</RimCourt.PickHandNone>
+	<RimCourt.LordByHand>{0} tient audience comme Main, le seigneur étant empêché.</RimCourt.LordByHand>
+	<RimCourt.StandingByHand>tient audience comme Main, le seigneur étant empêché</RimCourt.StandingByHand>
+	<RimCourt.StandingHandTag>la Main</RimCourt.StandingHandTag>
+	<RimCourt.SeatInheritedLabel>{0} hérite du siège</RimCourt.SeatInheritedLabel>
+	<RimCourt.SeatInheritedText>{0} est mort, et avait désigné {1} pour héritier avant que cela n'arrive. Le titre passe, et cette cour passe avec lui : {1} tient désormais le siège, par héritage et non par le poids du rang.
+
+Nommez le seigneur, sur le marqueur, si la salle doit répondre à quelqu'un d'autre.</RimCourt.SeatInheritedText>
+	<RimCourt.ShapedLabel>Le siège a changé {0}</RimCourt.ShapedLabel>
+	<RimCourt.Shaped1>{0} a ordonné assez de douleur depuis ce siège pour cesser d'y voir un problème. Il est {1} désormais, et c'est définitif.
+
+Il sera à l'aise avec les verdicts durs qu'il ramenait autrefois à la maison, ce qui n'est pas la même chose qu'être un meilleur seigneur.</RimCourt.Shaped1>
+	<RimCourt.Shaped2>{0} a pris assez d'argent depuis ce siège pour que cela devienne une habitude plutôt qu'une décision. Il est {1} désormais, et c'est définitif.
+
+Il sera à l'aise avec les verdicts vénaux qu'il ramenait autrefois à la maison, ce qui n'est pas la même chose qu'être un meilleur seigneur.</RimCourt.Shaped2>
+	<RimCourt.Shaped3>{0} a esquivé assez de jugements depuis ce siège pour ne plus s'attendre à être obéi. Il est {1} désormais, et c'est définitif.
+
+Il sera à l'aise avec les verdicts faibles qu'il ramenait autrefois à la maison, ce qui n'est pas la même chose qu'être un meilleur seigneur.</RimCourt.Shaped3>
+	<RimCourt.ShapedLostKind>Ce qu'il y avait de bon chez {0} n'y a pas survécu.</RimCourt.ShapedLostKind>
+	<RimCourt.Settings.ShapeLord>Le siège change l'homme</RimCourt.Settings.ShapeLord>
+	<RimCourt.Settings.ShapeLordHint>Après une longue série de verdicts durs, vénaux ou faibles, le seigneur gagne définitivement un trait assorti. Il faut une réputation établie, trente points sur l'axe et une douzaine de verdicts du même homme : c'est rare, et c'est annoncé. Jamais de bon trait : le siège corrompt, il n'ennoblit pas. Un seigneur bon devenu sanguinaire n'est plus bon.</RimCourt.Settings.ShapeLordHint>
+	<RimCourt.Settings.NoDecay>Un nom fait ne s'oublie jamais</RimCourt.Settings.NoDecay>
+	<RimCourt.Settings.NoDecayHint>La réputation s'efface normalement d'environ trois pour cent par jour entre deux séances : une cour qui cesse de siéger se fait lentement oublier. Cochez et elle ne s'efface plus : ce que le seigneur s'est vu reconnaître, il le garde. C'est ouvertement de la triche, et c'est là si vous la voulez.</RimCourt.Settings.NoDecayHint>
+	<RimCourt.Epithet0>le Juste</RimCourt.Epithet0>
+	<RimCourt.Epithet1>le Cruel</RimCourt.Epithet1>
+	<RimCourt.Epithet2>le Cupide</RimCourt.Epithet2>
+	<RimCourt.Epithet3>le Faible</RimCourt.Epithet3>
+	<RimCourt.EpithetF0>la Juste</RimCourt.EpithetF0>
+	<RimCourt.EpithetF1>la Cruelle</RimCourt.EpithetF1>
+	<RimCourt.EpithetF2>la Cupide</RimCourt.EpithetF2>
+	<RimCourt.EpithetF3>la Faible</RimCourt.EpithetF3>
+	<RimCourt.EpithetLine>Depuis ce jour la colonie a un nom pour lui, et il est dans son nom : {0}.</RimCourt.EpithetLine>
+	<RimCourt.EpithetDropped>{0} ne s'appelle plus {1}. Le nom s'est effacé avec les verdicts qui l'avaient gagné.</RimCourt.EpithetDropped>
+	<RimCourt.Settings.Epithets>La colonie met le nom dans son nom</RimCourt.Settings.Epithets>
+	<RimCourt.Settings.EpithetsHint>Une fois la réputation de la cour établie, le surnom du seigneur la porte : Jaime le Juste, Jaime le Cruel, Jaime le Cupide, Jaime le Faible. Il change quand le nom change et disparaît quand il s'efface. Un seigneur mort garde celui avec lequel il est mort. Décochez pour laisser les noms tels quels.</RimCourt.Settings.EpithetsHint>
+	<RimCourt.PutInStocks>{0} est mis au pilori pour {1} heures, à la vue de toute la colonie.</RimCourt.PutInStocks>
+	<RimCourt.NoStocksLash>Aucun pilori n'est construit, alors {0} reçoit le fouet à la place.</RimCourt.NoStocksLash>
+	<RimCourt.StocksReleased>{0} a purgé son temps au pilori.</RimCourt.StocksReleased>
+	<RimCourt.StocksFreed>{0} a été libéré du pilori avant l'heure.</RimCourt.StocksFreed>
+	<RimCourt.StocksReleaseLabel>Libérer</RimCourt.StocksReleaseLabel>
+	<RimCourt.StocksReleaseDesc>Sortir {0} du pilori avant la fin de sa peine. La cour n'en dira rien.</RimCourt.StocksReleaseDesc>
+	<RimCourt.StocksInspect>{0} au pilori, {1} restant.</RimCourt.StocksInspect>
+	<RimCourt.Settings.StocksHours>Heures au pilori</RimCourt.Settings.StocksHours>
+	<RimCourt.EscortDialogTitle>Au pilori</RimCourt.EscortDialogTitle>
+	<RimCourt.EscortDialogDesc>{0} doit être attaché au pilori, à la vue de tous. Quelqu'un l'y conduit et serre les liens, et la colonie se souviendra de qui. Choisissez, ou laissez {0} y aller seul.</RimCourt.EscortDialogDesc>
+	<RimCourt.EscortNoOne>Le laisser y aller seul</RimCourt.EscortNoOne>
+	<RimCourt.EscortNoOneCaptive>Le plus proche le porte</RimCourt.EscortNoOneCaptive>
+	<RimCourt.StocksUnreachableLash>Impossible d'amener {0} au pilori, ce sera donc le fouet.</RimCourt.StocksUnreachableLash>
+	<RimCourt.CaptiveCantReachPost>Personne n'a pu amener {0} au pilori. {0} retourne en cellule.</RimCourt.CaptiveCantReachPost>
+	<RimCourt.EscortRowInfo>{0}  ·  opinion du condamné {1}</RimCourt.EscortRowInfo>
+	<RimCourt.StocksTaken>{1} conduit {0} au pilori, pour {2} heures à la vue de toute la colonie.</RimCourt.StocksTaken>
+	<RimCourt.StocksInspectTaking>{0} conduit au pilori par {1}.</RimCourt.StocksInspectTaking>
+	<RimCourt.CaptiveBlood>{0} a tué {1}. Toute la salle le sait, et la moitié l'a vu faire.</RimCourt.CaptiveBlood>
+	<RimCourt.CaptiveHurt>{0} a mis {1} à terre. {1} s'est relevé, ce qui n'est pas à mettre au crédit de {0}.</RimCourt.CaptiveHurt>
+	<RimCourt.CaptiveRaids>Les gens de {0}, la faction {1}, sont venus contre ces murs {2} fois cette année. Ce n'est pas un étranger. C'est une habitude.</RimCourt.CaptiveRaids>
+	<RimCourt.CaptiveNobody>Personne n'a vu {0} toucher qui que ce soit. {0} est venu avec les autres et est tombé avec les autres, et c'est là toute l'accusation.</RimCourt.CaptiveNobody>
+	<RimCourt.CaptiveBrought>{0} va chercher {1} dans sa cellule.</RimCourt.CaptiveBrought>
+	<RimCourt.CaptiveNoGuard>Personne n'est libre pour aller chercher {0}, alors {0} est appelé et vient seul.</RimCourt.CaptiveNoGuard>
+	<RimCourt.CaptiveReleased>{0} est renvoyé chez les {1} avec un avertissement.</RimCourt.CaptiveReleased>
+	<RimCourt.CaptiveRansomed>Les {1} ont payé {2} pièces d'argent pour {0}. {0} rentre chez lui.</RimCourt.CaptiveRansomed>
+	<RimCourt.CaptiveExecuted>{0} passe {1} par l'épée devant le siège.</RimCourt.CaptiveExecuted>
+	<RimCourt.CaptiveNoExecutioner>Personne dans la salle ne veut tenir la lame. {0} est marqué pour l'exécution et ramené en cellule.</RimCourt.CaptiveNoExecutioner>
+	<RimCourt.CaptiveNoStocks>Aucun pilori n'est construit. {0} retourne en cellule.</RimCourt.CaptiveNoStocks>
+	<RimCourt.CaptiveKept>{0} retourne en cellule.</RimCourt.CaptiveKept>
+	<RimCourt.ExecutionerDialogTitle>L'épée</RimCourt.ExecutionerDialogTitle>
+	<RimCourt.ExecutionerDialogDesc>{0} doit mourir ici, devant la cour. Quelqu'un tient la lame, et la colonie se souviendra de qui. Choisissez, ou laissez le plus proche s'en charger sans cérémonie.</RimCourt.ExecutionerDialogDesc>
+	<RimCourt.ExecutionerNoOne>Le plus proche, sans cérémonie</RimCourt.ExecutionerNoOne>
+	<RimCourt.CancelCourtLabel>Dissoudre l'audience</RimCourt.CancelCourtLabel>
+	<RimCourt.CancelCourtDesc>Met fin à la session en cours. Les affaires non entendues sont abandonnées.</RimCourt.CancelCourtDesc>
+	<RimCourt.CancelCourtConfirm>Dissoudre l'audience ? Les affaires non entendues seront abandonnées.</RimCourt.CancelCourtConfirm>
+	<RimCourt.CourtCooldownGizmo>La cour siégera de nouveau dans {0} jours.</RimCourt.CourtCooldownGizmo>
+	<RimCourt.CourtCooldownGizmoOne>La cour siégera de nouveau demain.</RimCourt.CourtCooldownGizmoOne>
+
+	<!-- Convocation -->
+	<RimCourt.CourtAlreadyRunning>Une audience est déjà en cours.</RimCourt.CourtAlreadyRunning>
+	<RimCourt.CourtOnCooldown>La cour a fini de siéger pour l'instant. Elle reprendra dans {0} jours.</RimCourt.CourtOnCooldown>
+	<RimCourt.CourtOnCooldownOne>La cour a fini de siéger pour l'instant. Elle reprendra demain.</RimCourt.CourtOnCooldownOne>
+	<RimCourt.NeedSeat>Aucun siège du seigneur près du marqueur d'audience. Placez-en un à moins de 15 cases.</RimCourt.NeedSeat>
+	<RimCourt.NoAudienceRoom>Pas de place devant le siège pour que les pétitionnaires se tiennent. Tournez le siège, dégagez l'espace, ou posez un marqueur d'audience.</RimCourt.NoAudienceRoom>
+	<RimCourt.PetitionersStandHere>Les pétitionnaires se tiendront {0} cases devant.</RimCourt.PetitionersStandHere>
+	<RimCourt.NeedLord>Personne dans la colonie ne peut tenir audience pour l'instant.</RimCourt.NeedLord>
+	<RimCourt.NoPetitions>Personne ne réclame la justice du seigneur aujourd'hui. Aucune querelle digne d'être entendue.</RimCourt.NoPetitions>
+	<RimCourt.CourtConvened>{0} tient audience. {1} affaires seront entendues.</RimCourt.CourtConvened>
+	<RimCourt.CourtConvenedOne>{0} tient audience. Une affaire sera entendue.</RimCourt.CourtConvenedOne>
+
+	<!-- Session -->
+	<RimCourt.CaseCalled>{0} s'avance pour plaider.</RimCourt.CaseCalled>
+	<RimCourt.CaseSkipped>L'affaire de {0} n'a pas pu être entendue.</RimCourt.CaseSkipped>
+	<RimCourt.CourtCancelled>L'audience est dissoute.</RimCourt.CourtCancelled>
+	<RimCourt.CourtLordGone>Le seigneur n'est pas en état de tenir audience. L'audience est dissoute.</RimCourt.CourtLordGone>
+	<RimCourt.CourtScattered>La cour se disperse. Personne ne plaide pendant que la colonie est attaquée.</RimCourt.CourtScattered>
+	<RimCourt.VerdictLetterLabel>Pétition : {0}</RimCourt.VerdictLetterLabel>
+	<RimCourt.VerdictRendered>{0} a parlé. {1}.</RimCourt.VerdictRendered>
+	<RimCourt.VerdictRefused>{0} ne l'accepte pas et quitte la salle pendant que {1} parle encore. Le jugement tient sur le papier et sur rien d'autre.</RimCourt.VerdictRefused>
+	<RimCourt.BanishedByCourt>{0} est banni de la colonie par la parole du seigneur.</RimCourt.BanishedByCourt>
+	<RimCourt.ExileReturnsLabel>{0} est revenu</RimCourt.ExileReturnsLabel>
+	<RimCourt.ExileReturnsText>La cour a renvoyé {0} et la cour en avait fini. {0}, non.\n\nIl chevauche avec {1} désormais, et il en a amené {2} avec lui. Il sait où sont les portes, il sait lesquels d'entre vous savent se battre, et il sait exactement ce qu'on lui a dit au pied de ce siège.</RimCourt.ExileReturnsText>
+	<RimCourt.ExileWarlordLabel>{0} siège maintenant en bout de table</RimCourt.ExileWarlordLabel>
+	<RimCourt.ExileWarlordText>La nouvelle revient de loin. {0}, que cette cour a banni, dirige {1}.\n\nCe qui s'est dit dans cette salle est devenu la politique d'une faction, et cette faction a une frontière avec vous. {0} n'a eu à expliquer son grief à personne : ils ont cru sur parole un homme qui y était.</RimCourt.ExileWarlordText>
+	<RimCourt.FlogMote>Le fouet !</RimCourt.FlogMote>
+	<RimCourt.DuelStarted>{0} et {1} en découdent devant la cour, avec la permission du seigneur.</RimCourt.DuelStarted>
+	<RimCourt.DuelWon>{0} est resté debout. {1} est déclaré dans son tort.</RimCourt.DuelWon>
+	<RimCourt.FloggerDialogTitle>Le prix du sang</RimCourt.FloggerDialogTitle>
+	<RimCourt.FloggerDialogDesc>{0} doit en répondre devant la cour assemblée. Quelqu'un doit tenir le fouet, et la colonie se souviendra de qui l'a fait. Choisissez, ou que cela soit fait sans cérémonie.</RimCourt.FloggerDialogDesc>
+	<RimCourt.FloggerNoOne>Que cela soit fait sans cérémonie</RimCourt.FloggerNoOne>
+	<RimCourt.FloggerRowInfo>{0}  ·  mêlée {1}  ·  opinion du condamné {2}</RimCourt.FloggerRowInfo>
+	<RimCourt.NoFlogger>Personne dans la colonie n'a voulu tenir le fouet : {0} le reçoit tout de même.</RimCourt.NoFlogger>
+	<RimCourt.FloggerLord>{0} (celui qui prononce la sentence la porte lui-même)</RimCourt.FloggerLord>
+	<RimCourt.FloggerWronged>{0} (celui à qui l'on a fait du tort)</RimCourt.FloggerWronged>
+	<RimCourt.FloggerAny>{0}</RimCourt.FloggerAny>
+	<RimCourt.NoAnswerLabel>aucune réponse</RimCourt.NoAnswerLabel>
+	<RimCourt.NoAnswerMessage>{0} a laissé l'affaire de {1} sans réponse. Le silence vaut renvoi.</RimCourt.NoAnswerMessage>
+	<RimCourt.LogVerdict>{0} contre {1} : {2}</RimCourt.LogVerdict>
+	<RimCourt.LogVerdictSolo>{0} : {1}</RimCourt.LogVerdictSolo>
+	<RimCourt.AdjournLetterLabel>La cour se retire</RimCourt.AdjournLetterLabel>
+	<RimCourt.AdjournLetterText>{0} a entendu les pétitions du jour. {1} affaires ont été réglées.</RimCourt.AdjournLetterText>
+	<RimCourt.AdjournLetterTextOne>{0} a entendu les pétitions du jour. Une affaire a été réglée.</RimCourt.AdjournLetterTextOne>
+
+	<!-- Pétitionnaires du dehors -->
+	<RimCourt.PetitionerArrivesLabel>Pétitionnaire : {0}</RimCourt.PetitionerArrivesLabel>
+	<RimCourt.OutsiderGaveUp>{0} a attendu une audience qui n'est jamais venue, et s'en est allé.</RimCourt.OutsiderGaveUp>
+	<RimCourt.OutsiderJoined>{0} a été accueilli dans la colonie.</RimCourt.OutsiderJoined>
+	<RimCourt.SlaveFreed>{0} est libre. Le seigneur l'a dit, et toute la salle l'a entendu.</RimCourt.SlaveFreed>
+	<RimCourt.OutsiderBoughtIn>{0} a payé {1} pièces d'argent pour une place dans la colonie.</RimCourt.OutsiderBoughtIn>
+	<RimCourt.OutsiderPaid>{0} a reçu {1} pièces d'argent en dédommagement.</RimCourt.OutsiderPaid>
+	<RimCourt.OutsiderNoSilver>La colonie n'a pas les {0} pièces d'argent promises par le seigneur. Le pétitionnaire repart insulté.</RimCourt.OutsiderNoSilver>
+	<RimCourt.OutsiderFeeTaken>{0} a payé {1} pièces d'argent de frais de justice, et n'a rien obtenu.</RimCourt.OutsiderFeeTaken>
+	<RimCourt.EnvoyArmsGiven>{1} armes partent vers {0}. Ce qu'ils en feront, ils le feront avec votre acier.</RimCourt.EnvoyArmsGiven>
+	<RimCourt.EnvoyArmsSold>{0} a payé {1} pièces d'argent pour des armes dont ils avaient besoin pour survivre.</RimCourt.EnvoyArmsSold>
+	<RimCourt.EnvoyNoArms>La colonie ne peut pas céder {0} armes de ses réserves.</RimCourt.EnvoyNoArms>
+	<RimCourt.EnvoyFoodGiven>{1} vivres partent vers {0}. Une maison se souvient d'avoir été nourrie.</RimCourt.EnvoyFoodGiven>
+	<RimCourt.EnvoyFoodSold>{0} a payé {1} pièces d'argent pour des vivres qu'ils mendiaient.</RimCourt.EnvoyFoodSold>
+	<RimCourt.EnvoyNoFood>La colonie ne peut pas céder les {0} vivres promis par le seigneur.</RimCourt.EnvoyNoFood>
+	<RimCourt.EnvoyRefused>L'envoyé de {0} repart les mains vides.</RimCourt.EnvoyRefused>
+	<RimCourt.ArbitrationArrivesLabel>Deux voisins à la porte</RimCourt.ArbitrationArrivesLabel>
+	<RimCourt.Quarrel0>une bande de frontière que ni l'un ni l'autre ne peut cultiver et qu'aucun ne veut lâcher</RimCourt.Quarrel0>
+	<RimCourt.Quarrel1>un homme tué sur une route qui n'appartient à personne</RimCourt.Quarrel1>
+	<RimCourt.Quarrel2>une dette que l'un dit avoir payée et que l'autre dit n'avoir jamais reçue</RimCourt.Quarrel2>
+	<RimCourt.ArbitrationRuled>La cour donne raison à {0}. {1} l'accepte, et se souviendra de l'avoir accepté.</RimCourt.ArbitrationRuled>
+	<RimCourt.ArbitrationBought>{0} a posé {1} pièces sur la table et la cour lui a donné raison. {2} a vu la scène.</RimCourt.ArbitrationBought>
+	<RimCourt.ArbitrationRefused>{0} et {1} sont renvoyés régler cela eux-mêmes, ce qu'ils feront, et pas avec des mots.</RimCourt.ArbitrationRefused>
+	<RimCourt.MatchBlessed>{0} et {1} ont la bénédiction du seigneur.</RimCourt.MatchBlessed>
+	<RimCourt.MatchPledged>{0} et {1} ont la bénédiction du seigneur. La noce est fixée à demain au lieu du jour où le couple s'y serait mis, et la cour la fera tenir quoi que la colonie trouve à faire d'autre.</RimCourt.MatchPledged>
+	<RimCourt.WeddingKeptLabel>Parole donnée</RimCourt.WeddingKeptLabel>
+	<RimCourt.WeddingKeptText>La cour a béni cette union il y a des jours, et la colonie n'a jamais trouvé un après-midi assez calme pour une fête. {0} et {1} sont mariés quand même, devant ceux qui se trouvaient là. La parole du seigneur avait été donnée ; ce n'est pas la faute des époux si personne n'est venu.</RimCourt.WeddingKeptText>
+	<RimCourt.WorkExcused>{0} est dispensé de {1} par la parole du seigneur.</RimCourt.WorkExcused>
+	<RimCourt.Apprenticed>{0} sera formé à {1} pour de bon, et c'est {2} qui s'en chargera. La réponse du seigneur à qui déteste le travail : cesser d'y être mauvais.</RimCourt.Apprenticed>
+	<RimCourt.ApprenticedAlone>{0} sera formé à {1} pour de bon, sans personne dans la colonie pour l'enseigner. La parole du seigneur devra faire l'école.</RimCourt.ApprenticedAlone>
+	<RimCourt.PromiseBroken>{0} a été remis à {1}, dont la cour l'avait dispensé. La colonie a vu le jugement, et la colonie voit ceci.</RimCourt.PromiseBroken>
+	<RimCourt.LeaveGranted>{0} a la permission de partir, et part.</RimCourt.LeaveGranted>
+	<RimCourt.Honoured>{0} est honoré devant toute la cour.</RimCourt.Honoured>
+	<RimCourt.HonourPaid>{0} reçoit {1} pièces d'argent devant la cour assemblée, et l'argent repart avec lui.</RimCourt.HonourPaid>
+	<RimCourt.HonourNoSilver>La colonie n'a pas les {0} pièces promises par le seigneur. Les mots ont été dits, et tout le monde a entendu que c'était tout ce qu'il aurait.</RimCourt.HonourNoSilver>
+	<RimCourt.PesteredOrdered>{0} s'entend ordonner devant la cour assemblée de laisser {1} en paix, et tout le monde l'a entendu. L'envie reste où elle loge ; les demandes s'arrêtent aujourd'hui.</RimCourt.PesteredOrdered>
+	<RimCourt.RivalOrderedOff>{0} reçoit l'ordre de renoncer à sa cour. {1} n'a pas été consulté, et {2} n'en avait pas besoin.</RimCourt.RivalOrderedOff>
+	<RimCourt.RivalsBothOff>La cour décide que {0} ne sera courtisé par personne du tout, ce qui l'arrange très bien ou très mal.</RimCourt.RivalsBothOff>
+	<RimCourt.RivalDuelWon>{0} est resté debout, et garde sa cour. {1} en a fini de courtiser {2}, par la parole de la cour.</RimCourt.RivalDuelWon>
+	<RimCourt.ForgivenessOrdered>{0} reçoit l'ordre de passer l'éponge. Que {1} soit pardonné ou simplement plus rien dû, c'est une nuance que la salle ne creuse pas.</RimCourt.ForgivenessOrdered>
+	<RimCourt.GrudgeDeserved>La cour juge que {0} a mérité chaque miette de ce que {1} pense de lui. Il demandait un prix ; le prix est de la porter.</RimCourt.GrudgeDeserved>
+	<RimCourt.RescuerHonoured>{0} est honoré devant la cour assemblée, à la demande de {1}, qui est en vie pour la faire.</RimCourt.RescuerHonoured>
+	<RimCourt.ExilePardonLabel>{0} à la porte</RimCourt.ExilePardonLabel>
+	<RimCourt.ExilePardoned>{0} est gracié devant la cour, et rentre par la grande porte cette fois.</RimCourt.ExilePardoned>
+	<RimCourt.ExileSpurned>{0} est chassé pour de bon, et l'a entendu debout. Ce qui reviendra ensuite ne reviendra pas seul.</RimCourt.ExileSpurned>
+	<RimCourt.ExileTurnedAway>{0} a attendu à la porte et aucune réponse n'est venue. Ce qu'il en fait le regarde.</RimCourt.ExileTurnedAway>
+	<RimCourt.EstateRuled>Ce que laisse {1} revient à {0}, par la parole du seigneur. {2} a regardé la remise, et continuera de la regarder.</RimCourt.EstateRuled>
+	<RimCourt.EstateNobody>La cour juge que {0} ne laisse rien qui vaille une querelle. Les deux héritiers rentrent avec la même part.</RimCourt.EstateNobody>
+	<RimCourt.AdulteryDivorced>{0} est délié du mariage devant la cour assemblée. {1} garde l'amant, et perd tout ce qui n'était pas l'amant.</RimCourt.AdulteryDivorced>
+	<RimCourt.AdulteryOrdered>{0} reçoit l'ordre de renoncer à {1} et de tenir le serment. La cour y croira quand elle le verra.</RimCourt.AdulteryOrdered>
+	<RimCourt.SomeoneElse>quelqu'un d'autre</RimCourt.SomeoneElse>
+	<RimCourt.LordAdmitted>{0} reconnaît devant toute la salle que la cour a fait du tort à {1}. Cela ne lui coûte rien qui puisse s'emporter, et c'est la chose la plus chère qu'il ait dite de la journée.</RimCourt.LordAdmitted>
+	<RimCourt.LordCleared>{0} a entendu l'affaire portée contre lui et s'est trouvé sans reproche. La salle l'accepte, parce que la salle n'a pas le choix.</RimCourt.LordCleared>
+	<RimCourt.ThroneTakenLabel>Le siège change de mains</RimCourt.ThroneTakenLabel>
+	<RimCourt.ThroneTakenText>{0} tient désormais le siège du seigneur, et {1} ne le tient plus. Quel que soit le nom que l'ancien seigneur s'était fait, la colonie ouvre une page neuve avec celui-ci. La prochaine audience répondra à {0}.</RimCourt.ThroneTakenText>
+	<RimCourt.ThroneDefended>{0} a gardé le siège. {1} l'a réclamé et a été mis à terre devant toute la cour.</RimCourt.ThroneDefended>
+
+	<!-- Réputation -->
+	<RimCourt.RepLine>La colonie voit le seigneur comme : {0}</RimCourt.RepLine>
+	<RimCourt.RepDetail>Verdicts rendus : {0} juste, {1} dur, {2} vénal, {3} faible.</RimCourt.RepDetail>
+	<RimCourt.RepUntested>encore inconnu</RimCourt.RepUntested>
+	<RimCourt.RepJust>juste</RimCourt.RepJust>
+	<RimCourt.RepHarsh>dur</RimCourt.RepHarsh>
+	<RimCourt.RepVenal>vénal</RimCourt.RepVenal>
+	<RimCourt.RepWeak>faible</RimCourt.RepWeak>
+	<RimCourt.InspectHearing>Audience en cours : affaire {0} sur {1}.</RimCourt.InspectHearing>
+	<RimCourt.RepLetterLabel>On dit le seigneur {0}</RimCourt.RepLetterLabel>
+	<RimCourt.RepEarnedText>Assez de verdicts ont été rendus pour que la colonie se fasse une idée de {0}. On le dit {1}.</RimCourt.RepEarnedText>
+	<RimCourt.RepShiftedText>La colonie a changé d'avis sur {0}. On le dit désormais {1}.</RimCourt.RepShiftedText>
+	<RimCourt.RepEffect0>Une main équitable gagne la loyauté, et la loyauté amène du monde à votre porte. On vous fait confiance pour trancher, alors on vous en apporte davantage.</RimCourt.RepEffect0>
+	<RimCourt.RepEffect1>La peur fait régner le calme. Peu se risqueront à comparaître pour une broutille : seules les vraies haines arrivent encore devant la cour. On vous obéit. On ne vous aime pas.</RimCourt.RepEffect1>
+	<RimCourt.RepEffect2>Ici la justice a un prix, et tout le monde le sait. On paie, on enrage, et on s'en souvient.</RimCourt.RepEffect2>
+	<RimCourt.RepEffect3>Un seigneur qui ne tranche rien se fait tester. Des rancunes mesquines qui n'auraient jamais atteint une cour plus ferme sont en route vers la vôtre.</RimCourt.RepEffect3>
+
+	<!-- Répliques -->
+	<RimCourt.Plead1>Écoutez-moi, mon seigneur !</RimCourt.Plead1>
+	<RimCourt.Plead2>Je demande justice !</RimCourt.Plead2>
+	<RimCourt.Plead3>Ce n'est pas ma faute !</RimCourt.Plead3>
+	<RimCourt.Plead4>Toute la colonie connaît la vérité !</RimCourt.Plead4>
+	<RimCourt.ReactHappy1>Justice !</RimCourt.ReactHappy1>
+	<RimCourt.ReactHappy2>Le seigneur est sage !</RimCourt.ReactHappy2>
+	<RimCourt.ReactAngry1>Ce n'est pas la justice !</RimCourt.ReactAngry1>
+	<RimCourt.ReactAngry2>Je m'en souviendrai.</RimCourt.ReactAngry2>
+
+	<!-- Parchemin -->
+	<RimCourt.SheetTitle>Porté devant la cour</RimCourt.SheetTitle>
+	<RimCourt.SheetPetitioner>Plaignant</RimCourt.SheetPetitioner>
+	<RimCourt.SheetDefendant>Mis en cause</RimCourt.SheetDefendant>
+	<RimCourt.SheetVerdicts>Le seigneur peut trancher :</RimCourt.SheetVerdicts>
+	<RimCourt.SheetPrecedent>La dernière fois que cette cour a entendu pareille affaire, elle a tranché {0}.</RimCourt.SheetPrecedent>
+	<RimCourt.SheetKin>{0} est {1} du seigneur.</RimCourt.SheetKin>
+	<RimCourt.SheetKinBoth>{0} est {1} du seigneur. {2} est {3} du seigneur.</RimCourt.SheetKinBoth>
+	<RimCourt.Nepotism>{0} a tranché en faveur de {1}, qui est {2} du seigneur. Venant de n'importe qui d'autre, la salle aurait appelé cela juste.</RimCourt.Nepotism>
+	<RimCourt.Precedent0>avec justice</RimCourt.Precedent0>
+	<RimCourt.Precedent1>durement</RimCourt.Precedent1>
+	<RimCourt.Precedent2>en faveur de qui payait</RimCourt.Precedent2>
+	<RimCourt.Precedent3>en refusant de trancher</RimCourt.Precedent3>
+	<RimCourt.PrecedentHeld>{0} tranche comme il avait tranché. La cour tient une ligne, et tout le monde voit où elle passe.</RimCourt.PrecedentHeld>
+	<RimCourt.PrecedentBroken>{0} tranche l'inverse de la dernière fois sur une affaire du même genre. Une cour qui change d'avis est une cour avec qui l'on peut discuter.</RimCourt.PrecedentBroken>
+	<RimCourt.SheetPronounce>Prononcer le verdict</RimCourt.SheetPronounce>
+	<RimCourt.ReopenSheetLabel>Lire la pétition</RimCourt.ReopenSheetLabel>
+	<RimCourt.ReopenSheetDesc>Ouvre la pétition écrite qui attend la parole du seigneur.</RimCourt.ReopenSheetDesc>
+	<RimCourt.SheetAwait>La cour attend la parole du seigneur ({0} h restantes)</RimCourt.SheetAwait>
+	<RimCourt.SheetFooter>Consigné par le greffier de la cour de {0}.</RimCourt.SheetFooter>
+	<RimCourt.StampTip>Le sceau du seigneur. Prenez-le en main, puis tamponnez le jugement de votre choix. Vous pouvez changer d'avis tant que le verdict n'est pas prononcé.</RimCourt.StampTip>
+	<RimCourt.StampSealed>SCELLÉ</RimCourt.StampSealed>
+
+	<!-- Options -->
+	<RimCourt.Settings.Intro>La cour suit vos marqueurs. Le reste, ce sont des curseurs.</RimCourt.Settings.Intro>
+	<RimCourt.Settings.VerdictHours>Heures pour rendre un verdict</RimCourt.Settings.VerdictHours>
+	<RimCourt.Settings.CasesPerSession>Affaires par session</RimCourt.Settings.CasesPerSession>
+	<RimCourt.Settings.CooldownDays>Jours entre les sessions</RimCourt.Settings.CooldownDays>
+	<RimCourt.Settings.AutoOpenSheet>Ouvrir la pétition automatiquement</RimCourt.Settings.AutoOpenSheet>
+	<RimCourt.Settings.AutoOpenSheetHint>Quand un pétitionnaire finit de plaider, la pétition écrite s'ouvre d'elle-même. Sinon, cliquez sur la lettre.</RimCourt.Settings.AutoOpenSheetHint>
+	<RimCourt.Settings.Reset>Rétablir les valeurs par défaut</RimCourt.Settings.Reset>
+	<RimCourt.Settings.Advanced>Avancé</RimCourt.Settings.Advanced>
+	<RimCourt.Settings.AdvancedIntro>Quelles factions un colon exilé peut revenir diriger. Celles qui sont décochées peuvent toujours envoyer des pillards avec lesquels il chevauche ; elles ne lui céderont simplement pas le bout de leur table. Les factions ayant leur propre charge nommée, celles qui accordent des titres royaux et celles qui ne lancent jamais de raid sont décochées d'office.</RimCourt.Settings.AdvancedIntro>
+	<RimCourt.Settings.LeaderReset>Rétablir les choix par défaut</RimCourt.Settings.LeaderReset>
+
+	<!-- Le rang du seigneur -->
+	<RimCourt.StandingLabel>Le rang du seigneur</RimCourt.StandingLabel>
+	<RimCourt.StandingDesc>Ce que la colonie a décidé qu'il était, d'après les verdicts qu'il a rendus, et qui se tient assez près du siège pour le vouloir.</RimCourt.StandingDesc>
+	<RimCourt.StandingTitle>Le rang du seigneur</RimCourt.StandingTitle>
+	<RimCourt.StandingNoLord>Personne dans la colonie ne peut tenir audience pour l'instant.</RimCourt.StandingNoLord>
+	<RimCourt.StandingByWord>tient audience par votre volonté</RimCourt.StandingByWord>
+	<RimCourt.StandingByThrone>tient audience de droit par le trône</RimCourt.StandingByThrone>
+	<RimCourt.StandingByPrestige>tient audience faute de plus lourd que lui</RimCourt.StandingByPrestige>
+	<RimCourt.StandingCredentials>{0}  ·  social {1}  ·  {2} ans</RimCourt.StandingCredentials>
+	<RimCourt.StandingNameSection>Son nom</RimCourt.StandingNameSection>
+	<RimCourt.StandingThroneSection>Sa légitimité</RimCourt.StandingThroneSection>
+	<RimCourt.StandingUntested>La cour a trop peu entendu pour dire ce qu'il est. Un nom prend à {1} points ; il en est à {0}. Chaque verdict en vaut deux ou trois, donc trois ou quatre affaires suffisent à trancher.</RimCourt.StandingUntested>
+	<RimCourt.StandingSwitch>Ce qui compte n'est pas le plus haut score, c'est l'avance. Il faudrait {0} points de plus à {1} pour lui reprendre le nom.</RimCourt.StandingSwitch>
+	<RimCourt.StandingDecay>Un jugement peut être refusé. Le colon contre qui il est rendu peut tout simplement quitter la salle, ce qui coûte au seigneur deux points de faible, vingt points d'estime auprès de tous ceux qui regardaient, et ne fait aucune jurisprudence, puisque rien n'a été réglé. Que cela arrive dépend surtout du nom du seigneur : un seigneur dur n'est presque jamais défié, un seigneur faible l'est souvent. L'orgueil fait le reste, donc le grande gueule, le cupide, le jaloux, le soupe au lait et l'inflexible sont plus enclins que le bon et le trouillard, et un colon portant un titre royal que le seigneur n'a pas l'est plus encore. Personne ne quitte un fouet, un bannissement ou un duel : ceux-là n'attendent pas votre accord.\n\nLe seigneur ne peut pas être partie à une affaire, mais sa femme, son frère et son fils le peuvent. Quand l'un d'eux se présente, le parchemin le dit en rouge, et trancher en sa faveur n'est pas compté comme juste. C'est compté comme vénal, et tous les autres colons le prennent pour ce que ça a l'air d'être. La cour s'arrête à la famille proche : époux, amant, parent, enfant, frère ou sœur, grand-parent. Un cousin n'est pas assez proche pour que la salle murmure.\n\nLa cour se souvient aussi de ses propres jugements. Avant que vous ne tranchiez, le parchemin vous dit comment elle a réglé la dernière affaire du même genre, et elle garde ce souvenir vingt jours. Tranchez pareil et le seigneur gagne un point de juste : la cour tient une ligne, et tout le monde voit où elle passe. Tranchez l'inverse et il gagne deux points de faible, car une cour qui change d'avis est une cour avec qui l'on peut discuter. Laisser expirer une affaire ne crée aucun précédent et n'en brise aucun.\n\nLes vieux verdicts s'effacent de trois pour cent par jour : un nom qu'on laisse tranquille redescend vers rien.</RimCourt.StandingDecay>
+	<RimCourt.StandingNoDecay>Les vieux verdicts ne s'effacent pas : vous avez dit au mod qu'un nom fait ne s'oublie jamais. Ce que cette cour s'est vu reconnaître, elle le garde, jusqu'à ce qu'assez de jugements contraires le lui retirent.</RimCourt.StandingNoDecay>
+	<RimCourt.StandingEffect0>Une affaire de plus par audience. Le bruit court que cette cour vaut le déplacement.</RimCourt.StandingEffect0>
+	<RimCourt.StandingEffect1>Une affaire de moins par audience, et seules les haines profondes remontent. Les petites rancunes restent au dortoir, où elles se conservent.</RimCourt.StandingEffect1>
+	<RimCourt.StandingEffect2>Les affaires arrivent comme avant, mais le siège n'est plus sûr. Un seigneur qui vend ses verdicts s'expose à ce qu'on lui demande ce qu'il vendrait d'autre.</RimCourt.StandingEffect2>
+	<RimCourt.StandingEffect3>Une affaire de plus par audience, et de plus petites remontent : un seigneur incapable de dire non, on le sollicite davantage. Le siège n'est pas sûr non plus.</RimCourt.StandingEffect3>
+	<RimCourt.StandingThroneOpen>Le trône peut être contesté. Quelqu'un qui le méprise peut se lever en pleine audience et demander de quel droit il siège.</RimCourt.StandingThroneOpen>
+	<RimCourt.StandingThroneShut>Le trône ne peut pas être contesté. À un seigneur tenu pour juste ou dur, on ne demande pas de quel droit il siège, quoi qu'on en pense en privé.</RimCourt.StandingThroneShut>
+	<RimCourt.StandingNoRival>Personne n'a de quoi se lever. Il faut une opinion du seigneur à {0} ou pire et un social de {1} ou mieux ; le plus prestigieux de ceux-là est celui qui se lève.</RimCourt.StandingNoRival>
+	<RimCourt.StandingRival>{0}  ·  social {1}  ·  opinion du seigneur {2}</RimCourt.StandingRival>
+	<RimCourt.StandingWouldRise>se lèverait contre lui</RimCourt.StandingWouldRise>
+
+	<!-- La salle -->
+	<RimCourt.StandingHallSection>Sa salle</RimCourt.StandingHallSection>
+	<RimCourt.StandingHallScore>prestance {0}</RimCourt.StandingHallScore>
+	<RimCourt.StandingHallHow>La pièce où se dresse le siège est mesurée comme n'importe quelle pièce de la colonie : l'espace, les sols, les murs, les œuvres, la propreté. Élevez-la et vous élevez la cour avec elle.</RimCourt.StandingHallHow>
+	<RimCourt.HallNumbers>étrangers {0}  ·  refus {1}</RimCourt.HallNumbers>
+	<RimCourt.HallNoChange>comme toujours</RimCourt.HallNoChange>
+	<RimCourt.HallPoints>{0} pts</RimCourt.HallPoints>
+	<RimCourt.HallInspect>La cour se tient dans {0}.</RimCourt.HallInspect>
+	<RimCourt.Hall0>le plein air</RimCourt.Hall0>
+	<RimCourt.Hall1>une pièce nue</RimCourt.Hall1>
+	<RimCourt.Hall2>une salle quelconque</RimCourt.Hall2>
+	<RimCourt.Hall3>une salle qui fera l'affaire</RimCourt.Hall3>
+	<RimCourt.Hall4>une belle salle</RimCourt.Hall4>
+	<RimCourt.Hall5>une grande salle</RimCourt.Hall5>
+	<RimCourt.HallNote0>Le siège est planté sous le ciel. Moins d'étrangers font le voyage pour être jugés dans un champ, et le colon à qui l'on y réclame son argent prend l'ordre moins au sérieux.</RimCourt.HallNote0>
+	<RimCourt.HallNote1>Quatre murs, un toit, et rien d'autre à regarder. La rumeur ne va pas loin sur une pièce pareille, et le verdict rendu dedans non plus.</RimCourt.HallNote1>
+	<RimCourt.HallNote2>De quoi l'appeler une salle, tout juste. Les étrangers viennent un peu moins qu'ils ne pourraient, et un jugement rendu ici est un peu plus facile à quitter.</RimCourt.HallNote2>
+	<RimCourt.HallNote3>Une pièce qui porte le siège sans le flatter. On n'ajoute rien et on ne retire rien.</RimCourt.HallNote3>
+	<RimCourt.HallNote4>Assez belle pour qu'on arrive déjà impressionné. La rumeur circule, davantage d'étrangers font le déplacement, et moins d'hommes tiennent à discuter une fois debout dedans.</RimCourt.HallNote4>
+	<RimCourt.HallNote5>Une grande salle. Les étrangers en entendent parler et viennent, et celui qui entrait avec l'intention de refuser y réfléchit un instant de plus.</RimCourt.HallNote5>
+
+	<RimCourt.HonourConferredLabel>{0} est nommé le Négociateur</RimCourt.HonourConferredLabel>
+	<RimCourt.HonourConferred>{1} est venu de {2} en espérant être entendu, et il l'a été. Cette cour avait déjà une réputation de justice avant son arrivée, et c'est la seule raison pour laquelle la visite valait un rapport. L'Empire tient une liste de ceux qui règlent les choses sans soldats.
+
+	<RimCourt.DeserterStrikesLabel>{0} n'était pas un pétitionnaire</RimCourt.DeserterStrikesLabel>
+	<RimCourt.DeserterStrikes>Le verdict est tombé, et {0} s'est jeté sur {1} au lieu de gagner la porte. L'affaire était vraie, l'histoire tenait debout, et rien de tout cela n'était la raison de sa venue. Les déserteurs ne pardonnent à personne qui porte les titres de l'Empire, et le seigneur en porte un.
+	<RimCourt.ImperialStrikes>Le verdict est tombé, et {0} s'est jeté sur {1} au lieu de gagner la porte. L'affaire était vraie, l'histoire tenait debout, et rien de tout cela n'était la raison de sa venue. L'Empire n'oublie pas un seigneur passé du côté des déserteurs, et il n'envoie pas d'armée pour un seul homme.
+
+Il est entré armé, et personne n'a pensé à regarder.</RimCourt.ImperialStrikes>
+
+Il est entré armé, et personne n'a pensé à regarder.</RimCourt.DeserterStrikes>
+
+{0} reçoit l'honneur du Négociateur. Il est à lui tant que personne ne le lui reprend, et sa compétence sociale ne rouillera pas tant qu'il le porte.</RimCourt.HonourConferred>
+	<RimCourt.LocateTip>Cliquez pour le retrouver sur la carte.</RimCourt.LocateTip>
+	<RimCourt.StandingTabRank>Son rang</RimCourt.StandingTabRank>
+	<RimCourt.StandingTabRecord>Le registre</RimCourt.StandingTabRecord>
+	<RimCourt.StandingTabBlood>Le sang</RimCourt.StandingTabBlood>
+	<RimCourt.BloodHeirSection>Qui hérite du siège</RimCourt.BloodHeirSection>
+	<RimCourt.BloodHeirTag>héritier désigné</RimCourt.BloodHeirTag>
+	<RimCourt.BloodHeirNote>Si le seigneur meurt, {0} prend la salle. Rien d'autre n'est consulté : ni le trône, ni la Main, ni celui qui pèse le plus ce jour-là.</RimCourt.BloodHeirNote>
+	<RimCourt.BloodNoHeir>Aucun héritier. Le seigneur ne porte pas de titre royal, ou en porte un sans avoir désigné personne pour le suivre. Nommez un héritier dans son onglet Royauté et le siège passera avec le titre ; sans cela, la salle revient au trône, à la Main, ou au plus lourd du jour.</RimCourt.BloodNoHeir>
+	<RimCourt.BloodKinSection>Le sang de {0}</RimCourt.BloodKinSection>
+	<RimCourt.BloodNoKin>{0} n'a pas de sang dans cette colonie. Un seigneur sans famille ici n'a personne à favoriser et personne pour lui succéder : c'est soit une cour propre, soit une dynastie courte.</RimCourt.BloodNoKin>
+	<RimCourt.BloodYears>{0} ans</RimCourt.BloodYears>
+	<RimCourt.RecordCasesSection>Ce que la cour a jugé</RimCourt.RecordCasesSection>
+	<RimCourt.RecordGrievancesSection>Qui le lui garde</RimCourt.RecordGrievancesSection>
+	<RimCourt.RecordEmpty>La cour n'a pas siégé, ou rien de ce qu'elle a réglé n'est encore en mémoire. Le registre garde vingt jours.</RimCourt.RecordEmpty>
+	<RimCourt.RecordRow>{0}  ·  tranché {1}</RimCourt.RecordRow>
+	<RimCourt.RecordPair>{0} contre {1}</RimCourt.RecordPair>
+	<RimCourt.RecordNoAnswer>sans réponse</RimCourt.RecordNoAnswer>
+	<RimCourt.RecordToday>aujourd'hui</RimCourt.RecordToday>
+	<RimCourt.RecordDaysAgo>il y a {0} jours</RimCourt.RecordDaysAgo>
+	<RimCourt.RecordNoGrievance>Personne ne tient de compte contre le seigneur. Ce sont les jugements rendus contre un même colon qui en ouvrent un.</RimCourt.RecordNoGrievance>
+	<RimCourt.RecordGrievance>{0} griefs sur {1}</RimCourt.RecordGrievance>
+	<RimCourt.RecordWillAccuse>accusera le siège</RimCourt.RecordWillAccuse>
+
+	<!-- Guide -->
+	<RimCourt.Guide.Title>Tenir audience</RimCourt.Guide.Title>
+
+	<RimCourt.Guide.StartTitle>Ouvrir une cour</RimCourt.Guide.StartTitle>
+	<RimCourt.Guide.StartBody>Posez un siège du seigneur sur un trône ou une belle chaise, depuis Architecture, Divers. Le marqueur se glisse sous le meuble, le trône reste donc visible. C'est toute l'installation.\n\nSélectionnez le marqueur : la case où se tiendront les pétitionnaires est encadrée. Ils se placent à quelques cases devant, dans la direction que regarde la chaise. Au sol nu, tournez le marqueur pour choisir la direction du regard du seigneur.\n\nPosez le marqueur sur un trône et son propriétaire tient audience. Le trône a répondu, le mod ne repose pas la question : Nommer le seigneur se grise. Réattribuez le trône pour installer un autre.\n\nSans trône, et la plupart des colonies n'en bâtissent jamais, le siège revient à celui qui pèse le plus dans la colonie, au rang social et aux années. C'est un score invisible : Nommer le seigneur est donc l'endroit où vous tranchez vous-même. C'est aussi par là qu'on reprend le siège à celui qui vous l'a gagné en pleine audience.\n\nUtilisez ensuite Tenir audience. Le seigneur prend place, les colons libres s'assemblent pour regarder, et les affaires sont entendues une par une. Le seigneur ne peut pas être partie à une affaire : c'est lui qui juge.\n\nLe marqueur d'audience est facultatif. Posez-en un si vous voulez éloigner les pétitionnaires, au bout d'une grande salle, ou si le siège fait face à un mur.</RimCourt.Guide.StartBody>
+
+	<RimCourt.Guide.CasesTitle>D'où viennent les affaires</RimCourt.Guide.CasesTitle>
+	<RimCourt.Guide.CasesBody>Les affaires ne sont pas inventées. La cour lit ce dont vos colons se souviennent réellement : ce qu'elle entend est donc ce que votre colonie a vécu. Rien n'est ajouté pour faire nombre.\n\nUne colonie tranquille a donc peu à juger, et on vous dira que personne ne réclame la justice du seigneur aujourd'hui. Ce n'est pas un défaut : revenez quand il se sera passé quelque chose.\n\nLes souvenirs s'effacent, et plus l'affaire est grave, plus la cour l'entendra longtemps. Les affaires graves passent toujours avant les petites.\n\nLa cour n'entendra pas deux fois les mêmes personnes avant dix jours. Une affaire réglée est réglée.\n\nLes voyageurs et les voisins entendent parler de la cour, eux aussi, et certains s'y présentent. Ils attendent une audience trois jours à la porte avant de renoncer et de repartir, ce dont les leurs se souviennent. La fréquence à laquelle on vient dépend du nom du seigneur.</RimCourt.Guide.CasesBody>
+
+	<RimCourt.Guide.SheetTitle>Le parchemin</RimCourt.Guide.SheetTitle>
+	<RimCourt.Guide.SheetBody>Quand le plaignant a fini de parler, le greffier met l'affaire par écrit et le parchemin s'ouvre : les parties, ce qui est réclamé, et les jugements ouverts au seigneur.\n\nPrenez le sceau du seigneur sous le parchemin, puis tamponnez le jugement de votre choix. Tamponner une autre ligne efface la première : le parchemin ne montre jamais qu'une seule réponse. Appuyez ensuite sur Prononcer le verdict.\n\nLe parchemin peut être déplacé, et fermé par la croix si vous voulez regarder autre chose d'abord. Lire la pétition, sur le marqueur, le rouvre, et cliquer la lettre aussi.\n\nLes notes en marge, au-dessus des jugements, sont ce que la cour sait déjà : comment elle a réglé la dernière affaire du même genre, et si l'une des parties est du sang du seigneur. Lisez-les avant de tamponner.\n\nNe rien dire est aussi une réponse. Si le délai expire, l'affaire est renvoyée, c'est consigné comme aucune réponse donnée, et cela compte contre vous comme une faiblesse.</RimCourt.Guide.SheetBody>
+
+	<RimCourt.Guide.VerdictsTitle>Trancher</RimCourt.Guide.VerdictsTitle>
+	<RimCourt.Guide.VerdictsBody>Chaque jugement change ce que les parties pensent l'une de l'autre et du seigneur, et ces opinions durent des jours. Certains jugements font davantage : de l'argent change réellement de mains, des ordres de travail changent réellement, et des gens quittent réellement la colonie. Le parchemin dit lesquels.\n\nUn jugement peut être refusé. Le colon contre qui il est rendu peut tout simplement quitter la salle, ce qui coûte au seigneur deux points de faible, vingt points d'estime auprès de tous ceux qui regardaient, et ne fait aucune jurisprudence, puisque rien n'a été réglé. Que cela arrive dépend surtout du nom du seigneur : un seigneur dur n'est presque jamais défié, un seigneur faible l'est souvent. L'orgueil fait le reste, donc le grande gueule, le cupide, le jaloux, le soupe au lait et l'inflexible sont plus enclins que le bon et le trouillard, et un colon portant un titre royal que le seigneur n'a pas l'est plus encore. Certains jugements n'attendent pas votre accord et ne peuvent pas être refusés.\n\nLe seigneur ne peut pas être partie à une affaire, mais sa femme, son frère et son fils le peuvent. Quand l'un d'eux se présente, le parchemin le dit en rouge, et trancher en sa faveur n'est pas compté comme juste. C'est compté comme vénal, et tous les autres colons le prennent pour ce que ça a l'air d'être. La cour s'arrête à la famille proche : époux, amant, parent, enfant, frère ou sœur, grand-parent. Un cousin n'est pas assez proche pour que la salle murmure.\n\nLa cour se souvient aussi de ses propres jugements. Avant que vous ne tranchiez, le parchemin vous dit comment elle a réglé la dernière affaire du même genre, et elle garde ce souvenir vingt jours. Tranchez pareil et le seigneur gagne un point de juste : la cour tient une ligne, et tout le monde voit où elle passe. Tranchez l'inverse et il gagne deux points de faible, car une cour qui change d'avis est une cour avec qui l'on peut discuter. Laisser expirer une affaire ne crée aucun précédent et n'en brise aucun.\n\nChasser quelqu'un de la colonie est le jugement le plus facile à rendre, et le seul qui puisse revenir sur ses pas. La plupart des exilés ne redonnent jamais signe de vie. Certains si, et lesquels se décide le jour où vous les chassez : un homme d'armes avec une rancune retrouve son chemin plus souvent qu'un homme bon ou qu'un vieillard, et rien ne vous dit lequel vous venez de faire.\n\nUn seigneur qui ne décide pas est un seigneur faible. C'est tout l'enjeu.</RimCourt.Guide.VerdictsBody>
+
+	<RimCourt.Guide.PunishTitle>Quand un jugement a un corps</RimCourt.Guide.PunishTitle>
+	<RimCourt.Guide.PunishBody>Certains jugements s'exécutent dans la salle au lieu d'être couchés par écrit, et vous les regardez se faire.\n\nQuand un fouet est ordonné, vous choisissez qui le tient. Chaque candidat est listé avec son adresse et avec ce qu'il pense du condamné, car confier le fouet à son ami n'est pas la même scène que le confier à son ennemi. Vous pouvez aussi faire exécuter la chose sans cérémonie et ne désigner personne. On ne confie jamais le fouet à un enfant, ni à un prisonnier ou un esclave.\n\nUn fouet fait mal et demande des soins ensuite. Il ne tue pas.\n\nQuand le seigneur renvoie deux parties à leurs poings, il n'a pas tranché du tout, et la colonie le remarque aussi. Celui qui reste debout est tenu pour avoir raison.\n\nRien de physique ne se passe hors écran. Si vous ne pouvez pas le regarder, ce n'est pas dans ce mod.\n\nConstruisez un pilori, dans Architecte, Divers. Certains jugements y enverront le perdant plutôt qu'au fouet. Comme pour le fouet, vous choisissez qui l'y conduit et l'attache, ou vous le laissez y aller seul. Il se tient dans la cour aussi longtemps que vous l'avez réglé dans les options, et les colons qui passent s'arrêtent pour dire leur mot, ou pour lui jeter quelque chose. Certains viennent exprès, sur leur temps libre, et restent un moment : ça compte comme un loisir, et ses amis restent à l'écart. Rien n'est blessé sauf sa fierté, et l'opinion qu'il garde de tous ceux qui ont ri. Si vous condamnez au pilori sans en avoir construit, c'est le fouet qui s'applique.</RimCourt.Guide.PunishBody>
+
+	<RimCourt.Guide.ReputationTitle>La réputation du seigneur</RimCourt.Guide.ReputationTitle>
+	<RimCourt.Guide.ReputationBody>Chaque verdict vaut deux points sur l'un des quatre axes : juste, dur, vénal ou faible. Donner raison à une partie lésée est juste, punir est dur, renvoyer une affaire est faible, prendre de l'argent est vénal.\n\nLa colonie se fait une opinion à huit points, soit environ quatre verdicts marqués. L'axe en tête donne le titre, et il faut trois points d'avance pour lui faire changer d'avis : un jugement isolé ne défait pas une réputation.\n\nLe rang du seigneur, sur le marqueur, tient deux pages. La première met tout à plat : les quatre axes en barres, ce que le nom actuel fait à votre cour, combien de points le lui reprendraient, et quels colons se tiennent assez près du siège pour le vouloir. La seconde est le registre : ce que la cour a jugé ces vingt jours et dans quel sens, pour voir la ligne que vous tenez, et quels colons tiennent un compte contre le seigneur et à quelle distance ils sont de l'apporter. Cliquez un visage pour le retrouver.\n\nLe titre n'est pas décoratif. Vos colons en tirent une opinion permanente du seigneur, et il décide de qui vient à la cour, à quelle fréquence, et de ce qu'on juge digne de lui être apporté. Il porte aussi au-delà des murs : une cour réputée équitable est une cour où des étrangers feront le voyage et à qui ils se soumettront ; une cour réputée faible ne l'est pas.\n\nLa réputation s'estompe d'environ trois pour cent par jour entre les audiences. Une cour qui siège souvent garde son nom ; une cour qui cesse de siéger est peu à peu oubliée, et peut être réorientée.\n\nUn seigneur réputé faible ou vénal a plus à perdre que sa réputation. Tenez audience assez longtemps sous ce nom et vous découvrirez quoi. La colonie met aussi ce nom dans son nom : une fois établi, le seigneur est appelé le Juste, le Cruel, le Cupide ou le Faible partout où son nom s'affiche, jusqu'à ce que les verdicts en décident autrement.</RimCourt.Guide.ReputationBody>
+
+	<RimCourt.Guide.SeatTitle>Le siège lui-même</RimCourt.Guide.SeatTitle>
+	<RimCourt.Guide.SeatBody>Posez le marqueur sur un trône et son propriétaire tient audience. Le trône a répondu, le mod ne repose pas la question : Nommer le seigneur se grise. Réattribuez le trône pour installer un autre.\n\nSans trône, et la plupart des colonies n'en bâtissent jamais, le siège revient à celui qui pèse le plus dans la colonie, au rang social et aux années. C'est un score invisible : Nommer le seigneur est donc l'endroit où vous tranchez vous-même.\n\nLe siège peut changer de mains, et pas toujours avec votre accord. Nommer le seigneur est aussi la façon de le reprendre.
+
+Avec le DLC Royalty, si le seigneur porte un titre, le siège suit la couronne : désignez un héritier dans son onglet Royauté et cet héritier prendra la salle à sa mort, au lieu qu'elle retombe au plus lourd du jour. C'est le seul héritage du mod, et le jeu le suit déjà pour vous.
+
+La pièce où se dresse le siège est mesurée elle aussi, comme n'importe quelle pièce de la colonie. Une cour tenue à ciel ouvert, ou dans une cellule nue, est une cour que les étrangers ne se donnent pas la peine d'atteindre et que vos propres colons quittent sans mal. L'espace, les sols, les murs et quelques bonnes sculptures changent les deux. Le marqueur vous dit quelle salle vous avez et Le rang du seigneur vous en donne les chiffres.
+
+Qui s'y assoit compte au-delà du prestige. Un seigneur juge avec son propre tempérament, et les verdicts qui le contredisent lui coûtent : le seigneur bon qui ordonne le fouet, l'ascète qui prend l'argent, l'inflexible qui laisse une affaire expirer sans réponse, chacun le porte plusieurs jours. Trancher comme il l'aurait fait de toute façon le soulage à l'inverse. Un psychopathe sur le siège ne ressent ni l'un ni l'autre, ce qui est une qualification en soi.\n\nLe seigneur garde son siège tant qu'il peut marcher, penser, tenir debout malgré la fièvre et compter pour adulte. Quand il ne le peut pas, une Main nommée prend le siège pour la journée et le rend dès qu'il se rétablit ; sans Main, le siège retombe au poids du rang, comme toujours. Nommer la Main, sur le marqueur.</RimCourt.Guide.SeatBody>
+
+	<RimCourt.Guide.TipsTitle>Bon à savoir</RimCourt.Guide.TipsTitle>
+	<RimCourt.Guide.TipsBody>La cour se dissout si la colonie est attaquée, si le seigneur tombe ou fait une crise, ou si vous la dissolvez vous-même. Aucun délai n'est appliqué dans ce cas : reconvoquez quand le calme est revenu.\n\nUne affaire ne peut être entendue si l'une des parties est à terre, emprisonnée, en crise ou mobilisée. Démobilisez vos colons avant de tenir audience.\n\nLa cour surveille ce qu'elle a jugé. Là où un jugement a changé quelque chose que vous pouvez défaire vous-même, défaites-le dans la quinzaine et la colonie verra la parole du seigneur rompue, quoi qu'en dise le parchemin.\n\nTout est réglable dans les paramètres du mod : le temps dont vous disposez pour trancher, le nombre d'affaires par audience, les jours entre les audiences, et si le parchemin s'ouvre tout seul.\n\nUn ennemi capturé peut lui aussi être amené devant le siège. Un garde va le chercher dans sa cellule et le plante là où se tiennent les pétitionnaires, la feuille dit ce qu'il a fait et ce que les siens paieraient pour le récupérer, et le seigneur tranche une fois : chez lui, la rançon, le pilori ou l'épée. Ce qui compte comme juste dépend de ce qu'il a fait, pas de ce que vous avez choisi : l'épée pour un homme qui a tué un des vôtres est justice, l'épée pour un homme qui n'a touché personne est cruauté. Chaque prisonnier n'est entendu qu'une fois. En dehors de cette audience, RimCourt ne touche ni aux prisonniers ni aux gardiens.</RimCourt.Guide.TipsBody>
+
+	<RimCourt.RadiusPlus>Rayon {0} +</RimCourt.RadiusPlus>
+	<RimCourt.RadiusMinus>Rayon {0} -</RimCourt.RadiusMinus>
+	<RimCourt.RadiusDesc>Les chaises dans ce rayon autour de la case des plaideurs accueillent la foule. Sélectionnez le siège pour le voir.</RimCourt.RadiusDesc>
+	<RimCourt.RadiusAuto>Auto</RimCourt.RadiusAuto>
+	<RimCourt.RadiusAutoDesc>La foule peut s'asseoir n'importe où dans la pièce du siège, quelle que soit sa taille.</RimCourt.RadiusAutoDesc>
+	<RimCourt.RadiusNotEnclosed>Le siège n'est pas dans une pièce fermée. Utilisez le rayon.</RimCourt.RadiusNotEnclosed>
+	<RimCourt.RadiusFitted>La foule peut maintenant s'asseoir dans toute la salle, {0} cases.</RimCourt.RadiusFitted>
+	<RimCourt.CrowdAreaRadius>La foule s'assoit à {0} cases des plaideurs au plus.</RimCourt.CrowdAreaRadius>
+	<RimCourt.CrowdAreaRoom>La foule s'assoit n'importe où dans la salle.</RimCourt.CrowdAreaRoom>
+
+</LanguageData>

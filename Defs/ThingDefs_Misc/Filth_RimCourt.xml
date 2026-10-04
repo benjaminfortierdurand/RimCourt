@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Calqué sur Filth_Vomit : même texture vanilla, autre couleur. Quelqu'un devra nettoyer la cour, c'est voulu. -->
+
+	<ThingDef ParentName="BaseFilth">
+		<defName>RimCourt_FilthSplat</defName>
+		<label>rotten food</label>
+		<description>Whatever was thrown at the post. It did not survive the landing.</description>
+		<statBases>
+			<Beauty>-12</Beauty>
+			<Cleanliness>-6</Cleanliness>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Filth/PoolSoft</texPath>
+			<color>(140, 74, 42, 190)</color>
+		</graphicData>
+		<filth>
+			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+			<disappearsInDays>6~10</disappearsInDays>
+			<rainWashes>true</rainWashes>
+			<cleaningWorkToReduceThickness>50</cleaningWorkToReduceThickness>
+			<maxThickness>3</maxThickness>
+		</filth>
+	</ThingDef>
+
+</Defs>

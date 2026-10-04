@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_Sanctuary.label>une demande d'asile</RimCourt_Sanctuary.label>
+	<RimCourt_Sanctuary.description>Un voyageur demande à être accueilli et à recevoir une place dans la colonie.</RimCourt_Sanctuary.description>
+	<RimCourt_Sanctuary.arrivalText>{PETITIONER_labelShort} est arrivé des terres sauvages et demande à être entendu par le seigneur. Il a quitté {FACTION} sans rien et veut une place ici, offrant {SILVER} pièces d'argent d'économies pour ce privilège.\n\nTenez audience sous {DAYS} jours, sans quoi il reprendra la route.</RimCourt_Sanctuary.arrivalText>
+	<RimCourt_Sanctuary.caseText>{PETITIONER_labelShort} se tient devant la cour sans rien d'autre que ce qu'il porte. Il demande un toit, une place à la table et la protection du seigneur. On parle de ses économies, quelque {SILVER} pièces d'argent, qu'il préférerait garder.\n\nComment le seigneur tranche-t-il ?</RimCourt_Sanctuary.caseText>
+	<RimCourt_Sanctuary.verdicts.0.label>Accueillir {PETITIONER_labelShort}</RimCourt_Sanctuary.verdicts.0.label>
+	<RimCourt_Sanctuary.verdicts.1.label>Renvoyer {PETITIONER_labelShort} sur la route</RimCourt_Sanctuary.verdicts.1.label>
+	<RimCourt_Sanctuary.verdicts.2.label>Lui vendre sa place pour {SILVER} pièces d'argent</RimCourt_Sanctuary.verdicts.2.label>
+	<RimCourt_Sanctuary.verdicts.0.pastLabel>asile accordé</RimCourt_Sanctuary.verdicts.0.pastLabel>
+	<RimCourt_Sanctuary.verdicts.1.pastLabel>asile refusé</RimCourt_Sanctuary.verdicts.1.pastLabel>
+	<RimCourt_Sanctuary.verdicts.2.pastLabel>place vendue {SILVER} pièces d'argent</RimCourt_Sanctuary.verdicts.2.pastLabel>
+
+	<RimCourt_Redress.label>une demande de réparation</RimCourt_Redress.label>
+	<RimCourt_Redress.description>Un voyageur détroussé près de vos terres vient réclamer réparation au seigneur.</RimCourt_Redress.description>
+	<RimCourt_Redress.arrivalText>{PETITIONER_labelShort}, de {FACTION}, se présente à votre porte, détroussé sur les routes que vous dites vôtres. Il réclame {SILVER} pièces d'argent de dédommagement et attendra que le seigneur l'entende.\n\nTenez audience sous {DAYS} jours, sans quoi il ira raconter l'histoire chez lui.</RimCourt_Redress.arrivalText>
+	<RimCourt_Redress.caseText>{PETITIONER_labelShort} a été attaqué près de vos frontières et a tout perdu sur la route. La réclamation est simple : ces terres sont celles du seigneur, donc cette dette est la sienne. {SILVER} pièces d'argent régleraient l'affaire.\n\nComment le seigneur tranche-t-il ?</RimCourt_Redress.caseText>
+	<RimCourt_Redress.verdicts.0.label>Payer les {SILVER} pièces d'argent</RimCourt_Redress.verdicts.0.label>
+	<RimCourt_Redress.verdicts.1.label>Renvoyer {PETITIONER_labelShort} les mains vides</RimCourt_Redress.verdicts.1.label>
+	<RimCourt_Redress.verdicts.2.label>Lui prendre {SILVER} pièces d'argent de frais de justice, puis refuser</RimCourt_Redress.verdicts.2.label>
+	<RimCourt_Redress.verdicts.0.pastLabel>{SILVER} pièces d'argent versées en réparation</RimCourt_Redress.verdicts.0.pastLabel>
+	<RimCourt_Redress.verdicts.1.pastLabel>réclamation refusée</RimCourt_Redress.verdicts.1.pastLabel>
+	<RimCourt_Redress.verdicts.2.pastLabel>{SILVER} pièces d'argent prises en frais de justice</RimCourt_Redress.verdicts.2.pastLabel>
+
+</LanguageData>

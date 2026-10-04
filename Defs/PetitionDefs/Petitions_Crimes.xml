@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Deux souvenirs sociaux vanilla que personne n'exploitait. Zéro C#, tout passe par PetitionWorker_Memory. -->
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Butcher</defName>
+		<priority>60</priority>
+		<label>meat that was a man</label>
+		<description>A colonist who butchered a human corpse is called to answer for it by someone who knows.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Memory</workerClass>
+		<sourceThoughts>
+			<li>ButcheredHumanlikeCorpseOpinion</li>
+		</sourceThoughts>
+		<maxMemoryAgeDays>20</maxMemoryAgeDays>
+		<caseText>{PETITIONER_labelShort} will not say the word in the hall, so the clerk writes it down instead: {OTHER_labelShort} took a knife to a human body and cut it like an animal. Everyone who was there knows. Some of them ate.\n\n{PETITIONER_labelShort} wants the lord to say what that makes {OTHER_objective}. {OTHER_labelShort} would like the lord to remember who fed the colony that week.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Banish {OTHER_labelShort} from the colony</label>
+				<pastLabel>{OTHER_labelShort} banished for it</pastLabel>
+				<outcome>Banish</outcome>
+				<harsh>3</harsh>
+				<just>1</just>
+			</li>
+			<li>
+				<label>Have {OTHER_labelShort} flogged before the court</label>
+				<pastLabel>the butcher flogged</pastLabel>
+				<outcome>BloodPrice</outcome>
+				<just>2</just>
+				<harsh>1</harsh>
+			</li>
+			<li>
+				<label>Rule that the colony ate, and the colony is grateful</label>
+				<pastLabel>ruled that the colony ate</pastLabel>
+				<outcome>FavorOther</outcome>
+				<weak>2</weak>
+				<venal>1</venal>
+			</li>
+			<li>
+				<label>Bind {OTHER_labelShort} to the post, where everyone can look</label>
+				<pastLabel>the butcher bound to the post</pastLabel>
+				<outcome>Stocks</outcome>
+				<harsh>2</harsh>
+				<just>1</just>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Bonded</defName>
+		<priority>55</priority>
+		<label>the dog he killed</label>
+		<description>A colonist whose bonded animal was killed by another colonist asks for redress.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Memory</workerClass>
+		<sourceThoughts>
+			<li>KilledMyBondedAnimal</li>
+		</sourceThoughts>
+		<maxMemoryAgeDays>30</maxMemoryAgeDays>
+		<caseText>{OTHER_labelShort} killed the animal that slept at the foot of {PETITIONER_labelShort}'s bed. Perhaps it was an accident. Perhaps it was in the way. {PETITIONER_labelShort} does not much care which, and has come to say so where it counts.\n\nThe animal cannot be given back. The lord is being asked what it was worth.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Hold {OTHER_labelShort} answerable, and make {OTHER_objective} say so</label>
+				<pastLabel>the killer held answerable</pastLabel>
+				<outcome>FavorPetitioner</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Have {OTHER_labelShort} flogged for it</label>
+				<pastLabel>flogged over an animal</pastLabel>
+				<outcome>BloodPrice</outcome>
+				<harsh>3</harsh>
+			</li>
+			<li>
+				<label>Have them make peace before the court</label>
+				<pastLabel>peace made over the animal</pastLabel>
+				<outcome>Reconcile</outcome>
+				<just>1</just>
+				<weak>1</weak>
+			</li>
+			<li>
+				<label>Rule that it was an animal</label>
+				<pastLabel>ruled that it was an animal</pastLabel>
+				<outcome>Dismiss</outcome>
+				<weak>2</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+</Defs>

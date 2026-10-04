@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Feud</defName>
+		<priority>20</priority>
+		<label>bad blood</label>
+		<description>Two colonists who despise each other are called to settle it before the lord.</description>
+		<mutualGrudge>true</mutualGrudge>
+		<opinionThreshold>-15</opinionThreshold>
+		<caseText>{PETITIONER_labelShort} and {OTHER_labelShort} stand before the court. The two of them have been at each other's throats for a long time, and the whole colony knows it. Sooner or later this ends in blood. Today it ends with the lord's word instead.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Order them to make peace</label>
+				<pastLabel>peace ordered</pastLabel>
+				<outcome>Reconcile</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Punish them both for the disturbance</label>
+				<pastLabel>both punished</pastLabel>
+				<outcome>PunishBoth</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Throw the case out</label>
+				<pastLabel>case thrown out</pastLabel>
+				<outcome>Dismiss</outcome>
+				<weak>2</weak>
+			</li>
+					<li>
+				<label>Let them settle it with their fists</label>
+				<pastLabel>settled by trial of combat</pastLabel>
+				<outcome>Duel</outcome>
+				<harsh>2</harsh>
+				<weak>1</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Grievance</defName>
+		<priority>15</priority>
+		<label>a wrong to be righted</label>
+		<description>A colonist with a grudge brings a grievance against another before the lord.</description>
+		<mutualGrudge>false</mutualGrudge>
+		<opinionThreshold>-20</opinionThreshold>
+		<caseText>{PETITIONER_labelShort} kneels before the court and lays out a grievance against {OTHER_labelShort}: slights, wrongs and old wounds, all of it laid at the lord's feet. {OTHER_labelShort} denies everything.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Rule for {PETITIONER_labelShort}</label>
+				<pastLabel>ruling for {PETITIONER_labelShort}</pastLabel>
+				<outcome>FavorPetitioner</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Rule for {OTHER_labelShort}</label>
+				<pastLabel>ruling for {OTHER_labelShort}</pastLabel>
+				<outcome>FavorOther</outcome>
+				<harsh>1</harsh>
+			</li>
+			<li>
+				<label>Dismiss the case</label>
+				<pastLabel>case dismissed</pastLabel>
+				<outcome>Dismiss</outcome>
+				<weak>2</weak>
+			</li>
+			<li>
+				<label>Bind {OTHER_labelShort} to the post for the trouble</label>
+				<pastLabel>{OTHER_labelShort} bound to the post for it</pastLabel>
+				<outcome>Stocks</outcome>
+				<harsh>2</harsh>
+				<just>1</just>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+</Defs>

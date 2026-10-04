@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Les colons viennent demander quelque chose au seigneur. Pas d'argent :
+	     entre le seigneur et les siens, tout appartient deja au meme tresor. -->
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Match</defName>
+		<priority>60</priority>
+		<label>a betrothal waiting on a word</label>
+		<description>Two betrothed colonists come to ask the lord's blessing before the wedding is held.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Match</workerClass>
+		<caseText>{PETITIONER_labelShort} and {OTHER_labelShort} are promised to each other and come before the court together, which the whole colony worked out some time ago. A betrothal in this hall waits on the lord: they are asking him to say out loud that the match is a good one, so the feast can be held rather than talked about for another season.
+
+It costs him nothing but his word, and his word is the only thing they cannot get anywhere else.
+
+How does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Bless it, and set the day</label>
+				<pastLabel>the match blessed and the day set</pastLabel>
+				<outcome>GrantMarriage</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Forbid it</label>
+				<pastLabel>the match forbidden</pastLabel>
+				<outcome>DenyMarriage</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Say neither yes nor no</label>
+				<pastLabel>no answer on the match</pastLabel>
+				<outcome>Defer</outcome>
+				<weak>2</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Exemption</defName>
+		<priority>45</priority>
+		<label>one task too many</label>
+		<description>A colonist asks to be excused from a named job he has no heart for.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Exemption</workerClass>
+		<caseText>{PETITIONER_labelShort} has been put to {WORK}, has no heart for it and no hand for it, and would rather the lord took it off {PETITIONER_objective}. Somebody else would have to pick it up. That is rather the point of asking a lord instead of asking a friend.
+
+How does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Excuse {PETITIONER_labelShort} from {WORK}</label>
+				<pastLabel>excused from {WORK}</pastLabel>
+				<outcome>GrantExemption</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Order {PETITIONER_labelShort} taught {WORK} properly</label>
+				<pastLabel>ordered taught, not excused</pastLabel>
+				<outcome>Apprentice</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Refuse. The {WORK} does not do itself</label>
+				<pastLabel>kept to the work</pastLabel>
+				<outcome>DenyExemption</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Tell {PETITIONER_labelShort} to sort it out with the others</label>
+				<pastLabel>sent away to sort it out</pastLabel>
+				<outcome>Defer</outcome>
+				<weak>2</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<!-- Priorité basse exprès. À 75 elle prenait une place à chaque séance et étouffait les affaires rares. -->
+		<defName>RimCourt_Leave</defName>
+		<priority>30</priority>
+		<label>leave to go</label>
+		<description>An unhappy colonist asks the lord for permission to leave the colony.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Leave</workerClass>
+		<caseText>{PETITIONER_labelShort} has been unhappy here for a long while, and has come to say so in the one place where saying it means something. {PETITIONER_pronoun} is asking leave to go. Whether the lord grants it or not, everyone in the hall now knows {PETITIONER_pronoun} wanted to.
+
+How does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Let {PETITIONER_labelShort} go</label>
+				<pastLabel>leave granted</pastLabel>
+				<outcome>LetGo</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Refuse. Nobody walks out on the lord</label>
+				<pastLabel>leave refused</pastLabel>
+				<outcome>KeepHim</outcome>
+				<harsh>3</harsh>
+			</li>
+			<li>
+				<label>Let {PETITIONER_labelShort} go, and provisioned for the road</label>
+				<pastLabel>sent off with food for the road</pastLabel>
+				<outcome>LetGoProvisioned</outcome>
+				<just>3</just>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<!-- L'argent est détruit, pas donné. Y a pas de fortune perso dans RimWorld, j'ai cherché. -->
+		<defName>RimCourt_Honour</defName>
+		<priority>50</priority>
+		<label>an honour to be given</label>
+		<description>A colonist who has killed for the colony asks to be paid for it, in coin the colony will not see again.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Honour</workerClass>
+		<caseText>{PETITIONER_labelShort} has killed {KILLS} people for this colony and has never heard anyone say so. {PETITIONER_pronoun} is not asking to be thanked, or not only. {PETITIONER_pronoun} knows what someone is worth who does that work, and {PETITIONER_pronoun} has put a number on it: {SILVER} silver.
+
+Coin says it in a way words cannot, and it leaves with {PETITIONER_objective}. Words cost the colony nothing, and {PETITIONER_pronoun} will take them, but {PETITIONER_pronoun} will know what {PETITIONER_pronoun} was offered instead of what {PETITIONER_pronoun} asked for.
+
+How does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Pay {PETITIONER_labelShort} the {SILVER} silver he asks</label>
+				<pastLabel>paid {SILVER} silver for the blood he spilled</pastLabel>
+				<outcome>PayHonour</outcome>
+				<just>3</just>
+			</li>
+			<li>
+				<label>Honour {PETITIONER_labelShort} before the court, and nothing more</label>
+				<pastLabel>honoured before the court, and nothing more</pastLabel>
+				<outcome>Honour</outcome>
+				<just>1</just>
+				<weak>1</weak>
+			</li>
+			<li>
+				<label>Rule that {PETITIONER_labelShort} did no more than his duty</label>
+				<pastLabel>told it was only duty</pastLabel>
+				<outcome>DenyHonour</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Move on to the next case</label>
+				<pastLabel>passed over in silence</pastLabel>
+				<outcome>Defer</outcome>
+				<weak>2</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+</Defs>

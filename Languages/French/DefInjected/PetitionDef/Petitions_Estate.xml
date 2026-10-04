@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_Estate.label>ce que le mort laisse</RimCourt_Estate.label>
+	<RimCourt_Estate.description>Deux parents d'un colon défunt réclament chacun ce qu'il laisse, et aucun ne cédera à l'autre.</RimCourt_Estate.description>
+	<RimCourt_Estate.caseText>{DEAD} est mort, et {DEAD} laisse des choses derrière lui : une chambre, un manteau, une place à table qu'il faudra bien que quelqu'un prenne. {PETITIONER_labelShort} et {OTHER_labelShort} étaient chacun quelque chose pour le mort, et chacun est certain que le mort destinait tout à lui seul.
+
+Rien n'a été écrit. Rien ne s'écrit jamais ici. C'est à cela que sert le siège.
+
+Comment le seigneur tranche-t-il ?</RimCourt_Estate.caseText>
+	<RimCourt_Estate.verdicts.0.label>Attribuer la succession à {PETITIONER_labelShort}</RimCourt_Estate.verdicts.0.label>
+	<RimCourt_Estate.verdicts.1.label>Attribuer la succession à {OTHER_labelShort}</RimCourt_Estate.verdicts.1.label>
+	<RimCourt_Estate.verdicts.2.label>Déclarer que le mort ne laisse rien qui vaille une querelle</RimCourt_Estate.verdicts.2.label>
+	<RimCourt_Estate.verdicts.3.label>Passer à l'affaire suivante</RimCourt_Estate.verdicts.3.label>
+	<RimCourt_Estate.verdicts.0.pastLabel>la succession attribuée à {PETITIONER_labelShort}</RimCourt_Estate.verdicts.0.pastLabel>
+	<RimCourt_Estate.verdicts.1.pastLabel>la succession attribuée à {OTHER_labelShort}</RimCourt_Estate.verdicts.1.pastLabel>
+	<RimCourt_Estate.verdicts.2.pastLabel>jugé que le mort ne laisse rien</RimCourt_Estate.verdicts.2.pastLabel>
+	<RimCourt_Estate.verdicts.3.pastLabel>renvoyés, la succession en suspens</RimCourt_Estate.verdicts.3.pastLabel>
+
+</LanguageData>

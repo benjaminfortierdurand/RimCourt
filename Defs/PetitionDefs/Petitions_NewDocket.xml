@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Quatre affaires : le triangle amoureux, le penitent, la grace de l'exile,
+	     la dette de gratitude. -->
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Rivals</defName>
+		<priority>55</priority>
+		<label>two suitors, one heart</label>
+		<description>Two colonists court the same person, and one of them asks the lord to settle it.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Rivals</workerClass>
+		<caseText>{PETITIONER_labelShort} and {OTHER_labelShort} both court {LOVER}, and {LOVER} has not chosen, which is {LOVER}'s right and everyone else's problem. The two of them circle each other at meals, and the colony is waiting to find out where it ends.
+
+{PETITIONER_labelShort} asks the seat to end it first.
+
+How does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Order {OTHER_labelShort} to give up the suit</label>
+				<pastLabel>ordered to give up the suit</pastLabel>
+				<outcome>OrderRivalOff</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Let them settle it before the court, hand to hand</label>
+				<pastLabel>the suit settled hand to hand</pastLabel>
+				<outcome>RivalsDuel</outcome>
+				<just>1</just>
+				<harsh>1</harsh>
+			</li>
+			<li>
+				<label>Order them both to leave {LOVER} be</label>
+				<pastLabel>both ordered to give up the suit</pastLabel>
+				<outcome>BothDesist</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Move on to the next case</label>
+				<pastLabel>left to circle each other</pastLabel>
+				<outcome>Dismiss</outcome>
+				<weak>2</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Penitent</defName>
+		<priority>45</priority>
+		<label>a wrong brought by the one who did it</label>
+		<description>A colonist who wronged another comes to court himself, asking the lord to broker the pardon he cannot get alone.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Penitent</workerClass>
+		<maxMemoryAgeDays>15</maxMemoryAgeDays>
+		<sourceThoughts>
+			<li>Insulted</li>
+			<li>HarmedMe</li>
+			<li>HadAngeringFight</li>
+		</sourceThoughts>
+		<caseText>Every other matter in this hall is brought by the one who was wronged. {PETITIONER_labelShort} brings this one, and {PETITIONER_labelShort} is the one who did it.
+
+{OTHER_labelShort} has not forgiven, and will not, and {PETITIONER_labelShort} has run out of ways to ask. So the wrongdoer stands before the court and asks for a price. Any price. Something that can be paid.
+
+How does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Order {OTHER_labelShort} to let it go</label>
+				<pastLabel>ordered forgiven</pastLabel>
+				<outcome>OrderForgiveness</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Set the price: the lash, and the debt dies with it</label>
+				<pastLabel>the debt paid under the lash</pastLabel>
+				<outcome>Penance</outcome>
+				<just>1</just>
+				<harsh>1</harsh>
+			</li>
+			<li>
+				<label>Rule that the grudge is deserved</label>
+				<pastLabel>the grudge ruled deserved</pastLabel>
+				<outcome>GrudgeDeserved</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Move on to the next case</label>
+				<pastLabel>sent away to carry it</pastLabel>
+				<outcome>Dismiss</outcome>
+				<weak>2</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Gratitude</defName>
+		<priority>35</priority>
+		<label>a debt of gratitude</label>
+		<description>A colonist asks that the one who saved their life be honoured for it out loud.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Gratitude</workerClass>
+		<maxMemoryAgeDays>20</maxMemoryAgeDays>
+		<sourceThoughts>
+			<li>RescuedMe</li>
+		</sourceThoughts>
+		<caseText>{PETITIONER_labelShort} is alive because {OTHER_labelShort} went and got {PETITIONER_objective}, and nobody has said anything about it since. {OTHER_labelShort} never asked for anything, which is exactly why {PETITIONER_labelShort} is asking for {OTHER_objective}.
+
+Nobody in this hall is in the wrong. The court hears so little of that, it may take a moment to adjust.
+
+How does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Honour {OTHER_labelShort} before the court</label>
+				<pastLabel>the rescuer honoured before the court</pastLabel>
+				<outcome>HonourRescuer</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Rule that saving a life is no more than duty</label>
+				<pastLabel>told it was only duty</pastLabel>
+				<outcome>OnlyDuty</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Move on to the next case</label>
+				<pastLabel>passed over in silence</pastLabel>
+				<outcome>Dismiss</outcome>
+				<weak>2</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Pardon</defName>
+		<priority>85</priority>
+		<label>an exile at the gate</label>
+		<description>A colonist this court banished has come back alone, asking for pardon instead of arriving with a raid.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Pardon</workerClass>
+		<arrivalText>{PETITIONER_labelShort} is at the gate. This court banished {PETITIONER_objective}, and the sensible thing was to never come back, and here {PETITIONER_pronoun} is anyway, alone and unarmed, asking to be heard.
+
+{PETITIONER_pronoun} will wait {DAYS} days for an audience. What happens if the answer is no, or if no answer comes, is anyone's guess.</arrivalText>
+		<caseText>{PETITIONER_labelShort} stands where the banished do not stand twice. The road has taken what it takes, and what is left of {PETITIONER_objective} is asking to come home.
+
+The court that sent {PETITIONER_objective} away is the only one that can unsay it. That is why {PETITIONER_pronoun} is here, and why everyone is watching the seat.
+
+How does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Pardon {PETITIONER_labelShort}, and let the past lie</label>
+				<pastLabel>pardoned and taken back</pastLabel>
+				<outcome>PardonHim</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Turn {PETITIONER_labelShort} away for good</label>
+				<pastLabel>turned away for good</pastLabel>
+				<outcome>SpurnHim</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Leave the gate shut and say nothing</label>
+				<pastLabel>left at the gate unanswered</pastLabel>
+				<outcome>Dismiss</outcome>
+				<weak>2</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+</Defs>

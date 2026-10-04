@@ -1,0 +1,6 @@
+.research/
+_concept/
+Source/obj/
+Source/bin/
+.vs/
+*.user

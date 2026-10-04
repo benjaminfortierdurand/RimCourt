@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Les grands verdicts nourrissent l'art de la colonie : la colonie se souvient
+	     litteralement de ce que le seigneur a decide. -->
+
+	<TaleDef>
+		<defName>RimCourt_Tale_Flogged</defName>
+		<label>flogged before the court</label>
+		<taleClass>Tale_DoublePawn</taleClass>
+		<type>Expirable</type>
+		<firstPawnSymbol>LORD</firstPawnSymbol>
+		<secondPawnSymbol>CONDEMNED</secondPawnSymbol>
+		<baseInterest>4</baseInterest>
+		<maxPerPawn>2</maxPerPawn>
+		<expireDays>35</expireDays>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->the flogging of [CONDEMNED_nameDef]</li>
+				<li>tale_noun->[CONDEMNED_nameDef] paying the blood price</li>
+				<li>image->[CONDEMNED_nameFull] taking the lash before the court of [LORD_nameFull] [circumstance_group]</li>
+				<li>image->[LORD_nameFull] watching from the seat as [CONDEMNED_nameFull] pays the blood price [circumstance_group]</li>
+				<li>circumstance_phrase->while the whole colony watches in silence</li>
+				<li>circumstance_phrase->with the debt declared settled</li>
+				<li>circumstance_phrase->under the lord's unblinking gaze</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+
+	<TaleDef>
+		<defName>RimCourt_Tale_Banished</defName>
+		<label>banished by the court</label>
+		<taleClass>Tale_DoublePawn</taleClass>
+		<type>Expirable</type>
+		<firstPawnSymbol>LORD</firstPawnSymbol>
+		<secondPawnSymbol>BANISHED</secondPawnSymbol>
+		<baseInterest>4</baseInterest>
+		<maxPerPawn>2</maxPerPawn>
+		<expireDays>35</expireDays>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->the banishment of [BANISHED_nameDef]</li>
+				<li>tale_noun->[LORD_nameDef] casting out [BANISHED_nameDef]</li>
+				<li>image->[LORD_nameFull] pointing [BANISHED_nameFull] toward the gates [circumstance_group]</li>
+				<li>image->[BANISHED_nameFull] walking out of the colony by the lord's word [circumstance_group]</li>
+				<li>circumstance_phrase->while the court looks on</li>
+				<li>circumstance_phrase->never to return</li>
+				<li>circumstance_phrase->with nothing but the road ahead</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+
+	<TaleDef>
+		<defName>RimCourt_Tale_TrialByCombat</defName>
+		<label>trial by combat</label>
+		<taleClass>Tale_DoublePawn</taleClass>
+		<type>Expirable</type>
+		<firstPawnSymbol>VICTOR</firstPawnSymbol>
+		<secondPawnSymbol>LOSER</secondPawnSymbol>
+		<baseInterest>5</baseInterest>
+		<maxPerPawn>2</maxPerPawn>
+		<expireDays>35</expireDays>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->the trial by combat of [VICTOR_nameDef] and [LOSER_nameDef]</li>
+				<li>tale_noun->[VICTOR_nameDef] proving [VICTOR_possessive] right by the fist</li>
+				<li>image->[VICTOR_nameFull] standing over [LOSER_nameFull] before the assembled court [circumstance_group]</li>
+				<li>image->[VICTOR_nameFull] and [LOSER_nameFull] settling it with their fists before the lord [circumstance_group]</li>
+				<li>circumstance_phrase->with the right of it decided by whoever stayed standing</li>
+				<li>circumstance_phrase->by the lord's leave</li>
+				<li>circumstance_phrase->while the court cheered and winced</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+
+	<TaleDef>
+		<defName>RimCourt_Tale_MatchBlessed</defName>
+		<label>a match blessed</label>
+		<taleClass>Tale_DoublePawn</taleClass>
+		<type>Expirable</type>
+		<firstPawnSymbol>LOVER</firstPawnSymbol>
+		<secondPawnSymbol>PARTNER</secondPawnSymbol>
+		<baseInterest>3</baseInterest>
+		<maxPerPawn>1</maxPerPawn>
+		<expireDays>40</expireDays>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->the blessing of [LOVER_nameDef] and [PARTNER_nameDef]</li>
+				<li>tale_noun->[LOVER_nameDef] and [PARTNER_nameDef] blessed before the court</li>
+				<li>image->[LOVER_nameFull] and [PARTNER_nameFull] standing together before the lord's seat [circumstance_group]</li>
+				<li>image->the lord blessing the match of [LOVER_nameFull] and [PARTNER_nameFull] [circumstance_group]</li>
+				<li>circumstance_phrase->with the whole colony as witness</li>
+				<li>circumstance_phrase->and nobody could call it improper again</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+
+	<TaleDef>
+		<defName>RimCourt_Tale_ThroneTaken</defName>
+		<label>the seat changed hands</label>
+		<taleClass>Tale_DoublePawn</taleClass>
+		<type>PermanentHistorical</type>
+		<firstPawnSymbol>USURPER</firstPawnSymbol>
+		<secondPawnSymbol>DEPOSED</secondPawnSymbol>
+		<baseInterest>6</baseInterest>
+		<maxPerPawn>2</maxPerPawn>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->the fall of [DEPOSED_nameDef]</li>
+				<li>tale_noun->[USURPER_nameDef] taking the lord's seat</li>
+				<li>image->[USURPER_nameFull] taking the seat from [DEPOSED_nameFull] before the whole court [circumstance_group]</li>
+				<li>image->[DEPOSED_nameFull] rising from the lord's seat for the last time [circumstance_group]</li>
+				<li>circumstance_phrase->while the colony watched a lord fall</li>
+				<li>circumstance_phrase->and nothing was ever quite the same</li>
+				<li>circumstance_phrase->as the old order ended</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+
+</Defs>

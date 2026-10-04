@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_Feud.label>sang mauvais</RimCourt_Feud.label>
+	<RimCourt_Feud.description>Deux colons qui se détestent sont appelés à régler cela devant le seigneur.</RimCourt_Feud.description>
+	<RimCourt_Feud.caseText>{PETITIONER_labelShort} et {OTHER_labelShort} se tiennent devant la cour. Ces deux-là se cherchent depuis longtemps, et toute la colonie le sait. Tôt ou tard, cela finit dans le sang. Aujourd'hui, cela finit par la parole du seigneur.\n\nComment le seigneur tranche-t-il ?</RimCourt_Feud.caseText>
+	<RimCourt_Feud.verdicts.0.label>Leur ordonner de faire la paix</RimCourt_Feud.verdicts.0.label>
+	<RimCourt_Feud.verdicts.1.label>Les punir tous les deux pour le trouble</RimCourt_Feud.verdicts.1.label>
+	<RimCourt_Feud.verdicts.2.label>Renvoyer l'affaire</RimCourt_Feud.verdicts.2.label>
+	<RimCourt_Feud.verdicts.0.pastLabel>paix ordonnée</RimCourt_Feud.verdicts.0.pastLabel>
+	<RimCourt_Feud.verdicts.1.pastLabel>les deux punis</RimCourt_Feud.verdicts.1.pastLabel>
+	<RimCourt_Feud.verdicts.2.pastLabel>affaire renvoyée</RimCourt_Feud.verdicts.2.pastLabel>
+	<RimCourt_Feud.verdicts.3.label>Qu'ils règlent cela à coups de poing</RimCourt_Feud.verdicts.3.label>
+	<RimCourt_Feud.verdicts.3.pastLabel>réglé par l'épreuve du combat</RimCourt_Feud.verdicts.3.pastLabel>
+
+	<RimCourt_Grievance.label>un tort à réparer</RimCourt_Grievance.label>
+	<RimCourt_Grievance.description>Un colon plein de rancune porte un grief contre un autre devant le seigneur.</RimCourt_Grievance.description>
+	<RimCourt_Grievance.caseText>{PETITIONER_labelShort} s'agenouille devant la cour et expose un grief contre {OTHER_labelShort} : des affronts, des torts et de vieilles blessures, tout cela déposé aux pieds du seigneur. {OTHER_labelShort} nie tout en bloc.\n\nComment le seigneur tranche-t-il ?</RimCourt_Grievance.caseText>
+	<RimCourt_Grievance.verdicts.0.label>Donner raison à {PETITIONER_labelShort}</RimCourt_Grievance.verdicts.0.label>
+	<RimCourt_Grievance.verdicts.1.label>Donner raison à {OTHER_labelShort}</RimCourt_Grievance.verdicts.1.label>
+	<RimCourt_Grievance.verdicts.2.label>Rejeter l'affaire</RimCourt_Grievance.verdicts.2.label>
+	<RimCourt_Grievance.verdicts.0.pastLabel>raison donnée à {PETITIONER_labelShort}</RimCourt_Grievance.verdicts.0.pastLabel>
+	<RimCourt_Grievance.verdicts.1.pastLabel>raison donnée à {OTHER_labelShort}</RimCourt_Grievance.verdicts.1.pastLabel>
+	<RimCourt_Grievance.verdicts.2.pastLabel>affaire rejetée</RimCourt_Grievance.verdicts.2.pastLabel>
+	<RimCourt_Grievance.verdicts.3.label>Mettre {OTHER_labelShort} au pilori pour la peine</RimCourt_Grievance.verdicts.3.label>
+	<RimCourt_Grievance.verdicts.3.pastLabel>{OTHER_labelShort} mis au pilori pour cela</RimCourt_Grievance.verdicts.3.pastLabel>
+
+</LanguageData>

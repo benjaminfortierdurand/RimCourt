@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<IncidentDef>
+		<defName>RimCourt_Petitioner</defName>
+		<label>petitioner at the gate</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RimCourt.IncidentWorker_Petitioner</workerClass>
+		<!-- Ce chiffre est un mensonge, la réputation et la salle le multiplient derrière. -->
+		<baseChance>0.55</baseChance>
+		<minRefireDays>12</minRefireDays>
+	</IncidentDef>
+
+
+	<IncidentDef>
+		<defName>RimCourt_Arbitration</defName>
+		<label>two neighbours at the gate</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RimCourt.IncidentWorker_Arbitration</workerClass>
+		<baseChance>0.35</baseChance>
+		<minRefireDays>25</minRefireDays>
+	</IncidentDef>
+
+</Defs>

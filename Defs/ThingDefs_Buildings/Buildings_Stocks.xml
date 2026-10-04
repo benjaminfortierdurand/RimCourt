@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Pas de plateforme Anomaly, pas de patch Harmony. Imprimé dans le maillage comme le poteau décoratif de Gerrymon, Standable, altitude Building : le jeu dessine le pion au-dessus. Si « Sense Of Depth For Tall Buildings » est chargé, Patches/Patches_SenseOfDepth.xml l'empêche de repasser le fût sur la tête. Texture de Gerrymon, avec sa permission. -->
+
+	<ThingDef ParentName="FurnitureBase">
+		<defName>RimCourt_Stocks</defName>
+		<label>pillory post</label>
+		<description>A post with iron rings, set where everyone passes. The lord's court can bind a colonist to it for a stretch of hours, standing, in full view, and everyone who walks by gets to say what they think. Nobody is hurt at the post. That is not the point of it.</description>
+		<thingClass>RimCourt.Court.Building_Stocks</thingClass>
+		<graphicData>
+			<texPath>Things/Building/RimCourt_Post</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,3)</drawSize>
+			<drawOffset>(0,0,0.1)</drawOffset>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<uiIconScale>0.6</uiIconScale>
+		<!-- Normal et pas Rare : à 250 ticks un colon qui passe à côté est déjà loin. Le Tick() sort tout de suite si personne n'est attaché. -->
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Standable</passability>
+		<pathCost>30</pathCost>
+		<fillPercent>0.35</fillPercent>
+		<rotatable>false</rotatable>
+		<designationCategory>Misc</designationCategory>
+		<size>(1,1)</size>
+		<stuffCategories>
+			<li>Woody</li>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>45</costStuffCount>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<WorkToBuild>700</WorkToBuild>
+			<Mass>20</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>-4</Beauty>
+			<TerrorSource MayRequire="Ludeon.RimWorld.Ideology">6</TerrorSource>
+		</statBases>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+	</ThingDef>
+
+</Defs>

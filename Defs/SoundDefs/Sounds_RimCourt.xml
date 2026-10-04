@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<SoundDef>
+		<defName>RimCourt_Whip</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>5</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RimCourt/Whip</clipPath>
+					</li>
+				</grains>
+				<volumeRange>28~38</volumeRange>
+				<pitchRange>0.92~1.08</pitchRange>
+				<distRange>0~35</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+</Defs>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_Challenge.label>une prétention au siège</RimCourt_Challenge.label>
+	<RimCourt_Challenge.description>Un colon qui pense peu de bien du seigneur se lève et réclame le siège lui-même.</RimCourt_Challenge.description>
+	<RimCourt_Challenge.caseText>{PETITIONER_labelShort} s'avance et ne s'agenouille pas. La salle se tait, car tout le monde comprend avant qu'un mot soit dit. La colonie dit son seigneur faible depuis quelque temps, et {PETITIONER_labelShort} a décidé de le dire au siège lui-même : cédez la place, et laissez régner quelqu'un qui régnera.
+
+Le seigneur doit répondre à son propre accusateur.
+
+Comment le seigneur tranche-t-il ?</RimCourt_Challenge.caseText>
+	<RimCourt_Challenge.verdicts.0.label>Céder le siège à {PETITIONER_labelShort}</RimCourt_Challenge.verdicts.0.label>
+	<RimCourt_Challenge.verdicts.1.label>Bannir {PETITIONER_labelShort} pour trahison</RimCourt_Challenge.verdicts.1.label>
+	<RimCourt_Challenge.verdicts.2.label>Le siège se gagne par l'épée. Battez-vous</RimCourt_Challenge.verdicts.2.label>
+	<RimCourt_Challenge.verdicts.0.pastLabel>le siège cédé</RimCourt_Challenge.verdicts.0.pastLabel>
+	<RimCourt_Challenge.verdicts.1.pastLabel>le prétendant banni pour trahison</RimCourt_Challenge.verdicts.1.pastLabel>
+	<RimCourt_Challenge.verdicts.2.pastLabel>le siège remis à l'épée</RimCourt_Challenge.verdicts.2.pastLabel>
+	<RimCourt_Challenge.verdicts.3.label>Mettre {PETITIONER_labelShort} au pilori, et que la colonie voie qui siège</RimCourt_Challenge.verdicts.3.label>
+	<RimCourt_Challenge.verdicts.3.pastLabel>le prétendant mis au pilori</RimCourt_Challenge.verdicts.3.pastLabel>
+
+</LanguageData>
