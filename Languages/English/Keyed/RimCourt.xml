@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Gizmos -->
+	<RimCourt.HoldCourtLabel>Hold court</RimCourt.HoldCourtLabel>
+	<RimCourt.GuideGizmoLabel>Court guide</RimCourt.GuideGizmoLabel>
+	<RimCourt.GuideGizmoDesc>How holding court works: where cases come from, how to rule, and what it does to the lord's name.</RimCourt.GuideGizmoDesc>
+	<RimCourt.Settings.OpenGuide>Open the court guide</RimCourt.Settings.OpenGuide>
+	<RimCourt.HoldCourtDesc>Convene an audience. The lord takes the seat, the colony gathers, and petitioners plead their cases one by one. You render each verdict.</RimCourt.HoldCourtDesc>
+	<RimCourt.NameLordLabel>Name the lord</RimCourt.NameLordLabel>
+	<RimCourt.NameLordDesc>Choose who holds court. Left alone, the seat goes to the throne's assigned owner, and failing that to whoever carries the most weight in the colony.</RimCourt.NameLordDesc>
+	<RimCourt.NameLordOnThrone>The seat stands on {0}'s throne, and that settles it. Reassign the throne to seat another, or let someone take it off him in open court.</RimCourt.NameLordOnThrone>
+	<RimCourt.PickLordTitle>Who holds court</RimCourt.PickLordTitle>
+	<RimCourt.PickLordDesc>No throne carries this seat, so it goes to whoever the colony holds highest. Assign a throne and its owner takes the seat on his own; until then, name your lord here.</RimCourt.PickLordDesc>
+	<RimCourt.PickLordRow>{0}  ·  social {1}</RimCourt.PickLordRow>
+	<RimCourt.PickLordNoTitle>no title</RimCourt.PickLordNoTitle>
+	<RimCourt.PickLordThroneDesc>The seat stands on {0}'s throne, so the court would seat {0} on its own. Someone else holds it only because you or a challenge put him there; leave it to the seat and the throne takes it back.</RimCourt.PickLordThroneDesc>
+	<RimCourt.PickLordSeatOwner>owns this throne</RimCourt.PickLordSeatOwner>
+	<RimCourt.LordByThrone>{0} holds court, by right of the throne.</RimCourt.LordByThrone>
+	<RimCourt.PickLordAuto>Leave it to the seat ({0} as things stand)</RimCourt.PickLordAuto>
+	<RimCourt.LordNamed>{0} holds court, by your word.</RimCourt.LordNamed>
+	<RimCourt.LordByPrestige>{0} would hold court.</RimCourt.LordByPrestige>
+	<RimCourt.NameHandLabel>Name the Hand</RimCourt.NameHandLabel>
+	<RimCourt.NameHandDesc>Name a colonist to preside when the lord cannot: laid up, sick, or too young to swear anyone to anything. Without a Hand the seat falls back to weight of standing, as it always did.</RimCourt.NameHandDesc>
+	<RimCourt.PickHandTitle>The lord's Hand</RimCourt.PickHandTitle>
+	<RimCourt.PickHandDesc>The Hand takes the seat for the day whenever the lord is in no state to hold it. The verdicts are theirs, the reputation they build is the court's, and the lord gets it back the moment he can walk to the chair.</RimCourt.PickHandDesc>
+	<RimCourt.PickHandNone>The court will manage without a Hand</RimCourt.PickHandNone>
+	<RimCourt.LordByHand>{0} holds court as the Hand, while the lord cannot.</RimCourt.LordByHand>
+	<RimCourt.StandingByHand>holds court as the Hand, while the lord cannot</RimCourt.StandingByHand>
+	<RimCourt.StandingHandTag>the Hand</RimCourt.StandingHandTag>
+	<RimCourt.SeatInheritedLabel>{0} inherits the seat</RimCourt.SeatInheritedLabel>
+	<RimCourt.SeatInheritedText>{0} is dead, and named {1} heir before it happened. The title passes, and this court passes with it: {1} holds the seat now, by inheritance rather than by weight of standing.
+
+Name the lord on the marker if the hall should answer to somebody else instead.</RimCourt.SeatInheritedText>
+	<RimCourt.ShapedLabel>The seat has changed {0}</RimCourt.ShapedLabel>
+	<RimCourt.Shaped1>{0} has ordered enough pain from that chair to stop minding it. He is {1} now, and the change is permanent.
+
+He will be at ease with the harsh rulings he used to carry home, which is not the same thing as being a better lord.</RimCourt.Shaped1>
+	<RimCourt.Shaped2>{0} has taken money across that chair often enough for it to become a habit rather than a decision. He is {1} now, and the change is permanent.
+
+He will be at ease with the venal rulings he used to carry home, which is not the same thing as being a better lord.</RimCourt.Shaped2>
+	<RimCourt.Shaped3>{0} has ducked enough judgements from that chair to stop expecting to be obeyed. He is {1} now, and the change is permanent.
+
+He will be at ease with the weak rulings he used to carry home, which is not the same thing as being a better lord.</RimCourt.Shaped3>
+	<RimCourt.ShapedLostKind>Whatever was kind in {0} did not survive it.</RimCourt.ShapedLostKind>
+	<RimCourt.Settings.ShapeLord>The seat changes the man</RimCourt.Settings.ShapeLord>
+	<RimCourt.Settings.ShapeLordHint>After a long run of harsh, venal or weak rulings, the lord permanently gains a trait to match. It takes a settled reputation, thirty points on the count, and a dozen verdicts from the same man, so it is rare and it is announced. It never grants a good trait: the seat corrupts, it does not ennoble. A kind lord made bloodthirsty is not kind any more.</RimCourt.Settings.ShapeLordHint>
+	<RimCourt.Settings.NoDecay>A name once made is never forgotten</RimCourt.Settings.NoDecay>
+	<RimCourt.Settings.NoDecayHint>Reputation normally fades about three percent a day between sessions, so a court that stops sitting is slowly forgotten. Tick this and it never fades: whatever the lord has been judged to be, he stays. Openly a cheat, and there if you want it.</RimCourt.Settings.NoDecayHint>
+	<RimCourt.Epithet0>the Just</RimCourt.Epithet0>
+	<RimCourt.Epithet1>the Cruel</RimCourt.Epithet1>
+	<RimCourt.Epithet2>the Greedy</RimCourt.Epithet2>
+	<RimCourt.Epithet3>the Weak</RimCourt.Epithet3>
+	<RimCourt.EpithetF0>the Just</RimCourt.EpithetF0>
+	<RimCourt.EpithetF1>the Cruel</RimCourt.EpithetF1>
+	<RimCourt.EpithetF2>the Greedy</RimCourt.EpithetF2>
+	<RimCourt.EpithetF3>the Weak</RimCourt.EpithetF3>
+	<RimCourt.EpithetLine>From today the colony has a name for him, and it is in his name: {0}.</RimCourt.EpithetLine>
+	<RimCourt.EpithetDropped>{0} is no longer called {1}. The name faded with the verdicts that earned it.</RimCourt.EpithetDropped>
+	<RimCourt.Settings.Epithets>The colony puts the name in his name</RimCourt.Settings.Epithets>
+	<RimCourt.Settings.EpithetsHint>Once the court has a settled reputation, the lord's nickname carries it: Jaime the Just, Jaime the Cruel, Jaime the Greedy, Jaime the Weak. It changes when the name changes and goes when it fades. A dead lord keeps whatever he died with. Untick to keep names as they were.</RimCourt.Settings.EpithetsHint>
+	<RimCourt.PutInStocks>{0} is bound to the post for {1} hours, in full view of the colony.</RimCourt.PutInStocks>
+	<RimCourt.NoStocksLash>There is no pillory post built, so {0} gets the lash instead.</RimCourt.NoStocksLash>
+	<RimCourt.StocksReleased>{0} has served the time at the post.</RimCourt.StocksReleased>
+	<RimCourt.StocksFreed>{0} was let off the post early.</RimCourt.StocksFreed>
+	<RimCourt.StocksReleaseLabel>Release</RimCourt.StocksReleaseLabel>
+	<RimCourt.StocksReleaseDesc>Untie {0} from the post before the time is served. The court will not mention it.</RimCourt.StocksReleaseDesc>
+	<RimCourt.StocksInspect>{0} at the post, {1} left.</RimCourt.StocksInspect>
+	<RimCourt.Settings.StocksHours>Hours at the post</RimCourt.Settings.StocksHours>
+	<RimCourt.EscortDialogTitle>To the post</RimCourt.EscortDialogTitle>
+	<RimCourt.EscortDialogDesc>{0} is to be bound at the post in full view. Someone walks {0} there and ties the knots, and the colony will remember who did. Choose, or let {0} walk there alone.</RimCourt.EscortDialogDesc>
+	<RimCourt.EscortNoOne>Let them walk there alone</RimCourt.EscortNoOne>
+	<RimCourt.EscortNoOneCaptive>Whoever is nearest carries them</RimCourt.EscortNoOneCaptive>
+	<RimCourt.StocksUnreachableLash>{0} cannot be got to the post, so it is the lash instead.</RimCourt.StocksUnreachableLash>
+	<RimCourt.CaptiveCantReachPost>Nobody could get {0} to the post. {0} goes back to the cell.</RimCourt.CaptiveCantReachPost>
+	<RimCourt.EscortRowInfo>{0}  ·  opinion of the condemned {1}</RimCourt.EscortRowInfo>
+	<RimCourt.StocksTaken>{1} takes {0} to the post, for {2} hours in full view of the colony.</RimCourt.StocksTaken>
+	<RimCourt.StocksInspectTaking>{0} being taken to the post by {1}.</RimCourt.StocksInspectTaking>
+	<RimCourt.CaptiveBlood>{0} killed {1}. Everyone in the hall knows it, and half of them watched it happen.</RimCourt.CaptiveBlood>
+	<RimCourt.CaptiveHurt>{0} put {1} on the ground. {1} got up again, which is no credit to {0}.</RimCourt.CaptiveHurt>
+	<RimCourt.CaptiveRaids>{0}'s people, the {1}, have come against these walls {2} times this year. This is not a stranger. This is a habit.</RimCourt.CaptiveRaids>
+	<RimCourt.CaptiveNobody>Nobody saw {0} touch anyone. {0} came with the others and fell with the others, and that is the whole of the charge.</RimCourt.CaptiveNobody>
+	<RimCourt.CaptiveBrought>{0} goes to fetch {1} from the cell.</RimCourt.CaptiveBrought>
+	<RimCourt.CaptiveNoGuard>Nobody is free to fetch {0}, so {0} is called and comes alone.</RimCourt.CaptiveNoGuard>
+	<RimCourt.CaptiveReleased>{0} is sent home to the {1} with a warning.</RimCourt.CaptiveReleased>
+	<RimCourt.CaptiveRansomed>The {1} paid {2} silver for {0}. {0} walks home.</RimCourt.CaptiveRansomed>
+	<RimCourt.CaptiveExecuted>{0} puts {1} to the sword before the seat.</RimCourt.CaptiveExecuted>
+	<RimCourt.CaptiveNoExecutioner>Nobody in the hall will hold the blade. {0} is marked for execution and taken back to the cell.</RimCourt.CaptiveNoExecutioner>
+	<RimCourt.CaptiveNoStocks>There is no pillory post built. {0} goes back to the cell.</RimCourt.CaptiveNoStocks>
+	<RimCourt.CaptiveKept>{0} goes back to the cell.</RimCourt.CaptiveKept>
+	<RimCourt.ExecutionerDialogTitle>The sword</RimCourt.ExecutionerDialogTitle>
+	<RimCourt.ExecutionerDialogDesc>{0} is to die here, before the court. Someone holds the blade, and the colony will remember who. Choose, or let whoever is nearest do it without ceremony.</RimCourt.ExecutionerDialogDesc>
+	<RimCourt.ExecutionerNoOne>Whoever is nearest, without ceremony</RimCourt.ExecutionerNoOne>
+	<RimCourt.CancelCourtLabel>Dissolve the audience</RimCourt.CancelCourtLabel>
+	<RimCourt.CancelCourtDesc>End the current session. Cases not yet heard are dropped.</RimCourt.CancelCourtDesc>
+	<RimCourt.CancelCourtConfirm>Dissolve the audience? Cases not yet heard will be dropped.</RimCourt.CancelCourtConfirm>
+	<RimCourt.CourtCooldownGizmo>The court reconvenes in {0} days.</RimCourt.CourtCooldownGizmo>
+	<RimCourt.CourtCooldownGizmoOne>The court reconvenes tomorrow.</RimCourt.CourtCooldownGizmoOne>
+
+	<!-- Convening -->
+	<RimCourt.CourtAlreadyRunning>An audience is already in session.</RimCourt.CourtAlreadyRunning>
+	<RimCourt.CourtOnCooldown>The court is done for now. It reconvenes in {0} days.</RimCourt.CourtOnCooldown>
+	<RimCourt.CourtOnCooldownOne>The court is done for now. It reconvenes tomorrow.</RimCourt.CourtOnCooldownOne>
+	<RimCourt.NeedSeat>No lord's seat near the audience spot. Place one within 15 tiles.</RimCourt.NeedSeat>
+	<RimCourt.NoAudienceRoom>No room in front of the seat for petitioners to stand. Turn the seat around, clear the space, or place an audience spot.</RimCourt.NoAudienceRoom>
+	<RimCourt.PetitionersStandHere>Petitioners will stand {0} tiles ahead.</RimCourt.PetitionersStandHere>
+	<RimCourt.NeedLord>Nobody in the colony can hold court right now.</RimCourt.NeedLord>
+	<RimCourt.NoPetitions>Nobody seeks the lord's justice today. No quarrels worth hearing.</RimCourt.NoPetitions>
+	<RimCourt.CourtConvened>{0} holds court. {1} cases will be heard.</RimCourt.CourtConvened>
+	<RimCourt.CourtConvenedOne>{0} holds court. One case will be heard.</RimCourt.CourtConvenedOne>
+
+	<!-- Session -->
+	<RimCourt.CaseCalled>{0} steps forward to plead.</RimCourt.CaseCalled>
+	<RimCourt.CaseSkipped>The case of {0} could not be heard.</RimCourt.CaseSkipped>
+	<RimCourt.CourtCancelled>The audience is dissolved.</RimCourt.CourtCancelled>
+	<RimCourt.CourtLordGone>The lord is in no state to hold court. The audience is dissolved.</RimCourt.CourtLordGone>
+	<RimCourt.CourtScattered>The court scatters. Nobody pleads a case while the colony is under attack.</RimCourt.CourtScattered>
+	<RimCourt.VerdictLetterLabel>Petition: {0}</RimCourt.VerdictLetterLabel>
+	<RimCourt.VerdictRendered>{0} has spoken. {1}.</RimCourt.VerdictRendered>
+	<RimCourt.VerdictRefused>{0} will not have it, and walks out of the hall while {1} is still speaking. The ruling stands on paper and on nothing else.</RimCourt.VerdictRefused>
+	<RimCourt.BanishedByCourt>{0} is banished from the colony by the lord's word.</RimCourt.BanishedByCourt>
+	<RimCourt.ExileReturnsLabel>{0} has come back</RimCourt.ExileReturnsLabel>
+	<RimCourt.ExileReturnsText>The court sent {0} away and the court was done with it. {0} was not.\n\nHe rides with {1} now, and he has brought {2} of them with him. He knows where the doors are, he knows which of you can fight, and he knows exactly what he was told at the foot of that chair.</RimCourt.ExileReturnsText>
+	<RimCourt.ExileWarlordLabel>{0} sits at the head of a table now</RimCourt.ExileWarlordLabel>
+	<RimCourt.ExileWarlordText>Word comes back from far off. {0}, whom this court banished, leads {1}.\n\nWhatever was said in that hall is now the policy of a faction, and the faction has a border with you. {0} did not have to explain the grievance to anyone: they took the word of a man who had been there.</RimCourt.ExileWarlordText>
+	<RimCourt.FlogMote>The lash!</RimCourt.FlogMote>
+	<RimCourt.DuelStarted>{0} and {1} settle it before the court, by the lord's leave.</RimCourt.DuelStarted>
+	<RimCourt.DuelWon>{0} stayed standing. {1} is held to be in the wrong.</RimCourt.DuelWon>
+	<RimCourt.FloggerDialogTitle>The blood price</RimCourt.FloggerDialogTitle>
+	<RimCourt.FloggerDialogDesc>{0} is to answer for it before the assembled court. Someone must lay the lash, and the colony will remember who did. Choose, or have it done without ceremony.</RimCourt.FloggerDialogDesc>
+	<RimCourt.FloggerNoOne>Have it done without ceremony</RimCourt.FloggerNoOne>
+	<RimCourt.FloggerRowInfo>{0}  ·  melee {1}  ·  opinion of the condemned {2}</RimCourt.FloggerRowInfo>
+	<RimCourt.NoFlogger>Nobody in the colony would hold the lash, so {0} takes it from the guards.</RimCourt.NoFlogger>
+	<RimCourt.FloggerLord>{0} (the lord passes the sentence, the lord swings it)</RimCourt.FloggerLord>
+	<RimCourt.FloggerWronged>{0} (the one who was wronged)</RimCourt.FloggerWronged>
+	<RimCourt.FloggerAny>{0}</RimCourt.FloggerAny>
+	<RimCourt.NoAnswerLabel>no answer given</RimCourt.NoAnswerLabel>
+	<RimCourt.NoAnswerMessage>{0} let the case of {1} go unanswered. Silence counts as throwing it out.</RimCourt.NoAnswerMessage>
+	<RimCourt.LogVerdict>{0} against {1}: {2}</RimCourt.LogVerdict>
+	<RimCourt.LogVerdictSolo>{0}: {1}</RimCourt.LogVerdictSolo>
+	<RimCourt.AdjournLetterLabel>The court adjourns</RimCourt.AdjournLetterLabel>
+	<RimCourt.AdjournLetterText>{0} has heard the day's petitions. {1} cases were settled.</RimCourt.AdjournLetterText>
+	<RimCourt.AdjournLetterTextOne>{0} has heard the day's petitions. One case was settled.</RimCourt.AdjournLetterTextOne>
+
+	<!-- Petitioners from outside -->
+	<RimCourt.PetitionerArrivesLabel>Petitioner: {0}</RimCourt.PetitionerArrivesLabel>
+	<RimCourt.OutsiderGaveUp>{0} waited for an audience that never came, and has left.</RimCourt.OutsiderGaveUp>
+	<RimCourt.OutsiderJoined>{0} has been taken into the colony.</RimCourt.OutsiderJoined>
+	<RimCourt.SlaveFreed>{0} is free. The lord said so, and the whole hall heard it.</RimCourt.SlaveFreed>
+	<RimCourt.OutsiderBoughtIn>{0} paid {1} silver for a place in the colony.</RimCourt.OutsiderBoughtIn>
+	<RimCourt.OutsiderPaid>{0} was paid {1} silver in damages.</RimCourt.OutsiderPaid>
+	<RimCourt.OutsiderNoSilver>The colony does not have the {0} silver the lord promised. The petitioner leaves insulted.</RimCourt.OutsiderNoSilver>
+	<RimCourt.OutsiderFeeTaken>{0} paid {1} silver in court fees and got nothing for it.</RimCourt.OutsiderFeeTaken>
+	<RimCourt.EnvoyArmsGiven>{1} weapons go to {0}. Whatever they do with them is done with your steel.</RimCourt.EnvoyArmsGiven>
+	<RimCourt.EnvoyArmsSold>{0} paid {1} silver for weapons they needed to survive.</RimCourt.EnvoyArmsSold>
+	<RimCourt.EnvoyNoArms>The colony cannot spare {0} weapons from its stores.</RimCourt.EnvoyNoArms>
+	<RimCourt.EnvoyFoodGiven>{1} food goes to {0}. A house remembers being fed.</RimCourt.EnvoyFoodGiven>
+	<RimCourt.EnvoyFoodSold>{0} paid {1} silver for food they were begging for.</RimCourt.EnvoyFoodSold>
+	<RimCourt.EnvoyNoFood>The colony cannot spare the {0} food the lord promised.</RimCourt.EnvoyNoFood>
+	<RimCourt.EnvoyRefused>The envoy of {0} leaves with nothing.</RimCourt.EnvoyRefused>
+	<RimCourt.ArbitrationArrivesLabel>Two neighbours at the gate</RimCourt.ArbitrationArrivesLabel>
+	<RimCourt.Quarrel0>a stretch of border neither can farm and neither will give up</RimCourt.Quarrel0>
+	<RimCourt.Quarrel1>a man killed on a road that belongs to nobody</RimCourt.Quarrel1>
+	<RimCourt.Quarrel2>a debt one side says was paid and the other says was never sent</RimCourt.Quarrel2>
+	<RimCourt.ArbitrationRuled>The court finds for {0}. {1} accepts it, and will remember accepting it.</RimCourt.ArbitrationRuled>
+	<RimCourt.ArbitrationBought>{0} put {1} silver on the table and the court found for {0}. {2} watched it happen.</RimCourt.ArbitrationBought>
+	<RimCourt.ArbitrationRefused>{0} and {1} are sent home to settle it themselves, which they will, and not with words.</RimCourt.ArbitrationRefused>
+	<RimCourt.MatchBlessed>{0} and {1} have the lord's blessing.</RimCourt.MatchBlessed>
+	<RimCourt.MatchPledged>{0} and {1} have the lord's blessing. The wedding is set for tomorrow instead of whenever the pair got round to it, and the court will see it held whatever the colony finds to do instead.</RimCourt.MatchPledged>
+	<RimCourt.WeddingKeptLabel>A word is a word</RimCourt.WeddingKeptLabel>
+	<RimCourt.WeddingKeptText>The court blessed this match days ago and the colony never found an afternoon quiet enough for a feast. {0} and {1} are married anyway, in front of whoever happened to be standing there. The lord's word was given; it is not the couple's fault that nobody came.</RimCourt.WeddingKeptText>
+	<RimCourt.WorkExcused>{0} is excused from {1} by the lord's word.</RimCourt.WorkExcused>
+	<RimCourt.Apprenticed>{0} is to be taught {1} properly, and {2} is to do the teaching. The lord's answer to hating the work is to stop being bad at it.</RimCourt.Apprenticed>
+	<RimCourt.ApprenticedAlone>{0} is to be taught {1} properly, with nobody in the colony fit to teach it. The lord's word will have to do the teaching.</RimCourt.ApprenticedAlone>
+	<RimCourt.PromiseBroken>{0} has been put back to {1}, which the court excused {0} from. The colony saw the ruling and the colony sees this.</RimCourt.PromiseBroken>
+	<RimCourt.LeaveGranted>{0} has leave to go, and goes.</RimCourt.LeaveGranted>
+	<RimCourt.Honoured>{0} is honoured before the whole court.</RimCourt.Honoured>
+	<RimCourt.HonourPaid>{0} is paid {1} silver before the assembled court, and the money leaves with him.</RimCourt.HonourPaid>
+	<RimCourt.HonourNoSilver>The colony does not have the {0} silver the lord promised. The words were said and everyone heard that they were all he got.</RimCourt.HonourNoSilver>
+	<RimCourt.PesteredOrdered>{0} is told before the assembled court to let {1} be, and everyone heard it. The wanting stays where it lives; the asking ends today.</RimCourt.PesteredOrdered>
+	<RimCourt.RivalOrderedOff>{0} is ordered to give up the suit. {1} was not consulted, and {2} did not need to be.</RimCourt.RivalOrderedOff>
+	<RimCourt.RivalsBothOff>The court rules that {0} shall be courted by nobody at all, which suits {0} either very well or very badly.</RimCourt.RivalsBothOff>
+	<RimCourt.RivalDuelWon>{0} kept his feet, and keeps his suit. {1} is done courting {2}, by the court's word.</RimCourt.RivalDuelWon>
+	<RimCourt.ForgivenessOrdered>{0} is ordered to let it go. Whether {1} is forgiven or merely no longer owed is a fine distinction the hall does not press.</RimCourt.ForgivenessOrdered>
+	<RimCourt.GrudgeDeserved>The court rules that {0} earned every bit of what {1} thinks of him. He asked for a price, and the price is to carry it.</RimCourt.GrudgeDeserved>
+	<RimCourt.RescuerHonoured>{0} is honoured before the assembled court, at the asking of {1}, who is alive to ask.</RimCourt.RescuerHonoured>
+	<RimCourt.ExilePardonLabel>{0} at the gate</RimCourt.ExilePardonLabel>
+	<RimCourt.ExilePardoned>{0} is pardoned before the court, and walks back in through the front gate this time.</RimCourt.ExilePardoned>
+	<RimCourt.ExileSpurned>{0} is turned away for good, and heard it standing. Whatever comes back next will not come alone.</RimCourt.ExileSpurned>
+	<RimCourt.ExileTurnedAway>{0} waited at the gate and no answer came. What he does with that is his.</RimCourt.ExileTurnedAway>
+	<RimCourt.EstateRuled>What {1} left goes to {0}, by the lord's word. {2} watched it handed over, and will go on watching it.</RimCourt.EstateRuled>
+	<RimCourt.EstateNobody>The court rules that {0} left nothing worth quarrelling over. Both heirs go home with the same share.</RimCourt.EstateNobody>
+	<RimCourt.AdulteryDivorced>{0} is released from the marriage before the assembled court. {1} keeps the lover, and loses everything that was not the lover.</RimCourt.AdulteryDivorced>
+	<RimCourt.AdulteryOrdered>{0} is ordered to give up {1} and keep the vow. The court will believe it when it sees it.</RimCourt.AdulteryOrdered>
+	<RimCourt.SomeoneElse>someone else</RimCourt.SomeoneElse>
+	<RimCourt.LordAdmitted>{0} grants before the whole hall that the court wronged {1}. It costs him nothing anyone can carry, and it is the most expensive thing he has said all day.</RimCourt.LordAdmitted>
+	<RimCourt.LordCleared>{0} has heard the case against himself and found himself blameless. The hall accepts it, because the hall has no choice.</RimCourt.LordCleared>
+	<RimCourt.ThroneTakenLabel>The seat changes hands</RimCourt.ThroneTakenLabel>
+	<RimCourt.ThroneTakenText>{0} holds the lord's seat now, and {1} does not. Whatever name the old lord had built, the colony starts a fresh page with this one. The next audience answers to {0}.</RimCourt.ThroneTakenText>
+	<RimCourt.ThroneDefended>{0} kept the seat. {1} claimed it and was put on the floor before the whole court.</RimCourt.ThroneDefended>
+
+	<!-- Reputation -->
+	<RimCourt.RepLine>The colony sees the lord as: {0}</RimCourt.RepLine>
+	<RimCourt.RepDetail>Rulings so far: {0} just, {1} harsh, {2} venal, {3} weak.</RimCourt.RepDetail>
+	<RimCourt.RepUntested>untested</RimCourt.RepUntested>
+	<RimCourt.RepJust>just</RimCourt.RepJust>
+	<RimCourt.RepHarsh>harsh</RimCourt.RepHarsh>
+	<RimCourt.RepVenal>venal</RimCourt.RepVenal>
+	<RimCourt.RepWeak>weak</RimCourt.RepWeak>
+	<RimCourt.InspectHearing>Court is in session: hearing case {0} of {1}.</RimCourt.InspectHearing>
+	<RimCourt.RepLetterLabel>The lord is called {0}</RimCourt.RepLetterLabel>
+	<RimCourt.RepEarnedText>Enough verdicts have been handed down that the colony has made up its mind about {0}. Word is he is {1}.</RimCourt.RepEarnedText>
+	<RimCourt.RepShiftedText>The colony has changed its mind about {0}. Word is now that he is {1}.</RimCourt.RepShiftedText>
+	<RimCourt.RepEffect0>A fair hand earns loyalty, and loyalty brings people to your door. They trust you to settle things, so they bring you more of them.</RimCourt.RepEffect0>
+	<RimCourt.RepEffect1>Fear keeps things quiet. Few will risk standing before you over a trifle, so only the real hatreds reach the court now. They obey. They do not love you.</RimCourt.RepEffect1>
+	<RimCourt.RepEffect2>Justice has a price here and everyone knows it. They pay, they seethe, and they remember.</RimCourt.RepEffect2>
+	<RimCourt.RepEffect3>A lord who settles nothing gets tested. Petty grudges that would never have reached a firmer court are on their way to yours.</RimCourt.RepEffect3>
+
+	<!-- Scene lines -->
+	<RimCourt.Plead1>Hear me, my lord!</RimCourt.Plead1>
+	<RimCourt.Plead2>I demand justice!</RimCourt.Plead2>
+	<RimCourt.Plead3>It was not my doing!</RimCourt.Plead3>
+	<RimCourt.Plead4>The whole colony knows the truth!</RimCourt.Plead4>
+	<RimCourt.ReactHappy1>Justice!</RimCourt.ReactHappy1>
+	<RimCourt.ReactHappy2>The lord is wise!</RimCourt.ReactHappy2>
+	<RimCourt.ReactAngry1>This is no justice!</RimCourt.ReactAngry1>
+	<RimCourt.ReactAngry2>I will remember this.</RimCourt.ReactAngry2>
+
+	<!-- Petition sheet -->
+	<RimCourt.SheetTitle>Brought before the court</RimCourt.SheetTitle>
+	<RimCourt.SheetPetitioner>Petitioner</RimCourt.SheetPetitioner>
+	<RimCourt.SheetDefendant>Respondent</RimCourt.SheetDefendant>
+	<RimCourt.SheetVerdicts>The lord may rule:</RimCourt.SheetVerdicts>
+	<RimCourt.SheetPrecedent>The last time this court heard such a matter, it ruled {0}.</RimCourt.SheetPrecedent>
+	<RimCourt.SheetKin>{0} is the lord's {1}.</RimCourt.SheetKin>
+	<RimCourt.SheetKinBoth>{0} is the lord's {1}. {2} is his {3}.</RimCourt.SheetKinBoth>
+	<RimCourt.Nepotism>{0} has ruled for {1}, who is his {2}. The hall would have called that just from anyone else.</RimCourt.Nepotism>
+	<RimCourt.Precedent0>justly</RimCourt.Precedent0>
+	<RimCourt.Precedent1>harshly</RimCourt.Precedent1>
+	<RimCourt.Precedent2>for whoever paid</RimCourt.Precedent2>
+	<RimCourt.Precedent3>by declining to rule at all</RimCourt.Precedent3>
+	<RimCourt.PrecedentHeld>{0} rules as he ruled before. The court has a line, and everyone can see where it is.</RimCourt.PrecedentHeld>
+	<RimCourt.PrecedentBroken>{0} rules the opposite of last time on the same kind of matter. A court that changes its mind is a court worth arguing with.</RimCourt.PrecedentBroken>
+	<RimCourt.SheetPronounce>Pronounce the verdict</RimCourt.SheetPronounce>
+	<RimCourt.ReopenSheetLabel>Read the petition</RimCourt.ReopenSheetLabel>
+	<RimCourt.ReopenSheetDesc>Open the written petition waiting for the lord's word.</RimCourt.ReopenSheetDesc>
+	<RimCourt.SheetAwait>The court awaits the lord's word ({0}h left)</RimCourt.SheetAwait>
+	<RimCourt.SheetFooter>Recorded by the clerk of the court of {0}.</RimCourt.SheetFooter>
+	<RimCourt.StampTip>The lord's seal. Pick it up, then stamp the ruling of your choice. You can change your mind until the verdict is pronounced.</RimCourt.StampTip>
+	<RimCourt.StampSealed>SEALED</RimCourt.StampSealed>
+
+	<!-- Settings -->
+	<RimCourt.Settings.Intro>The court follows your markers. Everything else is sliders.</RimCourt.Settings.Intro>
+	<RimCourt.Settings.VerdictHours>Hours to render a verdict</RimCourt.Settings.VerdictHours>
+	<RimCourt.Settings.CasesPerSession>Cases per session</RimCourt.Settings.CasesPerSession>
+	<RimCourt.Settings.CooldownDays>Days between sessions</RimCourt.Settings.CooldownDays>
+	<RimCourt.Settings.AutoOpenSheet>Open the petition sheet automatically</RimCourt.Settings.AutoOpenSheet>
+	<RimCourt.Settings.AutoOpenSheetHint>When a petitioner finishes pleading, the written petition opens on its own. Otherwise, click the letter.</RimCourt.Settings.AutoOpenSheetHint>
+	<RimCourt.Settings.Reset>Reset to defaults</RimCourt.Settings.Reset>
+	<RimCourt.Settings.Advanced>Advanced</RimCourt.Settings.Advanced>
+	<RimCourt.Settings.AdvancedIntro>Which factions an exiled colonist may come back leading. Unticked ones can still send raiders he rides with; they simply will not hand him the seat at the head of their table. Factions with a named office of their own, factions that grant royal titles, and factions that never raid are unticked to begin with.</RimCourt.Settings.AdvancedIntro>
+	<RimCourt.Settings.LeaderReset>Restore the default choices</RimCourt.Settings.LeaderReset>
+
+	<!-- The lord's standing -->
+	<RimCourt.StandingLabel>The lord's standing</RimCourt.StandingLabel>
+	<RimCourt.StandingDesc>What the colony has decided the lord is, from the verdicts he has given, and who is close enough to the seat to want it.</RimCourt.StandingDesc>
+	<RimCourt.StandingTitle>The lord's standing</RimCourt.StandingTitle>
+	<RimCourt.StandingNoLord>Nobody in the colony can hold court right now.</RimCourt.StandingNoLord>
+	<RimCourt.StandingByWord>holds court by your word</RimCourt.StandingByWord>
+	<RimCourt.StandingByThrone>holds court by right of the throne</RimCourt.StandingByThrone>
+	<RimCourt.StandingByPrestige>holds court for want of anyone weightier</RimCourt.StandingByPrestige>
+	<RimCourt.StandingCredentials>{0}  ·  social {1}  ·  {2} years</RimCourt.StandingCredentials>
+	<RimCourt.StandingNameSection>His name</RimCourt.StandingNameSection>
+	<RimCourt.StandingThroneSection>His legitimacy</RimCourt.StandingThroneSection>
+	<RimCourt.StandingUntested>The court has heard too little to say what he is. A name sticks at {1} points; he stands at {0}. Every verdict is worth two or three, so three or four cases settle it.</RimCourt.StandingUntested>
+	<RimCourt.StandingSwitch>The bar is not the highest score, it is the lead. {1} would need {0} more points to take the name off him.</RimCourt.StandingSwitch>
+	<RimCourt.StandingDecay>A ruling can be refused. The colonist it went against may simply walk out of the hall, which costs the lord two points of weak, costs him twenty points of standing with everyone who watched, and sets no precedent, because nothing was settled. Whether it happens is mostly the lord's own name: a harsh lord is almost never defied and a weak one often is. Pride does the rest, so the abrasive, the greedy, the jealous, the volatile and the iron-willed are likelier than the kind and the meek, and a colonist with a royal title the lord does not have is likelier than either. Nobody walks out on a flogging, a banishment or a duel: those do not wait for consent.\n\nThe lord cannot be party to a case, but his wife, his brother and his son can. When one of them stands before the court the sheet says so in red, and ruling in their favour is not counted as just. It is counted as venal, and every other colonist takes it as what it looks like. The court draws the line at close family: spouse, lover, parent, child, sibling, grandparent. A cousin is not close enough for the hall to mutter about.\n\nThe court also remembers its own rulings. Before you rule, the sheet tells you how this court settled the last matter of the same kind, and it holds that memory for twenty days. Rule the same way and the lord gains a point of just: the court has a line and everyone can see where it is. Rule the opposite way and he gains two points of weak, because a court that changes its mind is a court worth arguing with. Letting a case time out sets no precedent and breaks none.\n\nOld verdicts fade at three percent a day, so a name left alone drifts back toward nothing.</RimCourt.StandingDecay>
+	<RimCourt.StandingNoDecay>Old verdicts do not fade: you have told the mod a name once made is never forgotten. Whatever this court has been judged to be, it stays, until enough rulings the other way take it off him.</RimCourt.StandingNoDecay>
+	<RimCourt.StandingEffect0>One more case is brought each session. Word gets round that this court is worth the walk.</RimCourt.StandingEffect0>
+	<RimCourt.StandingEffect1>One case less each session, and only deep hatreds are brought at all. Petty grievances stay in the barracks, where they keep.</RimCourt.StandingEffect1>
+	<RimCourt.StandingEffect2>Cases arrive as they always did, but the seat is no longer safe. A lord who sells his verdicts can be asked what else he would sell.</RimCourt.StandingEffect2>
+	<RimCourt.StandingEffect3>One more case each session, and pettier ones reach him: a lord who cannot say no is asked more often. The seat is not safe either.</RimCourt.StandingEffect3>
+	<RimCourt.StandingThroneOpen>The throne can be contested. Someone who despises him may stand up in open court and ask by what right he sits there.</RimCourt.StandingThroneOpen>
+	<RimCourt.StandingThroneShut>The throne cannot be contested. A lord held to be just or harsh is not asked by what right he sits there, whatever anyone privately thinks.</RimCourt.StandingThroneShut>
+	<RimCourt.StandingNoRival>Nobody qualifies to rise. It takes an opinion of the lord at {0} or worse and social {1} or better, and the most prestigious of those is the one who stands up.</RimCourt.StandingNoRival>
+	<RimCourt.StandingRival>{0}  ·  social {1}  ·  opinion of the lord {2}</RimCourt.StandingRival>
+	<RimCourt.StandingWouldRise>would rise against him</RimCourt.StandingWouldRise>
+
+	<!-- The hall -->
+	<RimCourt.StandingHallSection>His hall</RimCourt.StandingHallSection>
+	<RimCourt.StandingHallScore>impressiveness {0}</RimCourt.StandingHallScore>
+	<RimCourt.StandingHallHow>The room the seat stands in is measured the way any room in the colony is measured: space, floors, walls, art, cleanliness. Build it up and the court is built up with it.</RimCourt.StandingHallHow>
+	<RimCourt.HallNumbers>outsiders {0}  ·  refusals {1}</RimCourt.HallNumbers>
+	<RimCourt.HallNoChange>as ever</RimCourt.HallNoChange>
+	<RimCourt.HallPoints>{0} pts</RimCourt.HallPoints>
+	<RimCourt.HallInspect>Court is held in {0}.</RimCourt.HallInspect>
+	<RimCourt.Hall0>the open air</RimCourt.Hall0>
+	<RimCourt.Hall1>a bare room</RimCourt.Hall1>
+	<RimCourt.Hall2>a plain hall</RimCourt.Hall2>
+	<RimCourt.Hall3>a hall that will do</RimCourt.Hall3>
+	<RimCourt.Hall4>a handsome hall</RimCourt.Hall4>
+	<RimCourt.Hall5>a great hall</RimCourt.Hall5>
+	<RimCourt.HallNote0>The seat stands under the sky. Fewer strangers make the walk to be judged in a field, and a colonist told to hand over his silver in one takes the order less seriously.</RimCourt.HallNote0>
+	<RimCourt.HallNote1>Four walls and a roof, and nothing else worth looking at. Word does not travel far about a room like this, and neither does a verdict given in it.</RimCourt.HallNote1>
+	<RimCourt.HallNote2>Enough to be called a hall, barely. Outsiders come a little less than they might, and a ruling here is a little easier to walk away from.</RimCourt.HallNote2>
+	<RimCourt.HallNote3>A room that carries the seat without flattering it. Nothing is added and nothing is taken away.</RimCourt.HallNote3>
+	<RimCourt.HallNote4>Handsome enough that people arrive already impressed. Word travels, more strangers make the journey, and fewer men care to argue once they are standing in it.</RimCourt.HallNote4>
+	<RimCourt.HallNote5>A great hall. Strangers hear of it and come, and a man who walked in meaning to refuse thinks about it a moment longer.</RimCourt.HallNote5>
+
+	<RimCourt.HonourConferredLabel>{0} is named The Negotiator</RimCourt.HonourConferredLabel>
+	<RimCourt.HonourConferred>{1} came from {2} expecting a hearing and got one. This court already had a name for fairness before {1} walked in, which is the only reason the visit was worth reporting. The Empire keeps a list of people who settle things without soldiers.
+
+	<RimCourt.DeserterStrikesLabel>{0} was not a petitioner</RimCourt.DeserterStrikesLabel>
+	<RimCourt.DeserterStrikes>The verdict was given, and {0} went for {1} instead of the door. The case was real, the story checked out, and none of it was the reason {0} came. Deserters do not forgive anyone who wears the Empire's titles, and the lord wears one.
+	<RimCourt.ImperialStrikes>The verdict was given, and {0} went for {1} instead of the door. The case was real, the story checked out, and none of it was the reason {0} came. The Empire does not forget a lord who took the deserters' side, and it does not send armies for one man.
+
+He came in armed, which nobody thought to look at.</RimCourt.ImperialStrikes>
+
+He came in armed, which nobody thought to look at.</RimCourt.DeserterStrikes>
+
+{0} has been granted the honour of The Negotiator. It is theirs for as long as nobody takes it off them, and their social skill will not rust while they hold it.</RimCourt.HonourConferred>
+	<RimCourt.LocateTip>Click to find them on the map.</RimCourt.LocateTip>
+	<RimCourt.StandingTabRank>His standing</RimCourt.StandingTabRank>
+	<RimCourt.StandingTabRecord>The record</RimCourt.StandingTabRecord>
+	<RimCourt.StandingTabBlood>The blood</RimCourt.StandingTabBlood>
+	<RimCourt.BloodHeirSection>Who inherits the seat</RimCourt.BloodHeirSection>
+	<RimCourt.BloodHeirTag>named heir</RimCourt.BloodHeirTag>
+	<RimCourt.BloodHeirNote>If the lord dies, {0} takes the hall. Nothing else is consulted: not the throne, not the Hand, not who weighs most that day.</RimCourt.BloodHeirNote>
+	<RimCourt.BloodNoHeir>No heir. The lord holds no royal title, or holds one and has named nobody to follow him. Name an heir in his royalty tab and the seat will pass with the title; leave it and the hall goes to the throne, the Hand, or whoever weighs most on the day.</RimCourt.BloodNoHeir>
+	<RimCourt.BloodKinSection>The blood of {0}</RimCourt.BloodKinSection>
+	<RimCourt.BloodNoKin>{0} has no blood in this colony. A lord with no family here has nobody to favour and nobody to succeed him, which is either a clean court or a short dynasty.</RimCourt.BloodNoKin>
+	<RimCourt.BloodYears>{0} years</RimCourt.BloodYears>
+	<RimCourt.RecordCasesSection>What the court has ruled</RimCourt.RecordCasesSection>
+	<RimCourt.RecordGrievancesSection>Who holds it against him</RimCourt.RecordGrievancesSection>
+	<RimCourt.RecordEmpty>The court has not sat, or nothing it settled is still remembered. The register keeps twenty days.</RimCourt.RecordEmpty>
+	<RimCourt.RecordRow>{0}  ·  ruled {1}</RimCourt.RecordRow>
+	<RimCourt.RecordPair>{0} against {1}</RimCourt.RecordPair>
+	<RimCourt.RecordNoAnswer>without an answer</RimCourt.RecordNoAnswer>
+	<RimCourt.RecordToday>today</RimCourt.RecordToday>
+	<RimCourt.RecordDaysAgo>{0} days ago</RimCourt.RecordDaysAgo>
+	<RimCourt.RecordNoGrievance>Nobody is keeping a tally against the lord. Rulings against the same colonist are what build one.</RimCourt.RecordNoGrievance>
+	<RimCourt.RecordGrievance>{0} of {1} grievances</RimCourt.RecordGrievance>
+	<RimCourt.RecordWillAccuse>will accuse the seat</RimCourt.RecordWillAccuse>
+
+	<!-- Guide -->
+	<RimCourt.Guide.Title>Holding court</RimCourt.Guide.Title>
+
+	<RimCourt.Guide.StartTitle>Opening a court</RimCourt.Guide.StartTitle>
+	<RimCourt.Guide.StartBody>Place a lord's seat on a throne or a fine chair, from Architect, Misc. The marker slips under the furniture, so the throne stays visible. That is the whole setup.\n\nSelect the marker and the tile where petitioners will stand is outlined for you. They stand a few tiles in front, in the direction the chair faces. On bare ground, rotate the marker to choose which way the lord looks.\n\nStand the marker on a throne and its assigned owner holds court. The throne is the answer and the mod does not ask twice, so Name the lord greys out. Reassign the throne to seat another.\n\nWithout a throne, and most colonies never build one, the seat goes to whoever weighs most in the colony, on social standing and years. That is a hidden score, so Name the lord is where you settle it yourself. It is also how you take the seat back from a man who won it off you in open court.\n\nThen use Hold court. The lord takes the seat, the free colonists gather round to watch, and cases are heard one at a time. The lord cannot be party to a case: he is judging it.\n\nAn audience spot is optional. Place one if you want petitioners further away, at the end of a great hall, or if the seat faces a wall.</RimCourt.Guide.StartBody>
+
+	<RimCourt.Guide.CasesTitle>Where cases come from</RimCourt.Guide.CasesTitle>
+	<RimCourt.Guide.CasesBody>Cases are not invented. The court reads what your colonists actually remember, so what it hears is what your colony has lived through. Nothing else is added to make up the numbers.\n\nA quiet colony therefore has little to try, and you will be told that nobody seeks the lord's justice today. That is not a fault: come back when something has happened.\n\nMemories fade, and the graver the matter the longer the court will still hear it. Grave matters are always called before petty ones.\n\nThe court will not hear the same pair again for ten days. A matter settled is settled.\n\nTravellers and neighbours hear of the court as well, and some of them come to it. They wait three days at the gate for an audience before giving up and walking off, which their people remember. How often anyone comes at all depends on the lord's name.</RimCourt.Guide.CasesBody>
+
+	<RimCourt.Guide.SheetTitle>The petition sheet</RimCourt.Guide.SheetTitle>
+	<RimCourt.Guide.SheetBody>When a petitioner has finished speaking, the clerk writes the case up and the sheet opens: the parties, what is claimed, and the rulings open to the lord.\n\nPick up the lord's seal below the sheet, then stamp the ruling you choose. Stamping a different line clears the first, so the parchment only ever shows one answer. Then press Pronounce the verdict.\n\nThe sheet can be dragged out of the way, and closed with the cross if you want to look at something first. Read the petition on the court marker opens it again, and so does clicking the letter.\n\nNotes in the margin above the rulings are the court telling you what it already knows: how it settled the last matter of this kind, and whether either party is the lord's own blood. Read them before you stamp.\n\nSaying nothing is also an answer. If the deadline runs out the case is thrown out, it is recorded as no answer given, and it counts against you as weakness.</RimCourt.Guide.SheetBody>
+
+	<RimCourt.Guide.VerdictsTitle>Ruling</RimCourt.Guide.VerdictsTitle>
+	<RimCourt.Guide.VerdictsBody>Every ruling changes what the parties think of each other and of the lord, and those opinions last for days. Some rulings do more than that: money changes hands for real, work orders change for real, and people leave the colony for real. The sheet says which is which.\n\nA ruling can be refused. The colonist it went against may simply walk out of the hall, which costs the lord two points of weak, costs him twenty points of standing with everyone who watched, and sets no precedent, because nothing was settled. Whether it happens is mostly the lord's own name: a harsh lord is almost never defied and a weak one often is. Pride does the rest, so the abrasive, the greedy, the jealous, the volatile and the iron-willed are likelier than the kind and the meek, and a colonist with a royal title the lord does not have is likelier than either. Some rulings do not wait for consent and cannot be refused at all.\n\nThe lord cannot be party to a case, but his wife, his brother and his son can. When one of them stands before the court the sheet says so in red, and ruling in their favour is not counted as just. It is counted as venal, and every other colonist takes it as what it looks like. The court draws the line at close family: spouse, lover, parent, child, sibling, grandparent. A cousin is not close enough for the hall to mutter about.\n\nThe court also remembers its own rulings. Before you rule, the sheet tells you how this court settled the last matter of the same kind, and it holds that memory for twenty days. Rule the same way and the lord gains a point of just: the court has a line and everyone can see where it is. Rule the opposite way and he gains two points of weak, because a court that changes its mind is a court worth arguing with. Letting a case time out sets no precedent and breaks none.\n\nSending someone out of the colony is the easiest ruling to make and the only one that can walk back. Most exiles are never heard from again. Some are, and which ones is decided the day you send them: a fighter with a grudge is likelier to find his way back than a kind man or an old one, and nothing tells you which you have just made.\n\nA lord who does not decide is a weak lord. That is the point.</RimCourt.Guide.VerdictsBody>
+
+	<RimCourt.Guide.PunishTitle>When a ruling has a body</RimCourt.Guide.PunishTitle>
+	<RimCourt.Guide.PunishBody>Some rulings are carried out in the hall rather than written down, and you watch them happen.\n\nWhere a whipping is ordered, you choose who holds the lash. Every candidate is listed with their skill and with what they think of the condemned, because handing the whip to the man's friend is a different scene from handing it to his enemy. You can also have it done without ceremony and pick nobody. Children are never offered the lash, and neither are prisoners or slaves.\n\nA whipping hurts and needs tending afterwards. It does not kill.\n\nWhere the lord sends two parties to settle it with their fists, he has not ruled at all, and the colony notices that too. Whoever is left standing is held to be in the right.\n\nNothing physical happens off screen. If you cannot watch it, it is not in this mod.\n\nBuild a pillory post, from Architect, Misc. Some rulings can send the loser there instead of the lash. As with the lash, you choose who walks him there and ties him, or let him go alone. He stands bound in the yard for as long as you set in the options, and colonists who walk past stop to have their say, or to throw something. Some come over on purpose, on their own time, and stand there for a while: it counts as recreation, and the man's friends stay away. Nothing is hurt but his pride, and his opinion of everyone who laughed. If you rule for the post and have not built one, the lash is used instead.</RimCourt.Guide.PunishBody>
+
+	<RimCourt.Guide.ReputationTitle>The lord's reputation</RimCourt.Guide.ReputationTitle>
+	<RimCourt.Guide.ReputationBody>Every verdict is worth two points on one of four counts: just, harsh, venal or weak. Ruling for a wronged party is just, punishing is harsh, throwing a case out is weak, taking money is venal.\n\nThe colony forms an opinion at eight points, so about four telling verdicts. The leading count gives the title, and it takes a three point lead to change its mind: one odd ruling will not undo a reputation.\n\nThe lord's standing, on the marker, has two pages. The first lays all of it out: the four counts as bars, what the current name is doing to your court, how many points would take it off him, and which colonists stand close enough to the seat to want it. The second is the register: what the court has ruled these twenty days and in which direction, so you can see the line you have been holding, and which colonists are running a tally against the lord and how close they are to bringing it. Click a face to find them.\n\nThe title is not decoration. Colonists carry a standing opinion of the lord because of it, and it decides who comes to court and how often, and what they think it is worth bringing. It reaches past the walls as well: a court known to be fair is one strangers will travel to and submit to, and a court known to be weak is one they will not.\n\nReputation fades about three percent a day between sessions. A court that sits often keeps its name; one that stops sitting is slowly forgotten, and can be steered again.\n\nA lord known as weak or venal has more to lose than his reputation. Hold court often enough with that name and you will find out what. The colony also puts that name in his name: once it is settled, the lord is called the Just, the Cruel, the Greedy or the Weak wherever his name is shown, until the verdicts say otherwise.</RimCourt.Guide.ReputationBody>
+
+	<RimCourt.Guide.SeatTitle>The seat itself</RimCourt.Guide.SeatTitle>
+	<RimCourt.Guide.SeatBody>Stand the marker on a throne and its assigned owner holds court. The throne is the answer and the mod does not ask twice, so Name the lord greys out. Reassign the throne to seat another.\n\nWithout a throne, and most colonies never build one, the seat goes to whoever weighs most in the colony, on social standing and years. That is a hidden score, so Name the lord is where you settle it yourself.\n\nThe seat can change hands, and not always with your consent. Name the lord is also how you take it back.
+
+Where the Royalty DLC is installed and the lord holds a title, the seat follows the crown: name an heir in his royalty tab and that heir takes the hall when he dies, instead of it falling to whoever weighs most that day. It is the only inheritance in the mod, and the game already tracks it.
+
+The room the seat stands in is measured too, the way any room in the colony is measured. A court held under the open sky, or in a bare cell, is one strangers do not bother travelling to and one your own colonists find easy to walk out of. Space, floors, walls and a few good sculptures change both. The marker tells you what sort of hall you have and the lord's standing gives you the numbers.
+
+Who sits there matters beyond prestige. A lord rules with his own temperament, and rulings that go against it cost him: the kind lord who orders a flogging, the ascetic who takes money, the iron-willed who lets a case lapse unanswered, each carries it for days afterwards. Ruling the way he would have anyway lifts him instead. A psychopath on the seat feels neither, which is its own kind of qualification.\n\nThe lord holds his seat while he can walk, think, stand the fever off and count as grown. When he cannot, a named Hand takes the seat for the day and gives it back the moment he recovers; without one, the seat falls to weight of standing as it always did. Name the Hand on the marker.</RimCourt.Guide.SeatBody>
+
+	<RimCourt.Guide.TipsTitle>Worth knowing</RimCourt.Guide.TipsTitle>
+	<RimCourt.Guide.TipsBody>The court dissolves if the colony comes under attack, if the lord is downed or has a mental break, or if you dismiss it yourself. No cooldown is applied in that case: convene again when things are calm.\n\nA case cannot be heard if either party is downed, imprisoned, having a mental break, or drafted. Undraft your colonists before holding court.\n\nThe court watches what it ruled. Where a ruling changed something you can change back yourself, undo it inside a fortnight and the colony sees the lord's word broken, whatever the paperwork says.\n\nEverything is in the mod settings: how long you have to rule, how many cases a session, days between sessions, and whether the sheet opens on its own.\n\nA captured enemy can be brought before the seat as well. A guard fetches him from the cell and stands him where the petitioners stand, the sheet says what he did and what his people would pay to have him back, and the lord rules once: home, ransom, the post, or the sword. What counts as just depends on what he did, not on what you chose, so the sword for a man who killed one of yours is justice and the sword for a man who touched nobody is cruelty. Each prisoner is heard once. Beyond that one hearing, RimCourt does not touch prisoners or wardens.</RimCourt.Guide.TipsBody>
+
+	<RimCourt.RadiusPlus>Radius {0} +</RimCourt.RadiusPlus>
+	<RimCourt.RadiusMinus>Radius {0} -</RimCourt.RadiusMinus>
+	<RimCourt.RadiusDesc>Chairs inside this radius around the petitioners' tile seat the crowd. Select the seat to see it.</RimCourt.RadiusDesc>
+	<RimCourt.RadiusAuto>Auto</RimCourt.RadiusAuto>
+	<RimCourt.RadiusAutoDesc>Let the crowd sit anywhere in the room the seat stands in, however big it is.</RimCourt.RadiusAutoDesc>
+	<RimCourt.RadiusNotEnclosed>The seat isnt in an enclosed room. Use the radius instead.</RimCourt.RadiusNotEnclosed>
+	<RimCourt.RadiusFitted>The crowd can sit anywhere in the hall now, {0} cells.</RimCourt.RadiusFitted>
+	<RimCourt.CrowdAreaRadius>The crowd sits within {0} tiles of the petitioners.</RimCourt.CrowdAreaRadius>
+	<RimCourt.CrowdAreaRoom>The crowd sits anywhere in the hall.</RimCourt.CrowdAreaRoom>
+
+</LanguageData>

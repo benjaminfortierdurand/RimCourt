@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Manumission : le worker rend null sans Ideology, le def charge quand même. Pas de MayRequire ici, il ne référence rien du DLC. -->
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Manumission</defName>
+		<priority>80</priority>
+		<label>a slave asks for his freedom</label>
+		<description>A slave of the colony stands before the lord and asks to be made free.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Manumission</workerClass>
+		<caseText>{PETITIONER_labelShort} was not called. {PETITIONER_pronoun} came anyway, and stood where the free people stand, and asked for the one thing a slave is not supposed to ask for.\n\nNobody in the hall is speaking for {PETITIONER_objective}. Nobody has to. The question is on the floor, in front of everyone, and it will be answered one way or the other.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Free {PETITIONER_labelShort}, here and now</label>
+				<pastLabel>freed by the lord's word</pastLabel>
+				<outcome>Free</outcome>
+				<just>3</just>
+			</li>
+			<li>
+				<label>Rule that a slave is a slave, and send {PETITIONER_objective} back to work</label>
+				<pastLabel>sent back to work</pastLabel>
+				<outcome>Keep</outcome>
+				<harsh>1</harsh>
+				<venal>1</venal>
+			</li>
+			<li>
+				<label>Have {PETITIONER_objective} flogged for the insolence</label>
+				<pastLabel>flogged for asking</pastLabel>
+				<outcome>FlogSlave</outcome>
+				<harsh>3</harsh>
+			</li>
+			<li>
+				<label>Move on to the next case</label>
+				<pastLabel>passed over in silence</pastLabel>
+				<outcome>Defer</outcome>
+				<weak>2</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Veteran</defName>
+		<priority>50</priority>
+		<label>what he left on the field</label>
+		<description>A colonist maimed fighting for the colony asks the lord what it was worth.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Veteran</workerClass>
+		<caseText>{PETITIONER_labelShort} has killed {KILLS} people for this colony and carries the proof: something did not grow back. {PETITIONER_pronoun} is not asking for pity. {PETITIONER_pronoun} is asking what the lord thinks it was worth, and has come with three answers the lord could give.\n\nTake {WORK} off {PETITIONER_objective}, which {PETITIONER_pronoun} was never good at and now hates. Or {SILVER} silver, which says it plainly. Or a word before the court, which costs nothing and {PETITIONER_pronoun} will notice that it cost nothing.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Take {WORK} off {PETITIONER_labelShort} for good</label>
+				<pastLabel>excused from {WORK} for the wound</pastLabel>
+				<outcome>GrantExemption</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Pay {PETITIONER_labelShort} the {SILVER} silver</label>
+				<pastLabel>paid {SILVER} silver for the wound</pastLabel>
+				<outcome>PayHonour</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Honour {PETITIONER_labelShort} before the court, and nothing more</label>
+				<pastLabel>honoured for the wound, and nothing more</pastLabel>
+				<outcome>Honour</outcome>
+				<just>1</just>
+				<weak>1</weak>
+			</li>
+			<li>
+				<label>Rule that everyone bled</label>
+				<pastLabel>told that everyone bled</pastLabel>
+				<outcome>DenyVeteran</outcome>
+				<harsh>2</harsh>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+</Defs>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Sense Of Depth For Tall Buildings dessine le haut des batiments hauts par-dessus les pions.
+	     Il attrape le poteau tout seul (image 2x3 sur une emprise 1x1) et le fut passait sur la tete du condamne.
+	     Son extension avec apply=False est la sortie prevue par l'auteur : le poteau reste derriere le pion, comme sans le mod. -->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Sense Of Depth For Tall Buildings</li>
+		</mods>
+		<match Class="PatchOperationAddModExtension">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="RimCourt_Stocks"]</xpath>
+			<value>
+				<li Class="SenseOfDepthForTallBuilding.AddBackSideLayer">
+					<apply>False</apply>
+				</li>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

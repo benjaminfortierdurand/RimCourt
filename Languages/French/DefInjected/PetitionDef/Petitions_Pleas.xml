@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_Manumission.label>un esclave demande sa liberté</RimCourt_Manumission.label>
+	<RimCourt_Manumission.description>Un esclave de la colonie se tient devant le seigneur et demande à être affranchi.</RimCourt_Manumission.description>
+	<RimCourt_Manumission.caseText>{PETITIONER_labelShort} n'a pas été appelé. {PETITIONER_labelShort} est venu quand même, s'est tenu là où se tiennent les hommes libres, et a demandé la seule chose qu'un esclave n'est pas censé demander.\n\nPersonne dans la salle ne parle pour lui. Personne n'en a besoin. La question est posée, devant tout le monde, et elle recevra une réponse d'une façon ou d'une autre.\n\nComment le seigneur tranche-t-il ?</RimCourt_Manumission.caseText>
+	<RimCourt_Manumission.verdicts.0.label>Affranchir {PETITIONER_labelShort}, ici et maintenant</RimCourt_Manumission.verdicts.0.label>
+	<RimCourt_Manumission.verdicts.1.label>Déclarer qu'un esclave est un esclave, et le renvoyer au travail</RimCourt_Manumission.verdicts.1.label>
+	<RimCourt_Manumission.verdicts.2.label>Le faire fouetter pour son insolence</RimCourt_Manumission.verdicts.2.label>
+	<RimCourt_Manumission.verdicts.3.label>Passer à l'affaire suivante</RimCourt_Manumission.verdicts.3.label>
+	<RimCourt_Manumission.verdicts.0.pastLabel>affranchi par la parole du seigneur</RimCourt_Manumission.verdicts.0.pastLabel>
+	<RimCourt_Manumission.verdicts.1.pastLabel>renvoyé au travail</RimCourt_Manumission.verdicts.1.pastLabel>
+	<RimCourt_Manumission.verdicts.2.pastLabel>fouetté pour avoir demandé</RimCourt_Manumission.verdicts.2.pastLabel>
+	<RimCourt_Manumission.verdicts.3.pastLabel>passé sous silence</RimCourt_Manumission.verdicts.3.pastLabel>
+
+	<RimCourt_Veteran.label>ce qu'il a laissé sur le champ</RimCourt_Veteran.label>
+	<RimCourt_Veteran.description>Un colon mutilé en se battant pour la colonie demande au seigneur ce que cela valait.</RimCourt_Veteran.description>
+	<RimCourt_Veteran.caseText>{PETITIONER_labelShort} a tué {KILLS} personnes pour cette colonie et en porte la preuve : quelque chose n'a pas repoussé. {PETITIONER_labelShort} ne demande pas de pitié. {PETITIONER_labelShort} demande ce que le seigneur pense que cela valait, et vient avec trois réponses que le seigneur pourrait donner.\n\nLui retirer {WORK}, où il n'a jamais été bon et qu'il déteste désormais. Ou {SILVER} pièces d'argent, qui le disent clairement. Ou un mot devant la cour, qui ne coûte rien, et il remarquera que cela n'a rien coûté.\n\nComment le seigneur tranche-t-il ?</RimCourt_Veteran.caseText>
+	<RimCourt_Veteran.verdicts.0.label>Retirer {WORK} à {PETITIONER_labelShort} pour de bon</RimCourt_Veteran.verdicts.0.label>
+	<RimCourt_Veteran.verdicts.1.label>Payer à {PETITIONER_labelShort} les {SILVER} pièces d'argent</RimCourt_Veteran.verdicts.1.label>
+	<RimCourt_Veteran.verdicts.2.label>Honorer {PETITIONER_labelShort} devant la cour, et rien de plus</RimCourt_Veteran.verdicts.2.label>
+	<RimCourt_Veteran.verdicts.3.label>Déclarer que tout le monde a saigné</RimCourt_Veteran.verdicts.3.label>
+	<RimCourt_Veteran.verdicts.0.pastLabel>dispensé de {WORK} pour la blessure</RimCourt_Veteran.verdicts.0.pastLabel>
+	<RimCourt_Veteran.verdicts.1.pastLabel>{SILVER} pièces d'argent payées pour la blessure</RimCourt_Veteran.verdicts.1.pastLabel>
+	<RimCourt_Veteran.verdicts.2.pastLabel>honoré pour la blessure, et rien de plus</RimCourt_Veteran.verdicts.2.pastLabel>
+	<RimCourt_Veteran.verdicts.3.pastLabel>on lui a dit que tout le monde a saigné</RimCourt_Veteran.verdicts.3.pastLabel>
+
+</LanguageData>

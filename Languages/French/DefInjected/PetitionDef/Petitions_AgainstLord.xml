@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_AgainstLord.label>un grief contre le siège lui-même</RimCourt_AgainstLord.label>
+	<RimCourt_AgainstLord.description>Un colon contre qui le seigneur a tranché trop souvent vient demander réparation au seigneur, contre le seigneur.</RimCourt_AgainstLord.description>
+	<RimCourt_AgainstLord.caseText>{PETITIONER_labelShort} s'avance seul. Il n'y a personne à mettre en face de lui : la plainte vise {LORD}, et {LORD} est sur le siège.
+
+{COUNT} fois cette cour a tranché contre {PETITIONER_labelShort} ou l'a renvoyé sans réponse. Il ne dit pas que l'une d'elles était injuste. Il dit que toutes ensemble font une habitude, et qu'un seigneur qui n'a jamais tort est un seigneur à qui personne ne peut rien apporter.
+
+La salle s'est tue. Comment le seigneur tranche-t-il ?</RimCourt_AgainstLord.caseText>
+	<RimCourt_AgainstLord.verdicts.0.label>Reconnaître que la cour a fait du tort à {PETITIONER_labelShort}</RimCourt_AgainstLord.verdicts.0.label>
+	<RimCourt_AgainstLord.verdicts.1.label>Juger que la cour a toujours tranché correctement</RimCourt_AgainstLord.verdicts.1.label>
+	<RimCourt_AgainstLord.verdicts.2.label>Faire fouetter {PETITIONER_labelShort} pour avoir parlé ainsi au siège</RimCourt_AgainstLord.verdicts.2.label>
+	<RimCourt_AgainstLord.verdicts.3.label>Laisser la salle attendre, et ne rien dire</RimCourt_AgainstLord.verdicts.3.label>
+	<RimCourt_AgainstLord.verdicts.0.pastLabel>la cour a reconnu ses propres torts</RimCourt_AgainstLord.verdicts.0.pastLabel>
+	<RimCourt_AgainstLord.verdicts.1.pastLabel>la cour s'est disculpée elle-même</RimCourt_AgainstLord.verdicts.1.pastLabel>
+	<RimCourt_AgainstLord.verdicts.2.pastLabel>fouetté pour insolence envers le siège</RimCourt_AgainstLord.verdicts.2.pastLabel>
+	<RimCourt_AgainstLord.verdicts.3.pastLabel>aucune réponse à l'accusation</RimCourt_AgainstLord.verdicts.3.pastLabel>
+
+</LanguageData>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Le projectile part du moqueur avec une vitesse calculée pour arriver sur le condamné en 0,45 s.
+	     La flaque est posée tout de suite au point d'impact avec un fadeIn de 0,45 s : elle apparaît quand la patate arrive. Zéro tick à gérer. -->
+
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RimCourt_Thrown</defName>
+		<graphicData>
+			<texPath>Things/Item/Resource/PlantFoodRaw/Potatoes</texPath>
+			<shaderType>Transparent</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0.45</solidTime>
+		<fadeOutTime>0.05</fadeOutTime>
+	</FleckDef>
+
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RimCourt_Splat</defName>
+		<graphicData>
+			<texPath>Things/Mote/BloodSplash</texPath>
+			<shaderType>Transparent</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteLow</altitudeLayer>
+		<fadeInTime>0.45</fadeInTime>
+		<solidTime>1.0</solidTime>
+		<fadeOutTime>1.5</fadeOutTime>
+	</FleckDef>
+
+</Defs>

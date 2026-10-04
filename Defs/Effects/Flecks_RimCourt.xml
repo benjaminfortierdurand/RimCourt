@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RimCourt_HandNamed</defName>
+		<graphicData>
+			<texPath>UI/Commands/RimCourt_Hand</texPath>
+		</graphicData>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<fadeInTime>0.15</fadeInTime>
+		<solidTime>0.9</solidTime>
+		<fadeOutTime>1.2</fadeOutTime>
+	</FleckDef>
+
+</Defs>

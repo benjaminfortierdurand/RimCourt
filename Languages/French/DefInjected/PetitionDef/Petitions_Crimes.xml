@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_Butcher.label>de la viande qui fut un homme</RimCourt_Butcher.label>
+	<RimCourt_Butcher.description>Un colon qui a dépecé un cadavre humain est appelé à en répondre par quelqu'un qui sait.</RimCourt_Butcher.description>
+	<RimCourt_Butcher.caseText>{PETITIONER_labelShort} ne dira pas le mot dans la salle, alors le greffier l'écrit à sa place : {OTHER_labelShort} a pris un couteau à un corps humain et l'a découpé comme une bête. Tous ceux qui étaient là le savent. Certains ont mangé.\n\n{PETITIONER_labelShort} veut que le seigneur dise ce que cela fait de {OTHER_labelShort}. {OTHER_labelShort} aimerait que le seigneur se souvienne de qui a nourri la colonie cette semaine-là.\n\nComment le seigneur tranche-t-il ?</RimCourt_Butcher.caseText>
+	<RimCourt_Butcher.verdicts.0.label>Bannir {OTHER_labelShort} de la colonie</RimCourt_Butcher.verdicts.0.label>
+	<RimCourt_Butcher.verdicts.1.label>Faire fouetter {OTHER_labelShort} devant la cour</RimCourt_Butcher.verdicts.1.label>
+	<RimCourt_Butcher.verdicts.2.label>Déclarer que la colonie a mangé, et que la colonie est reconnaissante</RimCourt_Butcher.verdicts.2.label>
+	<RimCourt_Butcher.verdicts.0.pastLabel>{OTHER_labelShort} banni pour cela</RimCourt_Butcher.verdicts.0.pastLabel>
+	<RimCourt_Butcher.verdicts.1.pastLabel>le boucher fouetté</RimCourt_Butcher.verdicts.1.pastLabel>
+	<RimCourt_Butcher.verdicts.2.pastLabel>déclaré que la colonie a mangé</RimCourt_Butcher.verdicts.2.pastLabel>
+	<RimCourt_Butcher.verdicts.3.label>Mettre {OTHER_labelShort} au pilori, où tout le monde peut regarder</RimCourt_Butcher.verdicts.3.label>
+	<RimCourt_Butcher.verdicts.3.pastLabel>le boucher mis au pilori</RimCourt_Butcher.verdicts.3.pastLabel>
+
+	<RimCourt_Bonded.label>le chien qu'il a tué</RimCourt_Bonded.label>
+	<RimCourt_Bonded.description>Un colon dont l'animal lié a été tué par un autre colon demande réparation.</RimCourt_Bonded.description>
+	<RimCourt_Bonded.caseText>{OTHER_labelShort} a tué l'animal qui dormait au pied du lit de {PETITIONER_labelShort}. Peut-être un accident. Peut-être qu'il gênait. {PETITIONER_labelShort} se moque de savoir lequel, et vient le dire là où ça compte.\n\nL'animal ne peut pas être rendu. On demande au seigneur ce qu'il valait.\n\nComment le seigneur tranche-t-il ?</RimCourt_Bonded.caseText>
+	<RimCourt_Bonded.verdicts.0.label>Tenir {OTHER_labelShort} pour responsable, et le lui faire dire</RimCourt_Bonded.verdicts.0.label>
+	<RimCourt_Bonded.verdicts.1.label>Faire fouetter {OTHER_labelShort} pour cela</RimCourt_Bonded.verdicts.1.label>
+	<RimCourt_Bonded.verdicts.2.label>Leur faire faire la paix devant la cour</RimCourt_Bonded.verdicts.2.label>
+	<RimCourt_Bonded.verdicts.3.label>Déclarer que ce n'était qu'un animal</RimCourt_Bonded.verdicts.3.label>
+	<RimCourt_Bonded.verdicts.0.pastLabel>le tueur tenu pour responsable</RimCourt_Bonded.verdicts.0.pastLabel>
+	<RimCourt_Bonded.verdicts.1.pastLabel>fouetté pour un animal</RimCourt_Bonded.verdicts.1.pastLabel>
+	<RimCourt_Bonded.verdicts.2.pastLabel>paix faite au sujet de l'animal</RimCourt_Bonded.verdicts.2.pastLabel>
+	<RimCourt_Bonded.verdicts.3.pastLabel>déclaré que ce n'était qu'un animal</RimCourt_Bonded.verdicts.3.pastLabel>
+
+</LanguageData>

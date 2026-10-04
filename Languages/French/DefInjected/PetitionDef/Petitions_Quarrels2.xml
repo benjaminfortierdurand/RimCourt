@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_Insult.label>des mots dits devant tout le monde</RimCourt_Insult.label>
+	<RimCourt_Insult.description>Un colon réellement insulté porte l'affaire devant le seigneur.</RimCourt_Insult.description>
+	<RimCourt_Insult.caseText>{PETITIONER_labelShort} ne l'a pas digéré : {OTHER_labelShort} l'a dit à voix haute, devant témoins, et tout le monde a entendu. {PETITIONER_labelShort} veut qu'il soit dit ici, devant le seigneur, que c'était un mensonge.\n\nComment le seigneur tranche-t-il ?</RimCourt_Insult.caseText>
+	<RimCourt_Insult.verdicts.0.label>Faire retirer ses mots à {OTHER_labelShort}</RimCourt_Insult.verdicts.0.label>
+	<RimCourt_Insult.verdicts.1.label>Les punir tous les deux pour le spectacle</RimCourt_Insult.verdicts.1.label>
+	<RimCourt_Insult.verdicts.2.label>Déclarer que les mots ne sont que du vent</RimCourt_Insult.verdicts.2.label>
+	<RimCourt_Insult.verdicts.0.pastLabel>excuses ordonnées</RimCourt_Insult.verdicts.0.pastLabel>
+	<RimCourt_Insult.verdicts.1.pastLabel>les deux punis pour le spectacle</RimCourt_Insult.verdicts.1.pastLabel>
+	<RimCourt_Insult.verdicts.2.pastLabel>que du vent</RimCourt_Insult.verdicts.2.pastLabel>
+	<RimCourt_Insult.verdicts.3.label>Mettre {OTHER_labelShort} au pilori pour le mensonge</RimCourt_Insult.verdicts.3.label>
+	<RimCourt_Insult.verdicts.3.pastLabel>{OTHER_labelShort} mis au pilori pour cela</RimCourt_Insult.verdicts.3.pastLabel>
+
+	<RimCourt_Brawl.label>des coups échangés</RimCourt_Brawl.label>
+	<RimCourt_Brawl.description>Deux colons qui en sont réellement venus aux mains doivent s'en expliquer.</RimCourt_Brawl.description>
+	<RimCourt_Brawl.caseText>{PETITIONER_labelShort} et {OTHER_labelShort} en sont venus aux mains, et il a fallu que la colonie les sépare. {PETITIONER_labelShort} s'en est moins bien tiré et veut que le seigneur dise qui avait tort.\n\nComment le seigneur tranche-t-il ?</RimCourt_Brawl.caseText>
+	<RimCourt_Brawl.verdicts.0.label>Déclarer que {OTHER_labelShort} a frappé le premier</RimCourt_Brawl.verdicts.0.label>
+	<RimCourt_Brawl.verdicts.1.label>Les punir tous les deux pour la rixe</RimCourt_Brawl.verdicts.1.label>
+	<RimCourt_Brawl.verdicts.2.label>Déclarer que cela ne regarde qu'eux</RimCourt_Brawl.verdicts.2.label>
+	<RimCourt_Brawl.verdicts.0.pastLabel>{OTHER_labelShort} déclaré fautif</RimCourt_Brawl.verdicts.0.pastLabel>
+	<RimCourt_Brawl.verdicts.1.pastLabel>les deux punis pour la rixe</RimCourt_Brawl.verdicts.1.pastLabel>
+	<RimCourt_Brawl.verdicts.2.pastLabel>affaire privée</RimCourt_Brawl.verdicts.2.pastLabel>
+	<RimCourt_Brawl.verdicts.3.label>Qu'ils règlent cela à coups de poing</RimCourt_Brawl.verdicts.3.label>
+	<RimCourt_Brawl.verdicts.3.pastLabel>réglé par l'épreuve du combat</RimCourt_Brawl.verdicts.3.pastLabel>
+
+	<RimCourt_Blood.label>une vie que l'on doit</RimCourt_Blood.label>
+	<RimCourt_Blood.description>Un colon réclame justice pour un proche tué par un autre colon.</RimCourt_Blood.description>
+	<RimCourt_Blood.caseText>{PETITIONER_labelShort} se tient devant la cour et demande la seule chose qui réglerait l'affaire : {OTHER_labelShort} lui a pris quelqu'un, et continue de traverser la colonie chaque jour. Toute la salle sait que c'est vrai. Personne ne sait ce que cela vaut.\n\nComment le seigneur tranche-t-il ?</RimCourt_Blood.caseText>
+	<RimCourt_Blood.verdicts.0.label>Faire fouetter {OTHER_labelShort} devant la cour</RimCourt_Blood.verdicts.0.label>
+	<RimCourt_Blood.verdicts.1.label>Bannir {OTHER_labelShort} de la colonie</RimCourt_Blood.verdicts.1.label>
+	<RimCourt_Blood.verdicts.2.label>Clore l'affaire et interdire toute vengeance</RimCourt_Blood.verdicts.2.label>
+	<RimCourt_Blood.verdicts.0.pastLabel>le prix du sang payé sous le fouet</RimCourt_Blood.verdicts.0.pastLabel>
+	<RimCourt_Blood.verdicts.1.pastLabel>{OTHER_labelShort} banni pour cela</RimCourt_Blood.verdicts.1.pastLabel>
+	<RimCourt_Blood.verdicts.2.pastLabel>vengeance interdite</RimCourt_Blood.verdicts.2.pastLabel>
+
+	<RimCourt_Surgery.label>une main qui a glissé</RimCourt_Surgery.label>
+	<RimCourt_Surgery.description>Un colon mutilé sur la table d'opération veut que le chirurgien réponde de ses actes.</RimCourt_Surgery.description>
+	<RimCourt_Surgery.caseText>{PETITIONER_labelShort} est passé sous le bistouri de {OTHER_labelShort} et en est ressorti en plus mauvais état qu'avant. {OTHER_labelShort} appelle cela de la malchance. {PETITIONER_labelShort} appelle cela autrement, et veut que le seigneur le nomme.\n\nComment le seigneur tranche-t-il ?</RimCourt_Surgery.caseText>
+	<RimCourt_Surgery.verdicts.0.label>Tenir {OTHER_labelShort} pour responsable du dommage</RimCourt_Surgery.verdicts.0.label>
+	<RimCourt_Surgery.verdicts.1.label>Déclarer que c'était la malchance</RimCourt_Surgery.verdicts.1.label>
+	<RimCourt_Surgery.verdicts.2.label>Laisser cela entre eux</RimCourt_Surgery.verdicts.2.label>
+	<RimCourt_Surgery.verdicts.0.pastLabel>le chirurgien tenu pour responsable</RimCourt_Surgery.verdicts.0.pastLabel>
+	<RimCourt_Surgery.verdicts.1.pastLabel>déclaré malchance</RimCourt_Surgery.verdicts.1.pastLabel>
+	<RimCourt_Surgery.verdicts.2.pastLabel>laissé entre eux</RimCourt_Surgery.verdicts.2.pastLabel>
+	<RimCourt_Surgery.verdicts.3.label>Mettre {OTHER_labelShort} au pilori pour la main qui a glissé</RimCourt_Surgery.verdicts.3.label>
+	<RimCourt_Surgery.verdicts.3.pastLabel>le chirurgien mis au pilori</RimCourt_Surgery.verdicts.3.pastLabel>
+
+	<RimCourt_Spurned.label>un cœur éconduit</RimCourt_Spurned.label>
+	<RimCourt_Spurned.description>Un colon réellement éconduit, trompé ou quitté porte l'affaire devant la cour.</RimCourt_Spurned.description>
+	<RimCourt_Spurned.caseText>{PETITIONER_labelShort} a porté une affaire de cœur devant la cour, ce qui est soit très courageux, soit très imprudent. {OTHER_labelShort} l'a éconduit, et voilà que toute la colonie peut y assister une seconde fois.\n\nComment le seigneur tranche-t-il ?</RimCourt_Spurned.caseText>
+	<RimCourt_Spurned.verdicts.0.label>Ordonner à {OTHER_labelShort} de répondre clairement</RimCourt_Spurned.verdicts.0.label>
+	<RimCourt_Spurned.verdicts.1.label>Ordonner à {PETITIONER_labelShort} de laisser {OTHER_labelShort} tranquille</RimCourt_Spurned.verdicts.1.label>
+	<RimCourt_Spurned.verdicts.2.label>Déclarer que la cour ne juge pas les cœurs</RimCourt_Spurned.verdicts.2.label>
+	<RimCourt_Spurned.verdicts.0.pastLabel>réponse claire ordonnée</RimCourt_Spurned.verdicts.0.pastLabel>
+	<RimCourt_Spurned.verdicts.1.pastLabel>sommé de laisser tranquille</RimCourt_Spurned.verdicts.1.pastLabel>
+	<RimCourt_Spurned.verdicts.2.pastLabel>la cour a refusé de juger</RimCourt_Spurned.verdicts.2.pastLabel>
+
+</LanguageData>

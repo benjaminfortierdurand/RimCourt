@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="RimCourt_MarkerBase" ParentName="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>Standable</passability>
+		<pathCost>0</pathCost>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>0</WorkToBuild>
+			<Flammability>0</Flammability>
+		</statBases>
+		<building>
+			<isEdifice>false</isEdifice>
+			<isPlayerEjectable>true</isPlayerEjectable>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<designationCategory>Misc</designationCategory>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+		<size>(1,1)</size>
+		<rotatable>false</rotatable>
+		<comps>
+			<li Class="RimCourt.UI.CompProperties_CourtMarker" />
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RimCourt_MarkerBase">
+		<defName>RimCourt_AudienceSpot</defName>
+		<label>audience spot</label>
+		<description>Optional. Marks the exact tile where petitioners stand to plead. Without it, they simply stand a few tiles in front of the lord's seat, which is usually fine. Place one if you want the petitioners further away, at the end of a great hall, or if the seat faces a wall. The nearest one within 15 tiles of the seat wins. It can be placed over a floor, a carpet or furniture, and it never blocks anything.</description>
+		<graphicData>
+			<texPath>Things/Building/Misc/PartySpot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+
+	<ThingDef ParentName="RimCourt_MarkerBase">
+		<!-- isEdifice false et pathCost 0, c'est ça qui glisse le marqueur SOUS le trône. Touche pas. -->
+		<defName>RimCourt_LordSeat</defName>
+		<label>lord's seat</label>
+		<description>This is the whole court. Place it directly on a throne or a fine chair: the marker slips under the furniture, so the throne stays visible, and the lord comes to sit there when you hold court. Petitioners stand a few tiles in front, in the direction the chair faces. Select the marker to see the tile where they will stand. On bare ground, rotate the marker to choose which way the lord looks. If RimJoust is installed, its lord's seat works too.</description>
+		<rotatable>true</rotatable>
+		<graphicData>
+			<texPath>Things/Building/Misc/CaravanHitchingSpot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<comps>
+			<li Class="RimCourt.UI.CompProperties_CourtArea" />
+		</comps>
+		<placeWorkers>
+			<li>RimCourt.UI.PlaceWorker_CourtLayout</li>
+		</placeWorkers>
+	</ThingDef>
+
+</Defs>

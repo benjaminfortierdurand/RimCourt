@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_Tale_Flogged.label>fouetté devant la cour</RimCourt_Tale_Flogged.label>
+	<RimCourt_Tale_Banished.label>banni par la cour</RimCourt_Tale_Banished.label>
+	<RimCourt_Tale_TrialByCombat.label>épreuve du combat</RimCourt_Tale_TrialByCombat.label>
+	<RimCourt_Tale_MatchBlessed.label>une union bénie</RimCourt_Tale_MatchBlessed.label>
+	<RimCourt_Tale_ThroneTaken.label>le siège a changé de mains</RimCourt_Tale_ThroneTaken.label>
+
+</LanguageData>

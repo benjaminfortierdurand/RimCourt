@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Un envoye d'une maison vient demander une faveur. Le verdict engage la diplomatie. -->
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Arms</defName>
+		<priority>85</priority>
+		<amountRange>3~8</amountRange>
+		<label>a plea for arms</label>
+		<description>An envoy of a house at war asks the lord for weapons.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Envoy</workerClass>
+		<arrivalText>{PETITIONER_labelShort} has ridden in from {FACTION} with a war behind {PETITIONER_objective}. Their house is fighting and losing, and they have come to ask the lord for weapons.\n\nHold court within {DAYS} days or they will look for them elsewhere, and remember where they were not found.</arrivalText>
+		<caseText>{PETITIONER_labelShort} speaks for {FACTION}, who are at war and short of steel. They ask for {SILVER} weapons, any weapons, and are not in a position to be particular about it. Arming a house is not a small thing: whatever they do with them afterwards is done with the lord's blades.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Arm them. Give the {SILVER} weapons</label>
+				<pastLabel>{SILVER} weapons given to a house at war</pastLabel>
+				<outcome>GiveArms</outcome>
+				<just>3</just>
+			</li>
+			<li>
+				<label>Refuse. Their war is not the lord's</label>
+				<pastLabel>arms refused</pastLabel>
+				<outcome>RefuseArms</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Sell them the steel, at a war price</label>
+				<pastLabel>arms sold to a house at war</pastLabel>
+				<outcome>SellArms</outcome>
+				<venal>3</venal>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Provisions</defName>
+		<priority>85</priority>
+		<amountRange>25~70</amountRange>
+		<label>a plea for provisions</label>
+		<description>An envoy of a hungry house asks the lord for food.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Envoy</workerClass>
+		<arrivalText>{PETITIONER_labelShort} has come from {FACTION} on an empty stomach. Their house is hungry and they are asking the lord for food, which is not a thing a house asks lightly.\n\nHold court within {DAYS} days or they will go home and say the lord did not care to listen.</arrivalText>
+		<caseText>{PETITIONER_labelShort} speaks for {FACTION}, and speaks carefully, because asking for food is admitting you have none. They need {SILVER} units of it. A house remembers who fed it, and remembers rather longer who did not.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Give them the {SILVER} food they need</label>
+				<pastLabel>{SILVER} food given freely</pastLabel>
+				<outcome>GiveProvisions</outcome>
+				<just>3</just>
+			</li>
+			<li>
+				<label>Refuse. The colony feeds its own first</label>
+				<pastLabel>provisions refused</pastLabel>
+				<outcome>RefuseProvisions</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Sell it to them, at a hungry man's price</label>
+				<pastLabel>food sold to a hungry house</pastLabel>
+				<outcome>SellProvisions</outcome>
+				<venal>3</venal>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+</Defs>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Le pretendant lourd : construit sur FailedRomanceAttemptOnMe, qui s'empile
+	     jusqu'a 5 fois par pretendant. Le compteur d'insistance est deja vanilla. -->
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Pestered</defName>
+		<priority>40</priority>
+		<label>unwanted attentions</label>
+		<description>A colonist asks the lord to order a persistent suitor to let them be.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Pestered</workerClass>
+		<maxMemoryAgeDays>10</maxMemoryAgeDays>
+		<sourceThoughts>
+			<li>FailedRomanceAttemptOnMe</li>
+		</sourceThoughts>
+		<caseText>{PETITIONER_labelShort} would like to stop being courted. {OTHER_labelShort} has asked {COUNT} times, been refused {COUNT} times, and treats each refusal as an opening position.
+
+There is no crime in it, which is exactly why {PETITIONER_labelShort} is here and not anywhere else: only the seat can tell someone to keep a wanting to himself.
+
+How does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Order {OTHER_labelShort} to let {PETITIONER_labelShort} be</label>
+				<pastLabel>ordered to let {PETITIONER_labelShort} be</pastLabel>
+				<outcome>OrderPeace</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Rule that there is no harm in asking</label>
+				<pastLabel>told there is no harm in asking</pastLabel>
+				<outcome>NoHarmAsking</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Move on to the next case</label>
+				<pastLabel>sent away, still courted</pastLabel>
+				<outcome>Dismiss</outcome>
+				<weak>2</weak>
+			</li>
+			<li>
+				<label>Bind {OTHER_labelShort} to the post, so everyone learns what no means</label>
+				<pastLabel>the suitor bound to the post</pastLabel>
+				<outcome>StocksSuitor</outcome>
+				<harsh>3</harsh>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+</Defs>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_Arms.label>une demande d'armes</RimCourt_Arms.label>
+	<RimCourt_Arms.description>L'envoyé d'une maison en guerre demande des armes au seigneur.</RimCourt_Arms.description>
+	<RimCourt_Arms.arrivalText>{PETITIONER_labelShort} est arrivé de {FACTION} avec une guerre derrière lui. Sa maison se bat et perd, et il vient demander des armes au seigneur.\n\nTenez audience sous {DAYS} jours, sans quoi ils iront en chercher ailleurs, et se souviendront de l'endroit où ils n'en ont pas trouvé.</RimCourt_Arms.arrivalText>
+	<RimCourt_Arms.caseText>{PETITIONER_labelShort} parle pour {FACTION}, en guerre et à court d'acier. Ils demandent {SILVER} armes, n'importe lesquelles, et ne sont pas en position de faire la fine bouche. Armer une maison n'est pas rien : ce qu'ils en feront ensuite, ils le feront avec les lames du seigneur.\n\nComment le seigneur tranche-t-il ?</RimCourt_Arms.caseText>
+	<RimCourt_Arms.verdicts.0.label>Les armer. Donner les {SILVER} armes</RimCourt_Arms.verdicts.0.label>
+	<RimCourt_Arms.verdicts.1.label>Refuser. Leur guerre n'est pas celle du seigneur</RimCourt_Arms.verdicts.1.label>
+	<RimCourt_Arms.verdicts.2.label>Leur vendre l'acier, au prix de la guerre</RimCourt_Arms.verdicts.2.label>
+	<RimCourt_Arms.verdicts.0.pastLabel>{SILVER} armes données à une maison en guerre</RimCourt_Arms.verdicts.0.pastLabel>
+	<RimCourt_Arms.verdicts.1.pastLabel>armes refusées</RimCourt_Arms.verdicts.1.pastLabel>
+	<RimCourt_Arms.verdicts.2.pastLabel>armes vendues à une maison en guerre</RimCourt_Arms.verdicts.2.pastLabel>
+
+	<RimCourt_Provisions.label>une demande de vivres</RimCourt_Provisions.label>
+	<RimCourt_Provisions.description>L'envoyé d'une maison affamée demande des vivres au seigneur.</RimCourt_Provisions.description>
+	<RimCourt_Provisions.arrivalText>{PETITIONER_labelShort} est venu de {FACTION} le ventre vide. Sa maison a faim et elle demande des vivres au seigneur, ce qu'une maison ne demande pas à la légère.\n\nTenez audience sous {DAYS} jours, sans quoi il rentrera dire que le seigneur n'a pas daigné écouter.</RimCourt_Provisions.arrivalText>
+	<RimCourt_Provisions.caseText>{PETITIONER_labelShort} parle pour {FACTION}, et parle avec précaution, car demander à manger c'est avouer qu'on n'a rien. Il leur faut {SILVER} unités de vivres. Une maison se souvient de qui l'a nourrie, et se souvient plus longtemps encore de qui ne l'a pas fait.\n\nComment le seigneur tranche-t-il ?</RimCourt_Provisions.caseText>
+	<RimCourt_Provisions.verdicts.0.label>Leur donner les {SILVER} vivres nécessaires</RimCourt_Provisions.verdicts.0.label>
+	<RimCourt_Provisions.verdicts.1.label>Refuser. La colonie nourrit les siens d'abord</RimCourt_Provisions.verdicts.1.label>
+	<RimCourt_Provisions.verdicts.2.label>Les leur vendre, au prix de la faim</RimCourt_Provisions.verdicts.2.label>
+	<RimCourt_Provisions.verdicts.0.pastLabel>{SILVER} vivres donnés sans contrepartie</RimCourt_Provisions.verdicts.0.pastLabel>
+	<RimCourt_Provisions.verdicts.1.pastLabel>vivres refusés</RimCourt_Provisions.verdicts.1.pastLabel>
+	<RimCourt_Provisions.verdicts.2.pastLabel>vivres vendus à une maison affamée</RimCourt_Provisions.verdicts.2.pastLabel>
+
+</LanguageData>

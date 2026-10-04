@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_Pestered.label>des avances importunes</RimCourt_Pestered.label>
+	<RimCourt_Pestered.description>Un colon demande au seigneur d'ordonner à un prétendant insistant de le laisser en paix.</RimCourt_Pestered.description>
+	<RimCourt_Pestered.caseText>{PETITIONER_labelShort} aimerait qu'on cesse de le courtiser. {OTHER_labelShort} a demandé {COUNT} fois, essuyé {COUNT} refus, et traite chaque refus comme une position de départ.
+
+Il n'y a là aucun crime, et c'est précisément pourquoi {PETITIONER_labelShort} est ici et nulle part ailleurs : seul le siège peut ordonner à quelqu'un de garder une envie pour lui.
+
+Comment le seigneur tranche-t-il ?</RimCourt_Pestered.caseText>
+	<RimCourt_Pestered.verdicts.0.label>Ordonner à {OTHER_labelShort} de laisser {PETITIONER_labelShort} en paix</RimCourt_Pestered.verdicts.0.label>
+	<RimCourt_Pestered.verdicts.1.label>Juger qu'il n'y a pas de mal à demander</RimCourt_Pestered.verdicts.1.label>
+	<RimCourt_Pestered.verdicts.2.label>Passer à l'affaire suivante</RimCourt_Pestered.verdicts.2.label>
+	<RimCourt_Pestered.verdicts.0.pastLabel>sommé de laisser {PETITIONER_labelShort} en paix</RimCourt_Pestered.verdicts.0.pastLabel>
+	<RimCourt_Pestered.verdicts.1.pastLabel>jugé qu'il n'y a pas de mal à demander</RimCourt_Pestered.verdicts.1.pastLabel>
+	<RimCourt_Pestered.verdicts.2.pastLabel>renvoyé, toujours courtisé</RimCourt_Pestered.verdicts.2.pastLabel>
+	<RimCourt_Pestered.verdicts.3.label>Mettre {OTHER_labelShort} au pilori, pour que chacun apprenne ce que non veut dire</RimCourt_Pestered.verdicts.3.label>
+	<RimCourt_Pestered.verdicts.3.pastLabel>le prétendant mis au pilori</RimCourt_Pestered.verdicts.3.pastLabel>
+
+</LanguageData>

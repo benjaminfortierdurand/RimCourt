@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Ces affaires sortent de ce qui s'est reellement passe dans la colonie :
+	     elles lisent les souvenirs des pions, pas seulement leur opinion. -->
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Insult</defName>
+		<priority>30</priority>
+		<label>words said in front of everyone</label>
+		<description>A colonist who was really insulted brings it before the lord.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Memory</workerClass>
+		<sourceThoughts>
+			<li>Insulted</li>
+			<!-- Le MayRequire, tu l'enlèves pas. Slighted vient de Royalty et sans le DLC ça pète en silence. -->
+			<li MayRequire="Ludeon.RimWorld.Royalty">Slighted</li>
+		</sourceThoughts>
+		<maxMemoryAgeDays>15</maxMemoryAgeDays>
+		<caseText>{PETITIONER_labelShort} has not let it go: {OTHER_labelShort} said it out loud, in front of others, and everyone heard. {PETITIONER_labelShort} wants it said here, before the lord, that it was a lie.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Make {OTHER_labelShort} take the words back</label>
+				<pastLabel>an apology ordered</pastLabel>
+				<outcome>FavorPetitioner</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Punish them both for the spectacle</label>
+				<pastLabel>both punished for the spectacle</pastLabel>
+				<outcome>PunishBoth</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Rule that words are wind</label>
+				<pastLabel>words ruled to be wind</pastLabel>
+				<outcome>Dismiss</outcome>
+				<weak>2</weak>
+			</li>
+			<li>
+				<label>Bind {OTHER_labelShort} to the post for the lie</label>
+				<pastLabel>{OTHER_labelShort} bound to the post for it</pastLabel>
+				<outcome>Stocks</outcome>
+				<harsh>2</harsh>
+				<just>1</just>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Brawl</defName>
+		<priority>50</priority>
+		<label>blows exchanged</label>
+		<description>Two colonists who really came to blows are called to answer for it.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Memory</workerClass>
+		<sourceThoughts>
+			<li>HadAngeringFight</li>
+			<li>HarmedMe</li>
+		</sourceThoughts>
+		<maxMemoryAgeDays>15</maxMemoryAgeDays>
+		<caseText>It came to blows between {PETITIONER_labelShort} and {OTHER_labelShort}, and the colony had to pull them apart. {PETITIONER_labelShort} came out of it worse and wants the lord to say who was in the wrong.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Rule that {OTHER_labelShort} struck first</label>
+				<pastLabel>{OTHER_labelShort} held at fault</pastLabel>
+				<outcome>FavorPetitioner</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Punish them both for brawling</label>
+				<pastLabel>both punished for brawling</pastLabel>
+				<outcome>PunishBoth</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Rule it a private matter</label>
+				<pastLabel>ruled a private matter</pastLabel>
+				<outcome>Dismiss</outcome>
+				<weak>2</weak>
+			</li>
+					<li>
+				<label>Let them settle it with their fists</label>
+				<pastLabel>settled by trial of combat</pastLabel>
+				<outcome>Duel</outcome>
+				<harsh>2</harsh>
+				<weak>1</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Blood</defName>
+		<priority>100</priority>
+		<label>a life owed</label>
+		<description>A colonist demands justice for a relative or friend killed by another colonist.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Memory</workerClass>
+		<sourceThoughts>
+			<li>KilledMyFriend</li>
+			<li>KilledMyLover</li>
+			<li>KilledMyFiance</li>
+			<li>KilledMySpouse</li>
+			<li>KilledMyFather</li>
+			<li>KilledMyMother</li>
+			<li>KilledMySon</li>
+			<li>KilledMyDaughter</li>
+			<li>KilledMyBrother</li>
+			<li>KilledMySister</li>
+			<li>KilledMyKin</li>
+		</sourceThoughts>
+		<maxMemoryAgeDays>60</maxMemoryAgeDays>
+		<caseText>{PETITIONER_labelShort} stands before the court and asks for the only thing that would settle it: {OTHER_labelShort} took someone from {PETITIONER_objective}, and still walks the colony every day. The whole hall knows it is true. Nobody knows what it is worth.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Have {OTHER_labelShort} flogged before the court</label>
+				<pastLabel>the blood price paid under the lash</pastLabel>
+				<outcome>BloodPrice</outcome>
+				<just>3</just>
+			</li>
+			<li>
+				<label>Banish {OTHER_labelShort} from the colony</label>
+				<pastLabel>{OTHER_labelShort} banished for it</pastLabel>
+				<outcome>Banish</outcome>
+				<just>1</just>
+				<harsh>3</harsh>
+			</li>
+			<li>
+				<label>Rule the matter closed and forbid revenge</label>
+				<pastLabel>revenge forbidden</pastLabel>
+				<outcome>FavorOther</outcome>
+				<harsh>1</harsh>
+				<weak>2</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Surgery</defName>
+		<priority>70</priority>
+		<label>a hand that slipped</label>
+		<description>A colonist maimed on the operating table wants the surgeon answered for.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Memory</workerClass>
+		<sourceThoughts>
+			<li>BotchedMySurgery</li>
+		</sourceThoughts>
+		<maxMemoryAgeDays>30</maxMemoryAgeDays>
+		<caseText>{PETITIONER_labelShort} went under {OTHER_labelShort}'s knife and came back out worse than {PETITIONER_pronoun} went in. {OTHER_labelShort} calls it bad luck. {PETITIONER_labelShort} calls it something else, and wants the lord to call it by its name.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Hold {OTHER_labelShort} answerable for the harm</label>
+				<pastLabel>the surgeon held answerable</pastLabel>
+				<outcome>FavorPetitioner</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Rule it bad luck, and warn {PETITIONER_labelShort} off</label>
+				<pastLabel>ruled bad luck</pastLabel>
+				<outcome>FavorOther</outcome>
+				<harsh>1</harsh>
+			</li>
+			<li>
+				<label>Leave it between them</label>
+				<pastLabel>left between them</pastLabel>
+				<outcome>Dismiss</outcome>
+				<weak>2</weak>
+			</li>
+			<li>
+				<label>Bind {OTHER_labelShort} to the post for the hand that slipped</label>
+				<pastLabel>the surgeon bound to the post</pastLabel>
+				<outcome>Stocks</outcome>
+				<harsh>2</harsh>
+				<just>1</just>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Spurned</defName>
+		<priority>40</priority>
+		<label>a heart turned away</label>
+		<description>A colonist really rebuffed, cheated on or left brings it to court.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Memory</workerClass>
+		<sourceThoughts>
+			<li>CheatedOnMe</li>
+			<li>BrokeUpWithMe</li>
+			<li>DivorcedMe</li>
+			<li>RejectedMyProposal</li>
+			<li>RebuffedMyRomanceAttempt</li>
+		</sourceThoughts>
+		<maxMemoryAgeDays>20</maxMemoryAgeDays>
+		<caseText>{PETITIONER_labelShort} has brought a matter of the heart before the court, which is either very brave or very unwise. {OTHER_labelShort} turned {PETITIONER_objective} away, and now the whole colony gets to watch it happen a second time.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Tell {OTHER_labelShort} to answer {PETITIONER_objective} plainly</label>
+				<pastLabel>a plain answer ordered</pastLabel>
+				<outcome>FavorPetitioner</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Order {PETITIONER_labelShort} to leave {OTHER_objective} be</label>
+				<pastLabel>told to leave it be</pastLabel>
+				<outcome>FavorOther</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Rule that the court does not sit on hearts</label>
+				<pastLabel>the court declined to rule</pastLabel>
+				<outcome>Dismiss</outcome>
+				<weak>2</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+</Defs>

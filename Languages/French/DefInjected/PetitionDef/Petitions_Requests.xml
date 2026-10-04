@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_Match.label>des fiançailles suspendues à un mot</RimCourt_Match.label>
+	<RimCourt_Match.description>Deux colons fiancés viennent demander la bénédiction du seigneur avant que la noce ne soit tenue.</RimCourt_Match.description>
+	<RimCourt_Match.caseText>{PETITIONER_labelShort} et {OTHER_labelShort} sont promis l'un à l'autre et se présentent ensemble devant la cour, ce que toute la colonie avait compris depuis un moment. Dans cette salle, des fiançailles attendent le seigneur : ils lui demandent de dire à voix haute que l'union est bonne, pour que la noce se tienne au lieu d'en parler encore une saison.
+
+Cela ne lui coûte que sa parole, et sa parole est la seule chose qu'ils ne peuvent obtenir nulle part ailleurs.
+
+Comment le seigneur tranche-t-il ?</RimCourt_Match.caseText>
+	<RimCourt_Match.verdicts.0.label>Bénir et fixer le jour</RimCourt_Match.verdicts.0.label>
+	<RimCourt_Match.verdicts.1.label>L'interdire</RimCourt_Match.verdicts.1.label>
+	<RimCourt_Match.verdicts.2.label>Ne dire ni oui ni non</RimCourt_Match.verdicts.2.label>
+	<RimCourt_Match.verdicts.0.pastLabel>union bénie, jour fixé</RimCourt_Match.verdicts.0.pastLabel>
+	<RimCourt_Match.verdicts.1.pastLabel>union interdite</RimCourt_Match.verdicts.1.pastLabel>
+	<RimCourt_Match.verdicts.2.pastLabel>aucune réponse sur l'union</RimCourt_Match.verdicts.2.pastLabel>
+
+	<RimCourt_Exemption.label>une tâche de trop</RimCourt_Exemption.label>
+	<RimCourt_Exemption.description>Un colon demande à être dispensé d'une tâche précise pour laquelle il n'a aucun goût.</RimCourt_Exemption.description>
+	<RimCourt_Exemption.caseText>{PETITIONER_labelShort} a été mis à {WORK}, tâche pour laquelle il n'a ni goût ni main, et préférerait que le seigneur l'en décharge. Il faudrait bien que quelqu'un d'autre s'en occupe. C'est précisément pour cela qu'on s'adresse à un seigneur plutôt qu'à un ami.
+
+Comment le seigneur tranche-t-il ?</RimCourt_Exemption.caseText>
+	<RimCourt_Exemption.verdicts.0.label>Dispenser {PETITIONER_labelShort} de {WORK}</RimCourt_Exemption.verdicts.0.label>
+	<RimCourt_Exemption.verdicts.1.label>Ordonner qu'on l'y forme, plutôt que l'en dispenser</RimCourt_Exemption.verdicts.1.label>
+	<RimCourt_Exemption.verdicts.2.label>Refuser. Le travail ne se fait pas tout seul</RimCourt_Exemption.verdicts.2.label>
+	<RimCourt_Exemption.verdicts.3.label>Lui dire de s'arranger avec les autres</RimCourt_Exemption.verdicts.3.label>
+	<RimCourt_Exemption.verdicts.0.pastLabel>dispensé de {WORK}</RimCourt_Exemption.verdicts.0.pastLabel>
+	<RimCourt_Exemption.verdicts.1.pastLabel>formé plutôt que dispensé</RimCourt_Exemption.verdicts.1.pastLabel>
+	<RimCourt_Exemption.verdicts.2.pastLabel>maintenu à la tâche</RimCourt_Exemption.verdicts.2.pastLabel>
+	<RimCourt_Exemption.verdicts.3.pastLabel>renvoyé s'arranger seul</RimCourt_Exemption.verdicts.3.pastLabel>
+
+	<RimCourt_Leave.label>la permission de partir</RimCourt_Leave.label>
+	<RimCourt_Leave.description>Un colon malheureux demande au seigneur l'autorisation de quitter la colonie.</RimCourt_Leave.description>
+	<RimCourt_Leave.caseText>{PETITIONER_labelShort} est malheureux ici depuis longtemps, et vient le dire au seul endroit où le dire signifie quelque chose. Il demande la permission de partir. Que le seigneur l'accorde ou non, toute la salle sait désormais qu'il a voulu s'en aller.
+
+Comment le seigneur tranche-t-il ?</RimCourt_Leave.caseText>
+	<RimCourt_Leave.verdicts.0.label>Laisser partir {PETITIONER_labelShort}</RimCourt_Leave.verdicts.0.label>
+	<RimCourt_Leave.verdicts.1.label>Refuser. On ne quitte pas le seigneur</RimCourt_Leave.verdicts.1.label>
+	<RimCourt_Leave.verdicts.2.label>Le laisser partir, avec des vivres pour la route</RimCourt_Leave.verdicts.2.label>
+	<RimCourt_Leave.verdicts.0.pastLabel>départ accordé</RimCourt_Leave.verdicts.0.pastLabel>
+	<RimCourt_Leave.verdicts.1.pastLabel>départ refusé</RimCourt_Leave.verdicts.1.pastLabel>
+	<RimCourt_Leave.verdicts.2.pastLabel>renvoyé avec des vivres</RimCourt_Leave.verdicts.2.pastLabel>
+
+	<RimCourt_Honour.label>un honneur à rendre</RimCourt_Honour.label>
+	<RimCourt_Honour.description>Un colon qui a tué pour la colonie demande à en être payé, en argent que la colonie ne reverra pas.</RimCourt_Honour.description>
+	<RimCourt_Honour.caseText>{PETITIONER_labelShort} a tué {KILLS} personnes pour cette colonie et n'a jamais entendu personne le dire. Il ne demande pas des remerciements, ou pas seulement. Il sait ce que vaut un homme qui fait ce travail, et il y a mis un chiffre : {SILVER} pièces d'argent.
+
+L'argent le dit comme les mots ne savent pas le dire, et il repart avec. Les mots ne coûtent rien à la colonie, et il les prendra, mais il saura ce qu'on lui a offert à la place de ce qu'il demandait.
+
+Comment le seigneur tranche-t-il ?</RimCourt_Honour.caseText>
+	<RimCourt_Honour.verdicts.0.label>Payer à {PETITIONER_labelShort} les {SILVER} pièces qu'il demande</RimCourt_Honour.verdicts.0.label>
+	<RimCourt_Honour.verdicts.1.label>Honorer {PETITIONER_labelShort} devant la cour, et rien de plus</RimCourt_Honour.verdicts.1.label>
+	<RimCourt_Honour.verdicts.2.label>Juger que {PETITIONER_labelShort} n'a fait que son devoir</RimCourt_Honour.verdicts.2.label>
+	<RimCourt_Honour.verdicts.3.label>Passer à l'affaire suivante</RimCourt_Honour.verdicts.3.label>
+	<RimCourt_Honour.verdicts.0.pastLabel>payé {SILVER} pièces pour le sang versé</RimCourt_Honour.verdicts.0.pastLabel>
+	<RimCourt_Honour.verdicts.1.pastLabel>honoré devant la cour, et rien de plus</RimCourt_Honour.verdicts.1.pastLabel>
+	<RimCourt_Honour.verdicts.2.pastLabel>renvoyé à son devoir</RimCourt_Honour.verdicts.2.pastLabel>
+	<RimCourt_Honour.verdicts.3.pastLabel>passé sous silence</RimCourt_Honour.verdicts.3.pastLabel>
+
+</LanguageData>

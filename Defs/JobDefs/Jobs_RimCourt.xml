@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<JobDef>
+		<defName>RimCourt_HoldCourt</defName>
+		<driverClass>RimCourt.Jobs.JobDriver_HoldCourt</driverClass>
+		<reportString>holding court.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<suspendable>false</suspendable>
+	</JobDef>
+
+	<JobDef>
+		<defName>RimCourt_AttendCourt</defName>
+		<driverClass>RimCourt.Jobs.JobDriver_AttendCourt</driverClass>
+		<reportString>attending court.</reportString>
+		<suspendable>false</suspendable>
+		<joyKind>Social</joyKind>
+		<joyGainRate>1</joyGainRate>
+	</JobDef>
+
+	<JobDef>
+		<defName>RimCourt_PleadCase</defName>
+		<driverClass>RimCourt.Jobs.JobDriver_PleadCase</driverClass>
+		<reportString>pleading before the lord.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<suspendable>false</suspendable>
+	</JobDef>
+
+	<JobDef>
+		<defName>RimCourt_Flog</defName>
+		<driverClass>RimCourt.Jobs.JobDriver_Flog</driverClass>
+		<reportString>carrying out the lord's punishment.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<suspendable>false</suspendable>
+	</JobDef>
+
+	<JobDef>
+		<defName>RimCourt_TakeLashes</defName>
+		<driverClass>RimCourt.Jobs.JobDriver_TakeLashes</driverClass>
+		<reportString>answering for it before the court.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<suspendable>false</suspendable>
+	</JobDef>
+
+	<JobDef>
+		<defName>RimCourt_StandInStocks</defName>
+		<driverClass>RimCourt.Jobs.JobDriver_StandInStocks</driverClass>
+		<reportString>bound to the post.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<suspendable>false</suspendable>
+		<playerInterruptible>true</playerInterruptible>
+	</JobDef>
+
+	<JobDef>
+		<defName>RimCourt_EscortToStocks</defName>
+		<driverClass>RimCourt.Jobs.JobDriver_EscortToStocks</driverClass>
+		<reportString>taking TargetA to the post.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<suspendable>false</suspendable>
+	</JobDef>
+
+	<!-- Le garde porte le prisonnier sur l'épaule comme un gardien vanilla, le pose devant le siège et reste planté à côté. Pas de job forcé sur le prisonnier pendant le trajet. -->
+	<JobDef>
+		<defName>RimCourt_BringCaptive</defName>
+		<driverClass>RimCourt.Jobs.JobDriver_BringCaptive</driverClass>
+		<reportString>bringing TargetA before the seat.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<suspendable>false</suspendable>
+	</JobDef>
+
+	<JobDef>
+		<defName>RimCourt_ExecuteCaptive</defName>
+		<driverClass>RimCourt.Jobs.JobDriver_ExecuteCaptive</driverClass>
+		<reportString>carrying out the lord's sentence.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<suspendable>false</suspendable>
+	</JobDef>
+
+	<!-- Job de loisir : les colons viennent exprès se moquer du type au pilori pendant leur temps libre. joyKind Social, sinon JoyTickCheckEnd gueule. -->
+	<JobDef>
+		<defName>RimCourt_JeerAtStocks</defName>
+		<driverClass>RimCourt.Jobs.JobDriver_JeerAtStocks</driverClass>
+		<reportString>having a laugh at the post.</reportString>
+		<joyDuration>900</joyDuration>
+		<joyMaxParticipants>8</joyMaxParticipants>
+		<joyGainRate>1</joyGainRate>
+		<joyKind>Social</joyKind>
+	</JobDef>
+
+</Defs>

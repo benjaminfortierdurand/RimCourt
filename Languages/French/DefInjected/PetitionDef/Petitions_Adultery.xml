@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_Adultery.label>un serment rompu dans le noir</RimCourt_Adultery.label>
+	<RimCourt_Adultery.description>Un colon trompé par son époux demande à la cour de donner un sens au mariage, ou d'y mettre fin.</RimCourt_Adultery.description>
+	<RimCourt_Adultery.caseText>{PETITIONER_labelShort} se tient devant la cour, l'anneau encore au doigt, et demande au siège de regarder ce qu'il vaut. {OTHER_labelShort} fréquente {LOVER}, et sans discrétion : la colonie le savait avant {PETITIONER_labelShort}.
+
+Le serment a été juré devant tout le monde. {PETITIONER_labelShort} veut qu'il signifie quelque chose devant tout le monde, ou qu'il s'achève de la même façon.
+
+Comment le seigneur tranche-t-il ?</RimCourt_Adultery.caseText>
+	<RimCourt_Adultery.verdicts.0.label>Délier {PETITIONER_labelShort} du mariage</RimCourt_Adultery.verdicts.0.label>
+	<RimCourt_Adultery.verdicts.1.label>Ordonner à {OTHER_labelShort} de renoncer à {LOVER} et de tenir le serment</RimCourt_Adultery.verdicts.1.label>
+	<RimCourt_Adultery.verdicts.2.label>Faire fouetter {OTHER_labelShort} pour la trahison</RimCourt_Adultery.verdicts.2.label>
+	<RimCourt_Adultery.verdicts.3.label>Juger que les lits ne regardent pas le siège</RimCourt_Adultery.verdicts.3.label>
+	<RimCourt_Adultery.verdicts.0.pastLabel>délié du mariage</RimCourt_Adultery.verdicts.0.pastLabel>
+	<RimCourt_Adultery.verdicts.1.pastLabel>renvoyé à son serment</RimCourt_Adultery.verdicts.1.pastLabel>
+	<RimCourt_Adultery.verdicts.2.pastLabel>fouetté pour la trahison</RimCourt_Adultery.verdicts.2.pastLabel>
+	<RimCourt_Adultery.verdicts.3.pastLabel>jugé que les lits ne regardent pas le siège</RimCourt_Adultery.verdicts.3.pastLabel>
+
+</LanguageData>

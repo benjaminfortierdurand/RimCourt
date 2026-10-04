@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- La succession : la premiere affaire qui nait d'une mort naturelle plutot
+	     que d'une faute. Detection par les pensees de deuil vanilla (My*Died),
+	     qui portent le mort en otherPawn et durent 30 jours. -->
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Estate</defName>
+		<priority>65</priority>
+		<label>what the dead left behind</label>
+		<description>Two kin of a dead colonist each claim what the dead left, and neither will yield to the other.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Estate</workerClass>
+		<maxMemoryAgeDays>30</maxMemoryAgeDays>
+		<caseText>{DEAD} is dead, and {DEAD} left things behind: a room, a coat, a place at the table that somebody has to take. {PETITIONER_labelShort} and {OTHER_labelShort} were each something to the dead, and each is certain the dead meant it all for them.
+
+Nothing was written down. Nothing here ever is. That is what the seat is for.
+
+How does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Rule the estate to {PETITIONER_labelShort}</label>
+				<pastLabel>the estate ruled to {PETITIONER_labelShort}</pastLabel>
+				<outcome>FavorPetitioner</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Rule the estate to {OTHER_labelShort}</label>
+				<pastLabel>the estate ruled to {OTHER_labelShort}</pastLabel>
+				<outcome>FavorOther</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Declare the dead left nothing worth quarrelling over</label>
+				<pastLabel>ruled the dead left nothing</pastLabel>
+				<outcome>NobodyInherits</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Move on to the next case</label>
+				<pastLabel>sent away, the estate unsettled</pastLabel>
+				<outcome>Dismiss</outcome>
+				<weak>2</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+</Defs>

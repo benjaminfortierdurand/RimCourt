@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Sanctuary</defName>
+		<priority>80</priority>
+		<label>a plea for sanctuary</label>
+		<description>A traveller asks to be taken in and given a place in the colony.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Outsider</workerClass>
+		<arrivalText>{PETITIONER_labelShort} has walked in from the wilds and asks to be heard by the lord. {PETITIONER_pronoun} left {FACTION} with nothing and wants a place here, offering {SILVER} silver of savings for the privilege.\n\nHold court within {DAYS} days or {PETITIONER_objective} will move on.</arrivalText>
+		<caseText>{PETITIONER_labelShort} stands before the court with nothing but what {PETITIONER_pronoun} carries. {PETITIONER_pronoun} asks for a roof, a place at the table, and the lord's protection. There is talk of {PETITIONER_possessive} savings, some {SILVER} silver, which {PETITIONER_pronoun} would rather keep.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Take {PETITIONER_labelShort} in</label>
+				<pastLabel>sanctuary granted</pastLabel>
+				<outcome>TakeIn</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Send {PETITIONER_labelShort} back to the road</label>
+				<pastLabel>sanctuary refused</pastLabel>
+				<outcome>SendAway</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Let {PETITIONER_labelShort} buy a place for {SILVER} silver</label>
+				<pastLabel>a place sold for {SILVER} silver</pastLabel>
+				<outcome>BuyIn</outcome>
+				<venal>2</venal>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Redress</defName>
+		<priority>80</priority>
+		<label>a claim for redress</label>
+		<description>A traveller robbed near your land comes to claim damages from the lord.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Outsider</workerClass>
+		<arrivalText>{PETITIONER_labelShort} of {FACTION} has arrived at your gate, robbed on the roads you claim as yours. {PETITIONER_pronoun} wants {SILVER} silver in damages and will wait for the lord to hear it.\n\nHold court within {DAYS} days or {PETITIONER_objective} will take the story home instead.</arrivalText>
+		<caseText>{PETITIONER_labelShort} was set upon near your borders and lost everything on the road. The claim is simple: these are the lord's lands, so this is the lord's debt. {SILVER} silver would settle it.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Pay the {SILVER} silver</label>
+				<pastLabel>{SILVER} silver paid in damages</pastLabel>
+				<outcome>PayHim</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Send {PETITIONER_labelShort} away empty-handed</label>
+				<pastLabel>claim refused</pastLabel>
+				<outcome>SendAway</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Charge {SILVER} silver in court fees, then refuse</label>
+				<pastLabel>{SILVER} silver taken in court fees</pastLabel>
+				<outcome>CourtFee</outcome>
+				<venal>2</venal>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+</Defs>

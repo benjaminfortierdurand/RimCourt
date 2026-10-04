@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<InteractionDef>
+		<defName>RimCourt_Mock</defName>
+		<label>mock at the post</label>
+		<symbol>Things/Mote/SpeechSymbols/Insult</symbol>
+		<recipientThought>RimCourt_MockedInStocks</recipientThought>
+		<initiatorThought>RimCourt_HadALaugh</initiatorThought>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[INITIATOR_nameDef] stopped to laugh at [RECIPIENT_nameDef] at the post.</li>
+				<li>r_logentry->[INITIATOR_nameDef] asked [RECIPIENT_nameDef] how the view was from down there.</li>
+				<li>r_logentry->[INITIATOR_nameDef] told [RECIPIENT_nameDef] the post suited [RECIPIENT_objective].</li>
+				<li>r_logentry->[INITIATOR_nameDef] made a remark about [RECIPIENT_nameDef] that the whole yard heard.</li>
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>
+
+	<InteractionDef>
+		<defName>RimCourt_Pelt</defName>
+		<label>pelt at the post</label>
+		<symbol>Things/Mote/SpeechSymbols/Insult</symbol>
+		<recipientThought>RimCourt_PeltedInStocks</recipientThought>
+		<initiatorThought>RimCourt_HadALaugh</initiatorThought>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[INITIATOR_nameDef] threw a rotten potato at [RECIPIENT_nameDef].</li>
+				<li>r_logentry->[INITIATOR_nameDef] hit [RECIPIENT_nameDef] square in the face with something soft and brown.</li>
+				<li>r_logentry->[INITIATOR_nameDef] flung a clod of mud at [RECIPIENT_nameDef] and did not miss.</li>
+				<li>r_logentry->[INITIATOR_nameDef] threw an egg at [RECIPIENT_nameDef]. It was not a fresh one.</li>
+				<li>r_logentry->[INITIATOR_nameDef] picked something off the ground and threw it at [RECIPIENT_nameDef].</li>
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>
+
+</Defs>

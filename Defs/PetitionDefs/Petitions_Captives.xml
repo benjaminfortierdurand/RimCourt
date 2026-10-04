@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Les poids just/harsh ici sont ceux du "nobody". Le worker les réécrit selon le dossier (a tué, a blessé, faction acharnée) au moment du verdict. Touche pas à l'ordre : le 0 est le verdict de timeout. -->
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Captive</defName>
+		<priority>70</priority>
+		<label>a prisoner is brought before the seat</label>
+		<description>A captured enemy is dragged before the lord, who decides what becomes of him.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Captive</workerClass>
+		<caseText>{PETITIONER_labelShort} of the {FACTION} was brought in with {PETITIONER_possessive} hands tied and stood where the petitioners stand. {PETITIONER_pronoun} has asked for nothing. The hall has offered nothing.\n\n{DOSSIER}\n\n{PETITIONER_possessive} people would pay {SILVER} silver to have {PETITIONER_objective} back, or so the last trader who dealt with them says.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Send {PETITIONER_labelShort} home with a warning</label>
+				<pastLabel>sent home with a warning</pastLabel>
+				<outcome>Release</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Sell {PETITIONER_objective} back to {PETITIONER_possessive} people for {SILVER} silver</label>
+				<pastLabel>ransomed for {SILVER} silver</pastLabel>
+				<outcome>Ransom</outcome>
+				<just>1</just>
+				<venal>1</venal>
+			</li>
+			<li>
+				<label>The post, in full view, then back to the cell</label>
+				<pastLabel>bound to the post, then back to the cell</pastLabel>
+				<outcome>StocksCaptive</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>The sword, here, before the court</label>
+				<pastLabel>put to the sword before the seat</pastLabel>
+				<outcome>Execute</outcome>
+				<harsh>3</harsh>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+</Defs>
