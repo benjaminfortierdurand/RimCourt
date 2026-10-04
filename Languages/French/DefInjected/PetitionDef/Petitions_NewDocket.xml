@@ -3,7 +3,7 @@
 
 	<RimCourt_Rivals.label>deux prétendants, un seul cœur</RimCourt_Rivals.label>
 	<RimCourt_Rivals.description>Deux colons courtisent la même personne, et l'un des deux demande au seigneur de trancher.</RimCourt_Rivals.description>
-	<RimCourt_Rivals.caseText>{PETITIONER_labelShort} et {OTHER_labelShort} courtisent tous deux {LOVER}, et {LOVER} n'a pas choisi — ce qui est son droit, et le problème de tous les autres. Les deux se tournent autour à chaque repas, et la colonie attend de savoir où cela finit.
+	<RimCourt_Rivals.caseText>{PETITIONER_labelShort} et {OTHER_labelShort} courtisent tous deux {LOVER}, et {LOVER} n'a pas choisi, ce qui est son droit, et le problème de tous les autres. Les deux se tournent autour à chaque repas, et la colonie attend de savoir où cela finit.
 
 {PETITIONER_labelShort} demande au siège d'y mettre fin le premier.
 
@@ -35,7 +35,7 @@ Comment le seigneur tranche-t-il ?</RimCourt_Penitent.caseText>
 
 	<RimCourt_Gratitude.label>une dette de gratitude</RimCourt_Gratitude.label>
 	<RimCourt_Gratitude.description>Un colon demande que celui qui lui a sauvé la vie soit honoré à voix haute.</RimCourt_Gratitude.description>
-	<RimCourt_Gratitude.caseText>{PETITIONER_labelShort} est en vie parce que {OTHER_labelShort} est allé le chercher, et personne n'en a rien dit depuis. {OTHER_labelShort} n'a jamais rien demandé — c'est précisément pourquoi {PETITIONER_labelShort} demande pour lui.
+	<RimCourt_Gratitude.caseText>{PETITIONER_labelShort} est en vie parce que {OTHER_labelShort} est allé le chercher, et personne n'en a rien dit depuis. {OTHER_labelShort} n'a jamais rien demandé, et c'est précisément pourquoi {PETITIONER_labelShort} demande pour lui.
 
 Personne dans cette salle n'est en tort. La cour en entend si peu, cela peut lui demander un instant d'adaptation.
 
