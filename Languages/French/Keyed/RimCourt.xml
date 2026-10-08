@@ -6,7 +6,9 @@
 	<RimCourt.GuideGizmoLabel>Guide de la cour</RimCourt.GuideGizmoLabel>
 	<RimCourt.GuideGizmoDesc>Comment se tient une audience : d'ou viennent les affaires, comment trancher, et ce que cela fait au nom du seigneur.</RimCourt.GuideGizmoDesc>
 	<RimCourt.Settings.OpenGuide>Ouvrir le guide de la cour</RimCourt.Settings.OpenGuide>
-	<RimCourt.HoldCourtDesc>Convoque une audience. Le seigneur prend place, la colonie s'assemble, et les pétitionnaires plaident leur cause un par un. C'est vous qui rendez chaque verdict.</RimCourt.HoldCourtDesc>
+	<RimCourt.HoldCourtDesc>Convoque une audience. Le seigneur prend place, la colonie s'assemble, et les pétitionnaires plaident leur cause un par un. C'est vous qui rendez chaque verdict. Les prisonniers ont leur propre audience.</RimCourt.HoldCourtDesc>
+	<RimCourt.HearCaptivesLabel>Juger les prisonniers</RimCourt.HearCaptivesLabel>
+	<RimCourt.HearCaptivesDesc>Tient une audience réservée aux prisonniers. Le seigneur prend place et chaque captif est amené de sa cellule, un par un. Ce n'est pas une séance de la cour : aucun délai avant, aucun après.</RimCourt.HearCaptivesDesc>
 	<RimCourt.NameLordLabel>Nommer le seigneur</RimCourt.NameLordLabel>
 	<RimCourt.NameLordDesc>Choisissez qui tient audience. Sans intervention, le siège revient au propriétaire du trône, et à défaut à celui qui pèse le plus dans la colonie.</RimCourt.NameLordDesc>
 	<RimCourt.NameLordOnThrone>Le siège repose sur le trône de {0}, et cela tranche la question. Réattribuez le trône pour installer un autre, ou laissez quelqu'un le lui prendre en pleine audience.</RimCourt.NameLordOnThrone>
@@ -108,6 +110,9 @@ Il sera à l'aise avec les verdicts faibles qu'il ramenait autrefois à la maiso
 	<RimCourt.NoPetitions>Personne ne réclame la justice du seigneur aujourd'hui. Aucune querelle digne d'être entendue.</RimCourt.NoPetitions>
 	<RimCourt.CourtConvened>{0} tient audience. {1} affaires seront entendues.</RimCourt.CourtConvened>
 	<RimCourt.CourtConvenedOne>{0} tient audience. Une affaire sera entendue.</RimCourt.CourtConvenedOne>
+	<RimCourt.HearingConvened>{0} siège pour juger. {1} prisonniers seront amenés.</RimCourt.HearingConvened>
+	<RimCourt.HearingConvenedOne>{0} siège pour juger. Un prisonnier sera amené.</RimCourt.HearingConvenedOne>
+	<RimCourt.NoCaptives>Aucun prisonnier ne peut être jugé pour l'instant. Chacun n'est entendu qu'une fois, et seuls les captifs ennemis capables de marcher sont amenés.</RimCourt.NoCaptives>
 
 	<!-- Session -->
 	<RimCourt.CaseCalled>{0} s'avance pour plaider.</RimCourt.CaseCalled>
@@ -141,6 +146,8 @@ Il sera à l'aise avec les verdicts faibles qu'il ramenait autrefois à la maiso
 	<RimCourt.AdjournLetterLabel>La cour se retire</RimCourt.AdjournLetterLabel>
 	<RimCourt.AdjournLetterText>{0} a entendu les pétitions du jour. {1} affaires ont été réglées.</RimCourt.AdjournLetterText>
 	<RimCourt.AdjournLetterTextOne>{0} a entendu les pétitions du jour. Une affaire a été réglée.</RimCourt.AdjournLetterTextOne>
+	<RimCourt.AdjournHearingText>{0} a jugé les prisonniers. {1} sont passés devant le siège.</RimCourt.AdjournHearingText>
+	<RimCourt.AdjournHearingTextOne>{0} a jugé les prisonniers. Un seul est passé devant le siège.</RimCourt.AdjournHearingTextOne>
 
 	<!-- Pétitionnaires du dehors -->
 	<RimCourt.PetitionerArrivesLabel>Pétitionnaire : {0}</RimCourt.PetitionerArrivesLabel>
@@ -373,7 +380,7 @@ La pièce où se dresse le siège est mesurée elle aussi, comme n'importe quell
 Qui s'y assoit compte au-delà du prestige. Un seigneur juge avec son propre tempérament, et les verdicts qui le contredisent lui coûtent : le seigneur bon qui ordonne le fouet, l'ascète qui prend l'argent, l'inflexible qui laisse une affaire expirer sans réponse, chacun le porte plusieurs jours. Trancher comme il l'aurait fait de toute façon le soulage à l'inverse. Un psychopathe sur le siège ne ressent ni l'un ni l'autre, ce qui est une qualification en soi.\n\nLe seigneur garde son siège tant qu'il peut marcher, penser, tenir debout malgré la fièvre et compter pour adulte. Quand il ne le peut pas, une Main nommée prend le siège pour la journée et le rend dès qu'il se rétablit ; sans Main, le siège retombe au poids du rang, comme toujours. Nommer la Main, sur le marqueur.</RimCourt.Guide.SeatBody>
 
 	<RimCourt.Guide.TipsTitle>Bon à savoir</RimCourt.Guide.TipsTitle>
-	<RimCourt.Guide.TipsBody>La cour se dissout si la colonie est attaquée, si le seigneur tombe ou fait une crise, ou si vous la dissolvez vous-même. Aucun délai n'est appliqué dans ce cas : reconvoquez quand le calme est revenu.\n\nUne affaire ne peut être entendue si l'une des parties est à terre, emprisonnée, en crise ou mobilisée. Démobilisez vos colons avant de tenir audience.\n\nLa cour surveille ce qu'elle a jugé. Là où un jugement a changé quelque chose que vous pouvez défaire vous-même, défaites-le dans la quinzaine et la colonie verra la parole du seigneur rompue, quoi qu'en dise le parchemin.\n\nTout est réglable dans les paramètres du mod : le temps dont vous disposez pour trancher, le nombre d'affaires par audience, les jours entre les audiences, et si le parchemin s'ouvre tout seul.\n\nUn ennemi capturé peut lui aussi être amené devant le siège. Un garde va le chercher dans sa cellule et le plante là où se tiennent les pétitionnaires, la feuille dit ce qu'il a fait et ce que les siens paieraient pour le récupérer, et le seigneur tranche une fois : chez lui, la rançon, le pilori ou l'épée. Ce qui compte comme juste dépend de ce qu'il a fait, pas de ce que vous avez choisi : l'épée pour un homme qui a tué un des vôtres est justice, l'épée pour un homme qui n'a touché personne est cruauté. Chaque prisonnier n'est entendu qu'une fois. En dehors de cette audience, RimCourt ne touche ni aux prisonniers ni aux gardiens.</RimCourt.Guide.TipsBody>
+	<RimCourt.Guide.TipsBody>La cour se dissout si la colonie est attaquée, si le seigneur tombe ou fait une crise, ou si vous la dissolvez vous-même. Aucun délai n'est appliqué dans ce cas : reconvoquez quand le calme est revenu.\n\nUne affaire ne peut être entendue si l'une des parties est à terre, emprisonnée, en crise ou mobilisée. Démobilisez vos colons avant de tenir audience.\n\nLa cour surveille ce qu'elle a jugé. Là où un jugement a changé quelque chose que vous pouvez défaire vous-même, défaites-le dans la quinzaine et la colonie verra la parole du seigneur rompue, quoi qu'en dise le parchemin.\n\nTout est réglable dans les paramètres du mod : le temps dont vous disposez pour trancher, le nombre d'affaires par audience, les jours entre les audiences, et si le parchemin s'ouvre tout seul.\n\nLes ennemis capturés sont jugés à part : Juger les prisonniers, sur le siège, tient une audience pour eux seuls, sans délai avant ni après. Un garde va chercher chacun d'eux dans sa cellule et le plante là où se tiennent les pétitionnaires, la feuille dit ce qu'il a fait et ce que les siens paieraient pour le récupérer, et le seigneur tranche une fois : chez lui, la rançon, le pilori ou l'épée. Ce qui compte comme juste dépend de ce qu'il a fait, pas de ce que vous avez choisi : l'épée pour un homme qui a tué un des vôtres est justice, l'épée pour un homme qui n'a touché personne est cruauté. Chaque prisonnier n'est entendu qu'une fois. En dehors de cette audience, RimCourt ne touche ni aux prisonniers ni aux gardiens.</RimCourt.Guide.TipsBody>
 
 	<RimCourt.RadiusPlus>Rayon {0} +</RimCourt.RadiusPlus>
 	<RimCourt.RadiusMinus>Rayon {0} -</RimCourt.RadiusMinus>

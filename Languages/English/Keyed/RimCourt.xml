@@ -6,7 +6,9 @@
 	<RimCourt.GuideGizmoLabel>Court guide</RimCourt.GuideGizmoLabel>
 	<RimCourt.GuideGizmoDesc>How holding court works: where cases come from, how to rule, and what it does to the lord's name.</RimCourt.GuideGizmoDesc>
 	<RimCourt.Settings.OpenGuide>Open the court guide</RimCourt.Settings.OpenGuide>
-	<RimCourt.HoldCourtDesc>Convene an audience. The lord takes the seat, the colony gathers, and petitioners plead their cases one by one. You render each verdict.</RimCourt.HoldCourtDesc>
+	<RimCourt.HoldCourtDesc>Convene an audience. The lord takes the seat, the colony gathers, and petitioners plead their cases one by one. You render each verdict. Prisoners have their own hearing.</RimCourt.HoldCourtDesc>
+	<RimCourt.HearCaptivesLabel>Judge the prisoners</RimCourt.HearCaptivesLabel>
+	<RimCourt.HearCaptivesDesc>Hold a hearing for prisoners only. The lord takes the seat and each captive is brought in from the cell, one by one. It is not a court session: no wait before it, none after.</RimCourt.HearCaptivesDesc>
 	<RimCourt.NameLordLabel>Name the lord</RimCourt.NameLordLabel>
 	<RimCourt.NameLordDesc>Choose who holds court. Left alone, the seat goes to the throne's assigned owner, and failing that to whoever carries the most weight in the colony.</RimCourt.NameLordDesc>
 	<RimCourt.NameLordOnThrone>The seat stands on {0}'s throne, and that settles it. Reassign the throne to seat another, or let someone take it off him in open court.</RimCourt.NameLordOnThrone>
@@ -108,6 +110,9 @@ He will be at ease with the weak rulings he used to carry home, which is not the
 	<RimCourt.NoPetitions>Nobody seeks the lord's justice today. No quarrels worth hearing.</RimCourt.NoPetitions>
 	<RimCourt.CourtConvened>{0} holds court. {1} cases will be heard.</RimCourt.CourtConvened>
 	<RimCourt.CourtConvenedOne>{0} holds court. One case will be heard.</RimCourt.CourtConvenedOne>
+	<RimCourt.HearingConvened>{0} sits in judgement. {1} prisoners will be brought in.</RimCourt.HearingConvened>
+	<RimCourt.HearingConvenedOne>{0} sits in judgement. One prisoner will be brought in.</RimCourt.HearingConvenedOne>
+	<RimCourt.NoCaptives>No prisoner can be judged right now. Each one is heard once, and only enemy captives who can walk are brought in.</RimCourt.NoCaptives>
 
 	<!-- Session -->
 	<RimCourt.CaseCalled>{0} steps forward to plead.</RimCourt.CaseCalled>
@@ -141,6 +146,8 @@ He will be at ease with the weak rulings he used to carry home, which is not the
 	<RimCourt.AdjournLetterLabel>The court adjourns</RimCourt.AdjournLetterLabel>
 	<RimCourt.AdjournLetterText>{0} has heard the day's petitions. {1} cases were settled.</RimCourt.AdjournLetterText>
 	<RimCourt.AdjournLetterTextOne>{0} has heard the day's petitions. One case was settled.</RimCourt.AdjournLetterTextOne>
+	<RimCourt.AdjournHearingText>{0} has judged the prisoners. {1} stood before the seat.</RimCourt.AdjournHearingText>
+	<RimCourt.AdjournHearingTextOne>{0} has judged the prisoners. One stood before the seat.</RimCourt.AdjournHearingTextOne>
 
 	<!-- Petitioners from outside -->
 	<RimCourt.PetitionerArrivesLabel>Petitioner: {0}</RimCourt.PetitionerArrivesLabel>
@@ -373,7 +380,7 @@ The room the seat stands in is measured too, the way any room in the colony is m
 Who sits there matters beyond prestige. A lord rules with his own temperament, and rulings that go against it cost him: the kind lord who orders a flogging, the ascetic who takes money, the iron-willed who lets a case lapse unanswered, each carries it for days afterwards. Ruling the way he would have anyway lifts him instead. A psychopath on the seat feels neither, which is its own kind of qualification.\n\nThe lord holds his seat while he can walk, think, stand the fever off and count as grown. When he cannot, a named Hand takes the seat for the day and gives it back the moment he recovers; without one, the seat falls to weight of standing as it always did. Name the Hand on the marker.</RimCourt.Guide.SeatBody>
 
 	<RimCourt.Guide.TipsTitle>Worth knowing</RimCourt.Guide.TipsTitle>
-	<RimCourt.Guide.TipsBody>The court dissolves if the colony comes under attack, if the lord is downed or has a mental break, or if you dismiss it yourself. No cooldown is applied in that case: convene again when things are calm.\n\nA case cannot be heard if either party is downed, imprisoned, having a mental break, or drafted. Undraft your colonists before holding court.\n\nThe court watches what it ruled. Where a ruling changed something you can change back yourself, undo it inside a fortnight and the colony sees the lord's word broken, whatever the paperwork says.\n\nEverything is in the mod settings: how long you have to rule, how many cases a session, days between sessions, and whether the sheet opens on its own.\n\nA captured enemy can be brought before the seat as well. A guard fetches him from the cell and stands him where the petitioners stand, the sheet says what he did and what his people would pay to have him back, and the lord rules once: home, ransom, the post, or the sword. What counts as just depends on what he did, not on what you chose, so the sword for a man who killed one of yours is justice and the sword for a man who touched nobody is cruelty. Each prisoner is heard once. Beyond that one hearing, RimCourt does not touch prisoners or wardens.</RimCourt.Guide.TipsBody>
+	<RimCourt.Guide.TipsBody>The court dissolves if the colony comes under attack, if the lord is downed or has a mental break, or if you dismiss it yourself. No cooldown is applied in that case: convene again when things are calm.\n\nA case cannot be heard if either party is downed, imprisoned, having a mental break, or drafted. Undraft your colonists before holding court.\n\nThe court watches what it ruled. Where a ruling changed something you can change back yourself, undo it inside a fortnight and the colony sees the lord's word broken, whatever the paperwork says.\n\nEverything is in the mod settings: how long you have to rule, how many cases a session, days between sessions, and whether the sheet opens on its own.\n\nCaptured enemies are judged apart: Judge the prisoners, on the seat, holds a hearing for them alone, with no wait before or after. A guard fetches each one from the cell and stands him where the petitioners stand, the sheet says what he did and what his people would pay to have him back, and the lord rules once: home, ransom, the post, or the sword. What counts as just depends on what he did, not on what you chose, so the sword for a man who killed one of yours is justice and the sword for a man who touched nobody is cruelty. Each prisoner is heard once. Beyond that one hearing, RimCourt does not touch prisoners or wardens.</RimCourt.Guide.TipsBody>
 
 	<RimCourt.RadiusPlus>Radius {0} +</RimCourt.RadiusPlus>
 	<RimCourt.RadiusMinus>Radius {0} -</RimCourt.RadiusMinus>

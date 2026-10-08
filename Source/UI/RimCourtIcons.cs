@@ -31,6 +31,11 @@ namespace RimCourt.UI
 				?? ContentFinder<Texture2D>.Get("UI/Commands/RimCourt_HoldCourt", reportFailure: false)
 				?? TexCommand.DesirePower;
 
+		public static readonly Texture2D HearCaptives =
+			ContentFinder<Texture2D>.Get("UI/Commands/RimCourt_HearCaptives", reportFailure: false)
+				?? ContentFinder<Texture2D>.Get("UI/Commands/RimCourt_HoldCourt", reportFailure: false)
+				?? TexCommand.DesirePower;
+
 		public static readonly Texture2D Cancel =
 			ContentFinder<Texture2D>.Get("UI/Designators/Cancel", reportFailure: false)
 				?? TexCommand.ForbidOff;

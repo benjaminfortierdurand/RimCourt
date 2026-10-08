@@ -231,7 +231,7 @@ namespace RimCourt.Debug
 			if (kind == 3) mgr.DebugNoteRaids(faction, CaptiveUtility.RaidsForHabit);
 
 			Messages.Message("RimCourt debug : " + pawn.LabelShortCap + " (" + faction.Name + ") est prisonnier près "
-					+ (near == seat?.Position ? "du siège" : "d'un lit de prison") + ". Tenez audience.",
+					+ (near == seat?.Position ? "du siège" : "d'un lit de prison") + ". Jugez les prisonniers depuis le siège.",
 				new LookTargets(pawn), MessageTypeDefOf.NeutralEvent, historical: false);
 		}
 

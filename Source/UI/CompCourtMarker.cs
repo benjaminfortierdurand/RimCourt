@@ -113,6 +113,20 @@ namespace RimCourt.UI
 						(wait == 1 ? "RimCourt.CourtCooldownGizmoOne" : "RimCourt.CourtCooldownGizmo").Translate(wait);
 				}
 				yield return convene;
+
+				var map = parent.Map;
+				if (map != null && map.mapPawns.PrisonersOfColonySpawned.Count > 0)
+				{
+					var hear = new Command_Action
+					{
+						defaultLabel = "RimCourt.HearCaptivesLabel".Translate(),
+						defaultDesc = "RimCourt.HearCaptivesDesc".Translate(),
+						icon = RimCourtIcons.HearCaptives,
+						action = () => mgr.TryConvene(parent, true),
+					};
+					if (!mgr.AnyCaptiveToHear(map, seat)) hear.Disable("RimCourt.NoCaptives".Translate());
+					yield return hear;
+				}
 			}
 		}
 

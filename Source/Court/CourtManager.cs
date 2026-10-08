@@ -72,6 +72,9 @@ namespace RimCourt.Court
 		private int _callGrace;
 		private bool _executionPending;
 		private int _executionTier;
+		private bool _hearing;
+		private const int MaxHearingCases = 6;
+		private static readonly List<Petition> NoneTaken = new List<Petition>();
 		private const int RaidScanInterval = 1000;
 		private const int MaxGuardTries = 2;
 		private const int MaxArrivalTicks = 20000;
@@ -140,13 +143,13 @@ namespace RimCourt.Court
 
 		private static int VerdictTicks => Mathf.Max(1, RimCourtMod.Settings?.verdictHours ?? RimCourtSettings.DefVerdictHours) * 2500;
 
-		public bool TryConvene(Thing marker)
+		public bool TryConvene(Thing marker, bool hearing = false)
 		{
 			if (_active) { Reject("RimCourt.CourtAlreadyRunning".Translate()); return false; }
 			var map = marker?.Map;
 			if (map == null) return false;
 			var wait = Mathf.CeilToInt(DaysUntilCourt);
-			if (OnCooldown)
+			if (!hearing && OnCooldown)
 			{
 				Reject((wait == 1 ? "RimCourt.CourtOnCooldownOne" : "RimCourt.CourtOnCooldown").Translate(wait));
 				return false;
@@ -165,10 +168,11 @@ namespace RimCourt.Court
 				_reputation.Decay((Find.TickManager.TicksGame - _lastDecayTick) / 60000f);
 			SyncEpithet();
 
-			var cases = GeneratePetitions(map, lord);
-			if (cases.Count == 0) { Reject("RimCourt.NoPetitions".Translate()); return false; }
+			var cases = GeneratePetitions(map, lord, hearing);
+			if (cases.Count == 0) { Reject((hearing ? "RimCourt.NoCaptives" : "RimCourt.NoPetitions").Translate()); return false; }
 
 			_active = true;
+			_hearing = hearing;
 			_map = map;
 			_lord = lord;
 			_lastLord = lord;
@@ -189,8 +193,10 @@ namespace RimCourt.Court
 			SendLordToSeat();
 			GatherCourtCrowd();
 
-			Messages.Message((cases.Count == 1 ? "RimCourt.CourtConvenedOne" : "RimCourt.CourtConvened")
-					.Translate(lord.LabelShort, cases.Count),
+			var convened = hearing
+				? (cases.Count == 1 ? "RimCourt.HearingConvenedOne" : "RimCourt.HearingConvened")
+				: (cases.Count == 1 ? "RimCourt.CourtConvenedOne" : "RimCourt.CourtConvened");
+			Messages.Message(convened.Translate(lord.LabelShort, cases.Count),
 				new LookTargets(seat), MessageTypeDefOf.NeutralEvent, historical: false);
 			return true;
 		}
@@ -213,6 +219,18 @@ namespace RimCourt.Court
 		public Pawn CaptiveGuard => _captiveGuard;
 
 		public int ExecutionTier => _executionTier;
+
+		public bool Hearing => _active && _hearing;
+
+		public bool AnyCaptiveToHear(Map map, Thing seat)
+		{
+			if (map == null) return false;
+			var lord = LordFor(map, seat);
+			var prisoners = map.mapPawns.PrisonersOfColonySpawned;
+			for (var i = 0; i < prisoners.Count; i++)
+				if (CaptiveUtility.CanBeTried(prisoners[i], map, lord, NoneTaken)) return true;
+			return false;
+		}
 
 		public bool IsAwaitingExecution(Pawn p)
 			=> _active && _phase == PhasePunishment && _executionPending && p != null && p == _condemned && !_floggingDone;
@@ -1150,7 +1168,7 @@ namespace RimCourt.Court
 		public string DebugState()
 		{
 			var sb = new System.Text.StringBuilder();
-			sb.AppendLine("[RimCourt] active=" + _active + " phase=" + _phase + " phaseTicks=" + _phaseTicks);
+			sb.AppendLine("[RimCourt] active=" + _active + " hearing=" + _hearing + " phase=" + _phase + " phaseTicks=" + _phaseTicks);
 			sb.AppendLine("  lord=" + (_lord?.LabelShort ?? "-") + " lastLord=" + (_lastLord?.LabelShort ?? "-"));
 			sb.AppendLine("  seat=" + (_seat?.Position.ToString() ?? "-")
 				+ " spotCell=" + (_spotCell.IsValid ? _spotCell.ToString() : "-"));
@@ -1579,11 +1597,15 @@ namespace RimCourt.Court
 			var log = _verdictLog.ToList();
 			var resolved = _resolvedCount;
 			var repKey = _reputation.TitleKey;
+			var hearing = _hearing;
 			EndSession();
-			_lastSessionTick = Find.TickManager.TicksGame;
+			if (!hearing) _lastSessionTick = Find.TickManager.TicksGame;
 
 			var sb = new System.Text.StringBuilder();
-			sb.Append((resolved == 1 ? "RimCourt.AdjournLetterTextOne" : "RimCourt.AdjournLetterText")
+			var opening = hearing
+				? (resolved == 1 ? "RimCourt.AdjournHearingTextOne" : "RimCourt.AdjournHearingText")
+				: (resolved == 1 ? "RimCourt.AdjournLetterTextOne" : "RimCourt.AdjournLetterText");
+			sb.Append(opening
 				.Translate(lord?.LabelShort ?? "?", resolved));
 			foreach (var line in log)
 			{
@@ -1602,8 +1624,9 @@ namespace RimCourt.Court
 			var current = _current;
 			Step(() => { if (current != null) RemoveVerdictLetter(current); });
 			Step(() => SendPartiesBack(current));
+			var hearing = _hearing;
 			EndSession();
-			_lastSessionTick = -1;
+			if (!hearing) _lastSessionTick = -1;
 			Messages.Message(reason, MessageTypeDefOf.NegativeEvent, historical: false);
 		}
 
@@ -1636,6 +1659,7 @@ namespace RimCourt.Court
 			_callGrace = 0;
 			_executionPending = false;
 			_executionTier = 0;
+			_hearing = false;
 			_lastDecayTick = Find.TickManager.TicksGame;
 		}
 
@@ -2013,10 +2037,10 @@ namespace RimCourt.Court
 			return score;
 		}
 
-		private List<Petition> GeneratePetitions(Map map, Pawn lord)
+		private List<Petition> GeneratePetitions(Map map, Pawn lord, bool hearing)
 		{
 			var result = new List<Petition>();
-			for (var i = 0; i < _waiting.Count; i++)
+			for (var i = 0; i < _waiting.Count && !hearing; i++)
 			{
 				var req = _waiting[i];
 				if (!req.Valid || req.pawn.MapHeld != map) continue;
@@ -2028,9 +2052,10 @@ namespace RimCourt.Court
 
 			var range = RimCourtMod.Settings?.casesRange
 				?? new IntRange(RimCourtSettings.DefCasesMin, RimCourtSettings.DefCasesMax);
-			var max = Mathf.Clamp(range.RandomInRange + _reputation.CaseBonus, 1, 6);
+			var max = hearing ? MaxHearingCases : Mathf.Clamp(range.RandomInRange + _reputation.CaseBonus, 1, 6);
 			var shift = _reputation.ThresholdShift;
 			var defs = DefDatabase<PetitionDef>.AllDefsListForReading
+				.Where(d => (d.Worker is PetitionWorker_Captive) == hearing)
 				.OrderByDescending(d => d.priority).ToList();
 			var progress = true;
 			while (result.Count < max && progress)
@@ -2163,6 +2188,7 @@ namespace RimCourt.Court
 			Scribe_Values.Look(ref _callGrace, "callGrace");
 			Scribe_Values.Look(ref _executionPending, "executionPending");
 			Scribe_Values.Look(ref _executionTier, "executionTier");
+			Scribe_Values.Look(ref _hearing, "hearing");
 			Scribe_Collections.Look(ref _walkedOut, "walkedOut", LookMode.Reference);
 			Scribe_Deep.Look(ref _current, "current");
 			Scribe_Values.Look(ref _nextPetitionId, "nextPetitionId", 1);
