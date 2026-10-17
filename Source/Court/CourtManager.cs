@@ -1960,6 +1960,17 @@ namespace RimCourt.Court
 			return others.Count > 0 ? others[0] : null;
 		}
 
+		public static Thing CourtSeatForChair(Thing chair)
+		{
+			var map = chair?.Map;
+			if (map == null) return null;
+			var seat = Instance?.SeatThing(map) ?? AnySeatOn(map);
+			if (seat == null || chair.OccupiedRect().Contains(seat.Position)) return null;
+			var spot = FindAudienceCell(seat, map);
+			if (!spot.IsValid) return null;
+			return UI.CompCourtArea.InCrowdArea(seat, spot, chair.Position) ? seat : null;
+		}
+
 		public static Thing SeatOf(Thing marker)
 		{
 			if (marker == null || marker.Map == null) return null;
@@ -2097,6 +2108,7 @@ namespace RimCourt.Court
 			var targets = new List<LocalTargetInfo>();
 			var chairCells = new List<IntVec3>();
 			var allBld = _map.listerBuildings.allBuildingsColonist;
+			var held = SeatHonourGuests(allBld, seatPos, spotPos);
 			for (var i = 0; i < allBld.Count; i++)
 			{
 				var bld = allBld[i];
@@ -2104,14 +2116,15 @@ namespace RimCourt.Court
 				if (!UI.CompCourtArea.InCrowdArea(_seat, spotPos, bld.Position)) continue;
 				if (bld.Position.DistanceTo(seatPos) < 3f) continue;
 				foreach (var cell in bld.OccupiedRect())
-					if (cell.InBounds(_map) && cell.Standable(_map)
+					if (cell.InBounds(_map) && cell.Standable(_map) && !held.ContainsKey(cell)
 						&& cell.DistanceTo(seatPos) >= spotToSeat - 1f)
 						chairCells.Add(cell);
 			}
 			chairCells.Sort((x, y) => x.DistanceToSquared(spotPos).CompareTo(y.DistanceToSquared(spotPos)));
 			for (var i = 0; i < chairCells.Count; i++) targets.Add(chairCells[i]);
 			standing.Sort((x, y) => x.DistanceToSquared(spotPos).CompareTo(y.DistanceToSquared(spotPos)));
-			for (var i = 0; i < standing.Count; i++) targets.Add(standing[i]);
+			for (var i = 0; i < standing.Count; i++)
+				if (!held.ContainsKey(standing[i])) targets.Add(standing[i]);
 			if (targets.Count == 0) return;
 
 			var ti = 0;
@@ -2131,6 +2144,41 @@ namespace RimCourt.Court
 				var job = JobMaker.MakeJob(RimCourtDefOf.RimCourt_AttendCourt, target, spotPos);
 				c.jobs.StartJob(job, JobCondition.InterruptForced);
 			}
+		}
+
+		private Dictionary<IntVec3, Pawn> SeatHonourGuests(List<Building> allBld, IntVec3 seatPos, IntVec3 spotPos)
+		{
+			var held = new Dictionary<IntVec3, Pawn>();
+			for (var i = 0; i < allBld.Count; i++)
+			{
+				var bld = allBld[i];
+				if (bld?.def?.building == null || !bld.def.building.isSittable) continue;
+				var guest = bld.TryGetComp<UI.CompCourtChair>()?.Guest;
+				if (guest == null || !guest.Spawned || guest.Map != _map) continue;
+				if (bld.OccupiedRect().Contains(seatPos)) continue;
+				if (!UI.CompCourtArea.InCrowdArea(_seat, spotPos, bld.Position)) continue;
+				foreach (var c in bld.OccupiedRect())
+					if (c.InBounds(_map) && c.Standable(_map)) { held[c] = guest; break; }
+			}
+			if (held.Count == 0) return held;
+
+			foreach (var p in _map.mapPawns.FreeColonistsSpawned.ToList())
+			{
+				if (p.CurJobDef != RimCourtDefOf.RimCourt_AttendCourt) continue;
+				if (held.TryGetValue(p.CurJob.targetA.Cell, out var owner) && owner != p)
+					p.jobs.EndCurrentJob(JobCondition.InterruptForced);
+			}
+
+			foreach (var kv in held)
+			{
+				var guest = kv.Value;
+				if (!EligibleSpectator(guest)) continue;
+				if (guest.CurJobDef == RimCourtDefOf.RimCourt_AttendCourt && guest.CurJob.targetA.Cell == kv.Key) continue;
+				if (!guest.CanReach(kv.Key, PathEndMode.OnCell, Danger.Deadly)) continue;
+				guest.jobs.StartJob(JobMaker.MakeJob(RimCourtDefOf.RimCourt_AttendCourt, kv.Key, spotPos),
+					JobCondition.InterruptForced);
+			}
+			return held;
 		}
 
 		private bool EligibleSpectator(Pawn c)

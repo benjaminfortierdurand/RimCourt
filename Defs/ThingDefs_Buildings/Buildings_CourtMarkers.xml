@@ -2,6 +2,7 @@
 <Defs>
 
 	<ThingDef Name="RimCourt_MarkerBase" ParentName="BuildingBase" Abstract="True">
+		<thingClass>RimCourt.UI.Building_CourtMarker</thingClass>
 		<category>Building</category>
 		<altitudeLayer>FloorEmplacement</altitudeLayer>
 		<passability>Standable</passability>

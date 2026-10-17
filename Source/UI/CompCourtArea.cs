@@ -13,19 +13,33 @@ namespace RimCourt.UI
 
 	public class CompCourtArea : ThingComp
 	{
-		public const float MinRadius = 6f;
-		public const float MaxRadius = 30f;
 		public const float DefRadius = 12f;
+		public const float MaxReach = 30f;
 
 		private float radius = DefRadius;
 		private bool wholeRoom;
-		private List<IntVec3> roomCells;
+		private List<IntVec3> regionCells;
+		private HashSet<IntVec3> regionSet;
+		private List<IntVec3> drawCells;
 		private float drawStamp = -999f;
+
+		public bool HasRegion => regionCells != null && regionCells.Count > 0;
+
+		private HashSet<IntVec3> Region
+		{
+			get
+			{
+				if (!HasRegion) return null;
+				if (regionSet == null) regionSet = new HashSet<IntVec3>(regionCells);
+				return regionSet;
+			}
+		}
 
 		public static bool InCrowdArea(Thing seat, IntVec3 spot, IntVec3 cell)
 		{
 			var comp = seat?.TryGetComp<CompCourtArea>();
 			if (comp == null) return cell.DistanceTo(spot) <= DefRadius;
+			if (comp.HasRegion) return comp.Region.Contains(cell);
 			var room = comp.Hall;
 			if (room != null) return cell.GetRoom(seat.Map) == room;
 			return cell.DistanceTo(spot) <= comp.radius;
@@ -41,81 +55,86 @@ namespace RimCourt.UI
 			}
 		}
 
+		private IntVec3 Spot => CourtManager.AudienceCellFor(parent.Position, parent.Rotation, parent.Map);
+
 		public override void PostExposeData()
 		{
 			base.PostExposeData();
 			Scribe_Values.Look(ref radius, "crowdRadius", DefRadius);
 			Scribe_Values.Look(ref wholeRoom, "crowdWholeRoom");
+			Scribe_Collections.Look(ref regionCells, "crowdCells", LookMode.Value);
+			if (Scribe.mode == LoadSaveMode.PostLoadInit) regionSet = null;
 		}
 
 		public override IEnumerable<Gizmo> CompGetGizmosExtra()
 		{
-			yield return new Command_Action
-			{
-				defaultLabel = "RimCourt.RadiusPlus".Translate(radius.ToString("F0")),
-				defaultDesc = "RimCourt.RadiusDesc".Translate(),
-				icon = TexButton.Plus,
-				action = () => SetRadius(radius + 1f),
-			};
-			yield return new Command_Action
-			{
-				defaultLabel = "RimCourt.RadiusMinus".Translate(radius.ToString("F0")),
-				defaultDesc = "RimCourt.RadiusDesc".Translate(),
-				icon = TexButton.Minus,
-				action = () => SetRadius(radius - 1f),
-			};
-			yield return new Command_Action
-			{
-				defaultLabel = "RimCourt.RadiusAuto".Translate(),
-				defaultDesc = "RimCourt.RadiusAutoDesc".Translate(),
-				icon = TexButton.AutoRebuild,
-				action = FitHall,
-			};
+			yield return new Designator_CourtArea(this, add: true);
+			yield return new Designator_CourtArea(this, add: false);
 		}
 
-		private void SetRadius(float r)
+		public bool InReach(IntVec3 c) => parent.Spawned && c.DistanceTo(parent.Position) <= MaxReach + 0.5f;
+
+		public bool InArea(IntVec3 c) => parent.Spawned && InCrowdArea(parent, Spot, c);
+
+		private List<IntVec3> CurrentCells()
 		{
-			radius = Mathf.Clamp(r, MinRadius, MaxRadius);
+			if (HasRegion) return new List<IntVec3>(regionCells);
+			var list = new List<IntVec3>();
+			if (!parent.Spawned) return list;
+			var room = Hall;
+			if (room != null)
+			{
+				list.AddRange(room.Cells);
+				return list;
+			}
+			var spot = Spot;
+			var center = spot.IsValid ? spot : parent.Position;
+			var n = GenRadial.NumCellsInRadius(radius);
+			for (var i = 0; i < n; i++)
+			{
+				var c = center + GenRadial.RadialPattern[i];
+				if (c.InBounds(parent.Map)) list.Add(c);
+			}
+			return list;
+		}
+
+		public void Paint(List<IntVec3> cells, bool add)
+		{
+			if (!parent.Spawned || cells == null) return;
+			var set = HasRegion ? new HashSet<IntVec3>(regionCells)
+				: add ? new HashSet<IntVec3>()
+				: new HashSet<IntVec3>(CurrentCells());
+			for (var i = 0; i < cells.Count; i++)
+			{
+				if (add) set.Add(cells[i]);
+				else set.Remove(cells[i]);
+			}
+			regionCells = set.Count > 0 ? new List<IntVec3>(set) : null;
+			regionSet = null;
 			wholeRoom = false;
 			drawStamp = -999f;
 		}
 
-		private void FitHall()
+		public void DrawArea()
 		{
-			var room = parent.Spawned ? parent.Position.GetRoom(parent.Map) : null;
-			if (room == null || room.PsychologicallyOutdoors)
+			if (!parent.Spawned) return;
+			if (drawCells == null || Time.realtimeSinceStartup - drawStamp > 1f)
 			{
-				Messages.Message("RimCourt.RadiusNotEnclosed".Translate(), parent,
-					MessageTypeDefOf.RejectInput, historical: false);
-				return;
+				drawCells = CurrentCells();
+				drawStamp = Time.realtimeSinceStartup;
 			}
-			wholeRoom = true;
-			drawStamp = -999f;
-			Messages.Message("RimCourt.RadiusFitted".Translate(room.CellCount), parent,
-				MessageTypeDefOf.NeutralEvent, historical: false);
+			GenDraw.DrawFieldEdges(drawCells);
 		}
 
 		public override void PostDrawExtraSelectionOverlays()
 		{
 			base.PostDrawExtraSelectionOverlays();
-			if (!parent.Spawned) return;
-			var room = Hall;
-			if (room != null)
-			{
-				if (roomCells == null || Time.realtimeSinceStartup - drawStamp > 1f)
-				{
-					roomCells = new List<IntVec3>(room.Cells);
-					drawStamp = Time.realtimeSinceStartup;
-				}
-				GenDraw.DrawFieldEdges(roomCells);
-				return;
-			}
-			var spot = CourtManager.AudienceCellFor(parent.Position, parent.Rotation, parent.Map);
-			GenDraw.DrawRadiusRing(spot.IsValid ? spot : parent.Position, radius);
+			DrawArea();
 		}
 
 		public override string CompInspectStringExtra()
 		{
+			if (HasRegion) return "RimCourt.CrowdAreaPainted".Translate(regionCells.Count);
 			return Hall != null
 				? "RimCourt.CrowdAreaRoom".Translate()
 				: "RimCourt.CrowdAreaRadius".Translate(radius.ToString("F0"));

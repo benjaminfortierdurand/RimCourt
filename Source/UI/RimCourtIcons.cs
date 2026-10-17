@@ -36,6 +36,24 @@ namespace RimCourt.UI
 				?? ContentFinder<Texture2D>.Get("UI/Commands/RimCourt_HoldCourt", reportFailure: false)
 				?? TexCommand.DesirePower;
 
+		public static readonly Texture2D ShowMarker =
+			ContentFinder<Texture2D>.Get("UI/Commands/RimCourt_ShowMarker", reportFailure: false)
+				?? TexCommand.ForbidOff;
+
+		public static readonly Texture2D HonourSeat =
+			ContentFinder<Texture2D>.Get("UI/Commands/AssignOwner", reportFailure: false)
+				?? ContentFinder<Texture2D>.Get("UI/Commands/RimCourt_NameLord", reportFailure: false)
+				?? TexCommand.DesirePower;
+
+		public static readonly Texture2D AreaExpand =
+			ContentFinder<Texture2D>.Get("UI/Designators/AreaAllowedExpand", reportFailure: false) ?? TexButton.Plus;
+
+		public static readonly Texture2D AreaClear =
+			ContentFinder<Texture2D>.Get("UI/Designators/AreaAllowedClear", reportFailure: false) ?? TexButton.Minus;
+
+		public static readonly Texture2D AreaBadge =
+			ContentFinder<Texture2D>.Get("UI/Commands/RimCourt_AreaBadge", reportFailure: false);
+
 		public static readonly Texture2D Cancel =
 			ContentFinder<Texture2D>.Get("UI/Designators/Cancel", reportFailure: false)
 				?? TexCommand.ForbidOff;
