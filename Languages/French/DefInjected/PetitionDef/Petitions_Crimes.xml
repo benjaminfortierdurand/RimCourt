@@ -13,7 +13,7 @@
 	<RimCourt_Butcher.verdicts.3.label>Mettre {OTHER_labelShort} au pilori, où tout le monde peut regarder</RimCourt_Butcher.verdicts.3.label>
 	<RimCourt_Butcher.verdicts.3.pastLabel>le boucher mis au pilori</RimCourt_Butcher.verdicts.3.pastLabel>
 
-	<RimCourt_Bonded.label>le chien qu'il a tué</RimCourt_Bonded.label>
+	<RimCourt_Bonded.label>un animal lié tué</RimCourt_Bonded.label>
 	<RimCourt_Bonded.description>Un colon dont l'animal lié a été tué par un autre colon demande réparation.</RimCourt_Bonded.description>
 	<RimCourt_Bonded.caseText>{OTHER_labelShort} a tué l'animal qui dormait au pied du lit de {PETITIONER_labelShort}. Peut-être un accident. Peut-être qu'il gênait. {PETITIONER_labelShort} se moque de savoir lequel, et vient le dire là où ça compte.\n\nL'animal ne peut pas être rendu. On demande au seigneur ce qu'il valait.\n\nComment le seigneur tranche-t-il ?</RimCourt_Bonded.caseText>
 	<RimCourt_Bonded.verdicts.0.label>Tenir {OTHER_labelShort} pour responsable, et le lui faire dire</RimCourt_Bonded.verdicts.0.label>

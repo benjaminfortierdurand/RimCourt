@@ -85,7 +85,7 @@
 				<baseOpinionOffset>-12</baseOpinionOffset>
 			</li>
 			<li>
-				<label>sells his verdicts</label>
+				<label>sells verdicts</label>
 				<baseOpinionOffset>-25</baseOpinionOffset>
 			</li>
 			<li>
@@ -117,7 +117,7 @@
 		<stages>
 			<li>
 				<label>the lord blessed our match</label>
-				<description>He said it out loud, in front of everyone. Nobody can call it improper now.</description>
+				<description>The lord said it out loud, in front of everyone. Nobody can call it improper now.</description>
 				<baseMoodEffect>8</baseMoodEffect>
 			</li>
 		</stages>
@@ -230,7 +230,7 @@
 		<stackLimit>1</stackLimit>
 		<stages>
 			<li>
-				<label>admitted he was wrong about me</label>
+				<label>admitted being wrong about me</label>
 				<baseOpinionOffset>40</baseOpinionOffset>
 			</li>
 		</stages>
@@ -243,7 +243,7 @@
 		<stackLimit>3</stackLimit>
 		<stages>
 			<li>
-				<label>judged his own case and won it</label>
+				<label>judged {1_possessive} own case and won it</label>
 				<baseOpinionOffset>-35</baseOpinionOffset>
 			</li>
 		</stages>
@@ -271,7 +271,7 @@
 		<stackLimit>2</stackLimit>
 		<stages>
 			<li>
-				<label>went back on what he ruled</label>
+				<label>went back on what {1_pronoun} ruled</label>
 				<baseOpinionOffset>-40</baseOpinionOffset>
 			</li>
 		</stages>
@@ -285,7 +285,7 @@
 		<stackLimit>3</stackLimit>
 		<stages>
 			<li>
-				<label>ruled for his own family</label>
+				<label>ruled for {1_possessive} own family</label>
 				<baseOpinionOffset>-25</baseOpinionOffset>
 			</li>
 		</stages>
@@ -300,7 +300,7 @@
 		<stages>
 			<li>
 				<label>did not take the ruling</label>
-				<description>He said it and I walked out. Whatever else is true, I did not stand there and take it.</description>
+				<description>The lord said it and I walked out. Whatever else is true, I did not stand there and take it.</description>
 				<baseMoodEffect>6</baseMoodEffect>
 			</li>
 		</stages>
@@ -313,7 +313,7 @@
 		<stackLimit>3</stackLimit>
 		<stages>
 			<li>
-				<label>was walked out on in his own hall</label>
+				<label>was walked out on in {1_possessive} own hall</label>
 				<baseOpinionOffset>-20</baseOpinionOffset>
 			</li>
 		</stages>
@@ -442,7 +442,7 @@
 		<stages>
 			<li>
 				<label>the lord let a killer walk</label>
-				<description>He stood there with blood on his hands, one of ours in the ground because of him, and the seat sent him home. I watched him go.</description>
+				<description>Blood on those hands, one of ours in the ground because of it, and the seat sent the killer home. I watched the killer go.</description>
 				<baseMoodEffect>-5</baseMoodEffect>
 			</li>
 		</stages>

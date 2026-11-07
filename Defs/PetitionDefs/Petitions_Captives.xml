@@ -7,7 +7,7 @@
 		<defName>RimCourt_Captive</defName>
 		<priority>70</priority>
 		<label>a prisoner is brought before the seat</label>
-		<description>A captured enemy is dragged before the lord, who decides what becomes of him.</description>
+		<description>A captured enemy is dragged before the lord, who decides what becomes of them.</description>
 		<workerClass>RimCourt.Court.PetitionWorker_Captive</workerClass>
 		<caseText>{PETITIONER_labelShort} of the {FACTION} was brought in with {PETITIONER_possessive} hands tied and stood where the petitioners stand. {PETITIONER_pronoun} has asked for nothing. The hall has offered nothing.\n\n{DOSSIER}\n\n{PETITIONER_possessive} people would pay {SILVER} silver to have {PETITIONER_objective} back, or so the last trader who dealt with them says.\n\nHow does the lord rule?</caseText>
 		<verdicts>

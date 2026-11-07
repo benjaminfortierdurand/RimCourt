@@ -48,7 +48,7 @@ How does the lord rule?</caseText>
 		<defName>RimCourt_Penitent</defName>
 		<priority>45</priority>
 		<label>a wrong brought by the one who did it</label>
-		<description>A colonist who wronged another comes to court himself, asking the lord to broker the pardon he cannot get alone.</description>
+		<description>A colonist who wronged another comes to court in person, asking the lord to broker the pardon they cannot get alone.</description>
 		<workerClass>RimCourt.Court.PetitionWorker_Penitent</workerClass>
 		<maxMemoryAgeDays>15</maxMemoryAgeDays>
 		<sourceThoughts>

@@ -38,7 +38,7 @@ namespace RimCourt.Court
 					OutsiderUtility.SendHome(pawn);
 					if (Rand.Chance(0.5f))
 						CourtManager.Instance?.RegisterSpurnedExile(pawn, SpurnMinDays, SpurnMaxDays);
-					Messages.Message("RimCourt.ExileTurnedAway".Translate(pawn.LabelShortCap),
+					Messages.Message("RimCourt.ExileTurnedAway".Translate(pawn),
 						MessageTypeDefOf.NeutralEvent, historical: false);
 					break;
 			}

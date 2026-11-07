@@ -104,9 +104,9 @@ namespace RimCourt.Court
 				return false;
 			}
 
-			var text = ("RimCourt.Shaped" + stage).Translate(lord.LabelShortCap,
+			var text = ("RimCourt.Shaped" + stage).Translate(lord,
 				gained.DataAtDegree(degree).LabelCap).ToString();
-			if (lostKind) text += "\n\n" + "RimCourt.ShapedLostKind".Translate(lord.LabelShortCap).ToString();
+			if (lostKind) text += "\n\n" + "RimCourt.ShapedLostKind".Translate(lord).ToString();
 			Find.LetterStack.ReceiveLetter(
 				"RimCourt.ShapedLabel".Translate(lord.LabelShortCap),
 				text, LetterDefOf.NegativeEvent, new LookTargets(lord));

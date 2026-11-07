@@ -49,7 +49,7 @@
 	<RimCourt.Court.PetitionDef>
 		<defName>RimCourt_Bonded</defName>
 		<priority>55</priority>
-		<label>the dog he killed</label>
+		<label>a bonded animal killed</label>
 		<description>A colonist whose bonded animal was killed by another colonist asks for redress.</description>
 		<workerClass>RimCourt.Court.PetitionWorker_Memory</workerClass>
 		<sourceThoughts>

@@ -6,7 +6,7 @@
 	<RimCourt.Court.PetitionDef>
 		<defName>RimCourt_Manumission</defName>
 		<priority>80</priority>
-		<label>a slave asks for his freedom</label>
+		<label>a slave asks to be freed</label>
 		<description>A slave of the colony stands before the lord and asks to be made free.</description>
 		<workerClass>RimCourt.Court.PetitionWorker_Manumission</workerClass>
 		<caseText>{PETITIONER_labelShort} was not called. {PETITIONER_pronoun} came anyway, and stood where the free people stand, and asked for the one thing a slave is not supposed to ask for.\n\nNobody in the hall is speaking for {PETITIONER_objective}. Nobody has to. The question is on the floor, in front of everyone, and it will be answered one way or the other.\n\nHow does the lord rule?</caseText>
@@ -42,13 +42,13 @@
 	<RimCourt.Court.PetitionDef>
 		<defName>RimCourt_Veteran</defName>
 		<priority>50</priority>
-		<label>what he left on the field</label>
+		<label>what was left on the field</label>
 		<description>A colonist maimed fighting for the colony asks the lord what it was worth.</description>
 		<workerClass>RimCourt.Court.PetitionWorker_Veteran</workerClass>
-		<caseText>{PETITIONER_labelShort} has killed {KILLS} people for this colony and carries the proof: something did not grow back. {PETITIONER_pronoun} is not asking for pity. {PETITIONER_pronoun} is asking what the lord thinks it was worth, and has come with three answers the lord could give.\n\nTake {WORK} off {PETITIONER_objective}, which {PETITIONER_pronoun} was never good at and now hates. Or {SILVER} silver, which says it plainly. Or a word before the court, which costs nothing and {PETITIONER_pronoun} will notice that it cost nothing.\n\nHow does the lord rule?</caseText>
+		<caseText>{PETITIONER_labelShort} fought for this colony and carries a wound that will never heal. {PETITIONER_pronoun} is not asking for pity, only for some sign of what that was worth.\n\n{PETITIONER_pronoun} suggests three answers. Excuse {PETITIONER_objective} from {WORK}, a job {PETITIONER_pronoun} was never good at and now hates. Pay {PETITIONER_objective} {SILVER} silver. Or honour {PETITIONER_objective} before the court, which costs nothing, and {PETITIONER_pronoun} will notice that.\n\nHow does the lord rule?</caseText>
 		<verdicts>
 			<li>
-				<label>Take {WORK} off {PETITIONER_labelShort} for good</label>
+				<label>Excuse {PETITIONER_labelShort} from {WORK} for good</label>
 				<pastLabel>excused from {WORK} for the wound</pastLabel>
 				<outcome>GrantExemption</outcome>
 				<just>2</just>

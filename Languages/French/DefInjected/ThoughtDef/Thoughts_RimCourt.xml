@@ -18,7 +18,7 @@
 	<RimCourt_SawCourtHeld.stages.0.description>Les griefs ont été entendus et réglés dans les formes. C'est comme ça que les choses doivent se faire.</RimCourt_SawCourtHeld.stages.0.description>
 
 	<RimCourt_BlessedByLord.stages.0.label>le seigneur a béni notre union</RimCourt_BlessedByLord.stages.0.label>
-	<RimCourt_BlessedByLord.stages.0.description>Il l'a dit à voix haute, devant tout le monde. Plus personne ne peut trouver cela déplacé.</RimCourt_BlessedByLord.stages.0.description>
+	<RimCourt_BlessedByLord.stages.0.description>Le seigneur l'a dit à voix haute, devant tout le monde. Plus personne ne peut trouver cela déplacé.</RimCourt_BlessedByLord.stages.0.description>
 
 	<RimCourt_RefusedByLord.stages.0.label>éconduit par le seigneur</RimCourt_RefusedByLord.stages.0.label>
 	<RimCourt_RefusedByLord.stages.0.description>J'ai demandé la seule chose que je voulais et on m'a dit non devant toute la colonie.</RimCourt_RefusedByLord.stages.0.description>
@@ -45,12 +45,12 @@
 
 	<RimCourt_PromiseBroken.stages.0.label>remis à un travail dont j'étais dispensé</RimCourt_PromiseBroken.stages.0.label>
 	<RimCourt_PromiseBroken.stages.0.description>Le seigneur a dit à voix haute que j'en avais fini. Puis je m'y suis retrouvé. Laquelle des deux était vraie ?</RimCourt_PromiseBroken.stages.0.description>
-	<RimCourt_LordBrokeHisWord.stages.0.label>est revenu sur ce qu'il avait jugé</RimCourt_LordBrokeHisWord.stages.0.label>
+	<RimCourt_LordBrokeHisWord.stages.0.label>est {1_gender ? revenu : revenue} sur ce qu'{1_pronoun} avait jugé</RimCourt_LordBrokeHisWord.stages.0.label>
 
 	<RimCourt_LordFavouredHisOwn.stages.0.label>a tranché en faveur des siens</RimCourt_LordFavouredHisOwn.stages.0.label>
 
 	<RimCourt_DefiedTheLord.stages.0.label>n'a pas accepté le jugement</RimCourt_DefiedTheLord.stages.0.label>
-	<RimCourt_DefiedTheLord.stages.0.description>Il l'a dit et je suis sorti. Quoi qu'il en soit par ailleurs, je ne suis pas resté planté là à encaisser.</RimCourt_DefiedTheLord.stages.0.description>
+	<RimCourt_DefiedTheLord.stages.0.description>Le seigneur l'a dit et je suis {PAWN_gender ? sorti : sortie}. Quoi qu'il en soit par ailleurs, je ne suis pas {PAWN_gender ? resté planté : restée plantée} là à encaisser.</RimCourt_DefiedTheLord.stages.0.description>
 	<RimCourt_LordWasDefied.stages.0.label>s'est fait quitter la salle en pleine audience</RimCourt_LordWasDefied.stages.0.label>
 
 	<RimCourt_EstateDenied.stages.0.label>a reçu ce qui aurait dû me revenir</RimCourt_EstateDenied.stages.0.label>
@@ -72,6 +72,6 @@
 	<RimCourt_PeltedInStocks.stages.0.label>m'a bombardé au pilori</RimCourt_PeltedInStocks.stages.0.label>
 
 	<RimCourt_KillerFreed.stages.0.label>le seigneur a laissé partir un tueur</RimCourt_KillerFreed.stages.0.label>
-	<RimCourt_KillerFreed.stages.0.description>Il se tenait là avec du sang sur les mains, un des nôtres en terre à cause de lui, et le siège l'a renvoyé chez lui. Je l'ai regardé partir.</RimCourt_KillerFreed.stages.0.description>
+	<RimCourt_KillerFreed.stages.0.description>Du sang sur les mains, un des nôtres en terre par sa faute, et le siège a renvoyé le tueur chez les siens. Je l'ai regardé partir.</RimCourt_KillerFreed.stages.0.description>
 
 </LanguageData>

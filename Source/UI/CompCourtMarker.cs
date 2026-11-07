@@ -54,7 +54,7 @@ namespace RimCourt.UI
 						picked => mgr.SetAppointedLord(picked, map, seat))),
 				};
 				if (owner != null && mgr.AppointedLord == null)
-					name.Disable("RimCourt.NameLordOnThrone".Translate(owner.LabelShortCap));
+					name.Disable("RimCourt.NameLordOnThrone".Translate(owner));
 				yield return name;
 
 				yield return new Command_Action

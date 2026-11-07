@@ -97,7 +97,7 @@ namespace RimCourt.Court
 				Find.LetterStack.ReceiveLetter(
 					"RimCourt.HonourConferredLabel".Translate(lord.LabelShortCap),
 					"RimCourt.HonourConferred".Translate(
-						lord.LabelShortCap, p.petitioner.LabelShortCap,
+						lord, p.petitioner,
 						p.petitioner.Faction.Name),
 					LetterDefOf.PositiveEvent, new LookTargets(lord));
 			}

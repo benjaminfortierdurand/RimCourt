@@ -42,19 +42,15 @@ namespace RimCourt.Court
 			for (var i = 0; i < list.Count; i++)
 			{
 				var h = list[i];
-				if (h is Hediff_MissingPart) return true;
-				if (h is Hediff_Injury && h.IsPermanent()) return true;
+				if (h is Hediff_MissingPart missing && missing.lastInjury != HediffDefOf.SurgicalCut) return true;
+				if (h is Hediff_Injury && h.def != HediffDefOf.SurgicalCut && h.IsPermanent()) return true;
 			}
 			return false;
 		}
 
-		private static string Kills(Pawn a)
-			=> Mathf.RoundToInt(a?.records?.GetValue(RecordDefOf.KillsHumanlikes) ?? 0f).ToString();
-
 		public override string CaseText(Petition p)
 			=> def.caseText.Formatted(p.petitioner.Named("PETITIONER"),
-				WorkLabel(p.extra).Named("WORK"), p.silver.Named("SILVER"),
-				Kills(p.petitioner).Named("KILLS"));
+				WorkLabel(p.extra).Named("WORK"), p.silver.Named("SILVER"));
 
 		public override string VerdictLabel(Petition p, int index)
 			=> def.verdicts[index].label.Formatted(p.petitioner.Named("PETITIONER"),

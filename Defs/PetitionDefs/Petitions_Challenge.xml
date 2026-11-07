@@ -12,7 +12,7 @@
 		<workerClass>RimCourt.Court.PetitionWorker_Challenge</workerClass>
 		<caseText>{PETITIONER_labelShort} steps forward and does not kneel. The hall goes quiet, because everyone understands before a word is said. The colony has been calling its lord weak for some time, and {PETITIONER_labelShort} has decided to say it to the seat itself: step down, and let someone rule who will.
 
-The lord must answer his own accuser.
+The lord must answer the accuser in person.
 
 How does the lord rule?</caseText>
 		<verdicts>

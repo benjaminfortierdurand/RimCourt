@@ -498,7 +498,7 @@ namespace RimCourt.UI
 			SectionHeader(width, ref y, "RimCourt.BloodKinSection".Translate(lord.LabelShortCap));
 			if (_kin.Count == 0)
 			{
-				Faded(width, ref y, "RimCourt.BloodNoKin".Translate(lord.LabelShortCap));
+				Faded(width, ref y, "RimCourt.BloodNoKin".Translate(lord));
 				return;
 			}
 			for (var i = 0; i < _kin.Count && i < 12; i++)

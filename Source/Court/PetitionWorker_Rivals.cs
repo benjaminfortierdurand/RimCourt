@@ -84,7 +84,7 @@ namespace RimCourt.Court
 			BreakSuit(loser, loved);
 			Mem(loser, RimCourtDefOf.RimCourt_DefeatedBeforeCourt, null);
 			Mem(winner, RimCourtDefOf.RimCourt_LordRuledForMe, lord);
-			Messages.Message("RimCourt.RivalDuelWon".Translate(winner.LabelShortCap,
+			Messages.Message("RimCourt.RivalDuelWon".Translate(winner,
 					loser.LabelShortCap, loved?.LabelShortCap ?? "?"),
 				new LookTargets(winner), MessageTypeDefOf.NeutralEvent, historical: false);
 		}

@@ -706,7 +706,7 @@ namespace RimCourt.Court
 			{
 				foreach (var c in _map.mapPawns.FreeColonistsSpawned)
 				{
-					if (c == _lord || c == p) continue;
+					if (c == _lord || c == p || KinToLord(c, _lord) != null) continue;
 					c.needs?.mood?.thoughts?.memories?.TryGainMemory(
 						RimCourtDefOf.RimCourt_LordWasDefied, _lord);
 				}
@@ -758,12 +758,12 @@ namespace RimCourt.Court
 			{
 				foreach (var c in _map.mapPawns.FreeColonistsSpawned)
 				{
-					if (c == _lord || c == favoured) continue;
+					if (c == _lord || c == favoured || KinToLord(c, _lord) != null) continue;
 					c.needs?.mood?.thoughts?.memories?.TryGainMemory(
 						RimCourtDefOf.RimCourt_LordFavouredHisOwn, _lord);
 				}
 			}
-			Messages.Message("RimCourt.Nepotism".Translate(_lord?.LabelShortCap ?? "?",
+			Messages.Message("RimCourt.Nepotism".Translate(LordArg,
 					favoured.LabelShortCap, rel.GetGenderSpecificLabel(favoured)),
 				new LookTargets(favoured), MessageTypeDefOf.NegativeEvent, historical: false);
 		}
@@ -805,7 +805,7 @@ namespace RimCourt.Court
 			{
 				if (now == JudgeReputation.StageWeak) return;
 				_reputation.just += ConsistencyBonus;
-				Messages.Message("RimCourt.PrecedentHeld".Translate(_lord?.LabelShort ?? "?"),
+				Messages.Message("RimCourt.PrecedentHeld".Translate(LordArg),
 					MessageTypeDefOf.PositiveEvent, historical: false);
 			}
 			else
@@ -1209,8 +1209,8 @@ namespace RimCourt.Court
 			if (stageNow == stageBefore || stageNow == JudgeReputation.StageNone) return;
 			var title = _reputation.TitleKey.Translate();
 			var body = stageBefore == JudgeReputation.StageNone
-				? "RimCourt.RepEarnedText".Translate(_lord?.LabelShort ?? "?", title)
-				: "RimCourt.RepShiftedText".Translate(_lord?.LabelShort ?? "?", title);
+				? "RimCourt.RepEarnedText".Translate(LordArg, title)
+				: "RimCourt.RepShiftedText".Translate(LordArg, title);
 			Find.LetterStack.ReceiveLetter(
 				"RimCourt.RepLetterLabel".Translate(title),
 				body + "\n\n" + ("RimCourt.RepEffect" + stageNow).Translate()
@@ -1219,10 +1219,12 @@ namespace RimCourt.Court
 				_lord != null ? new LookTargets(_lord) : default);
 		}
 
+		private NamedArgument LordArg => _lord != null ? (NamedArgument)_lord : (NamedArgument)"?";
+
 		private string EpithetLetterLine()
 		{
 			if (_epithetPawn == null || _epithetPawn != _lord) return "";
-			return "\n\n" + "RimCourt.EpithetLine".Translate(_lord.Name.ToStringShort).ToString();
+			return "\n\n" + "RimCourt.EpithetLine".Translate(_lord.Name.ToStringShort, _lord).ToString();
 		}
 
 		private Pawn EpithetCandidate => _lord ?? _lastLord;

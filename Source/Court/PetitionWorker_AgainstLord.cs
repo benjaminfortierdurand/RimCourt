@@ -56,14 +56,14 @@ namespace RimCourt.Court
 					Mem(pawn, RimCourtDefOf.RimCourt_LordAdmittedFault, lord);
 					Mem(pawn, RimCourtDefOf.RimCourt_LordRuledForMe, lord);
 					Messages.Message("RimCourt.LordAdmitted".Translate(
-							lord?.LabelShortCap ?? "?", pawn.LabelShortCap),
+							lord != null ? (NamedArgument)lord : (NamedArgument)"?", pawn.LabelShortCap),
 						new LookTargets(pawn), MessageTypeDefOf.PositiveEvent, historical: false);
 					break;
 
 				case "RuleForSelf":
 					Mem(pawn, RimCourtDefOf.RimCourt_LordRuledAgainstMe, lord);
 					Mem(pawn, RimCourtDefOf.RimCourt_LordJudgedHimself, lord);
-					Messages.Message("RimCourt.LordCleared".Translate(lord?.LabelShortCap ?? "?"),
+					Messages.Message("RimCourt.LordCleared".Translate(lord != null ? (NamedArgument)lord : (NamedArgument)"?"),
 						new LookTargets(pawn), MessageTypeDefOf.NegativeEvent, historical: false);
 					break;
 

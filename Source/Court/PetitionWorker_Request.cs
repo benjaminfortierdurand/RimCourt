@@ -94,7 +94,7 @@ namespace RimCourt.Court
 						Mem(pawn, RimCourtDefOf.RimCourt_HonouredByLord, null);
 						Mem(pawn, RimCourtDefOf.RimCourt_PaidInSilver, null);
 						HonourBefore(pawn, lord);
-						Messages.Message("RimCourt.HonourPaid".Translate(pawn.LabelShortCap, p.silver),
+						Messages.Message("RimCourt.HonourPaid".Translate(pawn, p.silver),
 							new LookTargets(pawn), MessageTypeDefOf.PositiveEvent, historical: false);
 					}
 					else
@@ -225,6 +225,7 @@ namespace RimCourt.Court
 			foreach (var work in DefDatabase<WorkTypeDef>.AllDefsListForReading)
 			{
 				if (work.relevantSkills.NullOrEmpty()) continue;
+				if (work.modContentPack == null || !work.modContentPack.IsOfficialMod) continue;
 				if (a.WorkTypeIsDisabled(work)) continue;
 				if (a.workSettings.GetPriority(work) <= 0) continue;
 				var avg = a.skills.AverageOfRelevantSkillsFor(work);

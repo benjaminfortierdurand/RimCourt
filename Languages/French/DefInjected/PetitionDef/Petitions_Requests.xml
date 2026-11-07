@@ -48,7 +48,7 @@ Comment le seigneur tranche-t-il ?</RimCourt_Leave.caseText>
 L'argent le dit comme les mots ne savent pas le dire, et il repart avec. Les mots ne coûtent rien à la colonie, et il les prendra, mais il saura ce qu'on lui a offert à la place de ce qu'il demandait.
 
 Comment le seigneur tranche-t-il ?</RimCourt_Honour.caseText>
-	<RimCourt_Honour.verdicts.0.label>Payer à {PETITIONER_labelShort} les {SILVER} pièces qu'il demande</RimCourt_Honour.verdicts.0.label>
+	<RimCourt_Honour.verdicts.0.label>Payer à {PETITIONER_labelShort} les {SILVER} pièces qu'{PETITIONER_pronoun} demande</RimCourt_Honour.verdicts.0.label>
 	<RimCourt_Honour.verdicts.1.label>Honorer {PETITIONER_labelShort} devant la cour, et rien de plus</RimCourt_Honour.verdicts.1.label>
 	<RimCourt_Honour.verdicts.2.label>Juger que {PETITIONER_labelShort} n'a fait que son devoir</RimCourt_Honour.verdicts.2.label>
 	<RimCourt_Honour.verdicts.3.label>Passer à l'affaire suivante</RimCourt_Honour.verdicts.3.label>

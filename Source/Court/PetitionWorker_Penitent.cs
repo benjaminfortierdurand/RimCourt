@@ -65,7 +65,7 @@ namespace RimCourt.Court
 					Mem(victim, RimCourtDefOf.RimCourt_LordRuledForMe, lord);
 					Mem(guilty, RimCourtDefOf.RimCourt_LordRuledAgainstMe, lord);
 					Messages.Message("RimCourt.GrudgeDeserved".Translate(
-							guilty.LabelShortCap, victim?.LabelShortCap ?? "?"),
+							guilty, victim?.LabelShortCap ?? "?"),
 						new LookTargets(guilty), MessageTypeDefOf.NeutralEvent, historical: false);
 					break;
 

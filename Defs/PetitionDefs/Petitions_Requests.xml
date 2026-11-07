@@ -10,9 +10,9 @@
 		<label>a betrothal waiting on a word</label>
 		<description>Two betrothed colonists come to ask the lord's blessing before the wedding is held.</description>
 		<workerClass>RimCourt.Court.PetitionWorker_Match</workerClass>
-		<caseText>{PETITIONER_labelShort} and {OTHER_labelShort} are promised to each other and come before the court together, which the whole colony worked out some time ago. A betrothal in this hall waits on the lord: they are asking him to say out loud that the match is a good one, so the feast can be held rather than talked about for another season.
+		<caseText>{PETITIONER_labelShort} and {OTHER_labelShort} are promised to each other and come before the court together, which the whole colony worked out some time ago. A betrothal in this hall waits on the lord: they are asking the lord to say out loud that the match is a good one, so the feast can be held rather than talked about for another season.
 
-It costs him nothing but his word, and his word is the only thing they cannot get anywhere else.
+It costs the lord nothing but a word, and that word is the only thing they cannot get anywhere else.
 
 How does the lord rule?</caseText>
 		<verdicts>
@@ -41,7 +41,7 @@ How does the lord rule?</caseText>
 		<defName>RimCourt_Exemption</defName>
 		<priority>45</priority>
 		<label>one task too many</label>
-		<description>A colonist asks to be excused from a named job he has no heart for.</description>
+		<description>A colonist asks to be excused from a named job they have no heart for.</description>
 		<workerClass>RimCourt.Court.PetitionWorker_Exemption</workerClass>
 		<caseText>{PETITIONER_labelShort} has been put to {WORK}, has no heart for it and no hand for it, and would rather the lord took it off {PETITIONER_objective}. Somebody else would have to pick it up. That is rather the point of asking a lord instead of asking a friend.
 
@@ -120,8 +120,8 @@ Coin says it in a way words cannot, and it leaves with {PETITIONER_objective}. W
 How does the lord rule?</caseText>
 		<verdicts>
 			<li>
-				<label>Pay {PETITIONER_labelShort} the {SILVER} silver he asks</label>
-				<pastLabel>paid {SILVER} silver for the blood he spilled</pastLabel>
+				<label>Pay {PETITIONER_labelShort} the {SILVER} silver {PETITIONER_pronoun} asks</label>
+				<pastLabel>paid {SILVER} silver for the blood {PETITIONER_pronoun} spilled</pastLabel>
 				<outcome>PayHonour</outcome>
 				<just>3</just>
 			</li>
@@ -133,7 +133,7 @@ How does the lord rule?</caseText>
 				<weak>1</weak>
 			</li>
 			<li>
-				<label>Rule that {PETITIONER_labelShort} did no more than his duty</label>
+				<label>Rule that {PETITIONER_labelShort} did no more than {PETITIONER_possessive} duty</label>
 				<pastLabel>told it was only duty</pastLabel>
 				<outcome>DenyHonour</outcome>
 				<harsh>2</harsh>

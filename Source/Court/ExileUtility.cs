@@ -289,7 +289,7 @@ namespace RimCourt.Court
 
 			Find.LetterStack.ReceiveLetter(
 				"RimCourt.ExileReturnsLabel".Translate(pawn.LabelShortCap),
-				"RimCourt.ExileReturnsText".Translate(pawn.LabelShortCap, faction.Name, band.Count - 1),
+				"RimCourt.ExileReturnsText".Translate(pawn, faction.Name, band.Count - 1),
 				LetterDefOf.ThreatBig, new LookTargets(pawn));
 			return true;
 		}

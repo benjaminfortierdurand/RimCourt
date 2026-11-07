@@ -106,7 +106,7 @@ namespace RimCourt.Court
 				Find.LetterStack.ReceiveLetter(
 					"RimCourt.DeserterStrikesLabel".Translate(attacker.LabelShortCap),
 					(imperial ? "RimCourt.ImperialStrikes" : "RimCourt.DeserterStrikes").Translate(
-						attacker.LabelShortCap, lord?.LabelShortCap ?? "?"),
+						attacker, lord?.LabelShortCap ?? "?"),
 					LetterDefOf.ThreatBig, new LookTargets(attacker));
 				return true;
 			}
