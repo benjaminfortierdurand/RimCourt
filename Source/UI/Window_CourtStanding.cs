@@ -547,6 +547,10 @@ namespace RimCourt.UI
 
 		private void DrawRecord(float width, ref float y, CourtManager mgr, Map map, Pawn lord)
 		{
+			if (Widgets.ButtonText(new Rect(0f, y, width, 30f), "RimCourt.RollsOpen".Translate(mgr.Rolls.Count)))
+				Window_CourtRolls.Open();
+			y += 36f;
+
 			SectionHeader(width, ref y, "RimCourt.RecordCasesSection".Translate());
 
 			RefreshRows(mgr);

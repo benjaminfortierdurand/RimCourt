@@ -30,6 +30,7 @@ namespace RimCourt.Court
 				case "StocksChallenger":
 				case "StocksCaptive":
 				case "Execute":
+				case "Death":
 				case "BloodPrice":
 				case "PunishBoth":
 				case "FlogAccuser":

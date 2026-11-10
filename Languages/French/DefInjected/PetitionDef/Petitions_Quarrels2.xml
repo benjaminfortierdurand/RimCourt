@@ -34,6 +34,8 @@
 	<RimCourt_Blood.verdicts.0.pastLabel>le prix du sang payé sous le fouet</RimCourt_Blood.verdicts.0.pastLabel>
 	<RimCourt_Blood.verdicts.1.pastLabel>{OTHER_labelShort} banni pour cela</RimCourt_Blood.verdicts.1.pastLabel>
 	<RimCourt_Blood.verdicts.2.pastLabel>vengeance interdite</RimCourt_Blood.verdicts.2.pastLabel>
+	<RimCourt_Blood.verdicts.3.label>L'épée, ici, devant la cour</RimCourt_Blood.verdicts.3.label>
+	<RimCourt_Blood.verdicts.3.pastLabel>{OTHER_labelShort} {OTHER_gender ? passé : passée} par l'épée</RimCourt_Blood.verdicts.3.pastLabel>
 
 	<RimCourt_Surgery.label>une main qui a glissé</RimCourt_Surgery.label>
 	<RimCourt_Surgery.description>Un colon mutilé sur la table d'opération veut que le chirurgien réponde de ses actes.</RimCourt_Surgery.description>

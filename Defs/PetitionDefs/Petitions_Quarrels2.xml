@@ -129,6 +129,13 @@
 				<harsh>1</harsh>
 				<weak>2</weak>
 			</li>
+			<li>
+				<label>The sword, here, before the court</label>
+				<pastLabel>{OTHER_labelShort} put to the sword</pastLabel>
+				<outcome>Death</outcome>
+				<harsh>3</harsh>
+				<just>1</just>
+			</li>
 		</verdicts>
 	</RimCourt.Court.PetitionDef>
 

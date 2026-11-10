@@ -35,6 +35,9 @@ namespace RimCourt
 		public static ThoughtDef RimCourt_Freed;
 		public static ThoughtDef RimCourt_InStocks;
 		public static ThoughtDef RimCourt_KillerFreed;
+		public static ThoughtDef RimCourt_CounselHeeded;
+		public static ThoughtDef RimCourt_CounselIgnored;
+		public static ThoughtDef RimCourt_LordTookMyKin;
 		public static FleckDef RimCourt_Thrown;
 		public static FleckDef RimCourt_Splat;
 		public static FleckDef RimCourt_WhipLine;
@@ -62,6 +65,7 @@ namespace RimCourt
 		public static TaleDef RimCourt_Tale_TrialByCombat;
 		public static TaleDef RimCourt_Tale_MatchBlessed;
 		public static TaleDef RimCourt_Tale_ThroneTaken;
+		public static TaleDef RimCourt_Tale_Executed;
 
 		static RimCourtDefOf()
 		{

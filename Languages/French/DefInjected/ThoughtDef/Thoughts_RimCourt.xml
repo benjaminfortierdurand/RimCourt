@@ -74,4 +74,8 @@
 	<RimCourt_KillerFreed.stages.0.label>le seigneur a laissé partir un tueur</RimCourt_KillerFreed.stages.0.label>
 	<RimCourt_KillerFreed.stages.0.description>Du sang sur les mains, un des nôtres en terre par sa faute, et le siège a renvoyé le tueur chez les siens. Je l'ai regardé partir.</RimCourt_KillerFreed.stages.0.description>
 
+	<RimCourt_CounselHeeded.stages.0.label>a suivi mon conseil</RimCourt_CounselHeeded.stages.0.label>
+	<RimCourt_CounselIgnored.stages.0.label>a tranché contre mon conseil</RimCourt_CounselIgnored.stages.0.label>
+	<RimCourt_LordTookMyKin.stages.0.label>a envoyé un des miens à l'épée</RimCourt_LordTookMyKin.stages.0.label>
+
 </LanguageData>

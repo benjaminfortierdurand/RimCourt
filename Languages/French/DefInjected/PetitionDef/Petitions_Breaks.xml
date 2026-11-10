@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RimCourt_Attempt.label>un meurtre manqué</RimCourt_Attempt.label>
+	<RimCourt_Attempt.description>Un colon pris d'une rage meurtrière doit répondre devant celui qu'il venait tuer.</RimCourt_Attempt.description>
+	<RimCourt_Attempt.caseText>{OTHER_labelShort} a craqué, a choisi {PETITIONER_labelShort}, et est {OTHER_gender ? venu : venue} pour {PETITIONER_gender ? le : la} tuer. Cela n'a pas marché, et c'est la seule raison pour laquelle {PETITIONER_labelShort} peut se tenir ici et le dire.{REPEAT}\n\n{OTHER_labelShort} dit qu'{OTHER_pronoun} n'avait plus sa tête. {PETITIONER_labelShort} dit que c'était bien assez réel.\n\nComment le seigneur tranche-t-il ?</RimCourt_Attempt.caseText>
+	<RimCourt_Attempt.verdicts.0.label>Faire fouetter {OTHER_labelShort} devant la cour</RimCourt_Attempt.verdicts.0.label>
+	<RimCourt_Attempt.verdicts.1.label>Bannir {OTHER_labelShort} de la colonie</RimCourt_Attempt.verdicts.1.label>
+	<RimCourt_Attempt.verdicts.2.label>Les laisser régler cela par les armes, devant la cour</RimCourt_Attempt.verdicts.2.label>
+	<RimCourt_Attempt.verdicts.3.label>Déclarer que c'était la crise, pas {OTHER_gender ? lui : elle}</RimCourt_Attempt.verdicts.3.label>
+	<RimCourt_Attempt.verdicts.0.pastLabel>{OTHER_gender ? fouetté : fouettée} pour la tentative</RimCourt_Attempt.verdicts.0.pastLabel>
+	<RimCourt_Attempt.verdicts.1.pastLabel>{OTHER_labelShort} {OTHER_gender ? banni : bannie} pour la tentative</RimCourt_Attempt.verdicts.1.pastLabel>
+	<RimCourt_Attempt.verdicts.2.pastLabel>réglé par l'épreuve du combat</RimCourt_Attempt.verdicts.2.pastLabel>
+	<RimCourt_Attempt.verdicts.3.pastLabel>déclaré que c'était la crise</RimCourt_Attempt.verdicts.3.pastLabel>
+
+	<RimCourt_Grave.label>une tombe ouverte</RimCourt_Grave.label>
+	<RimCourt_Grave.description>Un colon qui a déterré un mort pendant une crise doit en répondre.</RimCourt_Grave.description>
+	<RimCourt_Grave.caseText>{OTHER_labelShort} a craqué, est {OTHER_gender ? allé : allée} aux tombes, et a déterré {DETAIL}. Puis {OTHER_pronoun} a rapporté le corps parmi les vivants et l'a laissé là où tout le monde le trouverait.{REPEAT}\n\n{PETITIONER_labelShort} demande au seigneur de dire ce que l'on doit aux morts.\n\nComment le seigneur tranche-t-il ?</RimCourt_Grave.caseText>
+	<RimCourt_Grave.verdicts.0.label>Faire demander pardon au mort par {OTHER_labelShort}, devant la cour</RimCourt_Grave.verdicts.0.label>
+	<RimCourt_Grave.verdicts.1.label>Mettre {OTHER_labelShort} au pilori, où tout le monde peut regarder</RimCourt_Grave.verdicts.1.label>
+	<RimCourt_Grave.verdicts.2.label>Faire fouetter {OTHER_labelShort} devant la cour</RimCourt_Grave.verdicts.2.label>
+	<RimCourt_Grave.verdicts.3.label>Déclarer que c'était la crise, pas {OTHER_gender ? lui : elle}</RimCourt_Grave.verdicts.3.label>
+	<RimCourt_Grave.verdicts.0.pastLabel>pardon demandé au mort devant la cour</RimCourt_Grave.verdicts.0.pastLabel>
+	<RimCourt_Grave.verdicts.1.pastLabel>{OTHER_gender ? mis : mise} au pilori pour la tombe ouverte</RimCourt_Grave.verdicts.1.pastLabel>
+	<RimCourt_Grave.verdicts.2.pastLabel>{OTHER_gender ? fouetté : fouettée} pour la tombe ouverte</RimCourt_Grave.verdicts.2.pastLabel>
+	<RimCourt_Grave.verdicts.3.pastLabel>déclaré que c'était la crise</RimCourt_Grave.verdicts.3.pastLabel>
+
+	<RimCourt_Arson.label>des feux allumés dans la colonie</RimCourt_Arson.label>
+	<RimCourt_Arson.description>Un colon qui a allumé des feux pendant une crise doit en répondre.</RimCourt_Arson.description>
+	<RimCourt_Arson.caseText>{OTHER_labelShort} a craqué, et a fait le tour de la colonie en allumant des feux. Le greffier a noté ce qui a pris feu : {DETAIL}.{REPEAT}\n\n{PETITIONER_labelShort} a porté l'affaire devant le seigneur. {OTHER_labelShort} dit que c'était la crise et pas {OTHER_gender ? lui : elle}. Les deux peuvent être vrais.\n\nComment le seigneur tranche-t-il ?</RimCourt_Arson.caseText>
+	<RimCourt_Arson.verdicts.0.label>Ordonner à {OTHER_labelShort} de réparer ce qui a brûlé</RimCourt_Arson.verdicts.0.label>
+	<RimCourt_Arson.verdicts.1.label>Mettre {OTHER_labelShort} au pilori, où tout le monde peut regarder</RimCourt_Arson.verdicts.1.label>
+	<RimCourt_Arson.verdicts.2.label>Faire fouetter {OTHER_labelShort} devant la cour</RimCourt_Arson.verdicts.2.label>
+	<RimCourt_Arson.verdicts.3.label>Déclarer que c'était la crise, pas {OTHER_gender ? lui : elle}</RimCourt_Arson.verdicts.3.label>
+	<RimCourt_Arson.verdicts.0.pastLabel>{OTHER_gender ? condamné : condamnée} à réparer ce qui a brûlé</RimCourt_Arson.verdicts.0.pastLabel>
+	<RimCourt_Arson.verdicts.1.pastLabel>l'incendiaire au pilori</RimCourt_Arson.verdicts.1.pastLabel>
+	<RimCourt_Arson.verdicts.2.pastLabel>l'incendiaire sous le fouet</RimCourt_Arson.verdicts.2.pastLabel>
+	<RimCourt_Arson.verdicts.3.pastLabel>déclaré que c'était la crise</RimCourt_Arson.verdicts.3.pastLabel>
+
+	<RimCourt_Keys.label>une cellule qu'on a voulu ouvrir</RimCourt_Keys.label>
+	<RimCourt_Keys.description>Un colon qui a voulu faire évader des prisonniers pendant une crise doit en répondre.</RimCourt_Keys.description>
+	<RimCourt_Keys.caseText>{OTHER_labelShort} a craqué, est {OTHER_gender ? descendu : descendue} aux cellules, et a tenté de convaincre {DETAIL} de s'évader. Quoi qu'il en soit sorti, {OTHER_pronoun} a voulu ouvrir une porte que la colonie garde fermée.{REPEAT}\n\n{PETITIONER_labelShort} a porté l'affaire devant le seigneur.\n\nComment le seigneur tranche-t-il ?</RimCourt_Keys.caseText>
+	<RimCourt_Keys.verdicts.0.label>Faire fouetter {OTHER_labelShort} devant la cour</RimCourt_Keys.verdicts.0.label>
+	<RimCourt_Keys.verdicts.1.label>Mettre {OTHER_labelShort} au pilori, où tout le monde peut regarder</RimCourt_Keys.verdicts.1.label>
+	<RimCourt_Keys.verdicts.2.label>Bannir {OTHER_labelShort} de la colonie</RimCourt_Keys.verdicts.2.label>
+	<RimCourt_Keys.verdicts.3.label>Déclarer que c'était la crise, pas {OTHER_gender ? lui : elle}</RimCourt_Keys.verdicts.3.label>
+	<RimCourt_Keys.verdicts.0.pastLabel>{OTHER_gender ? fouetté : fouettée} pour la porte des cellules</RimCourt_Keys.verdicts.0.pastLabel>
+	<RimCourt_Keys.verdicts.1.pastLabel>{OTHER_gender ? mis : mise} au pilori pour la porte des cellules</RimCourt_Keys.verdicts.1.pastLabel>
+	<RimCourt_Keys.verdicts.2.pastLabel>{OTHER_labelShort} {OTHER_gender ? banni : bannie} pour la porte des cellules</RimCourt_Keys.verdicts.2.pastLabel>
+	<RimCourt_Keys.verdicts.3.pastLabel>déclaré que c'était la crise</RimCourt_Keys.verdicts.3.pastLabel>
+
+	<RimCourt_Herd.label>le troupeau passé au couteau</RimCourt_Herd.label>
+	<RimCourt_Herd.description>Un colon qui a abattu les animaux de la colonie pendant une crise doit en répondre.</RimCourt_Herd.description>
+	<RimCourt_Herd.caseText>{OTHER_labelShort} a craqué, et est {OTHER_gender ? allé : allée} parmi les bêtes de la colonie avec un couteau. {OTHER_pronoun} a tué {DETAIL}.{REPEAT}\n\n{PETITIONER_labelShort} demande au seigneur de dire ce que cela a coûté à la colonie. {OTHER_labelShort} préférerait que l'on ne compte pas.\n\nComment le seigneur tranche-t-il ?</RimCourt_Herd.caseText>
+	<RimCourt_Herd.verdicts.0.label>Tenir {OTHER_labelShort} pour responsable de la perte</RimCourt_Herd.verdicts.0.label>
+	<RimCourt_Herd.verdicts.1.label>Mettre {OTHER_labelShort} au pilori, où tout le monde peut regarder</RimCourt_Herd.verdicts.1.label>
+	<RimCourt_Herd.verdicts.2.label>Faire fouetter {OTHER_labelShort} devant la cour</RimCourt_Herd.verdicts.2.label>
+	<RimCourt_Herd.verdicts.3.label>Déclarer que c'était la crise, pas {OTHER_gender ? lui : elle}</RimCourt_Herd.verdicts.3.label>
+	<RimCourt_Herd.verdicts.0.pastLabel>{OTHER_gender ? tenu : tenue} pour responsable du troupeau</RimCourt_Herd.verdicts.0.pastLabel>
+	<RimCourt_Herd.verdicts.1.pastLabel>{OTHER_gender ? mis : mise} au pilori pour le troupeau</RimCourt_Herd.verdicts.1.pastLabel>
+	<RimCourt_Herd.verdicts.2.pastLabel>{OTHER_gender ? fouetté : fouettée} pour le troupeau</RimCourt_Herd.verdicts.2.pastLabel>
+	<RimCourt_Herd.verdicts.3.pastLabel>déclaré que c'était la crise</RimCourt_Herd.verdicts.3.pastLabel>
+
+	<RimCourt_Wreckage.label>une rage et ce qu'elle a cassé</RimCourt_Wreckage.label>
+	<RimCourt_Wreckage.description>Un colon qui a tout cassé pendant une crise de rage doit en répondre.</RimCourt_Wreckage.description>
+	<RimCourt_Wreckage.caseText>{OTHER_labelShort} est {OTHER_gender ? entré : entrée} dans une rage noire. Le greffier a noté ce qui a pris les coups : {DETAIL}.{REPEAT}\n\n{PETITIONER_labelShort} veut que quelqu'un en réponde. {OTHER_labelShort} dit que c'est la colonie qui l'y a {OTHER_gender ? poussé : poussée}.\n\nComment le seigneur tranche-t-il ?</RimCourt_Wreckage.caseText>
+	<RimCourt_Wreckage.verdicts.0.label>Ordonner à {OTHER_labelShort} de réparer les dégâts</RimCourt_Wreckage.verdicts.0.label>
+	<RimCourt_Wreckage.verdicts.1.label>Mettre {OTHER_labelShort} au pilori, où tout le monde peut regarder</RimCourt_Wreckage.verdicts.1.label>
+	<RimCourt_Wreckage.verdicts.2.label>Faire fouetter {OTHER_labelShort} devant la cour</RimCourt_Wreckage.verdicts.2.label>
+	<RimCourt_Wreckage.verdicts.3.label>Déclarer que c'était la crise, pas {OTHER_gender ? lui : elle}</RimCourt_Wreckage.verdicts.3.label>
+	<RimCourt_Wreckage.verdicts.0.pastLabel>{OTHER_gender ? condamné : condamnée} à réparer les dégâts</RimCourt_Wreckage.verdicts.0.pastLabel>
+	<RimCourt_Wreckage.verdicts.1.pastLabel>{OTHER_gender ? mis : mise} au pilori pour les dégâts</RimCourt_Wreckage.verdicts.1.pastLabel>
+	<RimCourt_Wreckage.verdicts.2.pastLabel>{OTHER_gender ? fouetté : fouettée} pour les dégâts</RimCourt_Wreckage.verdicts.2.pastLabel>
+	<RimCourt_Wreckage.verdicts.3.pastLabel>déclaré que c'était la crise</RimCourt_Wreckage.verdicts.3.pastLabel>
+
+</LanguageData>

@@ -34,6 +34,7 @@ namespace RimCourt.Debug
 				new DebugMenuOption("Pétitionnaire du dehors (déserteur)", DebugMenuOptionMode.Action, SpawnDeserter),
 				new DebugMenuOption("Exilé qui revient demander grâce", DebugMenuOptionMode.Action, ExileForPardon),
 				new DebugMenuOption("Prisonnier à juger", DebugMenuOptionMode.Action, MakeCaptiveMenu),
+				new DebugMenuOption("Crise mentale à juger", DebugMenuOptionMode.Action, MakeBreakMenu),
 			};
 			Find.WindowStack.Add(new Dialog_DebugOptionListLister(options, "RimCourt debug : quelle affaire ?"));
 		}
@@ -584,6 +585,44 @@ namespace RimCourt.Debug
 				Messages.Message("RimCourt debug : personne ne peut tenir audience (siège du seigneur posé ?).",
 					MessageTypeDefOf.RejectInput, historical: false);
 			return lord;
+		}
+
+		private static void MakeBreakMenu()
+		{
+			var options = new List<DebugMenuOption>
+			{
+				new DebugMenuOption("Pyromane", DebugMenuOptionMode.Action,
+					() => MakeBreak("FireStartingSpree", BreakRecord.KindFire, "a wooden wall", 3)),
+				new DebugMenuOption("Crise de rage (objets cassés)", DebugMenuOptionMode.Action,
+					() => MakeBreak("Tantrum", BreakRecord.KindTantrum, "a marble sculpture", 2)),
+				new DebugMenuOption("Tombe ouverte", DebugMenuOptionMode.Action,
+					() => MakeBreak("CorpseObsession", BreakRecord.KindGrave, "Old Tom", 1)),
+				new DebugMenuOption("Animaux abattus", DebugMenuOptionMode.Action,
+					() => MakeBreak("Slaughterer", BreakRecord.KindSlaughter, "a muffalo", 2)),
+				new DebugMenuOption("Évasion provoquée", DebugMenuOptionMode.Action,
+					() => MakeBreak("Jailbreaker", BreakRecord.KindJailbreak, "Raider", 1)),
+				new DebugMenuOption("Tentative de meurtre (choisir la cible)", DebugMenuOptionMode.Action, MakeAttempt),
+			};
+			Find.WindowStack.Add(new Dialog_DebugOptionListLister(options, "RimCourt debug : quelle crise ?"));
+		}
+
+		private static void MakeBreak(string stateName, int kind, string detail, int count)
+			=> PickOne("RimCourt debug : qui a craqué ?", p => PlantBreak(p, null, stateName, kind, detail, count));
+
+		private static void MakeAttempt()
+			=> PickPair("RimCourt debug : qui a craqué ?", "RimCourt debug : qui était visé ?",
+				(killer, target) => PlantBreak(killer, target, "MurderousRage", BreakRecord.KindMurder, target.LabelShortCap, 1));
+
+		private static void PlantBreak(Pawn p, Pawn victim, string stateName, int kind, string detail, int count)
+		{
+			var mgr = CourtManager.Instance;
+			var state = DefDatabase<MentalStateDef>.GetNamedSilentFail(stateName);
+			if (mgr == null || state == null) return;
+			mgr.DebugAddBreak(p, state, kind, victim, detail, count);
+			var warn = p == mgr.CurrentLord ? " ATTENTION : le seigneur ne peut pas être jugé, l'affaire ne sortira pas." : "";
+			Messages.Message("RimCourt debug : crise " + stateName + " notée pour " + p.LabelShortCap
+					+ ". Tenez audience." + warn,
+				new LookTargets(p), MessageTypeDefOf.NeutralEvent, historical: false);
 		}
 
 		private static void PickOne(string title, System.Action<Pawn> action)

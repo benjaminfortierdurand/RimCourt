@@ -16,6 +16,7 @@
 			<li>RimCourt_LordDismissedMyCase</li>
 			<li>RimCourt_RefusedByLord</li>
 			<li>RimCourt_LordBrokeHisWord</li>
+			<li>RimCourt_LordTookMyKin</li>
 		</sourceThoughts>
 		<!-- Fais pas plus long. La feuille passe en Tiny quand ça déborde et on lit plus rien. -->
 		<caseText>{PETITIONER_labelShort} comes forward alone. There is nobody to stand opposite {PETITIONER_objective}: the complaint is against {LORD}, and {LORD} is on the seat.

@@ -14,6 +14,7 @@ namespace RimCourt
 		public bool shapeLord = true;
 		public bool noDecay;
 		public bool epithets = true;
+		public bool tryBreaks = true;
 		public int stocksHours = DefStocksHours;
 		public bool advancedOpen;
 		public List<string> barredLeaders = new List<string>();
@@ -81,6 +82,7 @@ namespace RimCourt
 			shapeLord = true;
 			noDecay = false;
 			epithets = true;
+			tryBreaks = true;
 			stocksHours = DefStocksHours;
 			ResetBarred();
 		}
@@ -99,6 +101,7 @@ namespace RimCourt
 			Scribe_Values.Look(ref shapeLord, "shapeLord", true);
 			Scribe_Values.Look(ref noDecay, "noDecay");
 			Scribe_Values.Look(ref epithets, "epithets", true);
+			Scribe_Values.Look(ref tryBreaks, "tryBreaks", true);
 			Scribe_Values.Look(ref stocksHours, "stocksHours", DefStocksHours);
 			Scribe_Collections.Look(ref barredLeaders, "barredLeaders", LookMode.Value);
 			Scribe_Values.Look(ref barredSeeded, "barredSeeded");

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Les crises mentales passent en jugement : le manager note ce que le colon a fait pendant sa crise, rien n'est inventé. -->
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Attempt</defName>
+		<priority>90</priority>
+		<label>a killing that failed</label>
+		<description>A colonist who went into a murderous rage is called to answer by the one they came for.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Break</workerClass>
+		<sourceBreaks>
+			<li>MurderousRage</li>
+		</sourceBreaks>
+		<maxMemoryAgeDays>30</maxMemoryAgeDays>
+		<caseText>{OTHER_labelShort} broke, picked {PETITIONER_labelShort} out, and came to kill {PETITIONER_objective}. It did not work, which is the only reason {PETITIONER_labelShort} can stand here and say so.{REPEAT}\n\n{OTHER_labelShort} says {OTHER_pronoun} was not in {OTHER_possessive} right mind. {PETITIONER_labelShort} says it felt real enough.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Have {OTHER_labelShort} flogged before the court</label>
+				<pastLabel>flogged for the attempt</pastLabel>
+				<outcome>BloodPrice</outcome>
+				<just>2</just>
+				<harsh>1</harsh>
+			</li>
+			<li>
+				<label>Banish {OTHER_labelShort} from the colony</label>
+				<pastLabel>{OTHER_labelShort} banished for the attempt</pastLabel>
+				<outcome>Banish</outcome>
+				<harsh>3</harsh>
+				<just>1</just>
+			</li>
+			<li>
+				<label>Let them settle it in arms, before the court</label>
+				<pastLabel>settled by trial of combat</pastLabel>
+				<outcome>Duel</outcome>
+				<harsh>2</harsh>
+				<weak>1</weak>
+			</li>
+			<li>
+				<label>Rule that it was the breakdown, not {OTHER_objective}</label>
+				<pastLabel>ruled it was the breakdown</pastLabel>
+				<outcome>FavorOther</outcome>
+				<weak>2</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Grave</defName>
+		<priority>65</priority>
+		<label>a grave opened</label>
+		<description>A colonist who dug up the dead during a breakdown is called to answer for it.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Break</workerClass>
+		<sourceBreaks>
+			<li>CorpseObsession</li>
+		</sourceBreaks>
+		<maxMemoryAgeDays>20</maxMemoryAgeDays>
+		<caseText>{OTHER_labelShort} broke, went to the graves, and dug up {DETAIL}. Then {OTHER_pronoun} carried the body back among the living and left it where everyone would find it.{REPEAT}\n\n{PETITIONER_labelShort} wants the lord to say what is owed to the dead.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Make {OTHER_labelShort} beg the dead's pardon before the court</label>
+				<pastLabel>made to beg the dead's pardon</pastLabel>
+				<outcome>FavorPetitioner</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Bind {OTHER_labelShort} to the post, where everyone can look</label>
+				<pastLabel>bound to the post for the open grave</pastLabel>
+				<outcome>Stocks</outcome>
+				<harsh>2</harsh>
+				<just>1</just>
+			</li>
+			<li>
+				<label>Have {OTHER_labelShort} flogged before the court</label>
+				<pastLabel>flogged for the open grave</pastLabel>
+				<outcome>BloodPrice</outcome>
+				<harsh>3</harsh>
+			</li>
+			<li>
+				<label>Rule that it was the breakdown, not {OTHER_objective}</label>
+				<pastLabel>ruled it was the breakdown</pastLabel>
+				<outcome>FavorOther</outcome>
+				<just>1</just>
+				<weak>1</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Arson</defName>
+		<priority>62</priority>
+		<label>fires set in the colony</label>
+		<description>A colonist who went on a fire-starting spree is called to answer for it.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Break</workerClass>
+		<sourceBreaks>
+			<li>FireStartingSpree</li>
+		</sourceBreaks>
+		<maxMemoryAgeDays>20</maxMemoryAgeDays>
+		<caseText>{OTHER_labelShort} broke, and went round the colony setting fires. {OTHER_pronoun} put a flame to {DETAIL}.{REPEAT}\n\n{PETITIONER_labelShort} has brought it before the lord. {OTHER_labelShort} says it was the breakdown and not {OTHER_objective}. Both can be true.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Order {OTHER_labelShort} to make good what burned</label>
+				<pastLabel>ordered to make good what burned</pastLabel>
+				<outcome>FavorPetitioner</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Bind {OTHER_labelShort} to the post, where everyone can look</label>
+				<pastLabel>the firestarter bound to the post</pastLabel>
+				<outcome>Stocks</outcome>
+				<harsh>2</harsh>
+				<just>1</just>
+			</li>
+			<li>
+				<label>Have {OTHER_labelShort} flogged before the court</label>
+				<pastLabel>the firestarter flogged</pastLabel>
+				<outcome>BloodPrice</outcome>
+				<harsh>3</harsh>
+			</li>
+			<li>
+				<label>Rule that it was the breakdown, not {OTHER_objective}</label>
+				<pastLabel>ruled it was the breakdown</pastLabel>
+				<outcome>FavorOther</outcome>
+				<just>1</just>
+				<weak>1</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Keys</defName>
+		<priority>58</priority>
+		<label>a cell door talked open</label>
+		<description>A colonist who tried to set prisoners loose during a breakdown is called to answer for it.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Break</workerClass>
+		<sourceBreaks>
+			<li>Jailbreaker</li>
+		</sourceBreaks>
+		<maxMemoryAgeDays>20</maxMemoryAgeDays>
+		<caseText>{OTHER_labelShort} broke, went down to the cells, and tried to talk {DETAIL} into breaking out. Whatever came of it, {OTHER_pronoun} worked to open a door the colony keeps shut.{REPEAT}\n\n{PETITIONER_labelShort} has brought it before the lord.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Have {OTHER_labelShort} flogged before the court</label>
+				<pastLabel>flogged for the cell door</pastLabel>
+				<outcome>BloodPrice</outcome>
+				<just>2</just>
+				<harsh>1</harsh>
+			</li>
+			<li>
+				<label>Bind {OTHER_labelShort} to the post, where everyone can look</label>
+				<pastLabel>bound to the post for the cell door</pastLabel>
+				<outcome>Stocks</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Banish {OTHER_labelShort} from the colony</label>
+				<pastLabel>{OTHER_labelShort} banished for the cell door</pastLabel>
+				<outcome>Banish</outcome>
+				<harsh>3</harsh>
+			</li>
+			<li>
+				<label>Rule that it was the breakdown, not {OTHER_objective}</label>
+				<pastLabel>ruled it was the breakdown</pastLabel>
+				<outcome>FavorOther</outcome>
+				<just>1</just>
+				<weak>1</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Herd</defName>
+		<priority>52</priority>
+		<label>the herd put to the knife</label>
+		<description>A colonist who slaughtered the colony's animals during a breakdown is called to answer for it.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Break</workerClass>
+		<sourceBreaks>
+			<li>Slaughterer</li>
+		</sourceBreaks>
+		<maxMemoryAgeDays>20</maxMemoryAgeDays>
+		<caseText>{OTHER_labelShort} broke, and went among the colony's animals with a knife. {OTHER_pronoun} killed {DETAIL}.{REPEAT}\n\n{PETITIONER_labelShort} wants the lord to say what that cost the colony. {OTHER_labelShort} would rather it was not counted.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Hold {OTHER_labelShort} answerable for the loss</label>
+				<pastLabel>held answerable for the herd</pastLabel>
+				<outcome>FavorPetitioner</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Bind {OTHER_labelShort} to the post, where everyone can look</label>
+				<pastLabel>bound to the post for the herd</pastLabel>
+				<outcome>Stocks</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Have {OTHER_labelShort} flogged before the court</label>
+				<pastLabel>flogged for the herd</pastLabel>
+				<outcome>BloodPrice</outcome>
+				<harsh>3</harsh>
+			</li>
+			<li>
+				<label>Rule that it was the breakdown, not {OTHER_objective}</label>
+				<pastLabel>ruled it was the breakdown</pastLabel>
+				<outcome>FavorOther</outcome>
+				<just>1</just>
+				<weak>1</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+	<RimCourt.Court.PetitionDef>
+		<defName>RimCourt_Wreckage</defName>
+		<priority>45</priority>
+		<label>a rage and what it broke</label>
+		<description>A colonist who smashed things in a tantrum is called to answer for it.</description>
+		<workerClass>RimCourt.Court.PetitionWorker_Break</workerClass>
+		<sourceBreaks>
+			<li>Tantrum</li>
+			<li>TargetedTantrum</li>
+			<li>BedroomTantrum</li>
+		</sourceBreaks>
+		<maxMemoryAgeDays>20</maxMemoryAgeDays>
+		<caseText>{OTHER_labelShort} went into a rage and took it out on {DETAIL}.{REPEAT}\n\n{PETITIONER_labelShort} wants it answered for. {OTHER_labelShort} says the colony pushed {OTHER_objective} to it.\n\nHow does the lord rule?</caseText>
+		<verdicts>
+			<li>
+				<label>Order {OTHER_labelShort} to make good the damage</label>
+				<pastLabel>ordered to make good the damage</pastLabel>
+				<outcome>FavorPetitioner</outcome>
+				<just>2</just>
+			</li>
+			<li>
+				<label>Bind {OTHER_labelShort} to the post, where everyone can look</label>
+				<pastLabel>bound to the post for the damage</pastLabel>
+				<outcome>Stocks</outcome>
+				<harsh>2</harsh>
+			</li>
+			<li>
+				<label>Have {OTHER_labelShort} flogged before the court</label>
+				<pastLabel>flogged for the damage</pastLabel>
+				<outcome>BloodPrice</outcome>
+				<harsh>3</harsh>
+			</li>
+			<li>
+				<label>Rule that it was the breakdown, not {OTHER_objective}</label>
+				<pastLabel>ruled it was the breakdown</pastLabel>
+				<outcome>FavorOther</outcome>
+				<just>1</just>
+				<weak>1</weak>
+			</li>
+		</verdicts>
+	</RimCourt.Court.PetitionDef>
+
+</Defs>

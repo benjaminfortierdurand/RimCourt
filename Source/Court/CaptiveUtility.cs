@@ -251,7 +251,7 @@ namespace RimCourt.Court
 		{
 			Ground(victim);
 			if (victim == null || victim.Dead || !victim.Spawned) return null;
-			var exec = Willing(preferred) ? preferred : null;
+			var exec = Willing(preferred, victim) ? preferred : null;
 			if (exec == null)
 			{
 				var list = FlogUtility.FloggerCandidates(victim.Map, victim);
@@ -259,16 +259,23 @@ namespace RimCourt.Court
 				for (var i = 0; i < list.Count; i++)
 				{
 					var c = list[i];
-					if (c == lord || !Willing(c)) continue;
+					if (c == lord || !Willing(c, victim)) continue;
 					var d = c.Position.DistanceToSquared(victim.Position);
 					if (d < bestD) { bestD = d; exec = c; }
 				}
 			}
 			if (exec == null) return null;
 			if (tier > TierNobody) victim.guilt?.Notify_Guilty();
+			var colonist = victim.IsColonist && !victim.IsPrisoner;
 			ExecutionUtility.DoExecutionByCut(exec, victim);
 			ThoughtUtility.GiveThoughtsForPawnExecuted(victim, exec, PawnExecutionKind.GenericBrutal);
-			if (TaleDefOf.ExecutedPrisoner != null) TaleRecorder.RecordTale(TaleDefOf.ExecutedPrisoner, exec, victim);
+			if (colonist)
+			{
+				BlameLord(victim, exec, lord);
+				if (RimCourtDefOf.RimCourt_Tale_Executed != null)
+					TaleRecorder.RecordTale(RimCourtDefOf.RimCourt_Tale_Executed, lord ?? exec, victim);
+			}
+			else if (TaleDefOf.ExecutedPrisoner != null) TaleRecorder.RecordTale(TaleDefOf.ExecutedPrisoner, exec, victim);
 			return exec;
 		}
 
@@ -276,7 +283,7 @@ namespace RimCourt.Court
 		{
 			var list = FlogUtility.FloggerCandidates(map, victim);
 			for (var i = list.Count - 1; i >= 0; i--)
-				if (list[i] == lord || !Willing(list[i])) list.RemoveAt(i);
+				if (list[i] == lord || !Willing(list[i], victim)) list.RemoveAt(i);
 			return list;
 		}
 
@@ -287,12 +294,38 @@ namespace RimCourt.Court
 			SendBackToCell(p);
 		}
 
-		private static bool Willing(Pawn p)
+		private static void BlameLord(Pawn victim, Pawn exec, Pawn lord)
+		{
+			if (lord == null || lord.Dead || lord == victim || RimCourtDefOf.RimCourt_LordTookMyKin == null) return;
+			var colonists = PawnsFinder.AllMaps_FreeColonistsSpawned;
+			for (var i = 0; i < colonists.Count; i++)
+			{
+				var c = colonists[i];
+				if (c == lord || c == victim) continue;
+				var memories = c.needs?.mood?.thoughts?.memories;
+				if (memories == null) continue;
+				var list = memories.Memories;
+				var grieving = false;
+				for (var j = list.Count - 1; j >= 0; j--)
+				{
+					var m = list[j];
+					if (m?.def == null || m.otherPawn != exec || m.age > 2) continue;
+					if (m.def == ThoughtDefOf.KilledMyRival || !m.def.defName.StartsWith("KilledMy")) continue;
+					memories.RemoveMemory(m);
+					grieving = true;
+				}
+				if (grieving) memories.TryGainMemory(RimCourtDefOf.RimCourt_LordTookMyKin, lord);
+			}
+		}
+
+		private static bool Willing(Pawn p, Pawn victim)
 		{
 			if (p == null || p.Dead || !p.Spawned || p.Downed || p.InMentalState || !p.IsFreeColonist) return false;
 			if (p.WorkTagIsDisabled(WorkTags.Violent)) return false;
 			if (p.ageTracker != null && p.ageTracker.AgeBiologicalYears < FlogUtility.MinFloggerAge) return false;
-			return !ModsConfig.IdeologyActive || IdeoUtility.DoerWillingToDo(HistoryEventDefOf.ExecutedPrisoner, p);
+			if (!ModsConfig.IdeologyActive) return true;
+			var deed = victim != null && !victim.IsPrisoner ? HistoryEventDefOf.ExecutedColonist : HistoryEventDefOf.ExecutedPrisoner;
+			return IdeoUtility.DoerWillingToDo(deed, p);
 		}
 	}
 }

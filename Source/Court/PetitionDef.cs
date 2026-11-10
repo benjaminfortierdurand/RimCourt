@@ -12,6 +12,7 @@ namespace RimCourt.Court
 		public bool mutualGrudge;
 		public int opinionThreshold = -15;
 		public List<ThoughtDef> sourceThoughts;
+		public List<MentalStateDef> sourceBreaks;
 		public int maxMemoryAgeDays = 30;
 		public float priority = 10f;
 		public IntRange amountRange = new IntRange(80, 260);

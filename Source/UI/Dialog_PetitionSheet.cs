@@ -27,6 +27,9 @@ namespace RimCourt.UI
 		private const float PortraitZoom = 2.3f;
 		private const float PortraitRise = 0.42f;
 		private const float RowHeight = 46f;
+		private const float HeadSize = 30f;
+		private const float HeadStep = 33f;
+		private static readonly Color PhotoPaper = new Color(0.925f, 0.894f, 0.796f);
 
 		public readonly int petitionId;
 		private bool armed;
@@ -83,6 +86,7 @@ namespace RimCourt.UI
 			}
 			DrawSheet(sheet, mgr, p);
 			GUI.matrix = matrix;
+			DrawCounselTips(sheet, p);
 
 			var tools = new Rect(inRect.x, sheet.yMax + 10f, inRect.width, toolsH);
 			DrawStampTool(tools, mgr, p);
@@ -169,8 +173,10 @@ namespace RimCourt.UI
 				Widgets.Label(new Rect(body.x, noteY, body.width, 20f), kin);
 				GUI.color = InkFaint;
 			}
-			Widgets.Label(new Rect(body.x, rowsTop - 20f, body.width, 20f), "RimCourt.SheetVerdicts".Translate());
+			Widgets.Label(new Rect(body.x, rowsTop - 20f, body.width, 20f),
+				(p.council.Count > 0 ? "RimCourt.SheetVerdictsCouncil" : "RimCourt.SheetVerdicts").Translate());
 			Text.Font = GameFont.Small;
+			var gutter = CounselGutter(p, rowCount);
 
 			for (var i = 0; i < rowCount; i++)
 			{
@@ -185,9 +191,13 @@ namespace RimCourt.UI
 					for (var k = 0; k < rowCount; k++)
 						_verdictLabels[k] = (k + 1) + ". " + p.def.Worker.VerdictLabel(p, k);
 				}
-				Widgets.Label(new Rect(row.x + 12f, row.y, row.width - 24f, row.height - 6f),
-					_verdictLabels[i]);
+				var labelRect = new Rect(row.x + 12f + gutter, row.y, row.width - 24f - gutter, row.height - 6f);
+				if (gutter > 0f && Text.CalcHeight(_verdictLabels[i], labelRect.width) > labelRect.height)
+					Text.Font = GameFont.Tiny;
+				Widgets.Label(labelRect, _verdictLabels[i]);
+				Text.Font = GameFont.Small;
 				Text.Anchor = TextAnchor.UpperLeft;
+				if (gutter > 0f) DrawCounsel(row, p, i);
 			}
 
 			for (var i = 0; i < p.stamps.Count; i++)
@@ -240,6 +250,65 @@ namespace RimCourt.UI
 			Text.Anchor = TextAnchor.UpperLeft;
 			Text.Font = GameFont.Small;
 			GUI.color = Color.white;
+		}
+
+		private static float CounselGutter(Court.Petition p, int rowCount)
+		{
+			var most = 0;
+			for (var row = 0; row < rowCount; row++)
+			{
+				var n = 0;
+				for (var i = 0; i < p.counsel.Count; i++)
+					if (p.counsel[i] == row) n++;
+				if (n > most) most = n;
+			}
+			return most == 0 ? 0f : most * HeadStep + 4f;
+		}
+
+		private static Rect CounselRect(Rect row, int slot)
+			=> new Rect(row.x + 10f + slot * HeadStep, row.y + (row.height - 6f - HeadSize) / 2f, HeadSize, HeadSize);
+
+		private static void DrawCounsel(Rect row, Court.Petition p, int index)
+		{
+			var slot = 0;
+			for (var i = 0; i < p.council.Count && i < p.counsel.Count; i++)
+			{
+				if (p.counsel[i] != index) continue;
+				var pawn = p.council[i];
+				var r = CounselRect(row, slot++);
+				Widgets.DrawBoxSolid(r, PhotoPaper);
+				if (pawn != null && !pawn.Destroyed)
+				{
+					var tex = PortraitsCache.Get(pawn, new Vector2(HeadSize, HeadSize), Rot4.South,
+						new Vector3(0f, 0f, PortraitRise), PortraitZoom,
+						supersample: true, compensateForUIScale: true, renderHeadgear: false);
+					GUI.color = Color.white;
+					GUI.DrawTexture(r, tex);
+				}
+				GUI.color = Color.white;
+				Widgets.DrawBox(r, 1, RimCourtTex.ParchmentEdge);
+			}
+			GUI.color = Ink;
+		}
+
+		private static void DrawCounselTips(Rect sheet, Court.Petition p)
+		{
+			if (p.council.Count == 0 || p.counsel.Count != p.council.Count) return;
+			var rowCount = Mathf.Max(1, p.def.verdicts.Count);
+			for (var row = 0; row < rowCount; row++)
+			{
+				var slot = 0;
+				for (var i = 0; i < p.council.Count; i++)
+				{
+					if (p.counsel[i] != row) continue;
+					var r = CounselRect(VerdictRowRect(sheet, row, rowCount), slot++);
+					var pawn = p.council[i];
+					if (pawn == null) continue;
+					var tip = "RimCourt.CounselTip".Translate(pawn.LabelShortCap).ToString();
+					if (i < p.counselWhy.Count && !p.counselWhy[i].NullOrEmpty()) tip += "\n" + p.counselWhy[i];
+					TooltipHandler.TipRegion(r, new TipSignal(tip, pawn.thingIDNumber ^ 0x51C0));
+				}
+			}
 		}
 
 		private string KinLine(Court.CourtManager mgr, Court.Petition p)

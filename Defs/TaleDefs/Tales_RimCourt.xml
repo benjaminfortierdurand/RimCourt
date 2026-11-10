@@ -117,4 +117,27 @@
 		</rulePack>
 	</TaleDef>
 
+	<TaleDef>
+		<defName>RimCourt_Tale_Executed</defName>
+		<label>put to the sword by the court</label>
+		<taleClass>Tale_DoublePawn</taleClass>
+		<type>Expirable</type>
+		<firstPawnSymbol>LORD</firstPawnSymbol>
+		<secondPawnSymbol>CONDEMNED</secondPawnSymbol>
+		<baseInterest>6</baseInterest>
+		<maxPerPawn>2</maxPerPawn>
+		<expireDays>60</expireDays>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->the execution of [CONDEMNED_nameDef]</li>
+				<li>tale_noun->[LORD_nameDef] sending [CONDEMNED_nameDef] to the sword</li>
+				<li>image->[CONDEMNED_nameFull] kneeling before the seat of [LORD_nameFull] [circumstance_group]</li>
+				<li>image->[LORD_nameFull] watching from the seat as the sword comes down on [CONDEMNED_nameFull] [circumstance_group]</li>
+				<li>circumstance_phrase->while the whole colony watches in silence</li>
+				<li>circumstance_phrase->with a life paid for a life</li>
+				<li>circumstance_phrase->and nobody in the hall looks away</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+
 </Defs>

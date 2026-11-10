@@ -23,6 +23,9 @@ namespace RimCourt.Court
 		public int stampedIndex = -1;
 		public bool deserter;
 		public List<VerdictStampMark> stamps = new List<VerdictStampMark>();
+		public List<Pawn> council = new List<Pawn>();
+		public List<int> counsel = new List<int>();
+		public List<string> counselWhy = new List<string>();
 
 		public bool Involves(Pawn p) => p != null && (p == petitioner || p == other);
 
@@ -41,8 +44,18 @@ namespace RimCourt.Court
 			Scribe_Values.Look(ref stampedIndex, "stampedIndex", -1);
 			Scribe_Values.Look(ref deserter, "deserter");
 			Scribe_Collections.Look(ref stamps, "stamps", LookMode.Deep);
-			if (Scribe.mode == LoadSaveMode.PostLoadInit && stamps == null)
-				stamps = new List<VerdictStampMark>();
+			Scribe_Collections.Look(ref council, "council", LookMode.Reference);
+			Scribe_Collections.Look(ref counsel, "counsel", LookMode.Value);
+			Scribe_Collections.Look(ref counselWhy, "counselWhy", LookMode.Value);
+			if (Scribe.mode != LoadSaveMode.PostLoadInit) return;
+			if (stamps == null) stamps = new List<VerdictStampMark>();
+			if (council == null || counsel == null || counselWhy == null
+				|| council.Count != counsel.Count || council.Count != counselWhy.Count || council.Contains(null))
+			{
+				council = new List<Pawn>();
+				counsel = new List<int>();
+				counselWhy = new List<string>();
+			}
 		}
 	}
 
@@ -69,6 +82,42 @@ namespace RimCourt.Court
 			Scribe_Values.Look(ref defName, "defName");
 			Scribe_Values.Look(ref outcome, "outcome");
 			Scribe_Values.Look(ref tick, "tick");
+		}
+	}
+
+	public class RollEntry : IExposable
+	{
+		public const int Ruled = 0;
+		public const int Unanswered = 1;
+		public const int Defied = 2;
+
+		public int tick;
+		public float longitude;
+		public string defName;
+		public string caseLabel;
+		public string aName;
+		public string bName;
+		public string verdict;
+		public string lordName;
+		public int axis = JudgeReputation.StageNone;
+		public int outcome;
+		public bool hearing;
+		public bool kin;
+
+		public void ExposeData()
+		{
+			Scribe_Values.Look(ref tick, "tick");
+			Scribe_Values.Look(ref longitude, "longitude");
+			Scribe_Values.Look(ref defName, "defName");
+			Scribe_Values.Look(ref caseLabel, "caseLabel");
+			Scribe_Values.Look(ref aName, "aName");
+			Scribe_Values.Look(ref bName, "bName");
+			Scribe_Values.Look(ref verdict, "verdict");
+			Scribe_Values.Look(ref lordName, "lordName");
+			Scribe_Values.Look(ref axis, "axis", JudgeReputation.StageNone);
+			Scribe_Values.Look(ref outcome, "outcome");
+			Scribe_Values.Look(ref hearing, "hearing");
+			Scribe_Values.Look(ref kin, "kin");
 		}
 	}
 

@@ -448,4 +448,48 @@
 		</stages>
 	</ThoughtDef>
 
+	<!-- Le conseil : les colons assis sur un siège d'honneur se souviennent si le seigneur les a écoutés. -->
+	<ThoughtDef>
+		<defName>RimCourt_CounselHeeded</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>8</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>took my counsel</label>
+				<baseOpinionOffset>6</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RimCourt_CounselIgnored</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>8</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>ruled against my counsel</label>
+				<baseOpinionOffset>-4</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- La famille d'un colon exécuté sur ordre de la cour en veut au seigneur, pas au bourreau. -->
+	<ThoughtDef>
+		<defName>RimCourt_LordTookMyKin</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>40</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>sent one of mine to the sword</label>
+				<baseOpinionOffset>-40</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
 </Defs>

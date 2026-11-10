@@ -56,6 +56,8 @@ namespace RimCourt
 				"RimCourt.Settings.EpithetsHint".Translate());
 			l.CheckboxLabeled("RimCourt.Settings.NoDecay".Translate(), ref Settings.noDecay,
 				"RimCourt.Settings.NoDecayHint".Translate());
+			l.CheckboxLabeled("RimCourt.Settings.TryBreaks".Translate(), ref Settings.tryBreaks,
+				"RimCourt.Settings.TryBreaksHint".Translate());
 
 			l.GapLine();
 			if (l.ButtonText("RimCourt.Settings.OpenGuide".Translate()))

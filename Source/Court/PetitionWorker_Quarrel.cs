@@ -111,6 +111,20 @@ namespace RimCourt.Court
 						TaleRecorder.RecordTale(RimCourtDefOf.RimCourt_Tale_Banished, lord, p.other);
 					Banish(p.other);
 					break;
+
+				case "Death":
+					Mem(p.petitioner, RimCourtDefOf.RimCourt_LordRuledForMe, lord);
+					if (CourtManager.Instance?.SentenceToDeath(p.other, p.petitioner) ?? false)
+					{
+						ClearGrudge(p.petitioner, p.other);
+						break;
+					}
+					Messages.Message("RimCourt.DeathNoExecutioner".Translate(p.other?.LabelShortCap ?? "?"),
+						MessageTypeDefOf.NeutralEvent, historical: false);
+					if (RimCourtDefOf.RimCourt_Tale_Banished != null && p.other != null && lord != null)
+						TaleRecorder.RecordTale(RimCourtDefOf.RimCourt_Tale_Banished, lord, p.other);
+					Banish(p.other);
+					break;
 			}
 		}
 
@@ -140,6 +154,7 @@ namespace RimCourt.Court
 					otherMood = 0;
 					break;
 				case "Banish":
+				case "Death":
 					petitionerMood = 1;
 					otherMood = -1;
 					break;

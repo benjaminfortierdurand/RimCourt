@@ -75,6 +75,11 @@ namespace RimCourt.Court
 		private bool _hearing;
 		private const int MaxHearingCases = 6;
 		private static readonly List<Petition> NoneTaken = new List<Petition>();
+		private List<BreakRecord> _breaks = new List<BreakRecord>();
+		private List<RollEntry> _rolls = new List<RollEntry>();
+		private int _breakFailures;
+		private const int MaxRolls = 600;
+		private const int MinCouncilAge = 13;
 		private const int RaidScanInterval = 1000;
 		private const int MaxGuardTries = 2;
 		private const int MaxArrivalTicks = 20000;
@@ -243,7 +248,7 @@ namespace RimCourt.Court
 		public bool BeginExecution(Pawn condemned, Pawn executioner, int tier)
 		{
 			if (!_active || condemned == null || condemned.Dead || !condemned.Spawned || executioner == null) return false;
-			if (_current == null || _current.petitioner != condemned) return false;
+			if (_current == null || !_current.Involves(condemned)) return false;
 			if (executioner.Dead || !executioner.Spawned || executioner.Downed || executioner.jobs == null) return false;
 
 			_condemned = condemned;
@@ -258,7 +263,7 @@ namespace RimCourt.Court
 
 			try
 			{
-				var stand = PleadCellFor(true);
+				var stand = PleadCellFor(condemned == _current.petitioner);
 				if (!stand.IsValid || !stand.InBounds(_map)) stand = condemned.Position;
 				var wait = JobMaker.MakeJob(RimCourtDefOf.RimCourt_TakeLashes, stand, _seat?.Position ?? _spotCell);
 				if (condemned.jobs != null && !condemned.jobs.TryTakeOrderedJob(wait, JobTag.Misc))
@@ -639,6 +644,152 @@ namespace RimCourt.Court
 
 		public List<HeardCase> Heard => _heard;
 
+		public List<BreakRecord> Breaks => _breaks;
+
+		public List<RollEntry> Rolls => _rolls;
+
+		public void NoteBreakTried(Pawn pawn, int startTick)
+		{
+			for (var i = 0; i < _breaks.Count; i++)
+				if (_breaks[i].pawn == pawn && _breaks[i].startTick == startTick) _breaks[i].tried = true;
+		}
+
+		public BreakRecord DebugAddBreak(Pawn pawn, MentalStateDef state, int kind, Pawn victim, string detail, int count)
+		{
+			var now = Find.TickManager.TicksGame;
+			var r = new BreakRecord
+			{
+				pawn = pawn, state = state, kind = kind, victim = victim, detail = detail, count = count,
+				startTick = now - 2500, endTick = now,
+			};
+			var map = pawn?.Map;
+			if (map != null)
+				foreach (var c in map.mapPawns.FreeColonistsSpawned)
+					if (c != pawn && r.witnesses.Count < 12) r.witnesses.Add(c);
+			_breaks.Add(r);
+			return r;
+		}
+
+		private void ScanBreaks()
+		{
+			try { BreakUtility.Scan(_breaks); }
+			catch (System.Exception e)
+			{
+				if (_breakFailures++ == 0) Log.Error("[RimCourt] suivi des crises : " + e);
+			}
+		}
+
+		private void RecordRoll(Petition p, string label, VerdictOption v, int outcome, bool kin)
+		{
+			if (p?.def == null || p.petitioner == null) return;
+			var longitude = 0f;
+			if (_map != null) longitude = Find.WorldGrid.LongLatOf(_map.Tile).x;
+			_rolls.Add(new RollEntry
+			{
+				tick = Find.TickManager.TicksGame,
+				longitude = longitude,
+				defName = p.def.defName,
+				caseLabel = p.def.label,
+				aName = p.petitioner.LabelShortCap,
+				bName = p.other?.LabelShortCap,
+				verdict = label,
+				lordName = _lord?.LabelShortCap,
+				axis = v == null ? JudgeReputation.StageNone : AxisOf(v),
+				outcome = outcome,
+				hearing = _hearing,
+				kin = kin,
+			});
+			if (_rolls.Count > MaxRolls) _rolls.RemoveRange(0, _rolls.Count - MaxRolls);
+		}
+
+		private void SeedRolls()
+		{
+			for (var i = 0; i < _heard.Count; i++)
+			{
+				var h = _heard[i];
+				if (h == null || h.defName.NullOrEmpty()) continue;
+				var def = DefDatabase<PetitionDef>.GetNamedSilentFail(h.defName);
+				_rolls.Add(new RollEntry
+				{
+					tick = h.tick,
+					defName = h.defName,
+					caseLabel = def?.label,
+					aName = h.aName,
+					bName = h.bName,
+					axis = PrecedentAxis(def, h),
+					outcome = h.outcome.NullOrEmpty() ? RollEntry.Unanswered : RollEntry.Ruled,
+				});
+			}
+		}
+
+		private List<Pawn> SeatedCouncil()
+		{
+			var list = new List<Pawn>();
+			if (_map == null || _seat == null || !_spotCell.IsValid) return list;
+			var seatPos = _seat.Position;
+			var chairs = new List<Thing>();
+			var all = _map.listerBuildings.allBuildingsColonist;
+			for (var i = 0; i < all.Count; i++)
+			{
+				var bld = all[i];
+				if (bld?.def?.building == null || !bld.def.building.isSittable) continue;
+				var guest = bld.TryGetComp<UI.CompCourtChair>()?.Guest;
+				if (guest == null || guest == _lord || !guest.Spawned || guest.Map != _map) continue;
+				if (guest.CurJobDef != RimCourtDefOf.RimCourt_AttendCourt) continue;
+				if (guest.ageTracker != null && guest.ageTracker.AgeBiologicalYears < MinCouncilAge) continue;
+				if (bld.OccupiedRect().Contains(seatPos)) continue;
+				if (!UI.CompCourtArea.InCrowdArea(_seat, _spotCell, bld.Position)) continue;
+				if (guest.Position.DistanceTo(bld.Position) > 2.9f) continue;
+				chairs.Add(bld);
+			}
+			chairs.Sort((x, y) => x.Position.DistanceToSquared(seatPos).CompareTo(y.Position.DistanceToSquared(seatPos)));
+			for (var i = 0; i < chairs.Count; i++)
+			{
+				var guest = chairs[i].TryGetComp<UI.CompCourtChair>()?.Guest;
+				if (guest != null && !list.Contains(guest)) list.Add(guest);
+			}
+			return list;
+		}
+
+		private void ApplyCounsel(Petition p, int index, bool answered)
+		{
+			if (p?.council == null || p.council.Count == 0 || _lord == null || _lord.Dead) return;
+			if (p.counsel == null || p.counsel.Count != p.council.Count) return;
+			var unanimous = p.council.Count >= 2;
+			var first = p.counsel[0];
+			for (var i = 0; i < p.council.Count; i++)
+			{
+				if (p.counsel[i] != first) unanimous = false;
+				var c = p.council[i];
+				if (c == null || c.Dead || c == _lord) continue;
+				var heeded = answered && p.counsel[i] == index;
+				var thought = heeded ? RimCourtDefOf.RimCourt_CounselHeeded : RimCourtDefOf.RimCourt_CounselIgnored;
+				if (thought != null) c.needs?.mood?.thoughts?.memories?.TryGainMemory(thought, _lord);
+			}
+			if (unanimous && answered && first != index)
+				Messages.Message("RimCourt.CouncilOverruled".Translate(LordArg),
+					MessageTypeDefOf.NeutralEvent, historical: false);
+		}
+
+		public bool SentenceToDeath(Pawn condemned, Pawn wronged)
+		{
+			if (!_active || _map == null || condemned == null || condemned.Dead || !condemned.Spawned) return false;
+			var lord = _lord;
+			var candidates = CaptiveUtility.Executioners(_map, condemned, lord);
+			if (candidates.Count == 0) return false;
+			Find.WindowStack.Add(new UI.Dialog_PickFlogger(condemned, candidates, lord, wronged,
+				picked =>
+				{
+					if (picked != null && BeginExecution(condemned, picked, CaptiveUtility.TierBlood)) return;
+					var exec = CaptiveUtility.Execute(condemned, picked, lord, CaptiveUtility.TierBlood);
+					if (exec != null)
+						Messages.Message("RimCourt.CaptiveExecuted".Translate(exec.LabelShortCap, condemned.LabelShortCap),
+							new LookTargets(exec), MessageTypeDefOf.NegativeEvent, historical: false);
+				},
+				"RimCourt.ExecutionerDialogTitle", "RimCourt.ExecutionerDialogDesc", "RimCourt.ExecutionerNoOne", true));
+			return true;
+		}
+
 		public int DebugRushWeddings()
 		{
 			if (_pledges.Count == 0) return 0;
@@ -934,6 +1085,9 @@ namespace RimCourt.Court
 				: "RimCourt.LogVerdictSolo".Translate(p.petitioner.LabelShortCap, label));
 			_resolvedCount++;
 			RecordHeard(p, timedOut || refused ? null : v);
+			var rollOutcome = timedOut ? RollEntry.Unanswered : refused ? RollEntry.Defied : RollEntry.Ruled;
+			Guard("registre", () => RecordRoll(p, label, timedOut ? null : v, rollOutcome, kin != null && !timedOut));
+			Guard("conseil", () => ApplyCounsel(p, index, !timedOut));
 
 			ThrowReactions(p, v);
 			if (_lord != null)
@@ -1177,6 +1331,16 @@ namespace RimCourt.Court
 			sb.AppendLine("  just=" + _reputation.just + " harsh=" + _reputation.harsh
 				+ " venal=" + _reputation.venal + " weak=" + _reputation.weak);
 			sb.AppendLine("  lashesLanded=" + _lashesLanded);
+			sb.AppendLine("  breaks=" + _breaks.Count + " rolls=" + _rolls.Count
+				+ " council=" + (_current?.council?.Count ?? 0));
+			for (var i = 0; i < _breaks.Count; i++)
+			{
+				var b = _breaks[i];
+				sb.AppendLine("    crise " + (b.state?.defName ?? "?") + " " + (b.pawn?.LabelShort ?? "?")
+					+ " kind=" + b.kind + " count=" + b.count + " detail=" + (b.detail ?? "-")
+					+ " victime=" + (b.victim?.LabelShort ?? "-") + " temoins=" + b.witnesses.Count
+					+ (b.Open ? " (en cours)" : b.tried ? " (jugee)" : ""));
+			}
 			sb.AppendLine("  heard=" + _heard.Count + " waiting=" + _waiting.Count
 				+ " pledges=" + _pledges.Count + " exemptions=" + _exemptions.Count
 				+ " exiles=" + _exiles.Count);
@@ -1354,6 +1518,7 @@ namespace RimCourt.Court
 			if (_lastLord != null && Find.TickManager.TicksGame % SuccessionInterval == 0)
 				CheckSuccession();
 			if (Find.TickManager.TicksGame % RaidScanInterval == 0) ScanRaids();
+			if (Find.TickManager.TicksGame % BreakUtility.ScanInterval == 0) ScanBreaks();
 			if (!_active) return;
 			try
 			{
@@ -1716,6 +1881,7 @@ namespace RimCourt.Court
 		{
 			p.state = Petition.StateAwaitingVerdict;
 			p.deadlineTick = Find.TickManager.TicksGame + VerdictTicks;
+			Guard("conseil", () => CouncilUtility.Convene(p, SeatedCouncil()));
 			var letter = (Letters.ChoiceLetter_Verdict)LetterMaker.MakeLetter(
 				"RimCourt.VerdictLetterLabel".Translate(p.petitioner.LabelShort),
 				p.def.Worker.CaseText(p),
@@ -2219,6 +2385,12 @@ namespace RimCourt.Court
 			catch (System.Exception e) { Log.Error("[RimCourt] nettoyage de fin d'audience : " + e); }
 		}
 
+		private static void Guard(string what, System.Action step)
+		{
+			try { step(); }
+			catch (System.Exception e) { Log.Error("[RimCourt] " + what + " : " + e); }
+		}
+
 		private static void Reject(string msg)
 			=> Messages.Message(msg, MessageTypeDefOf.RejectInput, historical: false);
 
@@ -2233,6 +2405,8 @@ namespace RimCourt.Court
 			Scribe_Collections.Look(ref _exiles, "exiles", LookMode.Deep);
 			Scribe_Collections.Look(ref _raids, "raids", LookMode.Deep);
 			Scribe_Collections.Look(ref _triedCaptives, "triedCaptives", LookMode.Value);
+			Scribe_Collections.Look(ref _breaks, "breaks", LookMode.Deep);
+			Scribe_Collections.Look(ref _rolls, "rolls", LookMode.Deep);
 			Scribe_References.Look(ref _captiveGuard, "captiveGuard");
 			Scribe_Values.Look(ref _captiveTries, "captiveTries");
 			Scribe_Values.Look(ref _callGrace, "callGrace");
@@ -2288,6 +2462,14 @@ namespace RimCourt.Court
 				if (_exemptions == null) _exemptions = new List<WorkExemption>();
 				_exemptions.RemoveAll(e => e == null || e.pawn == null || e.workDefName.NullOrEmpty());
 				_heard.RemoveAll(h => h == null || h.defName.NullOrEmpty());
+				if (_breaks == null) _breaks = new List<BreakRecord>();
+				_breaks.RemoveAll(b => b == null || b.pawn == null || b.state == null);
+				if (_rolls == null)
+				{
+					_rolls = new List<RollEntry>();
+					SeedRolls();
+				}
+				_rolls.RemoveAll(r => r == null);
 				if (_verdictLog == null) _verdictLog = new List<string>();
 				_queue.RemoveAll(p => p == null || p.petitioner == null || p.def == null);
 				if (_current != null && (_current.petitioner == null || _current.def == null)) _current = null;
