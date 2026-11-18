@@ -9,6 +9,7 @@ namespace RimCourt
 		public static ThingDef RimCourt_AudienceSpot;
 		public static ThingDef RimCourt_LordSeat;
 		public static ThingDef RimCourt_Stocks;
+		public static ThingDef RimCourt_GuardPost;
 		public static JobDef RimCourt_HoldCourt;
 		public static JobDef RimCourt_StandInStocks;
 		public static JobDef RimCourt_EscortToStocks;
@@ -16,6 +17,7 @@ namespace RimCourt
 		public static JobDef RimCourt_JeerAtStocks;
 		public static JobDef RimCourt_ExecuteCaptive;
 		public static JobDef RimCourt_AttendCourt;
+		public static JobDef RimCourt_StandGuard;
 		public static JobDef RimCourt_PleadCase;
 		public static JobDef RimCourt_Flog;
 		public static JobDef RimCourt_TakeLashes;

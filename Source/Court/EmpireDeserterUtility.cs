@@ -55,7 +55,7 @@ namespace RimCourt.Court
 			var emp = Empire();
 			if (emp != null && emp.HostileTo(player) && SidedWithDeserters()) return emp;
 
-			return null;
+			return AttackUtility.Enabled ? CourtManager.Instance?.Avenger() : null;
 		}
 
 		public static bool Roll(Pawn lord)
@@ -93,6 +93,7 @@ namespace RimCourt.Court
 			if (map == null || faction == null) return false;
 
 			var imperial = EmpireHonorUtility.IsImperial(faction);
+			var avenger = !imperial && faction != Deserters();
 			try
 			{
 				OutsiderUtility.ReleaseFromLord(attacker);
@@ -105,8 +106,8 @@ namespace RimCourt.Court
 
 				Find.LetterStack.ReceiveLetter(
 					"RimCourt.DeserterStrikesLabel".Translate(attacker.LabelShortCap),
-					(imperial ? "RimCourt.ImperialStrikes" : "RimCourt.DeserterStrikes").Translate(
-						attacker, lord?.LabelShortCap ?? "?"),
+					(avenger ? "RimCourt.AvengerStrikes" : imperial ? "RimCourt.ImperialStrikes" : "RimCourt.DeserterStrikes")
+						.Translate(attacker, lord?.LabelShortCap ?? "?", faction.Name),
 					LetterDefOf.ThreatBig, new LookTargets(attacker));
 				return true;
 			}

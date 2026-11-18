@@ -73,7 +73,7 @@ namespace RimCourt.UI
 			var spot = new Rect(rect.xMax - size - rect.width * 0.04f, rect.yMax - size - rect.height * 0.04f, size, size);
 			GUI.color = parms.lowLight ? new Color(1f, 1f, 1f, 0.6f) : Color.white;
 			GUI.DrawTexture(spot, RimCourtIcons.AreaBadge);
-			GUI.DrawTexture(spot.ContractedBy(size * 0.16f), RimCourtIcons.HoldCourt, ScaleMode.ScaleToFit);
+			GUI.DrawTexture(spot.ContractedBy(size * 0.16f), RimCourtIcons.HoldCourtGlyph, ScaleMode.ScaleToFit);
 			GUI.color = Color.white;
 		}
 	}

@@ -97,6 +97,7 @@ namespace RimCourt.Court
 					break;
 
 				case "Execute":
+					mgr?.NoteFeud(c?.Faction);
 					CaptiveUtility.Ground(c);
 					var map = c?.Map;
 					var candidates = map == null ? new List<Pawn>() : CaptiveUtility.Executioners(map, c, lord);

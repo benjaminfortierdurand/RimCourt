@@ -87,4 +87,13 @@
 		<joyKind>Social</joyKind>
 	</JobDef>
 
+	<JobDef>
+		<defName>RimCourt_StandGuard</defName>
+		<driverClass>RimCourt.Jobs.JobDriver_StandGuard</driverClass>
+		<reportString>standing guard at court.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<suspendable>false</suspendable>
+		<alwaysShowWeapon>true</alwaysShowWeapon>
+	</JobDef>
+
 </Defs>

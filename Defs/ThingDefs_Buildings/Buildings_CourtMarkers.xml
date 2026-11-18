@@ -58,4 +58,19 @@
 		</placeWorkers>
 	</ThingDef>
 
+	<ThingDef ParentName="RimCourt_MarkerBase">
+		<!-- Pas de comp de marqueur ici : sinon le poste de garde proposerait de tenir audience comme un siège. -->
+		<defName>RimCourt_GuardPost</defName>
+		<label>court guard post</label>
+		<description>Optional. Marks a tile where a colonist stands guard while the court sits. Select it and post a guard: they come and stand here with whatever they carry, facing the petitioners, instead of joining the crowd. If someone goes for the lord, the guards on post go for the attacker first. Each guard on post also makes a ruling a little harder to walk out on, two at most. Place it within 25 tiles of the lord's seat.</description>
+		<thingClass>RimCourt.UI.Building_GuardPost</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Misc/PartySpot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+			<color>(190,70,60)</color>
+		</graphicData>
+		<comps Inherit="False" />
+	</ThingDef>
+
 </Defs>

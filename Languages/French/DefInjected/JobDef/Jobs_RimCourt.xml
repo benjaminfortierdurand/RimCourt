@@ -17,4 +17,6 @@
 	<RimCourt_ExecuteCaptive.reportString>exécute la sentence du seigneur.</RimCourt_ExecuteCaptive.reportString>
 	<RimCourt_JeerAtStocks.reportString>se paie la tête du type au pilori.</RimCourt_JeerAtStocks.reportString>
 
+	<RimCourt_StandGuard.reportString>monte la garde à l'audience.</RimCourt_StandGuard.reportString>
+
 </LanguageData>

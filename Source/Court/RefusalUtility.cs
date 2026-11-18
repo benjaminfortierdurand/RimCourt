@@ -17,6 +17,8 @@ namespace RimCourt.Court
 		private static readonly TraitDef Nerves = DefDatabase<TraitDef>.GetNamedSilentFail("Nerves");
 
 		private const float MaxChance = 0.55f;
+		public const float GuardShift = 0.03f;
+		public const int MaxGuardsCounted = 2;
 
 		public static bool CanBeRefused(VerdictOption v)
 		{
@@ -56,6 +58,7 @@ namespace RimCourt.Court
 			chance += FromTraits(p);
 			chance += FromStanding(p, lord);
 			chance += HallUtility.RefusalShiftOn(p.Map);
+			chance -= GuardShift * Mathf.Min(MaxGuardsCounted, CourtManager.Instance?.GuardsOnPost ?? 0);
 			return Mathf.Clamp(chance, 0f, MaxChance);
 		}
 

@@ -53,6 +53,7 @@ namespace RimCourt.Debug
 				new DebugMenuOption("Bannir : deviendra chef de guerre", DebugMenuOptionMode.Action, ExileAsWarlord),
 				new DebugMenuOption("Faire revenir les exilés maintenant", DebugMenuOptionMode.Action, RushExiles),
 				new DebugMenuOption("Mettre un colon au pilori", DebugMenuOptionMode.Action, PutInStocks),
+				new DebugMenuOption("Attentat : un colon se jette sur le seigneur", DebugMenuOptionMode.Action, MakeAttempt2),
 			};
 			Find.WindowStack.Add(new Dialog_DebugOptionListLister(options, "RimCourt debug : forcer quoi ?"));
 		}
@@ -586,6 +587,16 @@ namespace RimCourt.Debug
 					MessageTypeDefOf.RejectInput, historical: false);
 			return lord;
 		}
+
+		private static void MakeAttempt2()
+			=> PickOne("RimCourt debug : qui se jette sur le seigneur ?", p =>
+			{
+				var mgr = CourtManager.Instance;
+				var ok = mgr != null && mgr.Assail(p, "RimCourt.LungeColonist");
+				if (!ok)
+					Messages.Message("RimCourt debug : attentat impossible (seigneur absent ou choisi, colon incapable de violence, réglage coupé ?).",
+						MessageTypeDefOf.RejectInput, historical: false);
+			});
 
 		private static void MakeBreakMenu()
 		{

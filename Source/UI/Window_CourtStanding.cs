@@ -200,7 +200,7 @@ namespace RimCourt.UI
 			{
 				Widgets.DrawBoxSolid(icon, PortraitBg);
 				GUI.color = MutedColor;
-				GUI.DrawTexture(icon.ContractedBy(5f), RimCourtIcons.Hand);
+				GUI.DrawTexture(icon.ContractedBy(5f), RimCourtIcons.HandGlyph);
 				GUI.color = Color.white;
 			}
 

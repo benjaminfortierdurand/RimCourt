@@ -7,4 +7,7 @@
 	<RimCourt_LordSeat.label>siège du seigneur</RimCourt_LordSeat.label>
 	<RimCourt_LordSeat.description>C'est toute la cour. Placez-le directement sur un trône ou une belle chaise : le marqueur se glisse sous le meuble, le trône reste donc visible, et le seigneur vient y siéger quand vous tenez audience. Les pétitionnaires se tiennent à quelques cases devant, dans la direction que regarde la chaise. Sélectionnez le marqueur pour voir la case où ils se placeront. Au sol nu, tournez le marqueur pour choisir la direction du regard du seigneur. Si RimJoust est installé, son siège du seigneur fonctionne aussi.</RimCourt_LordSeat.description>
 
+	<RimCourt_GuardPost.label>poste de garde de la cour</RimCourt_GuardPost.label>
+	<RimCourt_GuardPost.description>Facultatif. Marque une case où un colon monte la garde pendant les audiences. Sélectionnez-le et postez un garde : il vient s'y tenir avec ce qu'il porte, face aux pétitionnaires, au lieu de se mêler à la foule. Si quelqu'un se jette sur le seigneur, les gardes en poste se jettent d'abord sur l'agresseur. Chaque garde en poste rend aussi un verdict un peu plus difficile à refuser, deux au plus. Placez-le à moins de 25 cases du siège du seigneur.</RimCourt_GuardPost.description>
+
 </LanguageData>

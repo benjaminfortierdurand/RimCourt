@@ -66,8 +66,16 @@ namespace RimCourt.UI
 			{
 				var old = SeatOf(pawn, map);
 				if (old != null && old != this) old._guest = null;
+				Building_GuardPost.Unpost(pawn, map);
 			}
 			_guest = pawn;
+		}
+
+		public static void Unseat(Pawn pawn, Map map)
+		{
+			if (pawn == null || map == null) return;
+			var seat = SeatOf(pawn, map);
+			if (seat != null) seat._guest = null;
 		}
 
 		private static CompCourtChair SeatOf(Pawn pawn, Map map)

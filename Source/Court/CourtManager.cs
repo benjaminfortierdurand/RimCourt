@@ -80,6 +80,12 @@ namespace RimCourt.Court
 		private int _breakFailures;
 		private const int MaxRolls = 600;
 		private const int MinCouncilAge = 13;
+		private Pawn _assailant;
+		private Pawn _assailed;
+		private List<RaidMark> _feuds = new List<RaidMark>();
+		private const float GuardPostRange = 25f;
+		private const int AssailCheckInterval = 30;
+		private const int FeudDays = 60;
 		private const int RaidScanInterval = 1000;
 		private const int MaxGuardTries = 2;
 		private const int MaxArrivalTicks = 20000;
@@ -771,6 +777,128 @@ namespace RimCourt.Court
 					MessageTypeDefOf.NeutralEvent, historical: false);
 		}
 
+		public int GuardsOnPost
+		{
+			get
+			{
+				if (!_active || _map == null) return 0;
+				var n = 0;
+				var colonists = _map.mapPawns.FreeColonistsSpawned;
+				for (var i = 0; i < colonists.Count; i++)
+					if (colonists[i].CurJobDef == RimCourtDefOf.RimCourt_StandGuard) n++;
+				return n;
+			}
+		}
+
+		private List<Pawn> PostGuards(Dictionary<IntVec3, Pawn> held)
+		{
+			var guards = new List<Pawn>();
+			if (RimCourtDefOf.RimCourt_GuardPost == null) return guards;
+			var posts = _map.listerThings.ThingsOfDef(RimCourtDefOf.RimCourt_GuardPost);
+			for (var i = 0; i < posts.Count; i++)
+			{
+				if (!(posts[i] is UI.Building_GuardPost post)) continue;
+				if (post.Position.DistanceTo(_seat.Position) > GuardPostRange) continue;
+				var guard = post.Guard;
+				if (guard == null || guards.Contains(guard)) continue;
+				guards.Add(guard);
+				held[post.Position] = guard;
+				if (_assailant != null || !UI.Building_GuardPost.CanGuard(guard) || !EligibleSpectator(guard)) continue;
+				if (guard.CurJobDef == RimCourtDefOf.RimCourt_StandGuard && guard.CurJob.targetA.Cell == post.Position) continue;
+				if (!guard.CanReach(post.Position, PathEndMode.OnCell, Danger.Deadly)) continue;
+				foreach (var p in _map.mapPawns.FreeColonistsSpawned.ToList())
+					if (p != guard && p.CurJobDef == RimCourtDefOf.RimCourt_AttendCourt && p.CurJob.targetA.Cell == post.Position)
+						p.jobs.EndCurrentJob(JobCondition.InterruptForced);
+				guard.jobs.StartJob(JobMaker.MakeJob(RimCourtDefOf.RimCourt_StandGuard, post.Position, _spotCell),
+					JobCondition.InterruptForced);
+			}
+			return guards;
+		}
+
+		private int AlertGuards(Pawn attacker)
+		{
+			var map = attacker?.Map;
+			if (map == null) return 0;
+			var n = 0;
+			foreach (var c in map.mapPawns.FreeColonistsSpawned.ToList())
+			{
+				if (c == attacker || c.CurJobDef != RimCourtDefOf.RimCourt_StandGuard) continue;
+				if (c.Downed || c.InMentalState || c.jobs == null) continue;
+				try
+				{
+					if (c.jobs.TryTakeOrderedJob(JobMaker.MakeJob(JobDefOf.AttackMelee, attacker), JobTag.Misc)) n++;
+				}
+				catch (System.Exception e)
+				{
+					Log.Warning("[RimCourt] " + c.LabelShort + " ne quitte pas son poste (" + e.Message + ").");
+				}
+			}
+			return n;
+		}
+
+		public bool Assail(Pawn attacker, string textKey)
+		{
+			var lord = _lord ?? CurrentLord;
+			if (attacker == null || lord == null) return false;
+			var outsider = attacker.Faction != Faction.OfPlayer;
+			if (!AttackUtility.Lunge(attacker, lord)) return false;
+			if (outsider) EmpireDeserterUtility.Arm(attacker);
+			else if (_active && !_walkedOut.Contains(attacker)) _walkedOut.Add(attacker);
+			_assailant = attacker;
+			_assailed = lord;
+			var guards = AlertGuards(attacker);
+			var guardKey = guards == 0 ? "RimCourt.LungeNoGuards" : guards == 1 ? "RimCourt.LungeGuardOne" : "RimCourt.LungeGuards";
+			Find.LetterStack.ReceiveLetter(
+				"RimCourt.LungeLabel".Translate(attacker.LabelShortCap),
+				textKey.Translate(attacker, lord).ToString() + "\n\n" + guardKey.Translate().ToString(),
+				LetterDefOf.ThreatSmall, new LookTargets(attacker));
+			return true;
+		}
+
+		private void AssailTick()
+		{
+			var a = _assailant;
+			var t = _assailed;
+			var rage = a != null && !a.Dead && a.Spawned && !a.Downed ? a.MentalState as MentalState_MurderousRage : null;
+			if (rage != null && rage.target == t && t != null && !t.Dead && !t.Downed && t.Spawned) return;
+			_assailant = null;
+			_assailed = null;
+			if (a == null) return;
+			try
+			{
+				if (rage != null) rage.RecoverFromState();
+				if (!a.Dead && a.Spawned && !a.Downed && a.Faction != null && !a.Faction.IsPlayer && !a.IsPrisoner)
+					OutsiderUtility.SendHome(a);
+			}
+			catch (System.Exception e)
+			{
+				Log.Warning("[RimCourt] fin de l'attentat mal passée (" + e.Message + ").");
+			}
+		}
+
+		public void NoteFeud(Faction faction)
+		{
+			if (faction == null || faction.IsPlayer) return;
+			_feuds.RemoveAll(f => f == null || f.faction == null || f.faction == faction);
+			_feuds.Add(new RaidMark { faction = faction, tick = Find.TickManager.TicksGame });
+		}
+
+		public Faction Avenger()
+		{
+			var now = Find.TickManager.TicksGame;
+			Faction best = null;
+			var bestTick = -1;
+			for (var i = 0; i < _feuds.Count; i++)
+			{
+				var f = _feuds[i];
+				if (f?.faction == null || f.faction.defeated || !f.faction.HostileTo(Faction.OfPlayer)) continue;
+				if (now - f.tick > FeudDays * 60000 || f.tick <= bestTick) continue;
+				bestTick = f.tick;
+				best = f.faction;
+			}
+			return best;
+		}
+
 		public bool SentenceToDeath(Pawn condemned, Pawn wronged)
 		{
 			if (!_active || _map == null || condemned == null || condemned.Dead || !condemned.Spawned) return false;
@@ -851,6 +979,8 @@ namespace RimCourt.Court
 
 			_reputation.weak += 2f;
 			_reputation.Recompute();
+
+			if (Rand.Chance(AttackUtility.LungeChance(p, _lord)) && Assail(p, "RimCourt.LungeColonist")) return true;
 
 			Mem(p, RimCourtDefOf.RimCourt_DefiedTheLord);
 			if (_map != null && RimCourtDefOf.RimCourt_LordWasDefied != null && !_lord.Dead)
@@ -1105,7 +1235,14 @@ namespace RimCourt.Court
 			if (p.deserter)
 			{
 				p.deserter = false;
-				Step(() => EmpireDeserterUtility.Strike(p.petitioner, _lord));
+				Step(() =>
+				{
+					if (EmpireDeserterUtility.Strike(p.petitioner, _lord)) AlertGuards(p.petitioner);
+				});
+			}
+			else if (!timedOut && AttackUtility.OutsiderSnaps(p, v, _reputation))
+			{
+				Guard("attentat", () => Assail(p.petitioner, "RimCourt.LungeOutsider"));
 			}
 		}
 
@@ -1519,6 +1656,7 @@ namespace RimCourt.Court
 				CheckSuccession();
 			if (Find.TickManager.TicksGame % RaidScanInterval == 0) ScanRaids();
 			if (Find.TickManager.TicksGame % BreakUtility.ScanInterval == 0) ScanBreaks();
+			if (_assailant != null && Find.TickManager.TicksGame % AssailCheckInterval == 0) AssailTick();
 			if (!_active) return;
 			try
 			{
@@ -1851,7 +1989,7 @@ namespace RimCourt.Court
 			if (_map == null) return;
 			foreach (var p in _map.mapPawns.FreeColonistsSpawned.ToList())
 				if (p.CurJobDef == RimCourtDefOf.RimCourt_AttendCourt || p.CurJobDef == RimCourtDefOf.RimCourt_PleadCase
-					|| p.CurJobDef == RimCourtDefOf.RimCourt_BringCaptive)
+					|| p.CurJobDef == RimCourtDefOf.RimCourt_BringCaptive || p.CurJobDef == RimCourtDefOf.RimCourt_StandGuard)
 					p.jobs?.EndCurrentJob(JobCondition.InterruptForced);
 		}
 
@@ -2017,7 +2155,7 @@ namespace RimCourt.Court
 		private void SendBack(Pawn pawn)
 		{
 			if (pawn == null || !pawn.Spawned || pawn.Dead || pawn.Downed || pawn.Drafted || pawn.jobs == null) return;
-			if (pawn.Faction != Faction.OfPlayer) return;
+			if (pawn.Faction != Faction.OfPlayer || pawn.InMentalState) return;
 			if (pawn.CurJobDef == RimCourtDefOf.RimCourt_StandInStocks
 				|| pawn.CurJobDef == RimCourtDefOf.RimCourt_EscortToStocks
 				|| pawn.CurJobDef == RimCourtDefOf.RimCourt_BringCaptive
@@ -2277,6 +2415,7 @@ namespace RimCourt.Court
 			var chairCells = new List<IntVec3>();
 			var allBld = _map.listerBuildings.allBuildingsColonist;
 			var held = SeatHonourGuests(allBld, seatPos, spotPos);
+			var guards = PostGuards(held);
 			for (var i = 0; i < allBld.Count; i++)
 			{
 				var bld = allBld[i];
@@ -2300,6 +2439,7 @@ namespace RimCourt.Court
 			{
 				if (!EligibleSpectator(c)) continue;
 				if (c.CurJobDef == RimCourtDefOf.RimCourt_AttendCourt) continue;
+				if (guards.Contains(c)) continue;
 
 				var target = LocalTargetInfo.Invalid;
 				while (ti < targets.Count)
@@ -2407,6 +2547,9 @@ namespace RimCourt.Court
 			Scribe_Collections.Look(ref _triedCaptives, "triedCaptives", LookMode.Value);
 			Scribe_Collections.Look(ref _breaks, "breaks", LookMode.Deep);
 			Scribe_Collections.Look(ref _rolls, "rolls", LookMode.Deep);
+			Scribe_Collections.Look(ref _feuds, "feuds", LookMode.Deep);
+			Scribe_References.Look(ref _assailant, "assailant");
+			Scribe_References.Look(ref _assailed, "assailed");
 			Scribe_References.Look(ref _captiveGuard, "captiveGuard");
 			Scribe_Values.Look(ref _captiveTries, "captiveTries");
 			Scribe_Values.Look(ref _callGrace, "callGrace");
@@ -2470,6 +2613,8 @@ namespace RimCourt.Court
 					SeedRolls();
 				}
 				_rolls.RemoveAll(r => r == null);
+				if (_feuds == null) _feuds = new List<RaidMark>();
+				_feuds.RemoveAll(f => f == null || f.faction == null);
 				if (_verdictLog == null) _verdictLog = new List<string>();
 				_queue.RemoveAll(p => p == null || p.petitioner == null || p.def == null);
 				if (_current != null && (_current.petitioner == null || _current.def == null)) _current = null;

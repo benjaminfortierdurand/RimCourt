@@ -36,9 +36,13 @@ namespace RimCourt.UI
 				?? ContentFinder<Texture2D>.Get("UI/Commands/RimCourt_HoldCourt", reportFailure: false)
 				?? TexCommand.DesirePower;
 
-		public static readonly Texture2D ShowMarker =
-			ContentFinder<Texture2D>.Get("UI/Commands/RimCourt_ShowMarker", reportFailure: false)
-				?? TexCommand.ForbidOff;
+		public static readonly Texture2D HoldCourtGlyph =
+			ContentFinder<Texture2D>.Get("UI/RimCourt_HoldCourtGlyph", reportFailure: false) ?? HoldCourt;
+
+		public static readonly Texture2D HandGlyph =
+			ContentFinder<Texture2D>.Get("UI/RimCourt_HandGlyph", reportFailure: false) ?? Hand;
+
+		public static readonly Texture2D ShowMarker = TexCommand.GatherSpotActive;
 
 		public static readonly Texture2D HonourSeat =
 			ContentFinder<Texture2D>.Get("UI/Commands/AssignOwner", reportFailure: false)
