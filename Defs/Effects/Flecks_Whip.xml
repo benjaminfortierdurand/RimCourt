@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<!-- Le fouet est un chapelet de bouts de corde tendus point par point le long d'une courbe, recolorés cuir dans FlogUtility.Crack. Texture dessinée en code, _concept/whip/whip.cs, aucun emprunt. -->
+	<!-- Le fouet est un chapelet de bouts de corde tendus point par point le long d'une courbe, recolorés cuir dans FlogUtility.Crack. Texture dessinée en code, aucun emprunt. -->
 
 	<FleckDef ParentName="FleckBase">
 		<defName>RimCourt_WhipLine</defName>
